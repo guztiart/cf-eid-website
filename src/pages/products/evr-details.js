@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 
@@ -24,23 +24,52 @@ const ProjectDetails = () => {
     },
   });
 
+  // Load custom CSS
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
+    document.head.appendChild(link);
+    
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   return (
     <div className="project-details-page">
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/page-title-bg.jpg)` }}>
         <div className="container position-relative">
-          <h1>Product Details</h1>
+          <h1>PRODUCTS</h1>
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/projects">Products</Link></li>
-              <li className="current">EH795 EH790 for Water Pump</li>
+              <li className="current">Water Lubricated Stern Tube Bearing (EVR)</li>
             </ol>
           </nav>
         </div>
       </div>
 
-      {/* Project Details Section */}
+      {/* Product Title and Navigation */}
+      <section className="product-header section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="product-title" data-aos="fade-up">Water Lubricated Stern Tube Bearing (EVR)</h2>
+              <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
+                <ul className="nav-list">
+                  <li className="nav-item"><Link to="/products?tag=marine">Marine</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=water-lubricated">Water Lubricated Stern Tube Bearing</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Details Section - Original Layout */}
       <section id="project-details" className="project-details section">
         <div className="container" data-aos="fade-up">
           <div className="portfolio-details-slider swiper init-swiper">
@@ -63,28 +92,33 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>EH795 EH790 for Water Pump</h2>
+                <h2>Water Lubricated Stern Tube Bearing (EVR)</h2>
                 <p>
-                   Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. 
-                   By its unitized design, EH795 supports easy installation into customer application.
+                  <strong>Excellent Durability and Vibration Absorption</strong>
                 </p>
                 <p>
-                  These seals are suitable for high-speed rotation due to its simple and compact construction. 
-                  The materials of the seal face are Eagle Industry’s proprietary carbon components and ceramics which provides high resistance to heat, wear and corrosion. 
-                  These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. 
-                  These seals are also suitable for industrial pumps. EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.
+                  No peeling off by combination of reinforced plastics outer shell and rubber. Outstanding durability and stable performance.
+                </p>
+                <p>
+                  Effective absorption of shaft vibration. Prevention of electric corrosion on the shaft sleeve.
+                </p>
+                <p>
+                  The EVR water lubricated stern tube bearing is designed with advanced materials to provide exceptional performance in marine applications. The combination of reinforced plastics outer shell and rubber components ensures long-lasting durability without peeling issues, even under harsh marine conditions.
+                </p>
+                <p>
+                  This bearing system effectively absorbs shaft vibrations, reducing stress on the propulsion system and extending the service life of connected components. Additionally, it prevents electric corrosion on the shaft sleeve, a common issue in marine environments where galvanic corrosion can damage critical components.
                 </p>
                 <div className="testimonial-item">
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
-                    The floating seals from Eagle Industry Indonesia have significantly improved our equipment's performance. 
-                    The quality and durability are exceptional.
+                    The EVR water lubricated stern tube bearings from Eagle Industry Indonesia have significantly improved our vessel's performance.
+                    The durability and vibration absorption capabilities are exceptional.
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>
                   <div>
                     <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
                     <h3>Eagle Industry Team</h3>
-                    <h4>Product Specialist</h4>
+                    <h4>Marine Product Specialist</h4>
                   </div>
                 </div>
               </div>
@@ -94,24 +128,13 @@ const ProjectDetails = () => {
               <div className="portfolio-info">
                 <h3>Product Information</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Mechanical Seals</span></li>
-                  <li><strong>Model</strong> <span>EH795</span></li>
-                  <li><strong>Material</strong> <span>High-grade Stainless Steel</span></li>
-                  <li><strong>Temperature Range</strong> <span>-40°C to 200°C</span></li>
-                  <li><strong>Pressure Rating</strong> <span>Up to 10 MPa</span></li>
-                  <li><strong>Applications</strong> <span>Water Pumps</span></li>
+                  <li><strong>Category</strong> <span>Marine, Water Lubricated Stern Tube Bearing</span></li>
+                  <li><strong>Model</strong> <span>EVR</span></li>
+                  <li><strong>Outer Shell Material</strong> <span>Reinforced Plastics</span></li>
+                  <li><strong>Inner Material</strong> <span>Special Rubber Compound</span></li>
+                  <li><strong>Key Features</strong> <span>Vibration Absorption, Electric Corrosion Prevention</span></li>
+                  <li><strong>Applications</strong> <span>Marine Propulsion Systems, Stern Tube Bearings</span></li>
                 </ul>
-                
-                <div className="pt-3">
-                  <h3>Product Features</h3>
-                  <ul>
-                    <li><i className="bi bi-check"></i> <span>Self-lubricating design</span></li>
-                    <li><i className="bi bi-check"></i> <span>Low friction coefficient</span></li>
-                    <li><i className="bi bi-check"></i> <span>High wear resistance</span></li>
-                    <li><i className="bi bi-check"></i> <span>Easy installation</span></li>
-                    <li><i className="bi bi-check"></i> <span>Long service life</span></li>
-                  </ul>
-                </div>
                 
                 <div className="pt-3">
                   <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
@@ -122,7 +145,64 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Related Products Section */}
+      {/* Product Specifications */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Product Features</h2>
+                <p>Key features and benefits of EVR Water Lubricated Stern Tube Bearing</p>
+              </div>
+              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
+                <table className="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <th style={{ width: '30%' }}>Durability</th>
+                      <td>No peeling off by combination of reinforced plastics outer shell and rubber</td>
+                    </tr>
+                    <tr>
+                      <th>Performance</th>
+                      <td>Outstanding durability and stable performance</td>
+                    </tr>
+                    <tr>
+                      <th>Vibration Control</th>
+                      <td>Effective absorption of shaft vibration</td>
+                    </tr>
+                    <tr>
+                      <th>Corrosion Protection</th>
+                      <td>Prevention of electric corrosion on the shaft sleeve</td>
+                    </tr>
+                    <tr>
+                      <th>Material Construction</th>
+                      <td>Reinforced plastics outer shell with special rubber compound</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className="note-text">Note: Specifications may vary according to application requirements. Contact us for detailed technical specifications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section - Elegant and Modern */}
+      <section className="contact-section section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="contact-box" data-aos="fade-up">
+                <Link to="/contact" className="contact-link">
+                  <h3 className="contact-title">Contact Us</h3>
+                  <p className="contact-text">Please contact us via our email form</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Products */}
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
@@ -131,41 +211,76 @@ const ProjectDetails = () => {
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Compressor Lip Seal</h4>
-                  <p>High-quality lip seals for AC compressors</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} title="Product 1" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/project-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>for A/C compressor<br />Type A Mechanical seal</span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Mechanical Seal</h4>
-                  <p>Durable mechanical seals for various applications</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} title="Product 2" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/project-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>for Water Pump<br />EH795/EH790</span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Rudder Seal</h4>
-                  <p>Specialized seals for marine rudder applications</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} title="Product 3" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/project-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="card-image" alt="Rudder Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>for Marine Applications<br />Rudder Seal</span>
+                  </div>
+                </Link>
               </div>
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Bottom Breadcrumb */}
+      <section className="bottom-breadcrumb section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <nav className="breadcrumbs">
+                <ol>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/projects">Products</Link></li>
+                  <li className="current">Water Lubricated Stern Tube Bearing (EVR)</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating Contact Button - Adjusted Position */}
+      <div className="floating-contact-button">
+        <Link to="/contact" className="contact-button">
+          <div className="contact-icon">
+            <i className="bi bi-envelope"></i>
+          </div>
+          <p className="contact-text">Contact</p>
+        </Link>
+      </div>
     </div>
   );
 };

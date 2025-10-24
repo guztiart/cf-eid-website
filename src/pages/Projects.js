@@ -117,34 +117,6 @@ const Projects = () => {
 
             <div className="col-lg-4 col-md-6 product-item">
               <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR Bearing (Straight Type).png`} className="card-img-top" alt="Water Lubricated Stern Tube Bearing" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Water Lubricated Stern Tube Bearing - EVR</h4>
-                  <p className="card-text">Straight type bearing with excellent durability and vibration absorption capabilities. Designed for long-term operation in marine environments.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/project-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR FWD - Flange.png`} className="card-img-top" alt="Water Lubricated Stern Tube Bearing" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Water Lubricated Stern Tube Bearing - EVR Flange</h4>
-                  <p className="card-text">Flange type bearing system designed for easy installation and maintenance. Provides excellent performance in marine applications with water lubrication.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/project-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU.png`} className="card-img-top" alt="Water Lubricated Stern Tube Bearing" />
                 <div className="card-body product-info">
                   <h4 className="card-title">Water Lubricated Stern Tube Bearing - EVU</h4>

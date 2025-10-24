@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 
@@ -24,35 +24,64 @@ const ProjectDetails = () => {
     },
   });
 
+  // Load custom CSS
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
+    document.head.appendChild(link);
+    
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   return (
     <div className="project-details-page">
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/page-title-bg.jpg)` }}>
         <div className="container position-relative">
-          <h1>Product Details</h1>
+          <h1>PRODUCTS</h1>
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/projects">Products</Link></li>
-              <li className="current">O Ring</li>
+              <li className="current">SUPERIOR O-Ring</li>
             </ol>
           </nav>
         </div>
       </div>
 
-      {/* Project Details Section */}
+      {/* Product Title and Navigation */}
+      <section className="product-header section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="product-title" data-aos="fade-up">SUPERIOR O-Ring</h2>
+              <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
+                <ul className="nav-list">
+                  <li className="nav-item"><Link to="/products?tag=semiconductor">Semiconductor</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=semiconductor-process">Semiconductor Process</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Details Section - Original Layout */}
       <section id="project-details" className="project-details section">
         <div className="container" data-aos="fade-up">
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-1.jpg`} alt="Product Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-1.jpg`} alt="SUPERIOR O-Ring Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} alt="Product Image 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} alt="SUPERIOR O-Ring Image 2" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-3.png`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-3.png`} alt="SUPERIOR O-Ring Image 3" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -63,21 +92,20 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>O Ring</h2>
+                <h2>SUPERIOR O-Ring</h2>
                 <p>
-                   Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. 
-                   By its unitized design, EH795 supports easy installation into customer application.
+                  "SUPERIOR" series is newly developed as O-Ring material with better chemical resistance, Low outgas generation, and light heat resistance especially for semiconductor process industry.
                 </p>
                 <p>
-                  These seals are suitable for high-speed rotation due to its simple and compact construction. 
-                  The materials of the seal face are Eagle Industry’s proprietary carbon components and ceramics which provides high resistance to heat, wear and corrosion. 
-                  These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. 
-                  These seals are also suitable for industrial pumps. EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.
+                  FKM and VMQ for various applications in semiconductor manufacturing process are available. These O-rings provide exceptional performance in demanding semiconductor environments where precision and reliability are critical.
+                </p>
+                <p>
+                  The SUPERIOR series demonstrates excellent resistance for plasma and chemicals, making it ideal for the harsh conditions encountered in semiconductor manufacturing. With small outgas generation and continuity of good resistance against photo thermal generated in manufacturing process of semiconductor, these O-rings maintain their integrity and sealing performance even in extreme conditions.
                 </p>
                 <div className="testimonial-item">
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
-                    The floating seals from Eagle Industry Indonesia have significantly improved our equipment's performance. 
+                    The SUPERIOR O-Rings from Eagle Industry Indonesia have significantly improved our semiconductor manufacturing processes.
                     The quality and durability are exceptional.
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>
@@ -94,22 +122,22 @@ const ProjectDetails = () => {
               <div className="portfolio-info">
                 <h3>Product Information</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Mechanical Seals</span></li>
-                  <li><strong>Model</strong> <span>EH795</span></li>
-                  <li><strong>Material</strong> <span>High-grade Stainless Steel</span></li>
-                  <li><strong>Temperature Range</strong> <span>-40°C to 200°C</span></li>
-                  <li><strong>Pressure Rating</strong> <span>Up to 10 MPa</span></li>
-                  <li><strong>Applications</strong> <span>Water Pumps</span></li>
+                  <li><strong>Category</strong> <span>Packing, Gasket</span></li>
+                  <li><strong>Product Series</strong> <span>SUPERIOR</span></li>
+                  <li><strong>Material</strong> <span>FKM and VMQ</span></li>
+                  <li><strong>Key Features</strong> <span>Chemical resistance, Low outgas generation</span></li>
+                  <li><strong>Special Properties</strong> <span>Plasma resistance, Light heat resistance</span></li>
+                  <li><strong>Applications</strong> <span>Semiconductor process industry</span></li>
                 </ul>
                 
                 <div className="pt-3">
                   <h3>Product Features</h3>
                   <ul>
-                    <li><i className="bi bi-check"></i> <span>Self-lubricating design</span></li>
-                    <li><i className="bi bi-check"></i> <span>Low friction coefficient</span></li>
-                    <li><i className="bi bi-check"></i> <span>High wear resistance</span></li>
-                    <li><i className="bi bi-check"></i> <span>Easy installation</span></li>
-                    <li><i className="bi bi-check"></i> <span>Long service life</span></li>
+                    <li><i className="bi bi-check"></i> <span>Excellent resistance for plasma</span></li>
+                    <li><i className="bi bi-check"></i> <span>Excellent resistance for chemical</span></li>
+                    <li><i className="bi bi-check"></i> <span>Small outgas generation</span></li>
+                    <li><i className="bi bi-check"></i> <span>Continuity of good resistance against photo thermal</span></li>
+                    <li><i className="bi bi-check"></i> <span>Available in FKM and VMQ materials</span></li>
                   </ul>
                 </div>
                 
@@ -122,7 +150,64 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Related Products Section */}
+      {/* Product Specifications */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Product Features</h2>
+                <p>Information about SUPERIOR O-Ring features.</p>
+              </div>
+              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
+                <table className="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <th style={{ width: '30%' }}>Material Options</th>
+                      <td>FKM and VMQ for various applications in semiconductor manufacturing process</td>
+                    </tr>
+                    <tr>
+                      <th>Plasma Resistance</th>
+                      <td>Excellent resistance for plasma</td>
+                    </tr>
+                    <tr>
+                      <th>Chemical Resistance</th>
+                      <td>Excellent resistance for chemical</td>
+                    </tr>
+                    <tr>
+                      <th>Outgas Generation</th>
+                      <td>Small outgas generation</td>
+                    </tr>
+                    <tr>
+                      <th>Photo Thermal Resistance</th>
+                      <td>Continuity of good resistance against photo thermal generated in manufacturing process of semiconductor</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className="note-text">Note: The SUPERIOR series is specially developed for semiconductor process industry applications with superior chemical resistance and low outgas generation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section - Elegant and Modern */}
+      <section className="contact-section section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="contact-box" data-aos="fade-up">
+                <Link to="/contact" className="contact-link">
+                  <h3 className="contact-title">Contact Us</h3>
+                  <p className="contact-text">Please contact us via our email form</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Products */}
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
@@ -131,41 +216,76 @@ const ProjectDetails = () => {
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Compressor Lip Seal</h4>
-                  <p>High-quality lip seals for AC compressors</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} title="Product 1" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/project-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>for A/C compressor<br />Type A Mechanical seal</span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Mechanical Seal</h4>
-                  <p>Durable mechanical seals for various applications</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} title="Product 2" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/project-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>for Water Pump<br />EH795/EH790</span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Rudder Seal</h4>
-                  <p>Specialized seals for marine rudder applications</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} title="Product 3" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/project-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
+                  </div>
+                  <div className="card-caption">
+                    <span>for Variable Displacement A/C Compressor<br />Control Valve</span>
+                  </div>
+                </Link>
               </div>
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Bottom Breadcrumb */}
+      <section className="bottom-breadcrumb section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <nav className="breadcrumbs">
+                <ol>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/projects">Products</Link></li>
+                  <li className="current">SUPERIOR O-Ring</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating Contact Button - Adjusted Position */}
+      <div className="floating-contact-button">
+        <Link to="/contact" className="contact-button">
+          <div className="contact-icon">
+            <i className="bi bi-envelope"></i>
+          </div>
+          <p className="contact-text">Contact</p>
+        </Link>
+      </div>
     </div>
   );
 };
