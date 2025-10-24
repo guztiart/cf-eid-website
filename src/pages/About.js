@@ -64,7 +64,7 @@ const About = () => {
                 </p>
                 <div className="watch-video d-flex align-items-center position-relative">
                   <i className="bi bi-play-circle"></i>
-                  <a href="https://www.youtube.com/watch?v=1mBq36R4rd8" className="glightbox stretched-link">Watch Video</a>
+                  <a href="https://www.youtube.com/watch?v=4335-VJuJeA" className="glightbox stretched-link">Watch Video</a>
                 </div>
               </div>
             </div>

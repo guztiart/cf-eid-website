@@ -9,7 +9,7 @@ import ScrollTop from './components/ScrollTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Projects from './pages/Projects';
+import Products from './pages/Products';
 import Blog from './pages/Blog';
 import Services from './pages/Services';
 import ProjectDetails from './pages/ProjectDetails';
@@ -40,7 +40,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/services" element={<Services />} />
             <Route path="/project-details" element={<ProjectDetails />} />

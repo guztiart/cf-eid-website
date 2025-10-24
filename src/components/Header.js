@@ -56,7 +56,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to="/projects" className={`${location.pathname === '/projects' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
+              <Link to="/products" className={`${location.pathname === '/products' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
                 Products
               </Link>
             </li>

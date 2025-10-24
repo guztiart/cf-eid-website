@@ -39,7 +39,7 @@ const ProjectDetails = () => {
   return (
     <div className="project-details-page">
       {/* Page Title */}
-      <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/page-title-bg.jpg)` }}>
+      <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
           <h1>PRODUCTS</h1>
           <nav className="breadcrumbs">

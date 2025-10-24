@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useIsotope, useGLightbox } from '../hooks/useExternalLibs';
 
-const Projects = () => {
+const Products = () => {
   // Initialize external libraries using custom hooks
   useAOS();
   useIsotope();
@@ -63,8 +63,8 @@ const Projects = () => {
               <div className="card product-card h-100">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="card-img-top" alt="Rudder Seal" />
                 <div className="card-body product-info">
-                  <h4 className="card-title">Rudder Seal</h4>
-                  <p className="card-text">Rudder seal manufactured with high-performance, self-lubricating lip seals designed to be mounted above the rudder bearing to prevent the ingress of sea water into the hull.</p>
+                  <h4 className="card-title">Stern Tube Seal</h4>
+                  <p className="card-text">Stern tube seals with lip seals designed to prevent lubricant leakage and seawater ingress. Approved by classification societies with multiple types available.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
                     <a href="/products/rudderSeal-details" className="btn btn-outline-primary btn-sm">View Details</a>
@@ -120,7 +120,7 @@ const Projects = () => {
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU.png`} className="card-img-top" alt="Water Lubricated Stern Tube Bearing" />
                 <div className="card-body product-info">
                   <h4 className="card-title">Water Lubricated Stern Tube Bearing - EVU</h4>
-                  <p className="card-text">Poly-Urethane bearing "EVU" is developed for water lubricated stern tube system based on the technology cultivated in our water lubricated bearing experience.</p>
+                  <p className="card-text">Poly-Urethane bearing developed for water lubricated stern tube systems based on our extensive water lubricated bearing technology and experience.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
                     <a href="/products/evu-details" className="btn btn-outline-primary btn-sm">View Details</a>
@@ -144,10 +144,10 @@ const Projects = () => {
             </div>
             <div className="col-lg-4 col-md-6 product-item">
               <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AirCutValve.jpg`} className="card-img-top" alt="Service Engineer" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AirCutValve.jpg`} className="card-img-top" alt="Air Cut Valve" />
                 <div className="card-body product-info">
                   <h4 className="card-title">Air Cut Valve</h4>
-                  <p className="card-text">Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing.</p>
+                  <p className="card-text">Control valve for variable displacement A/C compressors. Controls swash plate angle to adjust compressor displacement according to A/C load for improved fuel economy.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
                     <a href="/products/airCutValve-details" className="btn btn-outline-primary btn-sm">View Details</a>
@@ -157,10 +157,10 @@ const Projects = () => {
             </div>
             <div className="col-lg-4 col-md-6 product-item">
               <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed_valve_double.jpg`} className="card-img-top" alt="Service Engineer" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed_valve_double.jpg`} className="card-img-top" alt="Reed Valve" />
                 <div className="card-body product-info">
                   <h4 className="card-title">Reed Valve</h4>
-                  <p className="card-text">Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing.</p>
+                  <p className="card-text">Designed for four-stroke motorcycle engines for emission control. Substantially reduces carbon monoxide and hydrocarbon emissions to mitigate air pollution.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
                     <a href="/products/reedValve-details" className="btn btn-outline-primary btn-sm">View Details</a>
@@ -170,10 +170,10 @@ const Projects = () => {
             </div>
             <div className="col-lg-4 col-md-6 product-item">
               <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} className="card-img-top" alt="Service Engineer" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} className="card-img-top" alt="SUPERIOR O-Ring" />
                 <div className="card-body product-info">
-                  <h4 className="card-title">O Ring</h4>
-                  <p className="card-text">Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing.</p>
+                  <h4 className="card-title">SUPERIOR O-Ring</h4>
+                  <p className="card-text">Newly developed O-Ring material with better chemical resistance, low outgas generation, and light heat resistance for semiconductor process industry.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
                     <a href="/products/oRing-details" className="btn btn-outline-primary btn-sm">View Details</a>
@@ -183,10 +183,10 @@ const Projects = () => {
             </div>
             <div className="col-lg-4 col-md-6 product-item">
               <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/marine ace.png`} className="card-img-top" alt="Service Engineer" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/marine ace.png`} className="card-img-top" alt="Marine Ace Seal" />
                 <div className="card-body product-info">
-                  <h4 className="card-title">Marine Ace (MAS)</h4>
-                  <p className="card-text">Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing.</p>
+                  <h4 className="card-title">Marine Ace Seal (MAS)</h4>
+                  <p className="card-text">Water-lubricated stern seal for small vessels with direct drive systems. Features end-face seal structure for excellent sealing performance.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
                     <a href="/products/mas-details" className="btn btn-outline-primary btn-sm">View Details</a>
@@ -201,4 +201,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Products;

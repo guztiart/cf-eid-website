@@ -39,7 +39,7 @@ const ProjectDetails = () => {
   return (
     <div className="project-details-page">
       {/* Page Title */}
-      <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/page-title-bg.jpg)` }}>
+      <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
           <h1>PRODUCTS</h1>
           <nav className="breadcrumbs">
@@ -203,57 +203,57 @@ const ProjectDetails = () => {
       </section>
 
       {/* Related Products */}
-      <section id="related-products" className="related-products section">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
-          </div>
-          <div className="row gy-4">
-            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
-                  <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EA560_2.jpg`} className="card-image" alt="Versatile Mechanical Seal" />
+            <section id="related-products" className="related-products section">
+              <div className="container">
+                <div className="section-title" data-aos="fade-up">
+                  <h2>Related Products</h2>
+                  <p>Explore our other similar products</p>
+                </div>
+                <div className="row gy-4">
+                  <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div className="product-card h-100">
+                      <Link to="/project-details" className="card-link">
+                        <div className="card-image-container">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                        </div>
+                        <div className="card-caption">
+                          <span>for A/C compressor<br />Type A Mechanical seal</span>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                  <div className="card-caption">
-                    <span>Versatile Mechanical Seal<br/>EA560</span>
+                  <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div className="product-card h-100">
+                      <Link to="/project-details" className="card-link">
+                        <div className="card-image-container">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                        </div>
+                        <div className="card-caption">
+                          <span>for Water Pump<br />EH795/EH790</span>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                </Link>
+                  <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div className="product-card h-100">
+                      <Link to="/project-details" className="card-link">
+                        <div className="card-image-container">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
+                        </div>
+                        <div className="card-caption">
+                          <span>for Variable Displacement A/C Compressor<br />Control Valve</span>
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="row mt-4">
+                  <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
-                  <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/MA291_2-1.jpg`} className="card-image" alt="Compact Cartridge Seal" />
-                  </div>
-                  <div className="card-caption">
-                    <span>Compact Cartridge Seal<br/>MA290/MA291</span>
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
-                  <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/LB500_1.jpg`} className="card-image" alt="LA200" />
-                  </div>
-                  <div className="card-caption">
-                    <span>LA200</span>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="row mt-4">
-            <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
       {/* Bottom Breadcrumb */}
       <section className="bottom-breadcrumb section">

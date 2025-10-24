@@ -57,7 +57,7 @@ const Home = () => {
         <div className="p-hero-top">
           <div className="p-hero-top__mv">
             <div className="p-hero-top__video">
-              <iframe src="https://www.youtube.com/embed/1mBq36R4rd8?autoplay=1&mute=1&loop=1&playlist=1mBq36R4rd8&controls=0&showinfo=0&autohide=1&modestbranding=1&vq=hd1080&rel=0&iv_load_policy=3&cc_load_policy=0&disablekb=1"
+              <iframe src="https://www.youtube.com/embed/4335-VJuJeA?autoplay=1&mute=1&loop=1&playlist=4335-VJuJeA&controls=0&showinfo=0&autohide=1&modestbranding=1&vq=hd1080&rel=0&iv_load_policy=3&cc_load_policy=0&disablekb=1"
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
               allowFullScreen 
@@ -74,7 +74,7 @@ const Home = () => {
             </div>
           </div>
           <div className="p-hero-top__button" >
-            <a className="p-hero-top__button-link glightbox" href="https://www.youtube.com/watch?v=1mBq36R4rd8" rel="noopener noreferrer">
+            <a className="p-hero-top__button-link glightbox" href="https://www.youtube.com/watch?v=4335-VJuJeA" rel="noopener noreferrer">
               <i className="bi bi-play-circle"></i>
               <span>Play full movie</span>
             </a>

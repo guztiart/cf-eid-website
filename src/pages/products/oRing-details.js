@@ -39,7 +39,7 @@ const ProjectDetails = () => {
   return (
     <div className="project-details-page">
       {/* Page Title */}
-      <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/page-title-bg.jpg)` }}>
+      <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
           <h1>PRODUCTS</h1>
           <nav className="breadcrumbs">
@@ -129,17 +129,6 @@ const ProjectDetails = () => {
                   <li><strong>Special Properties</strong> <span>Plasma resistance, Light heat resistance</span></li>
                   <li><strong>Applications</strong> <span>Semiconductor process industry</span></li>
                 </ul>
-                
-                <div className="pt-3">
-                  <h3>Product Features</h3>
-                  <ul>
-                    <li><i className="bi bi-check"></i> <span>Excellent resistance for plasma</span></li>
-                    <li><i className="bi bi-check"></i> <span>Excellent resistance for chemical</span></li>
-                    <li><i className="bi bi-check"></i> <span>Small outgas generation</span></li>
-                    <li><i className="bi bi-check"></i> <span>Continuity of good resistance against photo thermal</span></li>
-                    <li><i className="bi bi-check"></i> <span>Available in FKM and VMQ materials</span></li>
-                  </ul>
-                </div>
                 
                 <div className="pt-3">
                   <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
