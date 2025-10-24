@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useAOS, usePureCounter, useIsotope } from '../hooks/useExternalLibs';
+import { useAOS, usePureCounter, useIsotope, useGLightbox } from '../hooks/useExternalLibs';
 
 const Home = () => {
   // Initialize external libraries using custom hooks
   useAOS();
   usePureCounter();
   useIsotope();
+  useGLightbox();
 
   // Handle tab navigation
   React.useEffect(() => {
@@ -72,8 +73,8 @@ const Home = () => {
               <div className="scroll-text">Scroll Down</div>
             </div>
           </div>
-          <div className="p-hero-top__button">
-            <a className="p-hero-top__button-link js-yt-popup" href="https://www.youtube.com/watch?v=1mBq36R4rd8" target="_blank" rel="noopener noreferrer">
+          <div className="p-hero-top__button" >
+            <a className="p-hero-top__button-link glightbox" href="https://www.youtube.com/watch?v=1mBq36R4rd8" rel="noopener noreferrer">
               <i className="bi bi-play-circle"></i>
               <span>Play full movie</span>
             </a>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, usePureCounter, useGLightbox } from '../hooks/useExternalLibs';
 
@@ -7,6 +7,19 @@ const About = () => {
   useAOS();
   usePureCounter();
   useGLightbox();
+  
+  // Additional initialization for PureCounter to ensure it works properly
+  useEffect(() => {
+    // Reinitialize PureCounter when component mounts
+    const timer = setTimeout(() => {
+      if (window.PureCounter) {
+        // Initialize new instance
+        new window.PureCounter();
+      }
+    }, 500);
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="about-page">
@@ -28,7 +41,7 @@ const About = () => {
         <div className="container">
           <div className="row position-relative">
             <div className="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.jpg`} alt="About Eagle Industry Indonesia" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/building/eid_building_front.jpg`} alt="About Eagle Industry Indonesia" />
             </div>
             <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <h2 className="inner-title">PT Eagle Industry Indonesia</h2>
@@ -71,7 +84,7 @@ const About = () => {
               <div className="stats-item d-flex align-items-center w-100 h-100">
                 <i className="bi bi-emoji-smile color-blue flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="2" className="purecounter"></span>
                   <p>Klien Puas</p>
                 </div>
               </div>
@@ -80,7 +93,7 @@ const About = () => {
               <div className="stats-item d-flex align-items-center w-100 h-100">
                 <i className="bi bi-journal-richtext color-orange flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="24102000" data-purecounter-duration="1" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="24102000" data-purecounter-duration="3" className="purecounter"></span>
                   <p>Produk Terjual</p>
                 </div>
               </div>
@@ -89,7 +102,7 @@ const About = () => {
               <div className="stats-item d-flex align-items-center w-100 h-100">
                 <i className="bi bi-headset color-green flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="2" className="purecounter"></span>
                   <p>Jam Dukungan</p>
                 </div>
               </div>
@@ -98,7 +111,7 @@ const About = () => {
               <div className="stats-item d-flex align-items-center w-100 h-100">
                 <i className="bi bi-people color-pink flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="119" data-purecounter-duration="1" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="119" data-purecounter-duration="2" className="purecounter"></span>
                   <p>Karyawan Berdedikasi</p>
                 </div>
               </div>

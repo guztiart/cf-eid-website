@@ -35,9 +35,15 @@ export const useAOS = () => {
 // Custom hook to initialize PureCounter
 export const usePureCounter = () => {
   useEffect(() => {
-    if (window.PureCounter) {
-      new window.PureCounter();
-    }
+    // Add a small delay to ensure DOM is fully rendered
+    const timer = setTimeout(() => {
+      if (window.PureCounter) {
+        // Initialize PureCounter with default settings
+        new window.PureCounter();
+      }
+    }, 300);
+    
+    return () => clearTimeout(timer);
   }, []);
 };
 

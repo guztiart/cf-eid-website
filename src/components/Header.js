@@ -60,11 +60,11 @@ const Header = () => {
                 Products
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/blog" className={`${location.pathname === '/blog' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
                 Blog/News
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contact" className={`${location.pathname === '/contact' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
                 Inquiry Form

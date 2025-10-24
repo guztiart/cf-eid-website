@@ -106,7 +106,8 @@ const ProjectDetails = () => {
                 <div className="testimonial-item">
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
-                    Engineered for excellence in automotive air conditioning systems, providing reliable sealing solutions that prevent refrigerant leakage and ensure optimal compressor performance.
+                    The lip seals from Eagle Industry Indonesia have significantly improved our automotive AC systems.
+                    The quality and durability are exceptional.
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>
                   <div>
@@ -130,10 +131,9 @@ const ProjectDetails = () => {
                   <li><strong>Shaft diameter</strong> <span>12.7 to 20 mm</span></li>
                   <li><strong>Material</strong> <span>Special rubber compound for CFC resistance</span></li>
                   <li><strong>Applications</strong> <span>Automotive AC compressors for passenger and commercial vehicles</span></li>
-                  <li><strong>Compliance</strong> <span>International automotive standards</span></li>
                 </ul>
                 
-                <div className="pt-3">
+                {/* <div className="pt-3">
                   <h3>Product Features</h3>
                   <ul>
                     <li><i className="bi bi-check"></i> <span>Rotating shaft seals exclusively designed for car air-conditioning compressors</span></li>
@@ -146,11 +146,7 @@ const ProjectDetails = () => {
                     <li><i className="bi bi-check"></i> <span>Low friction design for improved compressor efficiency</span></li>
                     <li><i className="bi bi-check"></i> <span>Compatible with both R134a and R1234yf refrigerants</span></li>
                   </ul>
-                </div>
-                
-                <div className="pt-3">
-                  <p className="small-text">Note: The above figures indicate the best conditions in individual cases and may differ according to the seal size, operating conditions, and specific application requirements. Please contact our technical support team for detailed specifications and compatibility information before use. Custom solutions are available for special applications.</p>
-                </div>
+                </div> */}
                 
                 <div className="pt-3">
                   <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
@@ -166,7 +162,10 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="section-title" data-aos="fade-up">Feature</h2>
+              <div className="section-title" data-aos="fade-up">
+                <h2>Product specification example</h2>
+                <p>Information about specification Product.</p>
+              </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
@@ -221,10 +220,9 @@ const ProjectDetails = () => {
       {/* Related Products */}
       <section id="related-products" className="related-products section">
         <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <h2 className="section-title" data-aos="fade-up">Related product</h2>
-            </div>
+          <div className="section-title" data-aos="fade-up">
+            <h2>Related Products</h2>
+            <p>Explore our other similar products</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
