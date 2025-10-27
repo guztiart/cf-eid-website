@@ -88,15 +88,15 @@ const Home = () => {
           <div className="row justify-content-between gy-4">
             <div className="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
               <div className="content">
-                <h3>Inovasi dan Keunggulan dalam Manufaktur Presisi.</h3>
-                <p>PT Eagle Industry Indonesia adalah bagian dari Eagle Industry Co., Ltd., Jepang, yang telah beroperasi selama puluhan tahun dalam menyediakan komponen berkualitas tinggi untuk berbagai industri. Kami mengutamakan teknologi canggih, keandalan produk, dan kepuasan pelanggan untuk mendukung kebutuhan pasar global.</p>
-                <p>Dengan fasilitas produksi modern di Indonesia, kami memastikan standar kualitas internasional dan pengiriman yang tepat waktu untuk memenuhi kebutuhan pelanggan kami di berbagai sektor.</p>
+                <h3>Innovation and Excellence in Precision Manufacturing.</h3>
+                <p>PT Eagle Industry Indonesia is part of Eagle Industry Co., Ltd., Japan, which has been operating for decades in providing high-quality components for various industries. We prioritize advanced technology, product reliability, and customer satisfaction to support global market needs.</p>
+                <p>With modern production facilities in Indonesia, we ensure international quality standards and timely delivery to meet the needs of our customers across various sectors.</p>
               </div>
             </div>
             <div className="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
               <form action="forms/quote.php" method="post" className="php-email-form">
-                <h3>Hubungi Kami</h3>
-                <p>Kirimkan pertanyaan Anda untuk informasi lebih lanjut tentang produk dan layanan kami.</p>
+                <h3>Contact Us</h3>
+                <p>Send your inquiries for more information about our products and services.</p>
                 <div className="row gy-3">
                   <div className="col-12">
                     <input type="text" name="name" className="form-control" placeholder="Name" required />
@@ -114,7 +114,7 @@ const Home = () => {
                     <div className="loading">Loading</div>
                     <div className="error-message"></div>
                     <div className="sent-message">Your quote request has been sent successfully. Thank you!</div>
-                    <button type="submit">Kirimkan</button>
+                    <button type="submit">Submit</button>
                   </div>
                 </div>
               </form>
@@ -205,8 +205,8 @@ const Home = () => {
       {/* Services Section */}
       <section id="services" className="services section light-background">
         <div className="container section-title" data-aos="fade-up">
-          <h2>Layanan Kami</h2>
-          <p>Kami menyediakan solusi lengkap untuk kebutuhan komponen presisi Anda.</p>
+          <h2>Our Services</h2>
+          <p>We provide comprehensive solutions for your precision component needs.</p>
         </div>
         <div className="container">
           <div className="row gy-4">
@@ -215,8 +215,8 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-mountain-city"></i>
                 </div>
-                <h3>Manufaktur Kustom</h3>
-                <p>Kami menawarkan solusi manufaktur kustom untuk memenuhi kebutuhan spesifik pelanggan di berbagai industri.</p>
+                <h3>Custom Manufacturing</h3>
+                <p>We offer custom manufacturing solutions to meet specific customer needs across various industries.</p>
                 <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -225,8 +225,8 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-arrow-up-from-ground-water"></i>
                 </div>
-                <h3>Dukungan Teknis</h3>
-                <p>Tim ahli kami memberikan dukungan teknis untuk memastikan performa optimal dari produk kami.</p>
+                <h3>Technical Support</h3>
+                <p>Our expert team provides technical support to ensure optimal performance of our products.</p>
                 <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -235,8 +235,8 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-compass-drafting"></i>
                 </div>
-                <h3>Layanan Purna Jual</h3>
-                <p>Kami menyediakan layanan purna jual yang andal untuk menjamin kepuasan pelanggan.</p>
+                <h3>After-Sales Service</h3>
+                <p>We provide reliable after-sales service to ensure customer satisfaction.</p>
                 <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -245,8 +245,8 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-trowel-bricks"></i>
                 </div>
-                <h3>Asperiores Commodit</h3>
-                <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+                <h3>Quality Assurance</h3>
+                <p>Our rigorous quality control processes ensure that all products meet international standards and customer specifications.</p>
                 <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -255,8 +255,8 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-helmet-safety"></i>
                 </div>
-                <h3>Velit Doloremque</h3>
-                <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+                <h3>Research & Development</h3>
+                <p>Our R&D team continuously innovates to develop advanced sealing solutions that address evolving industry challenges.</p>
                 <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -265,8 +265,8 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-arrow-up-from-ground-water"></i>
                 </div>
-                <h3>Dolori Architecto</h3>
-                <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+                <h3>Global Supply Chain</h3>
+                <p>We maintain an efficient global supply network to ensure timely delivery of products to customers worldwide.</p>
                 <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -348,13 +348,12 @@ const Home = () => {
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
                   <h3>Mechanical Seal</h3>
                   <p className="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                    High-performance mechanical seals designed for demanding industrial applications.
                   </p>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Engineered for superior durability and extended service life</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Suitable for high-pressure, high-temperature environments</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Available in various materials to match specific application requirements</span></li>
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
@@ -367,14 +366,13 @@ const Home = () => {
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
                   <h3>Floating Seal</h3>
                   <p className="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                    Precision floating seals for heavy-duty applications in harsh environments.
                   </p>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Excellent resistance to wear and extreme operating conditions</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Self-lubricating design for enhanced performance and longevity</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Ideal for construction, mining, and agricultural equipment</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Customizable configurations to meet specific application needs</span></li>
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
@@ -387,13 +385,12 @@ const Home = () => {
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
                   <h3>Lip Seal</h3>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Provident mollitia neque rerum asperiores dolores quos qui a. Ipsum neque dolor voluptate nisi sed.</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>High-quality sealing for rotary and reciprocating applications</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Available in various materials including NBR, FKM, and PTFE</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Designed to prevent fluid leakage and contamination</span></li>
                   </ul>
                   <p className="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                    Reliable lip seals for automotive, industrial, and marine applications.
                   </p>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
@@ -406,13 +403,12 @@ const Home = () => {
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
                   <h3>Rudder</h3>
                   <p className="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                    magna aliqua.
+                    Advanced rudder seals for marine vessels ensuring optimal steering performance.
                   </p>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Engineered for maximum durability in marine environments</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Superior resistance to corrosion and seawater conditions</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Designed to maintain vessel maneuverability and safety</span></li>
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">

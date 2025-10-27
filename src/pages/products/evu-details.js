@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 
@@ -24,35 +24,61 @@ const ProjectDetails = () => {
     },
   });
 
+  // Load custom CSS
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
+    document.head.appendChild(link);
+    
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   return (
     <div className="project-details-page">
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Product Details</h1>
+          <h1>PRODUCTS</h1>
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/projects">Products</Link></li>
-              <li className="current">EH795 EH790 for Water Pump</li>
+              <li className="current">EVU Valve Stem Seal</li>
             </ol>
           </nav>
         </div>
       </div>
 
-      {/* Project Details Section */}
+      {/* Product Title and Navigation */}
+      <section className="product-header section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="product-title" data-aos="fade-up">EVU Valve Stem Seal</h2>
+              <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
+                <ul className="nav-list">
+                  <li className="nav-item"><Link to="/products?tag=automobile">Automobile</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=valve-stem-seal">Valve Stem Seal</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Details Section - Original Layout */}
       <section id="project-details" className="project-details section">
         <div className="container" data-aos="fade-up">
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/floating_seal.jpg`} alt="Product Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU.png`} alt="EVU Valve Stem Seal" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} alt="Product Image 2" />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evu copy.png`} alt="EVU Valve Stem Seal Detail" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -63,22 +89,25 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>EH795 EH790 for Water Pump</h2>
+                <h2>EVU Valve Stem Seal</h2>
                 <p>
-                   Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. 
-                   By its unitized design, EH795 supports easy installation into customer application.
+                  EVU valve stem seals are designed to provide excellent sealing performance for engine valve applications. 
+                  These seals prevent oil from entering the combustion chamber through the valve guide while allowing proper lubrication of the valve stem.
                 </p>
                 <p>
-                  These seals are suitable for high-speed rotation due to its simple and compact construction. 
-                  The materials of the seal face are Eagle Industry’s proprietary carbon components and ceramics which provides high resistance to heat, wear and corrosion. 
-                  These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. 
-                  These seals are also suitable for industrial pumps. EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.
+                  Manufactured with high-quality materials and precision engineering, EVU valve stem seals offer superior durability and reliability. 
+                  The seals are designed to withstand extreme temperature variations and harsh operating conditions in modern engines. 
+                  Eagle Industry's advanced manufacturing processes ensure consistent quality and performance across all EVU products.
+                </p>
+                <p>
+                  The EVU series features a compact design that allows for easy installation and replacement. 
+                  These seals are compatible with a wide range of engine applications and provide optimal sealing efficiency throughout their service life.
                 </p>
                 <div className="testimonial-item">
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
-                    The floating seals from Eagle Industry Indonesia have significantly improved our equipment's performance. 
-                    The quality and durability are exceptional.
+                    The EVU valve stem seals from Eagle Industry Indonesia have significantly reduced oil consumption in our engines. 
+                    The quality and durability are exceptional, providing reliable performance under demanding conditions.
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>
                   <div>
@@ -94,24 +123,13 @@ const ProjectDetails = () => {
               <div className="portfolio-info">
                 <h3>Product Information</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Mechanical Seals</span></li>
-                  <li><strong>Model</strong> <span>EH795</span></li>
-                  <li><strong>Material</strong> <span>High-grade Stainless Steel</span></li>
-                  <li><strong>Temperature Range</strong> <span>-40°C to 200°C</span></li>
-                  <li><strong>Pressure Rating</strong> <span>Up to 10 MPa</span></li>
-                  <li><strong>Applications</strong> <span>Water Pumps</span></li>
+                  <li><strong>Category</strong> <span>Valve Stem Seals</span></li>
+                  <li><strong>Model</strong> <span>EVU Series</span></li>
+                  <li><strong>Material</strong> <span>High-grade Fluoroelastomer</span></li>
+                  <li><strong>Temperature Range</strong> <span>-40°C to 250°C</span></li>
+                  <li><strong>Pressure Rating</strong> <span>Up to 5 MPa</span></li>
+                  <li><strong>Applications</strong> <span>Engine Valve Systems</span></li>
                 </ul>
-                
-                <div className="pt-3">
-                  <h3>Product Features</h3>
-                  <ul>
-                    <li><i className="bi bi-check"></i> <span>Self-lubricating design</span></li>
-                    <li><i className="bi bi-check"></i> <span>Low friction coefficient</span></li>
-                    <li><i className="bi bi-check"></i> <span>High wear resistance</span></li>
-                    <li><i className="bi bi-check"></i> <span>Easy installation</span></li>
-                    <li><i className="bi bi-check"></i> <span>Long service life</span></li>
-                  </ul>
-                </div>
                 
                 <div className="pt-3">
                   <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
@@ -122,7 +140,69 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Related Products Section */}
+      {/* Product Specifications */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Product specification example</h2>
+                <p>Information about specification Product.</p>
+              </div>
+              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
+                <table className="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <th style={{ width: '30%' }}>Material</th>
+                      <td>High-grade Fluoroelastomer</td>
+                    </tr>
+                    <tr>
+                      <th>Operating Temperature</th>
+                      <td>-40°C to 250°C</td>
+                    </tr>
+                    <tr>
+                      <th>Pressure Rating</th>
+                      <td>Up to 5 MPa</td>
+                    </tr>
+                    <tr>
+                      <th>Applications</th>
+                      <td>Engine Valve Systems</td>
+                    </tr>
+                    <tr>
+                      <th>Features</th>
+                      <td>
+                        <p>Excellent oil resistance</p>
+                        <p>Superior heat resistance</p>
+                        <p>Precise dimensional control</p>
+                        <p>Enhanced durability</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className="note-text">Note: The above figures indicate the best conditions in individual cases and may differ according to the seal size. Contact us before use.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section - Elegant and Modern */}
+      <section className="contact-section section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="contact-box" data-aos="fade-up">
+                <Link to="/contact" className="contact-link">
+                  <h3 className="contact-title">Contact Us</h3>
+                  <p className="contact-text">Please contact us via our email form</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Products */}
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
@@ -131,41 +211,76 @@ const ProjectDetails = () => {
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Compressor Lip Seal</h4>
-                  <p>High-quality lip seals for AC compressors</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} title="Product 1" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/products/evr-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR.png`} className="card-image" alt="EVR Mechanical Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>Mechanical Seal<br />EVR Series</span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Mechanical Seal</h4>
-                  <p>Durable mechanical seals for various applications</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} title="Product 2" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/products/evk2rt-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK.jpg`} className="card-image" alt="EVK Mechanical Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>Mechanical Seal<br />EVK Series</span>
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div className="portfolio-content h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="img-fluid" alt="" />
-                <div className="portfolio-info">
-                  <h4>Rudder Seal</h4>
-                  <p>Specialized seals for marine rudder applications</p>
-                  <a href={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} title="Product 3" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
-                  <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
-                </div>
+              <div className="product-card h-100">
+                <Link to="/products/lipSeal-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="AC Compressor Lip Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>Lip Seal<br />For A/C Compressor</span>
+                  </div>
+                </Link>
               </div>
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Bottom Breadcrumb */}
+      <section className="bottom-breadcrumb section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <nav className="breadcrumbs">
+                <ol>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/projects">Products</Link></li>
+                  <li className="current">EVU Valve Stem Seal</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Floating Contact Button - Adjusted Position */}
+      <div className="floating-contact-button">
+        <Link to="/contact" className="contact-button">
+          <div className="contact-icon">
+            <i className="bi bi-envelope"></i>
+          </div>
+          <p className="contact-text">Contact</p>
+        </Link>
+      </div>
     </div>
   );
 };

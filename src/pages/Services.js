@@ -30,18 +30,18 @@ const Services = () => {
         <div className="container">
           <div className="row justify-content-around gy-4">
             <div className="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/Sustainability/skateHolder.png`} alt="Sustainability" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/Sustainability/skateHolder.png`} alt="Sustainability" style={{ height: 'auto', maxHeight: 'none', objectFit: 'contain', width: '100%' }} />
             </div>
             <div className="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
               <h3>Eagle Industry's Sustainability Vision</h3>
-              <p>At Eagle Industry Indonesia, we believe that sustainable business practices are essential for long-term success. Our philosophy is built on the foundation of creating value for society while minimizing environmental impact.</p>
-              <p>We strive to contribute to the realization of a sustainable society through our core business activities, developing innovative sealing solutions that prevent leaks, conserve energy, and protect the environment across various industries.</p>
+              <p>At Eagle Industry Indonesia, we believe that companies belong to not only their shareholders but also their employees and society. This philosophy has long permeated every aspect of the EKK Group's management since our establishment in 1996.</p>
+              <p>As part of Eagle Industry Co., Ltd., a global leader in sealing solutions, we contribute to environmental protection through our core business. Our mechanical seals prevent gases, oil, and other fluids from leaking machinery, directly helping to preserve the environment and prevent pollution.</p>
               <h4 className="mt-4">Our Core Principles:</h4>
               <ul>
-                <li><i className="bi bi-check-circle"></i> <span>Environmental protection through product innovation</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Social contribution and community engagement</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Economic sustainability and ethical governance</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Transparency and accountability in all operations</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>Environmental protection through leak prevention technology</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>Building trust through dialogue with all stakeholders</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>Creating fair profits that support perpetual growth</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>Developing products that resolve environmental regulatory issues</span></li>
               </ul>
             </div>
           </div>
@@ -54,25 +54,25 @@ const Services = () => {
           <div className="row justify-content-around gy-4">
             <div className="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
               <h3>Environmental Initiatives</h3>
-              <p>We are committed to protecting the environment through comprehensive initiatives that reduce our ecological footprint while delivering value to our customers.</p>
+              <p>At Eagle Industry Indonesia, we conduct comprehensive environmental preservation activities in accordance with our environmental policy. As part of the EKK Group's ISO 14001-certified environmental management system, we implement specific initiatives to minimize our ecological impact.</p>
               <div className="icon-box">
                 <i className="bi bi-droplet"></i>
-                <h4>Water Conservation</h4>
-                <p>Implementing water recycling systems and reducing water consumption in our manufacturing processes through advanced filtration and treatment technologies.</p>
+                <h4>Water Resource Management</h4>
+                <p>Our production sites monitor water quality and soil conditions in compliance with environmental laws. We reduce water consumption by recirculating cooling water and converting cleaning processes to solvent-based methods that don't require water usage.</p>
               </div>
               <div className="icon-box">
                 <i className="bi bi-lightning-charge"></i>
-                <h4>Energy Efficiency</h4>
-                <p>Investing in energy-efficient equipment and renewable energy sources to reduce CO2 emissions and minimize our carbon footprint.</p>
+                <h4>Global Warming Mitigation</h4>
+                <p>We contribute to carbon neutrality goals by developing energy-conserving products, adopting renewable energy, replacing equipment with energy-efficient models, switching to LED lighting, and sealing compressed air leaks in our production processes.</p>
               </div>
               <div className="icon-box">
                 <i className="bi bi-recycle"></i>
-                <h4>Waste Reduction</h4>
-                <p>Implementing comprehensive waste management programs, including recycling, reuse, and responsible disposal of materials.</p>
+                <h4>Industrial Waste Reduction</h4>
+                <p>We work to achieve a recycling ratio of at least 98% by analyzing waste in detail to determine recyclability. Our facilities implement comprehensive waste management programs including recycling and reuse of materials.</p>
               </div>
             </div>
             <div className="features-image col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/Sustainability/skateHolder.png`} alt="Environmental Initiatives" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/Sustainability/skateHolder.png`} alt="Environmental Initiatives" style={{ height: 'auto', maxHeight: 'none', objectFit: 'contain', width: '100%' }} />
             </div>
           </div>
         </div>
@@ -93,10 +93,10 @@ const Services = () => {
                 </div>
                 <h3>Employee Development</h3>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Comprehensive training and skill development programs</span></li>
-                  <li><i className="bi bi-check"></i><span>Safe and healthy working environment</span></li>
-                  <li><i className="bi bi-check"></i><span>Equal opportunity and diversity promotion</span></li>
-                  <li><i className="bi bi-check"></i><span>Work-life balance initiatives</span></li>
+                  <li><i className="bi bi-check"></i><span>Annual environmental mindset training for all employees</span></li>
+                  <li><i className="bi bi-check"></i><span>Occupational health and safety management systems</span></li>
+                  <li><i className="bi bi-check"></i><span>Human rights protection and promotion initiatives</span></li>
+                  <li><i className="bi bi-check"></i><span>Environmental performance disclosure on intranet portals</span></li>
                 </ul>
               </div>
             </div>
@@ -107,10 +107,10 @@ const Services = () => {
                 </div>
                 <h3>Supply Chain Responsibility</h3>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Ethical sourcing and procurement practices</span></li>
+                  <li><i className="bi bi-check"></i><span>Ethical sourcing and procurement policies</span></li>
                   <li><i className="bi bi-check"></i><span>Supplier engagement and development programs</span></li>
-                  <li><i className="bi bi-check"></i><span>Human rights due diligence</span></li>
-                  <li><i className="bi bi-check"></i><span>Quality assurance and product safety</span></li>
+                  <li><i className="bi bi-check"></i><span>Human rights due diligence throughout supply chain</span></li>
+                  <li><i className="bi bi-check"></i><span>Quality assurance and product responsibility</span></li>
                 </ul>
               </div>
             </div>
@@ -121,10 +121,10 @@ const Services = () => {
                 </div>
                 <h3>Community Engagement</h3>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Educational support and scholarship programs</span></li>
+                  <li><i className="bi bi-check"></i><span>Social investment and philanthropy programs</span></li>
                   <li><i className="bi bi-check"></i><span>Local community development initiatives</span></li>
-                  <li><i className="bi bi-check"></i><span>Disaster relief and emergency response</span></li>
-                  <li><i className="bi bi-check"></i><span>Volunteer activities and employee engagement</span></li>
+                  <li><i className="bi bi-check"></i><span>Biodiversity conservation and invasive species management</span></li>
+                  <li><i className="bi bi-check"></i><span>Endorsement of Keidanren's Biodiversity Declaration</span></li>
                 </ul>
               </div>
             </div>
@@ -146,12 +146,12 @@ const Services = () => {
                   <i className="bi bi-tree"></i>
                 </div>
                 <h3>Environmental Management</h3>
-                <p>We implement comprehensive environmental management systems to minimize our ecological impact and promote sustainable resource use.</p>
+                <p>The EKK Group conducts environmental preservation activities in accordance with our environmental policy. All subsidiaries in Japan are ISO 14001-certified and participate in an integrated environmental management system.</p>
                 <ul>
                   <li><i className="bi bi-check"></i><span>ISO 14001 environmental management certification</span></li>
-                  <li><i className="bi bi-check"></i><span>Climate change mitigation and adaptation strategies</span></li>
-                  <li><i className="bi bi-check"></i><span>Biodiversity conservation initiatives</span></li>
-                  <li><i className="bi bi-check"></i><span>Pollution prevention and control measures</span></li>
+                  <li><i className="bi bi-check"></i><span>Annual identification of environmental laws and regulations</span></li>
+                  <li><i className="bi bi-check"></i><span>Environmental internal audits and patrols</span></li>
+                  <li><i className="bi bi-check"></i><span>Emergency response procedures for environmental accidents</span></li>
                 </ul>
               </div>
             </div>
@@ -161,12 +161,12 @@ const Services = () => {
                   <i className="bi bi-heart"></i>
                 </div>
                 <h3>Social Contribution</h3>
-                <p>We prioritize social value creation through responsible business practices and meaningful community engagement.</p>
+                <p>We prioritize social value creation through responsible business practices and meaningful community engagement, following the EKK Human Rights Policy and Occupational Health and Safety Policies.</p>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Occupational health and safety management</span></li>
-                  <li><i className="bi bi-check"></i><span>Human rights protection and promotion</span></li>
+                  <li><i className="bi bi-check"></i><span>Occupational health and safety management systems</span></li>
+                  <li><i className="bi bi-check"></i><span>Human rights protection and promotion initiatives</span></li>
                   <li><i className="bi bi-check"></i><span>Customer satisfaction and product responsibility</span></li>
-                  <li><i className="bi bi-check"></i><span>Social investment and philanthropy</span></li>
+                  <li><i className="bi bi-check"></i><span>Social investment and philanthropy activities</span></li>
                 </ul>
               </div>
             </div>
@@ -176,12 +176,12 @@ const Services = () => {
                   <i className="bi bi-shield-check"></i>
                 </div>
                 <h3>Corporate Governance</h3>
-                <p>We maintain high standards of corporate governance to ensure transparency, accountability, and ethical business conduct.</p>
+                <p>We maintain high standards of corporate governance to ensure transparency, accountability, and ethical business conduct through our Basic Stance on Corporate Governance.</p>
                 <ul>
                   <li><i className="bi bi-check"></i><span>Board of Directors oversight and structure</span></li>
-                  <li><i className="bi bi-check"></i><span>Risk management and compliance systems</span></li>
-                  <li><i className="bi bi-check"></i><span>Information disclosure and transparency</span></li>
-                  <li><i className="bi bi-check"></i><span>Ethical standards and corporate culture</span></li>
+                  <li><i className="bi bi-check"></i><span>Compliance and Risk Management systems</span></li>
+                  <li><i className="bi bi-check"></i><span>Information security policy implementation</span></li>
+                  <li><i className="bi bi-check"></i><span>Anti-Corruption and Bribery Policy adherence</span></li>
                 </ul>
               </div>
             </div>
@@ -194,25 +194,25 @@ const Services = () => {
         <div className="container">
           <div className="row justify-content-around gy-4">
             <div className="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/Sustainability/skateHolder.png`} alt="Sustainability Goals" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/Sustainability/skateHolder.png`} alt="Sustainability Goals" style={{ height: 'auto', maxHeight: 'none', objectFit: 'contain', width: '100%' }} />
             </div>
             <div className="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
               <h3>Our Sustainability Goals</h3>
-              <p>We have established ambitious targets to guide our sustainability journey and measure our progress toward creating a better future.</p>
+              <p>We have established specific targets aligned with the Japanese government's carbon neutrality goal and our commitment to environmental preservation.</p>
               <div className="icon-box">
                 <i className="bi bi-bullseye"></i>
-                <h4>Carbon Neutrality by 2050</h4>
-                <p>Achieving carbon neutrality across our operations and value chain through energy efficiency, renewable energy, and innovative technologies.</p>
+                <h4>Carbon Neutrality Contribution</h4>
+                <p>Contributing to Japan's carbon neutrality target through development of environmentally friendly products that conserve energy and reduce environmental burden, while adopting renewable energy in our production processes.</p>
               </div>
               <div className="icon-box">
                 <i className="bi bi-water"></i>
-                <h4>Water Resource Management</h4>
-                <p>Reducing water consumption by 30% and implementing water recycling systems in all our manufacturing facilities by 2030.</p>
+                <h4>Water Resource Conservation</h4>
+                <p>Continuously reducing water consumption through recirculation of cooling water and conversion to waterless cleaning processes in our manufacturing facilities.</p>
               </div>
               <div className="icon-box">
                 <i className="bi bi-arrow-up-circle"></i>
-                <h4>Circular Economy</h4>
-                <p>Achieving 95% waste recycling rate and increasing the use of recycled materials in our products to 50% by 2030.</p>
+                <h4>Waste Recycling Excellence</h4>
+                <p>Maintaining our target of achieving a recycling ratio of at least 98% for industrial waste through detailed analysis and implementation of innovative recycling solutions.</p>
               </div>
             </div>
           </div>
