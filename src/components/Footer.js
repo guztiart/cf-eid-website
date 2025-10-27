@@ -17,62 +17,63 @@ const Footer = () => {
               <p><strong>Email:</strong> <span>riyanda.senjaya@ekkeagle.com</span></p>
             </div>
             <div className="social-links d-flex mt-4 justify-content-center">
-              <a href=""><i className="bi bi-twitter-x"></i></a>
               <a href="https://www.facebook.com/EKKEagleIndustry/" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/ekk_eagle_industry_official/" target="_blank" rel="noopener noreferrer"><i className="bi bi-instagram"></i></a>
-              <a href=""><i className="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/company/eagle-industry-co-ltd/" target="_blank" rel="noopener noreferrer"><i className="bi bi-linkedin"></i></a>
+              <a href="https://www.ekkeagle.com/en/" target="_blank" rel="noopener noreferrer"><i className="bi bi-globe"></i></a>
             </div>
           </div>
 
           <div className="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Quick Links</h4>
             <ul>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About us</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/services">Sustainability</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
 
           <div className="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
+            <h4>Product Categories</h4>
             <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
+              <li><Link to="/products/eh795-details">Water Pump Seals</Link></li>
+              <li><Link to="/products/lipSeal-details">Lip Seals</Link></li>
+              <li><Link to="/products/rudderSeal-details">Stern Tube Seals</Link></li>
+              <li><Link to="/products/floatingSeal-details">Floating Seals</Link></li>
+              <li><Link to="/products">All Products</Link></li>
             </ul>
           </div>
 
           <div className="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
+            <h4>Marine Solutions</h4>
             <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
+              <li><Link to="/products/evk2rv-details">Water Lubricated Seals</Link></li>
+              <li><Link to="/products/evr-details">Water Lubricated Bearings</Link></li>
+              <li><Link to="/products/evu-details">Poly-Urethane Bearings</Link></li>
+              <li><Link to="/products/mas-details">Marine Ace Seals</Link></li>
+              <li><Link to="/products/serviceEngineer-details">Service Engineering</Link></li>
             </ul>
           </div>
 
           <div className="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
+            <h4>Automotive Solutions</h4>
             <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
+              <li><Link to="/products/airCutValve-details">Air Cut Valves</Link></li>
+              <li><Link to="/products/reedValve-details">Reed Valves</Link></li>
+              <li><Link to="/products/oRing-details">SUPERIOR O-Rings</Link></li>
+              <li><Link to="/products/bladder-details">Bladder Accumulators</Link></li>
+              <li><Link to="/contact">Custom Solutions</Link></li>
             </ul>
           </div>
         </div>
       </div>
 
       <div className="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong className="px-1 sitename">PT. Eagle Industry Indonesia</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>2024</span> <strong className="px-1 sitename">PT. Eagle Industry Indonesia</strong> <span>All Rights Reserved</span></p>
         <div className="credits">
+          A subsidiary of <a href="https://www.eagle-e.co.jp/english/" target="_blank" rel="noopener noreferrer">Eagle Industry Co., Ltd.</a> |
           Designed by <a href="https://www.instagram.com/riyy2410/" target="_blank" rel="noopener noreferrer">Riyanda Aditiya Senjaya</a>
         </div>
       </div>
