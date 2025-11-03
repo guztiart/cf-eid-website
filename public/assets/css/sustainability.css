@@ -1,0 +1,494 @@
+/* Sustainability Pages Custom Styles */
+
+/* Content Section Styles */
+.sustainability-content {
+  padding: 60px 0;
+}
+
+.content-wrapper {
+  margin-bottom: 40px;
+}
+
+.content-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.content-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.content-subtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.content-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  border-radius: 2px;
+}
+
+.content-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.content-body p {
+  margin-bottom: 20px;
+}
+
+/* Principles Grid */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.principle-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.principle-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.principle-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.principle-icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.principle-text h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.principle-text p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Initiatives Grid */
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.initiative-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.initiative-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.initiative-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.initiative-icon i {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.initiative-content h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.initiative-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.initiative-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.initiative-content ul li {
+  padding: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.initiative-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* TCFD Grid */
+.tcfd-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.tcfd-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.tcfd-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.tcfd-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tcfd-icon i {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.tcfd-content h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.tcfd-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.tcfd-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tcfd-content ul li {
+  padding: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.tcfd-content ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Quote Section */
+.quote-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 40px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.sustainability-quote {
+  border-left: 4px solid #3498db;
+  padding-left: 30px;
+  margin: 0;
+}
+
+.sustainability-quote p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.sustainability-quote cite {
+  font-size: 1rem;
+  color: #7f8c8d;
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Sustainability Pillars */
+.sustainability-pillars {
+  padding: 60px 0;
+  background: #f8f9fa;
+}
+
+.pillars-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.pillar-item {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pillar-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pillar-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
+}
+
+.pillar-icon i {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.pillar-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.pillar-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ESG Initiatives Cards */
+.esg-initiatives .esg-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.esg-initiatives .esg-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.esg-initiatives .esg-card:nth-child(1) {
+  border-top-color: #27ae60;
+}
+
+.esg-initiatives .esg-card:nth-child(2) {
+  border-top-color: #e74c3c;
+}
+
+.esg-initiatives .esg-card:nth-child(3) {
+  border-top-color: #3498db;
+}
+
+.esg-initiatives .esg-card:nth-child(4) {
+  border-top-color: #f39c12;
+}
+
+.esg-initiatives .esg-card .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.esg-initiatives .esg-card:nth-child(1) .icon {
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+}
+
+.esg-initiatives .esg-card:nth-child(2) .icon {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+.esg-initiatives .esg-card:nth-child(3) .icon {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.esg-initiatives .esg-card:nth-child(4) .icon {
+  background: rgba(243, 156, 18, 0.1);
+  color: #f39c12;
+}
+
+.esg-initiatives .esg-card .icon i {
+  font-size: 1.8rem;
+}
+
+.esg-initiatives .esg-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.esg-initiatives .esg-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.esg-initiatives .esg-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.esg-initiatives .esg-card ul li {
+  padding: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.esg-initiatives .esg-card ul li i {
+  color: #27ae60;
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-title {
+    font-size: 2rem;
+  }
+  
+  .content-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pillars-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .quote-section {
+    padding: 25px;
+  }
+  
+  .sustainability-quote p {
+    font-size: 1.1rem;
+  }
+  
+  .pillar-item {
+    padding: 30px 20px;
+  }
+  
+  .pillar-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .pillar-icon i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .principle-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .principle-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}

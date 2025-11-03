@@ -15,7 +15,7 @@ const ServiceDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">Home</Link></li>
-              <li><Link to="/services">Sustainability</Link></li>
+              <li><Link to="/sustainability">Sustainability</Link></li>
               <li className="current">Service Details</li>
             </ol>
           </nav>

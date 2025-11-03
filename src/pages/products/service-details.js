@@ -99,6 +99,7 @@ const ProjectDetails = () => {
                   <li><strong>Material</strong> <span>High-grade Stainless Steel</span></li>
                   <li><strong>Temperature Range</strong> <span>-40°C to 200°C</span></li>
                   <li><strong>Pressure Rating</strong> <span>Up to 10 MPa</span></li>
+                  
                   <li><strong>Applications</strong> <span>Water Pumps</span></li>
                 </ul>
                 

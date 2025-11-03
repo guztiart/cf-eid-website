@@ -11,10 +11,15 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
 import Blog from './pages/Blog';
-import Services from './pages/Services';
+import Sustainability from './pages/Sustainability';
 import ProjectDetails from './pages/ProjectDetails';
 import BlogDetails from './pages/BlogDetails';
 import ServiceDetails from './pages/ServiceDetails';
+import ConceptOfSustainability from './pages/sustainability/ConceptOfSustainability';
+import EnvironmentalInitiatives from './pages/sustainability/EnvironmentalInitiatives';
+import ClimateChangeDisclosure from './pages/sustainability/ClimateChangeDisclosure';
+import OccupationalHealthSafety from './pages/sustainability/OccupationalHealthSafety';
+import SocialMediaContribution from './pages/sustainability/SocialMediaContribution';
 import EH795Details from './pages/products/eh795-details';
 import AirCutValveDetails from './pages/products/airCutValve-details';
 import LipSealDetails from './pages/products/lipSeal-details';
@@ -42,7 +47,12 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/products" element={<Products />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/services" element={<Services />} />
+            <Route path="/sustainability" element={<Sustainability />} />
+            <Route path="/sustainability/concept-of-sustainability" element={<ConceptOfSustainability />} />
+            <Route path="/sustainability/environmental-initiatives" element={<EnvironmentalInitiatives />} />
+            <Route path="/sustainability/climate-change-disclosure" element={<ClimateChangeDisclosure />} />
+            <Route path="/sustainability/occupational-health-safety" element={<OccupationalHealthSafety />} />
+            <Route path="/sustainability/social-media-contribution" element={<SocialMediaContribution />} />
             <Route path="/project-details" element={<ProjectDetails />} />
             <Route path="/blog-details" element={<BlogDetails />} />
             <Route path="/service-details" element={<ServiceDetails />} />
