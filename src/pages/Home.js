@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAOS, usePureCounter, useIsotope, useGLightbox } from '../hooks/useExternalLibs';
 
 const Home = () => {
@@ -8,6 +8,31 @@ const Home = () => {
   usePureCounter();
   useIsotope();
   useGLightbox();
+  
+  // Get navigate function for programmatic navigation
+  const navigate = useNavigate();
+  
+  // Load custom CSS for button styling
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
+    document.head.appendChild(link);
+    
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+  
+  // Handle category click
+  const handleCategoryClick = (category) => {
+    navigate('/products', { state: { filter: 'category', value: category } });
+  };
+  
+  // Handle industry click
+  const handleIndustryClick = (industry) => {
+    navigate('/products', { state: { filter: 'industry', value: industry } });
+  };
 
   // Handle tab navigation
   React.useEffect(() => {
@@ -149,45 +174,430 @@ const Home = () => {
           <div className="p-top-product-tab">
             <div className="p-top-product-tab__box js-tab-box" id="tab-top-category" style={{}}>
               <ul className="p-top-list aos-init" data-aos="fade-up">
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/mechanical-seals">Mechanical Seals</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/accumulator">Accumulators</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/actuators">Actuators</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/gas-seals">Gas Seals</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/aerospace-seal">Aerospace Seal</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/bearings">Bearings</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/magnetic-fluid-vacuum-seal">Magnetic Fluid Vacuum Seal</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/segmented-seal">Segmented Seal</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/stern-tube-seals">Stern tube seals</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/tanks">Tanks</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/joint-joint">Coupling, Joint</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/packing-gasket">Packing, Gasket</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/valves">Valves</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/filters">Filters</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/brush-seal">Brush Seal</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/floating-seal">Floating Seal</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/bellows-thin-plate-metal-processed">Metal bellows, Thin-Walled Metal parts</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/supply-systems">Supply Systems</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/hydraulic-energy-regeneration-device">Hydraulic Regeneration System</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/lip-seal">Lip Seal</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/flow-meter">Flow meter</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/glidex">GlideX</Link></li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('mechanical-seals');
+                    }}
+                  >
+                    Mechanical Seals
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('accumulator');
+                    }}
+                  >
+                    Accumulators
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('actuators');
+                    }}
+                  >
+                    Actuators
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('gas-seals');
+                    }}
+                  >
+                    Gas Seals
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('aerospace-seal');
+                    }}
+                  >
+                    Aerospace Seal
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('bearings');
+                    }}
+                  >
+                    Bearings
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('magnetic-fluid-vacuum-seal');
+                    }}
+                  >
+                    Magnetic Fluid Vacuum Seal
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('segmented-seal');
+                    }}
+                  >
+                    Segmented Seal
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('stern-tube-seals');
+                    }}
+                  >
+                    Stern tube seals
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('tanks');
+                    }}
+                  >
+                    Tanks
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('joint-joint');
+                    }}
+                  >
+                    Coupling, Joint
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('packing-gasket');
+                    }}
+                  >
+                    Packing, Gasket
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('valves');
+                    }}
+                  >
+                    Valves
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('filters');
+                    }}
+                  >
+                    Filters
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('brush-seal');
+                    }}
+                  >
+                    Brush Seal
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('floating-seal');
+                    }}
+                  >
+                    Floating Seal
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('bellows-thin-plate-metal-processed');
+                    }}
+                  >
+                    Metal bellows, Thin-Walled Metal parts
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('supply-systems');
+                    }}
+                  >
+                    Supply Systems
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('hydraulic-energy-regeneration-device');
+                    }}
+                  >
+                    Hydraulic Regeneration System
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('lip-seal');
+                    }}
+                  >
+                    Lip Seal
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('flow-meter');
+                    }}
+                  >
+                    Flow meter
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('glidex');
+                    }}
+                  >
+                    GlideX
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="p-top-product-tab__box js-tab-box" id="tab-top-industry" style={{ display: 'none' }}>
               <ul className="p-top-list">
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/oil-gas">Oil & Gas</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/machinery">Construction, Agriculture, Transporter</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/automobile">Automobile</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/energy">Energy</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/aerospace">Aerospace</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/pulp-paper">Pulp & Paper</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/housing-equipment">Housing Equipment</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/food-beveragepharmaceutical">Food & Beverage, Pharmaceutical</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/water-irrigation">Water, Irrigation</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/refinery-petrochemical">Refinery, Petrochemical</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/marine">Marine</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/steel">Steel</Link></li>
-                <li className="p-top-list__item"><Link className="p-top-list__link" to="/products/semiconductor">Semiconductor</Link></li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('oil-gas');
+                    }}
+                  >
+                    Oil & Gas
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('machinery');
+                    }}
+                  >
+                    Construction, Agriculture, Transporter
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('automobile');
+                    }}
+                  >
+                    Automobile
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('energy');
+                    }}
+                  >
+                    Energy
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('aerospace');
+                    }}
+                  >
+                    Aerospace
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('pulp-paper');
+                    }}
+                  >
+                    Pulp & Paper
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('housing-equipment');
+                    }}
+                  >
+                    Housing Equipment
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('food-beveragepharmaceutical');
+                    }}
+                  >
+                    Food & Beverage, Pharmaceutical
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('water-irrigation');
+                    }}
+                  >
+                    Water, Irrigation
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('refinery-petrochemical');
+                    }}
+                  >
+                    Refinery, Petrochemical
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('marine');
+                    }}
+                  >
+                    Marine
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('steel');
+                    }}
+                  >
+                    Steel
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleIndustryClick('semiconductor');
+                    }}
+                  >
+                    Semiconductor
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="p-top-product-tab__box js-tab-box" id="tab-top-keyword" style={{ display: 'none' }}>

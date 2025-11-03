@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { useAOS, useIsotope, useGLightbox } from '../hooks/useExternalLibs';
 
 const Products = () => {
@@ -7,6 +7,32 @@ const Products = () => {
   useAOS();
   useIsotope();
   useGLightbox();
+  
+  // Get location to access state passed from navigation
+  const location = useLocation();
+  const [filterInfo, setFilterInfo] = useState(null);
+  
+  // Check for filter parameters on component mount
+  useEffect(() => {
+    if (location.state && location.state.filter) {
+      setFilterInfo({
+        type: location.state.filter,
+        value: location.state.value
+      });
+    }
+  }, [location.state]);
+  
+  // Load custom CSS for filter info and button styling
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
+    document.head.appendChild(link);
+    
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
 
   return (
     <div className="projects-page">
@@ -27,7 +53,14 @@ const Products = () => {
       <section id="products" className="products section">
         <div className="container section-title" data-aos="fade-up">
           <h2>Our Products</h2>
-          <p>Explore our range of high-quality sealing solutions and precision components designed for automotive, marine, aerospace, and general industry applications.</p>
+          {filterInfo && (
+            <p className="filter-info">
+              Showing products for: <strong>{filterInfo.type === 'category' ? 'Category' : 'Industry'}</strong> - <strong>{filterInfo.value}</strong>
+            </p>
+          )}
+          {!filterInfo && (
+            <p>Explore our range of high-quality sealing solutions and precision components designed for automotive, marine, aerospace, and general industry applications.</p>
+          )}
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4">
