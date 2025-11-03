@@ -451,6 +451,24 @@ body {
   color: #0060c9 !important;
 }
 
+/* ABOUT */
+.our-story p {
+  text-align: justify;
+}
+
+.our-story ul li {
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.our-story ul li i {
+  font-size: 25px;
+}
+
+.management-message p {
+  text-align: justify;
+}
+
 /* Footer Enhancements */
 .footer {
   background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);

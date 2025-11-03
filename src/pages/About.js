@@ -127,8 +127,8 @@ const About = () => {
             <div className="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <img src={`${process.env.PUBLIC_URL}/assets/img/management/mrTsuru.jpg`} alt="Management" />
             </div>
-            <div className="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-              <h3>Management Message</h3>
+            <div className="col-lg-5 d-flex flex-column justify-content-center management-message" data-aos="fade-up" data-aos-delay="200">
+              <h3 className='text-start'>Management Message</h3>
               <p>Our company was originally formed as the mechanical seal division of NOK Corporation
               The division became independent and incorporated under the name of Nippon Sealol Co., Ltd. in 1964, the year of the Tokyo Olympic Games, and the company name was changed to the current Eagle Industry Co., Ltd. (EKK) in 1978.
 
@@ -150,8 +150,8 @@ const About = () => {
       <section id="alt-services-2" className="alt-services-2 section">
         <div className="container">
           <div className="row justify-content-around gy-4">
-            <div className="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-              <h3>Managing Director Message</h3>
+            <div className="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1 management-message" data-aos="fade-up" data-aos-delay="100">
+              <h3 className="text-start">Managing Director Message</h3>
               <p>PT Eagle Industry Indonesia was established in 1996 as part of Eagle Industry Co., Ltd.'s global expansion strategy. Located in EJIP Industrial Park, Cikarang, our facility represents Eagle Industry's commitment to the growing Southeast Asian market.
 
               Our Indonesian operations specialize in manufacturing high-precision mechanical seals, rubber bellows, and sealing components for automotive, industrial, and marine applications. We serve both domestic and international markets, with a focus on quality that meets Japanese manufacturing standards.
@@ -165,28 +165,28 @@ const About = () => {
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-easel flex-shrink-0"></i>
                   <div>
-                    <h4>Quality Excellence</h4>
+                    <h4 className="text-start">Quality Excellence</h4>
                     <p>Maintaining Japanese quality standards in all our manufacturing processes and products</p>
                   </div>
                 </div>
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-patch-check flex-shrink-0"></i>
                   <div>
-                    <h4>Technical Innovation</h4>
+                    <h4 className="text-start">Technical Innovation</h4>
                     <p>Continuously developing advanced sealing solutions for demanding applications</p>
                   </div>
                 </div>
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-brightness-high flex-shrink-0"></i>
                   <div>
-                    <h4>Customer Focus</h4>
+                    <h4 className="text-start">Customer Focus</h4>
                     <p>Building long-term partnerships through reliability and exceptional service</p>
                   </div>
                 </div>
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-brightness-high flex-shrink-0"></i>
                   <div>
-                    <h4>Sustainable Growth</h4>
+                    <h4 className="text-start">Sustainable Growth</h4>
                     <p>Contributing to environmental protection through efficient sealing technology</p>
                   </div>
                 </div>
