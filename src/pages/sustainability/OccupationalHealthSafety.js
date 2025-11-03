@@ -68,81 +68,53 @@ const OccupationalHealthSafety = () => {
               <div className="portfolio-description">
                 <h2>Occupational Health and Safety at Eagle Industry Indonesia</h2>
                 <p>
-                  At Eagle Industry Indonesia, we are committed to providing a safe and healthy working environment for all our employees. 
-                  Our Occupational Health and Safety (OHS) management system is designed to prevent work-related injuries and illnesses 
-                  while promoting overall employee well-being.
+                  The EKK Group always strives to build a work environment that supports the physical and mental well-being of employees.
+                  The principle of Safety underlies that safety is not only a pillar of the company, but also of individuals within the Group.
                 </p>
                 
-                <h3 className="mt-4">Our OHS Policy</h3>
+                <h3 className="mt-4">Our Health and Safety Management</h3>
                 <p>
-                  We prioritize the health and safety of our employees above all else. Our OHS policy guides our commitment to 
-                  continuous improvement in workplace safety, hazard prevention, and employee health promotion.
+                  Occupational safety is our top priority. The EKK Group manages OHS through a structured organization led directly by top management.
+                  By implementing the international standard ISO 45001:2018 (Occupational Health and Safety), we ensure that all operational activities
+                  run safely, healthily, and sustainably.
                 </p>
                 
-                <h3 className="mt-4">Key OHS Initiatives</h3>
+                <h3 className="mt-4">EKK Occupational Health and Safety Policies</h3>
                 
                 <div className="icon-box mt-4">
                   <i className="bi bi-shield-check"></i>
-                  <h4>Safety Management System</h4>
-                  <p>We implement a comprehensive safety management system that identifies, assesses, and controls workplace hazards. 
-                  Our system is aligned with international standards and local regulations to ensure the highest level of protection for our employees.</p>
-                  <ul>
-                    <li>Regular risk assessments and hazard identification</li>
-                    <li>Safety procedures and work instructions</li>
-                    <li>Incident reporting and investigation processes</li>
-                    <li>Emergency response preparedness</li>
-                  </ul>
+                  <h4>Basic Group Safety Principle</h4>
+                  <p>Safety is not only fundamental for management that respects human dignity, but also the personal desire and mission of all Group employees.</p>
                 </div>
                 
                 <div className="icon-box mt-4">
                   <i className="bi bi-heart-pulse"></i>
-                  <h4>Health Promotion Programs</h4>
-                  <p>We promote employee health through various wellness initiatives, regular health check-ups, and ergonomic improvements 
-                  in the workplace. Our programs focus on both physical and mental well-being.</p>
-                  <ul>
-                    <li>Annual health examinations for all employees</li>
-                    <li>Ergonomic workplace assessments and improvements</li>
-                    <li>Mental health support and counseling services</li>
-                    <li>Health and wellness education programs</li>
-                  </ul>
+                  <h4>Basic Concept</h4>
+                  <p>Based on the Group's Basic Safety Principle, the EKK Group develops human resources who are healthy physically and mentally.
+                  At the same time, improving the OHS management system and involving relevant parties to create a comfortable, safe, and motivating work environment.</p>
                 </div>
                 
                 <div className="icon-box mt-4">
                   <i className="bi bi-book"></i>
-                  <h4>Safety Training and Education</h4>
-                  <p>We provide comprehensive safety training to all employees, from induction programs for new hires to specialized 
-                  training for specific roles. Our training ensures that everyone has the knowledge and skills to work safely.</p>
-                  <ul>
-                    <li>Safety induction for all new employees</li>
-                    <li>Job-specific safety training programs</li>
-                    <li>Regular safety refresher courses</li>
-                    <li>Emergency response training and drills</li>
-                  </ul>
-                </div>
-                
-                <div className="icon-box mt-4">
-                  <i className="bi bi-people"></i>
-                  <h4>Employee Engagement</h4>
-                  <p>We actively involve employees in our OHS programs through safety committees, suggestion systems, and regular 
-                  communication. Employee participation is essential for identifying hazards and improving safety performance.</p>
-                  <ul>
-                    <li>Safety committees with employee representation</li>
-                    <li>Safety suggestion and recognition programs</li>
-                    <li>Regular safety meetings and communication</li>
-                    <li>Employee involvement in safety inspections</li>
-                  </ul>
+                  <h4>Activity Policy</h4>
+                  <ol>
+                    <li>Properly identify hazards related to business activities, assess risks, and control hazards by considering the hierarchy of controls to reduce risks with the participation and cooperation of all employees.</li>
+                    <li>Establish occupational health and safety targets and pursue better performance through continuous improvement.</li>
+                    <li>Comply with applicable laws and regulations as well as other requirements.</li>
+                    <li>Value active discussions in the workplace, recognizing that good communication is an integral part of occupational health and safety.</li>
+                    <li>Provide necessary education and training to ensure occupational health and safety while increasing employee awareness of the importance of health and safety.</li>
+                  </ol>
                 </div>
                 
                 <div className="testimonial-item mt-4">
                   <p>
                     <i className="bi bi-quote quote-icon-left"></i>
-                    The health and safety of our employees is our top priority. We are committed to creating a workplace where 
-                    everyone can work safely and return home healthy every day.
+                    Safety is not only fundamental for management that respects human dignity, but also the personal desire and mission of all Group employees.
                     <i className="bi bi-quote quote-icon-right"></i>
                   </p>
                   <div>
                     <img src={`${process.env.PUBLIC_URL}/assets/img/management/mrTsuru.webp`} className="testimonial-img" alt="" />
-                    <h3>HR & Safety Department</h3>
+                    <h3>EKK Group Safety Policy</h3>
                     <h4>Eagle Industry Indonesia</h4>
                   </div>
                 </div>
@@ -223,69 +195,223 @@ const OccupationalHealthSafety = () => {
         </div>
       </section>
 
-      {/* OHS Programs */}
+      {/* Safety Activities */}
       <section className="product-specifications section">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Specialized OHS Programs</h2>
-                <p>Targeted initiatives for specific workplace safety aspects</p>
+                <h2>Safety Activities</h2>
+                <p>Our commitment to safety through various programs and initiatives</p>
               </div>
-              <div className="row gy-4" data-aos="fade-up" data-aos-delay="100">
-                <div className="col-md-6">
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h4 className="card-title"><i className="bi bi-exclamation-triangle text-warning me-2"></i>Hazard Prevention</h4>
-                      <p className="card-text">Proactive identification and control of workplace hazards through regular assessments, engineering controls, and safe work procedures.</p>
-                      <ul className="card-text">
-                        <li>Risk assessment methodology</li>
-                        <li>Hierarchy of controls implementation</li>
-                        <li>Safe work procedure development</li>
-                        <li>Regular workplace inspections</li>
+              
+              {/* Training Activity */}
+              <div className="activity-item mb-5" data-aos="fade-up" data-aos-delay="100">
+                <div className="row align-items-center">
+                  <div className="col-lg-6">
+                    <div className="activity-content">
+                      <h3 className="activity-title"><i className="bi bi-mortarboard text-primary me-2"></i>Training</h3>
+                      <p className="activity-description">
+                        Training with topics on B3 Information System and Environmental Aspect Identification in the Workplace is routinely conducted every year to maintain understanding and increase employee awareness. These training sessions are designed to ensure all employees are equipped with the necessary knowledge to identify and handle hazardous materials safely.
+                      </p>
+                      <ul className="activity-highlights">
+                        <li>Annual B3 (Hazardous Materials) Information System training</li>
+                        <li>Environmental Aspect Identification in Workplace sessions</li>
+                        <li>Continuous education to maintain safety awareness</li>
+                        <li>Practical demonstrations and hands-on exercises</li>
                       </ul>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h4 className="card-title"><i className="bi bi-hospital text-danger me-2"></i>Emergency Preparedness</h4>
-                      <p className="card-text">Comprehensive emergency response planning and preparedness to ensure effective response to workplace incidents and emergencies.</p>
-                      <ul className="card-text">
-                        <li>Emergency response team training</li>
-                        <li>First aid and medical emergency response</li>
-                        <li>Fire prevention and firefighting</li>
-                        <li>Evacuation procedures and drills</li>
-                      </ul>
+                  <div className="col-lg-6">
+                    <div className="activity-images">
+                      <div className="row g-3">
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-1.jpg`} className="img-fluid rounded activity-img" alt="B3 Training" />
+                          <p className="img-caption text-center mt-2">B3 Training Session</p>
+                        </div>
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-2.jpg`} className="img-fluid rounded activity-img" alt="Hazard Identification Training" />
+                          <p className="img-caption text-center mt-2">Hazard Identification Workshop</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h4 className="card-title"><i className="bi bi-person-check text-success me-2"></i>Occupational Health</h4>
-                      <p className="card-text">Programs to monitor and promote employee health, including health surveillance, disease prevention, and health promotion activities.</p>
-                      <ul className="card-text">
-                        <li>Occupational health surveillance</li>
-                        <li>Industrial hygiene monitoring</li>
-                        <li>Health promotion and wellness</li>
-                        <li>Rehabilitation and return-to-work</li>
+              </div>
+              
+              {/* Safety Patrol Activity */}
+              <div className="activity-item mb-5" data-aos="fade-up" data-aos-delay="200">
+                <div className="row align-items-center">
+                  <div className="col-lg-6 order-lg-2">
+                    <div className="activity-content">
+                      <h3 className="activity-title"><i className="bi bi-shield-exclamation text-warning me-2"></i>Safety Patrol</h3>
+                      <p className="activity-description">
+                        As an effort to create a safe work environment, the company conducts monthly Safety Patrols involving the HSE team, Sachou (President Director), and Managers from all departments. This activity focuses on identifying hazardous conditions and ensuring proper implementation of 5S methodology in the work area.
+                      </p>
+                      <ul className="activity-highlights">
+                        <li>Monthly safety patrols with cross-departmental participation</li>
+                        <li>Focus on hazardous condition identification</li>
+                        <li>5S implementation monitoring and evaluation</li>
+                        <li>Regular follow-up meetings to review improvements</li>
                       </ul>
                     </div>
                   </div>
+                  <div className="col-lg-6 order-lg-1">
+                    <div className="activity-images">
+                      <div className="row g-3">
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-3.jpg`} className="img-fluid rounded activity-img" alt="Safety Patrol" />
+                          <p className="img-caption text-center mt-2">Monthly Safety Patrol</p>
+                        </div>
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-4.jpg`} className="img-fluid rounded activity-img" alt="5S Implementation" />
+                          <p className="img-caption text-center mt-2">5S Implementation Check</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="col-md-6">
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h4 className="card-title"><i className="bi bi-shield-plus text-primary me-2"></i>Safety Culture</h4>
-                      <p className="card-text">Building a strong safety culture through leadership commitment, employee engagement, and continuous improvement in safety performance.</p>
-                      <ul className="card-text">
-                        <li>Safety leadership development</li>
-                        <li>Behavior-based safety programs</li>
-                        <li>Safety communication and awareness</li>
-                        <li>Safety recognition and incentives</li>
+              </div>
+              
+              {/* Emergency Plan Activity */}
+              <div className="activity-item mb-5" data-aos="fade-up" data-aos-delay="300">
+                <div className="row align-items-center">
+                  <div className="col-lg-6">
+                    <div className="activity-content">
+                      <h3 className="activity-title"><i className="bi bi-exclamation-triangle text-danger me-2"></i>Emergency Plan</h3>
+                      <p className="activity-description">
+                        In facing emergency situations, the company has established structured handling steps. One potential emergency situation anticipated is fire. The company has comprehensive prevention plans, training programs, awareness campaigns, and routine inspections to ensure preparedness for any emergency situation.
+                      </p>
+                      <ul className="activity-highlights">
+                        <li>APAR (Light Fire Extinguisher) training and practice</li>
+                        <li>Regular evacuation simulations and drills</li>
+                        <li>Emergency response team formation and training</li>
+                        <li>Post-emergency recovery and evaluation procedures</li>
                       </ul>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="activity-images">
+                      <div className="row g-3">
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-1.jpg`} className="img-fluid rounded activity-img" alt="APAR Training" />
+                          <p className="img-caption text-center mt-2">APAR Training Session</p>
+                        </div>
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-2.jpg`} className="img-fluid rounded activity-img" alt="Evacuation Simulation" />
+                          <p className="img-caption text-center mt-2">Evacuation Drill</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Traffic Safety Initiatives */}
+      <section className="product-specifications section bg-light">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Traffic Safety Initiatives</h2>
+                <p>Ensuring safe commuting and transportation for all employees</p>
+              </div>
+              
+              <div className="activity-item" data-aos="fade-up" data-aos-delay="100">
+                <div className="row align-items-center">
+                  <div className="col-lg-6">
+                    <div className="activity-content">
+                      <h3 className="activity-title"><i className="bi bi-bicycle text-success me-2"></i>Safety Riding Program</h3>
+                      <p className="activity-description">
+                        Every year, we organize external training with the theme of Safety Riding, working with professionals, as an effort to increase awareness and safe driving skills for employees. Additionally, with monthly safety riding check activities, we hope to cultivate a culture of safe and responsible driving.
+                      </p>
+                      <ul className="activity-highlights">
+                        <li>Annual external Safety Riding training with professionals</li>
+                        <li>Monthly safety riding checks and vehicle inspections</li>
+                        <li>Building a culture of safe and responsible driving</li>
+                        <li>Increasing employee awareness of traffic safety</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="activity-images">
+                      <div className="row g-3">
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="img-fluid rounded activity-img" alt="Safety Riding Training" />
+                          <p className="img-caption text-center mt-2">Safety Riding Training</p>
+                        </div>
+                        <div className="col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-4.jpg`} className="img-fluid rounded activity-img" alt="Vehicle Inspection" />
+                          <p className="img-caption text-center mt-2">Monthly Vehicle Check</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Health Promotion */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Health Promotion</h2>
+                <p>Supporting employee well-being through various health and wellness programs</p>
+              </div>
+              
+              <div className="activity-item" data-aos="fade-up" data-aos-delay="100">
+                <div className="row align-items-center">
+                  <div className="col-lg-6">
+                    <div className="activity-content">
+                      <h3 className="activity-title"><i className="bi bi-heart-pulse text-info me-2"></i>Employee Wellness Programs</h3>
+                      <p className="activity-description">
+                        We realize the importance of health and hygiene of our employees. If employees are healthy and free from disease, they will be happy at work and work efficiently. The company provides various sports activity options to support physical fitness and mental well-being.
+                      </p>
+                      <ul className="activity-highlights">
+                        <li>Well-equipped gym facility for employee use</li>
+                        <li>Regular aerobic exercise sessions</li>
+                        <li>Badminton, table tennis, and volleyball clubs</li>
+                        <li>Soccer team and running club for sports enthusiasts</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="activity-images">
+                      <div className="row g-3">
+                        <div className="col-md-4 col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-1.jpg`} className="img-fluid rounded activity-img" alt="Gym" />
+                          <p className="img-caption text-center mt-2">Gym</p>
+                        </div>
+                        <div className="col-md-4 col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-2.jpg`} className="img-fluid rounded activity-img" alt="Aerobic" />
+                          <p className="img-caption text-center mt-2">Aerobic</p>
+                        </div>
+                        <div className="col-md-4 col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-3.jpg`} className="img-fluid rounded activity-img" alt="Badminton" />
+                          <p className="img-caption text-center mt-2">Badminton</p>
+                        </div>
+                        <div className="col-md-4 col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-4.jpg`} className="img-fluid rounded activity-img" alt="Table Tennis" />
+                          <p className="img-caption text-center mt-2">Table Tennis</p>
+                        </div>
+                        <div className="col-md-4 col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-5.jpg`} className="img-fluid rounded activity-img" alt="Volleyball" />
+                          <p className="img-caption text-center mt-2">Volleyball</p>
+                        </div>
+                        <div className="col-md-4 col-6">
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-6.jpg`} className="img-fluid rounded activity-img" alt="Soccer" />
+                          <p className="img-caption text-center mt-2">Soccer</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

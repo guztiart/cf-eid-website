@@ -1,10 +1,57 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../../hooks/useExternalLibs';
 
 const EnvironmentalInitiatives = () => {
   // Initialize external libraries using custom hooks
   useAOS();
+  
+  // State for PDF viewer
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [showPdfViewer, setShowPdfViewer] = useState(false);
+  
+  // Actual certificate data
+  const certificates = [
+    {
+      id: 1,
+      name: 'ISO 14001:2015 Certificate',
+      description: 'Environmental Management System Certification',
+      file: `${process.env.PUBLIC_URL}/assets/certificates/Certificate ISO 14001 (Validity Date 12 Jun 2024 - 12 Jun 2027).pdf`,
+      issueDate: '2024-06-12',
+      expiryDate: '2027-06-12',
+      issuer: 'Certification Body International'
+    },
+    {
+      id: 2,
+      name: 'ISO 45001:2018 Certificate',
+      description: 'Occupational Health and Safety Management System Certification',
+      file: `${process.env.PUBLIC_URL}/assets/certificates/Cetificate ISO45001 (Validit 12 jun 2024 - 12 jun 2027).pdf`,
+      issueDate: '2024-06-12',
+      expiryDate: '2027-06-12',
+      issuer: 'Certification Body International'
+    },
+    {
+      id: 3,
+      name: 'PROPER Blue Certificate',
+      description: 'Environmental Compliance Recognition from Ministry of Environment and Forestry',
+      file: `${process.env.PUBLIC_URL}/assets/certificates/Sertifikat PROPER (2022-2023) - PT Eagle Industry Indonesia.pdf`,
+      issueDate: '2022-01-01',
+      expiryDate: '2023-12-31',
+      issuer: 'Ministry of Environment and Forestry of Republic Indonesia'
+    }
+  ];
+  
+  // Function to open PDF viewer
+  const openPdfViewer = (certificate) => {
+    setSelectedCertificate(certificate);
+    setShowPdfViewer(true);
+  };
+  
+  // Function to close PDF viewer
+  const closePdfViewer = () => {
+    setShowPdfViewer(false);
+    setSelectedCertificate(null);
+  };
 
   // Load custom CSS
   useEffect(() => {
@@ -149,8 +196,8 @@ const EnvironmentalInitiatives = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Environmental Certifications</h2>
-                <p>Our commitment to environmental management standards</p>
+                <h2>Environmental & Safety Certifications</h2>
+                <p>Our commitment to environmental management and occupational health & safety standards</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
@@ -165,21 +212,96 @@ const EnvironmentalInitiatives = () => {
                     <tr>
                       <td>Environmental Management System</td>
                       <td>ISO 14001:2015</td>
-                      <td>International standard for environmental management systems</td>
+                      <td>International standard for environmental management systems that helps organizations minimize their environmental impact while complying with regulations</td>
+                    </tr>
+                    <tr>
+                      <td>Occupational Health & Safety Management</td>
+                      <td>ISO 45001:2018</td>
+                      <td>International standard for occupational health and safety management systems that provides a framework for improving employee safety, reducing workplace risks, and creating better working conditions</td>
                     </tr>
                     <tr>
                       <td>Environmental Compliance</td>
                       <td>PROPER Blue</td>
-                      <td>Recognition from the Ministry of Environment and Forestry of the Republic of Indonesia for compliance with environmental regulations</td>
+                      <td>Recognition from the Ministry of Environment and Forestry of the Republic of Indonesia for compliance with environmental regulations in industrial operations</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: These certifications demonstrate our commitment to environmental preservation and sustainable practices.</p>
+                <p className="note-text">Note: These certifications demonstrate our commitment to environmental preservation, occupational health & safety, and sustainable practices.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Certification Evidence Section */}
+      <section className="certification-evidence section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Certification Evidence</h2>
+                <p>View our environmental certifications and compliance documents</p>
+              </div>
+              <div className="certificates-grid" data-aos="fade-up" data-aos-delay="100">
+                {certificates.map((cert) => (
+                  <div key={cert.id} className="certificate-card">
+                    <div className="certificate-icon">
+                      <i className="bi bi-award-fill"></i>
+                    </div>
+                    <div className="certificate-content">
+                      <h3>{cert.name}</h3>
+                      <p>{cert.description}</p>
+                      <div className="certificate-details">
+                        <p><strong>Issuer:</strong> {cert.issuer}</p>
+                        <p><strong>Issue Date:</strong> {new Date(cert.issueDate).toLocaleDateString()}</p>
+                        <p><strong>Expiry Date:</strong> {new Date(cert.expiryDate).toLocaleDateString()}</p>
+                      </div>
+                      <button
+                        className="btn-view-certificate"
+                        onClick={() => openPdfViewer(cert)}
+                      >
+                        <i className="bi bi-file-earmark-pdf"></i> View Certificate
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PDF Viewer Modal */}
+      {showPdfViewer && selectedCertificate && (
+        <div className="pdf-viewer-modal">
+          <div className="pdf-viewer-container">
+            <div className="pdf-viewer-header">
+              <h3>{selectedCertificate.name}</h3>
+              <button className="btn-close-pdf" onClick={closePdfViewer}>
+                <i className="bi bi-x-lg"></i>
+              </button>
+            </div>
+            <div className="pdf-viewer-content">
+              <iframe
+                src={selectedCertificate.file}
+                title={selectedCertificate.name}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+              ></iframe>
+            </div>
+            <div className="pdf-viewer-footer">
+              <a
+                href={selectedCertificate.file}
+                download={selectedCertificate.name}
+                className="btn-download-pdf"
+              >
+                <i className="bi bi-download"></i> Download Certificate
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Related Sustainability Topics */}
       <section id="related-topics" className="related-products section">
