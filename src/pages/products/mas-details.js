@@ -102,19 +102,6 @@ const ProjectDetails = () => {
                 <p>
                   The inner diameter of the housing is designed to the same high standard as a rubber bearing so it can withstand contact with the shaft. As the sealing area is not exposed externally as is the case with a mechanical seal, it is able to withstand 'mechanical shock' to a high degree. The installation space is compact with the structure requiring only the cooling water hose to be supplied.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The Marine Ace Seal from Eagle Industry Indonesia has significantly improved our vessel's performance.
-                    The quality and durability are exceptional.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Product Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             

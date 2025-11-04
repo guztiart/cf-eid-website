@@ -44,7 +44,7 @@ const Contact = () => {
               <div className="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
                 <i className="bi bi-envelope"></i>
                 <h3>Email Us</h3>
-                <p>riyanda.senjaya@ekkeagle.com</p>
+                <p>shinta.maharani@ekkeagle.com</p>
               </div>
             </div>
           </div>

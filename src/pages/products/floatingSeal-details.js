@@ -114,19 +114,6 @@ const ProjectDetails = () => {
                 <p>
                   Main uses of floating seals include crawler rollers, travel drives and idlers of construction and agricultural machinery, and also for conveyors, mixers and various digging machines. In other words, they are used widely in relatively low-speed applications exposed to foreign matter.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The floating seals from Eagle Industry Indonesia have significantly improved our construction equipment's performance.
-                    The quality and durability are exceptional.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Product Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             

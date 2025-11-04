@@ -74,19 +74,6 @@ const ProjectDetails = () => {
                   These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. 
                   These seals are also suitable for industrial pumps. EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The floating seals from Eagle Industry Indonesia have significantly improved our equipment's performance. 
-                    The quality and durability are exceptional.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Product Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             

@@ -108,19 +108,6 @@ const ProjectDetails = () => {
                 <p>
                   This bearing system effectively absorbs shaft vibrations, reducing stress on the propulsion system and extending the service life of connected components. Additionally, it prevents electric corrosion on the shaft sleeve, a common issue in marine environments where galvanic corrosion can damage critical components.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The EVR water lubricated stern tube bearings from Eagle Industry Indonesia have significantly improved our vessel's performance.
-                    The durability and vibration absorption capabilities are exceptional.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Marine Product Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             

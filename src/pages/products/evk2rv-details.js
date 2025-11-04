@@ -108,19 +108,6 @@ const ProjectDetails = () => {
                   international maritime standards. Its robust construction and advanced sealing technology provide long service
                   life, reducing maintenance requirements and operational costs for vessel owners.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The EVK2RV water lubricated stern tube seals from Eagle Industry Indonesia have significantly improved our marine vessels' performance.
-                    The quality and durability are exceptional.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Product Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             

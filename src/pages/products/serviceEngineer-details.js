@@ -106,19 +106,6 @@ const ProjectDetails = () => {
                   From routine maintenance to emergency repairs, our service engineering team delivers prompt and reliable support to minimize downtime and maximize operational efficiency. 
                   We provide on-site services, technical consultations, and training programs to ensure your crew can properly maintain and operate our sealing systems.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The service engineering team from Eagle Industry Indonesia has provided exceptional technical support for our fleet.
-                    Their expertise and quick response time have significantly reduced our maintenance costs.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Service Engineering Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             

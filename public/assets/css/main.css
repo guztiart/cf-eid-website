@@ -785,6 +785,10 @@ section,
   top: 0;
 }
 
+.p-hero-top__video .hero-video {
+  filter: brightness(1) contrast(1); /* Tingkatkan brightness 20%, contrast 10% */
+}
+
 .hero .info {
   position: relative;
   inset: 0;

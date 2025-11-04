@@ -226,11 +226,11 @@ const OccupationalHealthSafety = () => {
                     <div className="activity-images">
                       <div className="row g-3">
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-1.jpg`} className="img-fluid rounded activity-img" alt="B3 Training" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/b3-1.jpg`} className="img-fluid rounded activity-img" alt="B3 Training" />
                           <p className="img-caption text-center mt-2">B3 Training Session</p>
                         </div>
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-2.jpg`} className="img-fluid rounded activity-img" alt="Hazard Identification Training" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img//activities/b3-2.jpg`} className="img-fluid rounded activity-img" alt="Hazard Identification Training" />
                           <p className="img-caption text-center mt-2">Hazard Identification Workshop</p>
                         </div>
                       </div>
@@ -260,11 +260,11 @@ const OccupationalHealthSafety = () => {
                     <div className="activity-images">
                       <div className="row g-3">
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-3.jpg`} className="img-fluid rounded activity-img" alt="Safety Patrol" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safety-patrol-3.jpg`} className="img-fluid rounded activity-img" alt="Safety Patrol" />
                           <p className="img-caption text-center mt-2">Monthly Safety Patrol</p>
                         </div>
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/constructions-4.jpg`} className="img-fluid rounded activity-img" alt="5S Implementation" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safety-patrol-2.jpg`} className="img-fluid rounded activity-img" alt="5S Implementation" />
                           <p className="img-caption text-center mt-2">5S Implementation Check</p>
                         </div>
                       </div>
@@ -294,11 +294,11 @@ const OccupationalHealthSafety = () => {
                     <div className="activity-images">
                       <div className="row g-3">
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-1.jpg`} className="img-fluid rounded activity-img" alt="APAR Training" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/apar-2.jpg`} className="img-fluid rounded activity-img" alt="APAR Training" />
                           <p className="img-caption text-center mt-2">APAR Training Session</p>
                         </div>
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-2.jpg`} className="img-fluid rounded activity-img" alt="Evacuation Simulation" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/erp-1.jpg`} className="img-fluid rounded activity-img" alt="Evacuation Simulation" />
                           <p className="img-caption text-center mt-2">Evacuation Drill</p>
                         </div>
                       </div>
@@ -341,11 +341,11 @@ const OccupationalHealthSafety = () => {
                     <div className="activity-images">
                       <div className="row g-3">
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="img-fluid rounded activity-img" alt="Safety Riding Training" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safetyRiding-2.jpg`} className="img-fluid rounded activity-img" alt="Safety Riding Training" />
                           <p className="img-caption text-center mt-2">Safety Riding Training</p>
                         </div>
                         <div className="col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/features-4.jpg`} className="img-fluid rounded activity-img" alt="Vehicle Inspection" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safetyRiding-1.jpg`} className="img-fluid rounded activity-img" alt="Vehicle Inspection" />
                           <p className="img-caption text-center mt-2">Monthly Vehicle Check</p>
                         </div>
                       </div>
@@ -388,27 +388,27 @@ const OccupationalHealthSafety = () => {
                     <div className="activity-images">
                       <div className="row g-3">
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-1.jpg`} className="img-fluid rounded activity-img" alt="Gym" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/gym.jpg`} className="img-fluid rounded activity-img" alt="Gym" />
                           <p className="img-caption text-center mt-2">Gym</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-2.jpg`} className="img-fluid rounded activity-img" alt="Aerobic" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/aerobic.jpg`} className="img-fluid rounded activity-img" alt="Aerobic" />
                           <p className="img-caption text-center mt-2">Aerobic</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-3.jpg`} className="img-fluid rounded activity-img" alt="Badminton" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/badminton.jpg`} className="img-fluid rounded activity-img" alt="Badminton" />
                           <p className="img-caption text-center mt-2">Badminton</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-4.jpg`} className="img-fluid rounded activity-img" alt="Table Tennis" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/table-tennis.jpg`} className="img-fluid rounded activity-img" alt="Table Tennis" />
                           <p className="img-caption text-center mt-2">Table Tennis</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-5.jpg`} className="img-fluid rounded activity-img" alt="Volleyball" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/volleyball.jpg`} className="img-fluid rounded activity-img" alt="Volleyball" />
                           <p className="img-caption text-center mt-2">Volleyball</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/team/team-6.jpg`} className="img-fluid rounded activity-img" alt="Soccer" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/soccer.jpg`} className="img-fluid rounded activity-img" alt="Soccer" />
                           <p className="img-caption text-center mt-2">Soccer</p>
                         </div>
                       </div>

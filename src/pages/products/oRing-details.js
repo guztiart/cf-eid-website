@@ -102,19 +102,6 @@ const ProjectDetails = () => {
                 <p>
                   The SUPERIOR series demonstrates excellent resistance for plasma and chemicals, making it ideal for the harsh conditions encountered in semiconductor manufacturing. With small outgas generation and continuity of good resistance against photo thermal generated in manufacturing process of semiconductor, these O-rings maintain their integrity and sealing performance even in extreme conditions.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The SUPERIOR O-Rings from Eagle Industry Indonesia have significantly improved our semiconductor manufacturing processes.
-                    The quality and durability are exceptional.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Product Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             

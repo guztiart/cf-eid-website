@@ -103,19 +103,6 @@ const ProjectDetails = () => {
                   The EVU series features a compact design that allows for easy installation and replacement. 
                   These seals are compatible with a wide range of engine applications and provide optimal sealing efficiency throughout their service life.
                 </p>
-                <div className="testimonial-item">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    The EVU valve stem seals from Eagle Industry Indonesia have significantly reduced oil consumption in our engines. 
-                    The quality and durability are exceptional, providing reliable performance under demanding conditions.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/testimonials/testimonials-1.jpg`} className="testimonial-img" alt="" />
-                    <h3>Eagle Industry Team</h3>
-                    <h4>Product Specialist</h4>
-                  </div>
-                </div>
               </div>
             </div>
             
