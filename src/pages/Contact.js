@@ -1,10 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../hooks/useExternalLibs';
+import axios from 'axios';
 
 const Contact = () => {
   // Initialize external libraries using custom hooks
   useAOS();
+
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  // UI state
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setSuccessMessage('');
+    setErrorMessage('');
+
+    try {
+      const response = await axios.post('http://localhost:5000/api/inquiry', formData);
+      
+      if (response.data.success) {
+        const emailStatus = response.data.emailSent ? ' and email sent' : '';
+        const confirmationStatus = response.data.confirmationSent ? ' (confirmation email sent to user)' : '';
+        setSuccessMessage(`Your message has been saved${emailStatus}${confirmationStatus}. Thank you!`);
+        alert(`Success! Your inquiry has been submitted successfully.${emailStatus}${confirmationStatus}`);
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        setErrorMessage(response.data.message || 'Failed to send message');
+        alert('Error: ' + (response.data.message || 'Failed to send message'));
+      }
+    } catch (error) {
+      const errorMsg = error.response?.data?.message || 'Error sending message. Please try again.';
+      setErrorMessage(errorMsg);
+      alert('Error: ' + errorMsg);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="contact-page">
@@ -62,25 +119,59 @@ const Contact = () => {
               ></iframe>
             </div>
             <div className="col-lg-6">
-              <form action="forms/contact.php" method="post" className="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              <form onSubmit={handleSubmit} className="php-email-form" data-aos="fade-up" data-aos-delay="400">
                 <div className="row gy-4">
                   <div className="col-md-6">
-                    <input type="text" name="name" className="form-control" placeholder="Your Name" required />
+                    <input
+                      type="text"
+                      name="name"
+                      className="form-control"
+                      placeholder="Your Name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
                   <div className="col-md-6">
-                    <input type="email" className="form-control" name="email" placeholder="Your Email" required />
+                    <input
+                      type="email"
+                      className="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
                   <div className="col-md-12">
-                    <input type="text" className="form-control" name="subject" placeholder="Subject" required />
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="subject"
+                      placeholder="Subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
                   <div className="col-md-12">
-                    <textarea className="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                    <textarea
+                      className="form-control"
+                      name="message"
+                      rows="6"
+                      placeholder="Message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    ></textarea>
                   </div>
                   <div className="col-md-12 text-center">
-                    <div className="loading">Loading</div>
-                    <div className="error-message"></div>
-                    <div className="sent-message">Your message has been sent. Thank you!</div>
-                    <button type="submit">Send Message</button>
+                    {loading && <div className="loading">Loading</div>}
+                    {errorMessage && <div className="error-message">{errorMessage}</div>}
+                    {successMessage && <div className="sent-message">{successMessage}</div>}
+                    <button type="submit" disabled={loading}>
+                      {loading ? 'Sending...' : 'Send Message'}
+                    </button>
                   </div>
                 </div>
               </form>
