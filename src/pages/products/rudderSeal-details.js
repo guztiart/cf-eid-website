@@ -46,7 +46,7 @@ const ProjectDetails = () => {
             <ol>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/projects">Products</Link></li>
-              <li className="current">Stern Tube Seal</li>
+              <li className="current">Rudder Seal</li>
             </ol>
           </nav>
         </div>
@@ -57,11 +57,11 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Stern Tube Seal</h2>
+              <h2 className="product-title" data-aos="fade-up">Rudder Seal</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/products?tag=marine">Marine</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=stern-tube-seals">Stern Tube Seals</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=stern-tube-seals">Rudder Seals</Link></li>
                 </ul>
               </div>
             </div>
@@ -92,20 +92,20 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>Stern Tube Seal</h2>
+                <h2>Rudder Seal</h2>
                 <p>
-                  Stern tube seals with lip seals designed to prevent the leakage of lubricant and the ingress of seawater. 
+                  Rudder seals with lip seals designed to prevent the leakage of lubricant and the ingress of seawater.
                   They are approved by classification societies of each country. Their comprehensive lineup includes the standard CX type, 
                   the DX type with an additional standby seal, the pollution-free AX type, and the EVA type equipped with face seals.
                 </p>
                 <p>
                   As the Seto Inland Sea has long been a prosperous shipping area, we manufacture marine related products such as 
-                  vulcanization molding of rubber for stern tube sealing, intermediate bearings for propeller shafts, etc. 
-                  Our stern tube seals are engineered with precision to provide optimal performance in marine applications, ensuring 
+                  vulcanization molding of rubber for rudder sealing, intermediate bearings for propeller shafts, etc.
+                  Our rudder seals are engineered with precision to provide optimal performance in marine applications, ensuring
                   maximum durability and efficiency in preventing oil leakage while maintaining smooth operation of the vessel's propulsion system.
                 </p>
                 <p>
-                  Our stern tube seals undergo rigorous quality control processes to meet international maritime standards. 
+                  Our rudder seals undergo rigorous quality control processes to meet international maritime standards.
                   The specialized materials used in manufacturing offer excellent resistance to seawater corrosion and various lubricants, 
                   ensuring long service life even under extreme operating conditions in marine environments.
                 </p>
@@ -116,7 +116,7 @@ const ProjectDetails = () => {
               <div className="portfolio-info">
                 <h3>Product Information</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Marine, Stern Tube Seals</span></li>
+                  <li><strong>Category</strong> <span>Marine, Rudder Seals</span></li>
                   <li><strong>Sealed fluid</strong> <span>Oil & Seawater</span></li>
                   <li><strong>Operating Temperature</strong> <span>-20°C to 120°C</span></li>
                   <li><strong>Maximum circumferential velocity</strong> <span>15 m/s (approx. 5,000 rpm)</span></li>
@@ -263,7 +263,7 @@ const ProjectDetails = () => {
                 <ol>
                   <li><Link to="/">Home</Link></li>
                   <li><Link to="/projects">Products</Link></li>
-                  <li className="current">Stern Tube Seal</li>
+                  <li className="current">Rudder Seal</li>
                 </ol>
               </nav>
             </div>

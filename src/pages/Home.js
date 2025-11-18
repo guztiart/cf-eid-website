@@ -82,7 +82,7 @@ const Home = () => {
         <div className="p-hero-top">
           <div className="p-hero-top__mv">
             <div className="p-hero-top__video">
-              <iframe src="https://www.youtube.com/embed/4335-VJuJeA?autoplay=1&mute=1&loop=1&playlist=4335-VJuJeA&controls=0&showinfo=0&autohide=1&modestbranding=1&vq=hd1080&rel=0&iv_load_policy=3&cc_load_policy=0&disablekb=1&vq=hd1080"
+              <iframe src="https://www.youtube.com/embed/LK56SEZupRQ?autoplay=1&mute=1&loop=1&playlist=LK56SEZupRQ&controls=0&showinfo=0&autohide=1&modestbranding=1&vq=hd1080&rel=0&iv_load_policy=3&cc_load_policy=0&disablekb=1"
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
               allowFullScreen 
@@ -99,7 +99,7 @@ const Home = () => {
             </div>
           </div>
           <div className="p-hero-top__button" >
-            <a className="p-hero-top__button-link glightbox" href="https://www.youtube.com/watch?v=4335-VJuJeA" rel="noopener noreferrer">
+            <a className="p-hero-top__button-link glightbox" href="https://www.youtube.com/watch?v=LK56SEZupRQ" rel="noopener noreferrer">
               <i className="bi bi-play-circle"></i>
               <span>Play full movie</span>
             </a>
@@ -110,39 +110,13 @@ const Home = () => {
       {/* Get Started Section */}
       <section id="get-started" className="get-started section">
         <div className="container">
-          <div className="row justify-content-between gy-4">
-            <div className="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
+          <div className="row justify-content-center gy-4">
+            <div className="col-lg-8 text-center" data-aos="zoom-out" data-aos-delay="100">
               <div className="content">
-                <h3>Innovation and Excellence in Precision Manufacturing.</h3>
-                <p>PT Eagle Industry Indonesia is part of Eagle Industry Co., Ltd., Japan, which has been operating for decades in providing high-quality components for various industries. We prioritize advanced technology, product reliability, and customer satisfaction to support global market needs.</p>
+                <h3 className="mb-4">Innovation and Excellence in Precision Manufacturing.</h3>
+                <p className="mb-3">PT Eagle Industry Indonesia is part of Eagle Industry Co., Ltd., Japan, which has been operating for decades in providing high-quality components for various industries. We prioritize advanced technology, product reliability, and customer satisfaction to support global market needs.</p>
                 <p>With modern production facilities in Indonesia, we ensure international quality standards and timely delivery to meet the needs of our customers across various sectors.</p>
               </div>
-            </div>
-            <div className="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
-              <form action="forms/quote.php" method="post" className="php-email-form">
-                <h3>Contact Us</h3>
-                <p>Send your inquiries for more information about our products and services.</p>
-                <div className="row gy-3">
-                  <div className="col-12">
-                    <input type="text" name="name" className="form-control" placeholder="Name" required />
-                  </div>
-                  <div className="col-12">
-                    <input type="email" className="form-control" name="email" placeholder="Email" required />
-                  </div>
-                  <div className="col-12">
-                    <input type="text" className="form-control" name="phone" placeholder="Phone" required />
-                  </div>
-                  <div className="col-12">
-                    <textarea className="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                  </div>
-                  <div className="col-12 text-center">
-                    <div className="loading">Loading</div>
-                    <div className="error-message"></div>
-                    <div className="sent-message">Your quote request has been sent successfully. Thank you!</div>
-                    <button type="submit">Submit</button>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
@@ -204,78 +178,6 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleCategoryClick('actuators');
-                    }}
-                  >
-                    Actuators
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('gas-seals');
-                    }}
-                  >
-                    Gas Seals
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('aerospace-seal');
-                    }}
-                  >
-                    Aerospace Seal
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('bearings');
-                    }}
-                  >
-                    Bearings
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('magnetic-fluid-vacuum-seal');
-                    }}
-                  >
-                    Magnetic Fluid Vacuum Seal
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('segmented-seal');
-                    }}
-                  >
-                    Segmented Seal
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
                       handleCategoryClick('stern-tube-seals');
                     }}
                   >
@@ -288,34 +190,10 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleCategoryClick('tanks');
-                    }}
-                  >
-                    Tanks
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
                       handleCategoryClick('joint-joint');
                     }}
                   >
-                    Coupling, Joint
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('packing-gasket');
-                    }}
-                  >
-                    Packing, Gasket
+                    Stern tube bearing
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -336,70 +214,10 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleCategoryClick('filters');
-                    }}
-                  >
-                    Filters
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('brush-seal');
-                    }}
-                  >
-                    Brush Seal
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
                       handleCategoryClick('floating-seal');
                     }}
                   >
                     Floating Seal
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('bellows-thin-plate-metal-processed');
-                    }}
-                  >
-                    Metal bellows, Thin-Walled Metal parts
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('supply-systems');
-                    }}
-                  >
-                    Supply Systems
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('hydraulic-energy-regeneration-device');
-                    }}
-                  >
-                    Hydraulic Regeneration System
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -420,22 +238,10 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleCategoryClick('flow-meter');
+                      handleCategoryClick('service-engineer');
                     }}
                   >
-                    Flow meter
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('glidex');
-                    }}
-                  >
-                    GlideX
+                    Service Engineer
                   </Link>
                 </li>
               </ul>
@@ -460,106 +266,10 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleIndustryClick('machinery');
-                    }}
-                  >
-                    Construction, Agriculture, Transporter
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('automobile');
-                    }}
-                  >
-                    Automobile
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('energy');
-                    }}
-                  >
-                    Energy
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('aerospace');
-                    }}
-                  >
-                    Aerospace
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('pulp-paper');
-                    }}
-                  >
-                    Pulp & Paper
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('housing-equipment');
-                    }}
-                  >
-                    Housing Equipment
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('food-beveragepharmaceutical');
-                    }}
-                  >
-                    Food & Beverage, Pharmaceutical
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
                       handleIndustryClick('water-irrigation');
                     }}
                   >
-                    Water, Irrigation
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('refinery-petrochemical');
-                    }}
-                  >
-                    Refinery, Petrochemical
+                    Machinery
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -571,19 +281,7 @@ const Home = () => {
                       handleIndustryClick('marine');
                     }}
                   >
-                    Marine
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleIndustryClick('steel');
-                    }}
-                  >
-                    Steel
+                    Automobile
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -595,7 +293,7 @@ const Home = () => {
                       handleIndustryClick('semiconductor');
                     }}
                   >
-                    Semiconductor
+                    Marine
                   </Link>
                 </li>
               </ul>
@@ -612,7 +310,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Services Section */}
+     {/* Service Section */}
       <section id="services" className="services section light-background">
         <div className="container section-title" data-aos="fade-up">
           <h2>Our Services</h2>
@@ -627,7 +325,7 @@ const Home = () => {
                 </div>
                 <h3>Custom Manufacturing</h3>
                 <p>We offer custom manufacturing solutions to meet specific customer needs across various industries.</p>
-                <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
+                <Link to="/services/custom-manufacturing" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -637,7 +335,7 @@ const Home = () => {
                 </div>
                 <h3>Technical Support</h3>
                 <p>Our expert team provides technical support to ensure optimal performance of our products.</p>
-                <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
+                <Link to="/services/technical-support" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
@@ -647,7 +345,7 @@ const Home = () => {
                 </div>
                 <h3>After-Sales Service</h3>
                 <p>We provide reliable after-sales service to ensure customer satisfaction.</p>
-                <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
+                <Link to="/services/after-sales-service" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
@@ -657,7 +355,7 @@ const Home = () => {
                 </div>
                 <h3>Quality Assurance</h3>
                 <p>Our rigorous quality control processes ensure that all products meet international standards and customer specifications.</p>
-                <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
+                <Link to="/services/quality-assurance" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
@@ -667,7 +365,7 @@ const Home = () => {
                 </div>
                 <h3>Research & Development</h3>
                 <p>Our R&D team continuously innovates to develop advanced sealing solutions that address evolving industry challenges.</p>
-                <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
+                <Link to="/services/research-development" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
@@ -677,14 +375,14 @@ const Home = () => {
                 </div>
                 <h3>Global Supply Chain</h3>
                 <p>We maintain an efficient global supply network to ensure timely delivery of products to customers worldwide.</p>
-                <a href="#" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></a>
+                <Link to="/services/global-supply-chain" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Alt Services Section */}
+      {/* Alt Services Section
       <section id="alt-services" className="alt-services section">
         <div className="container">
           <div className="row justify-content-around gy-4">
@@ -725,7 +423,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Features Section */}
       <section id="features" className="features section">
@@ -733,12 +431,12 @@ const Home = () => {
           <ul className="nav nav-tabs row g-2 d-flex" data-aos="fade-up" data-aos-delay="100" role="tablist">
             <li className="nav-item col-3" role="presentation">
               <a className="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1" aria-selected="true" role="tab">
-                <h4>Mechanical Seal</h4>
+                <h4>Floating Seal</h4>
               </a>
             </li>
             <li className="nav-item col-3" role="presentation">
               <a className="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabIndex="-1" role="tab">
-                <h4>Floating Seal</h4>
+                <h4>Mechanical Seal</h4>
               </a>
             </li>
             <li className="nav-item col-3" role="presentation">
@@ -756,24 +454,6 @@ const Home = () => {
             <div className="tab-pane fade active show" id="features-tab-1" role="tabpanel">
               <div className="row">
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
-                  <h3>Mechanical Seal</h3>
-                  <p className="fst-italic">
-                    High-performance mechanical seals designed for demanding industrial applications.
-                  </p>
-                  <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Engineered for superior durability and extended service life</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Suitable for high-pressure, high-temperature environments</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Available in various materials to match specific application requirements</span></li>
-                  </ul>
-                </div>
-                <div className="col-lg-6 order-1 order-lg-2 text-center">
-                  <img src="/assets/img/product/WP_compact_mechanical_seal.jpg" alt="Mechanical Seal" className="img-fluid" />
-                </div>
-              </div>
-            </div>
-            <div className="tab-pane fade" id="features-tab-2" role="tabpanel">
-              <div className="row">
-                <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
                   <h3>Floating Seal</h3>
                   <p className="fst-italic">
                     Precision floating seals for heavy-duty applications in harsh environments.
@@ -787,6 +467,24 @@ const Home = () => {
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
                   <img src="/assets/img/product/floating_seal.jpg" alt="Floating Seal" className="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div className="tab-pane fade" id="features-tab-2" role="tabpanel">
+              <div className="row">
+                <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
+                  <h3>Mechanical Seal</h3>
+                  <p className="fst-italic">
+                    High-performance mechanical seals designed for demanding industrial applications.
+                  </p>
+                  <ul>
+                    <li><i className="bi bi-check2-all"></i> <span>Engineered for superior durability and extended service life</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Suitable for high-pressure, high-temperature environments</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>Available in various materials to match specific application requirements</span></li>
+                  </ul>
+                </div>
+                <div className="col-lg-6 order-1 order-lg-2 text-center">
+                  <img src="/assets/img/product/WP_compact_mechanical_seal.jpg" alt="Mechanical Seal" className="img-fluid" />
                 </div>
               </div>
             </div>

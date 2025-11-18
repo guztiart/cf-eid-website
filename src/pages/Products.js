@@ -96,8 +96,8 @@ const Products = () => {
               <div className="card product-card h-100">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="card-img-top" alt="Rudder Seal" />
                 <div className="card-body product-info">
-                  <h4 className="card-title">Stern Tube Seal</h4>
-                  <p className="card-text">Stern tube seals with lip seals designed to prevent lubricant leakage and seawater ingress. Approved by classification societies with multiple types available.</p>
+                  <h4 className="card-title">Rudder Seal</h4>
+                  <p className="card-text">Rudder seals with lip seals designed to prevent lubricant leakage and seawater ingress. Approved by classification societies with multiple types available.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
                     <a href="/products/rudderSeal-details" className="btn btn-outline-primary btn-sm">View Details</a>
@@ -222,7 +222,20 @@ const Products = () => {
                   <p className="card-text">Water-lubricated stern seal for small vessels with direct drive systems. Features end-face seal structure for excellent sealing performance.</p>
                   <div className="btn-container">
                     <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/mas-details" className="btn btn-outline-primary btn-sm">View Details</a>
+                    <a href="/products/bladder-details" className="btn btn-outline-primary btn-sm">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 product-item">
+              <div className="card product-card h-100">
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/bladder_type_accumulators.jpeg`} className="card-img-top" alt="Marine Ace Seal" />
+                <div className="card-body product-info">
+                  <h4 className="card-title">Bladder Type Accumulator</h4>
+                  <p className="card-text">These standard bladder accumulators are manufactured based on years of experience and proven performance.</p>
+                  <div className="btn-container">
+                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
+                    <a href="/products/bladder-details" className="btn btn-outline-primary btn-sm">View Details</a>
                   </div>
                 </div>
               </div>

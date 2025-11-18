@@ -65,9 +65,26 @@ const EnvironmentalInitiatives = () => {
     link2.href = `${process.env.PUBLIC_URL}/assets/css/sustainability.css`;
     document.head.appendChild(link2);
     
+    // Add custom styles to prevent PDF download
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .pdf-viewer-content {
+        position: relative;
+        height: 70vh;
+        overflow: hidden;
+        border: 1px solid #ddd;
+      }
+      .pdf-viewer-content object {
+        width: 100%;
+        height: 100%;
+      }
+    `;
+    document.head.appendChild(style);
+    
     return () => {
       document.head.removeChild(link1);
       document.head.removeChild(link2);
+      document.head.removeChild(style);
     };
   }, []);
 
@@ -282,22 +299,15 @@ const EnvironmentalInitiatives = () => {
               </button>
             </div>
             <div className="pdf-viewer-content">
-              <iframe
-                src={selectedCertificate.file}
-                title={selectedCertificate.name}
+              <object
+                data={`${selectedCertificate.file}#toolbar=0&navpanes=0&scrollbar=0`}
+                type="application/pdf"
                 width="100%"
                 height="100%"
-                frameBorder="0"
-              ></iframe>
-            </div>
-            <div className="pdf-viewer-footer">
-              <a
-                href={selectedCertificate.file}
-                download={selectedCertificate.name}
-                className="btn-download-pdf"
+                onContextMenu={(e) => e.preventDefault()}
               >
-                <i className="bi bi-download"></i> Download Certificate
-              </a>
+                <p>Your browser does not support PDF viewing. Please try a different browser.</p>
+              </object>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollTop from './components/ScrollTop';
 import Home from './pages/Home';
-import About from './pages/About';
+import Company from './pages/Company';
 import Contact from './pages/Contact';
 import Products from './pages/Products';
 import Blog from './pages/Blog';
@@ -15,6 +15,12 @@ import Sustainability from './pages/Sustainability';
 import ProjectDetails from './pages/ProjectDetails';
 import BlogDetails from './pages/BlogDetails';
 import ServiceDetails from './pages/ServiceDetails';
+import CustomManufacturing from './pages/services/CustomManufacturing';
+import TechnicalSupport from './pages/services/TechnicalSupport';
+import AfterSalesService from './pages/services/AfterSalesService';
+import QualityAssurance from './pages/services/QualityAssurance';
+import ResearchDevelopment from './pages/services/ResearchDevelopment';
+import GlobalSupplyChain from './pages/services/GlobalSupplyChain';
 import ConceptOfSustainability from './pages/sustainability/ConceptOfSustainability';
 import EnvironmentalInitiatives from './pages/sustainability/EnvironmentalInitiatives';
 import ClimateChangeDisclosure from './pages/sustainability/ClimateChangeDisclosure';
@@ -43,7 +49,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/company" element={<Company />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/products" element={<Products />} />
             <Route path="/blog" element={<Blog />} />
@@ -56,6 +62,12 @@ function App() {
             <Route path="/project-details" element={<ProjectDetails />} />
             <Route path="/blog-details" element={<BlogDetails />} />
             <Route path="/service-details" element={<ServiceDetails />} />
+            <Route path="/services/custom-manufacturing" element={<CustomManufacturing />} />
+            <Route path="/services/technical-support" element={<TechnicalSupport />} />
+            <Route path="/services/after-sales-service" element={<AfterSalesService />} />
+            <Route path="/services/quality-assurance" element={<QualityAssurance />} />
+            <Route path="/services/research-development" element={<ResearchDevelopment />} />
+            <Route path="/services/global-supply-chain" element={<GlobalSupplyChain />} />
             <Route path="/products/eh795-details" element={< EH795Details/>} />
             <Route path="/products/airCutValve-details" element={< AirCutValveDetails/>} />
             <Route path="/products/lipSeal-details" element={< LipSealDetails/>} />
