@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 
 // Import components
@@ -41,9 +41,44 @@ import RudderSealDetails from './pages/products/rudderSeal-details';
 import ServiceEngineerDetails from './pages/products/serviceEngineer-details';
 import ORing from './pages/products/oRing-details';
 
+// Component to handle scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    // Reset AOS animations when route changes
+    if (window.AOS) {
+      // Refresh AOS to reinitialize animations for the new page
+      setTimeout(() => {
+        // First, remove all AOS attributes and classes
+        const elementsWithAOS = document.querySelectorAll('[data-aos]');
+        elementsWithAOS.forEach(element => {
+          element.classList.remove('aos-animate', 'aos-init');
+          element.removeAttribute('data-aos-id');
+        });
+        
+        // Then refresh AOS to reinitialize animations for new page
+        window.AOS.refreshHard();
+        // Re-initialize AOS to ensure animations start from beginning
+        window.AOS.init({
+          duration: 600,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false
+        });
+      }, 100);
+    }
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Header />
         <main>
