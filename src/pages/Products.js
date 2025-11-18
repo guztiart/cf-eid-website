@@ -11,6 +11,124 @@ const Products = () => {
   // Get location to access state passed from navigation
   const location = useLocation();
   const [filterInfo, setFilterInfo] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [activeCategory, setActiveCategory] = useState(null);
+  
+  // Product data structure with categories
+  const allProducts = [
+    {
+      id: 1,
+      name: "EH795 EH790 for Water Pump",
+      category: "mechanical-seals",
+      image: "/assets/img/product/WP_compact_mechanical_seal.jpg",
+      description: "Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. By its unitized design, EH795 supports easy installation into customer application.",
+      detailsLink: "/products/eh795-details"
+    },
+    {
+      id: 2,
+      name: "Lip Seal For A/C Compressor",
+      category: "lip-seal",
+      image: "/assets/img/product/AC_compressor_lip_seal.jpg",
+      description: "Rotating shaft seals exclusively designed for car air-conditioning compressors. Eagle Industry's original design featuring compactness and high reliability. Helps eliminate CFC leakage causing global warming.",
+      detailsLink: "/products/lipSeal-details"
+    },
+    {
+      id: 3,
+      name: "Reed Valve",
+      category: "valves",
+      image: "/assets/img/product/reed_valve_double.jpg",
+      description: "Designed for four-stroke motorcycle engines for emission control. Substantially reduces carbon monoxide and hydrocarbon emissions to mitigate air pollution.",
+      detailsLink: "/products/reedValve-details"
+    },
+    {
+      id: 4,
+      name: "Air Cut Valve",
+      category: "valves",
+      image: "/assets/img/product/AirCutValve.jpg",
+      description: "Control valve for variable displacement A/C compressors. Controls swash plate angle to adjust compressor displacement according to A/C load for improved fuel economy.",
+      detailsLink: "/products/airCutValve-details"
+    },
+    {
+      id: 5,
+      name: "Floating Seal",
+      category: "floating-seal",
+      image: "/assets/img/product/floating_seal.jpg",
+      description: "Seals for undercarriages of construction machinery. Simple structure consisting of an O-ring and a seal ring made of special cast iron. Optimum seals for undercarriages of bulldozers and hydraulic excavators.",
+      detailsLink: "/products/floatingSeal-details"
+    },
+    {
+      id: 6,
+      name: "SUPERIOR O-Ring",
+      category: "floating-seal",
+      image: "/assets/img/product/oring-2.png",
+      description: "Newly developed O-Ring material with better chemical resistance, low outgas generation, and light heat resistance for semiconductor process industry.",
+      detailsLink: "/products/oRing-details"
+    },
+    {
+      id: 7,
+      name: "Bladder Type Accumulator",
+      category: "accumulators",
+      image: "/assets/img/product/bladder_type_accumulators.jpeg",
+      description: "These standard bladder accumulators are manufactured based on years of experience and proven performance.",
+      detailsLink: "/products/bladder-details"
+    },
+    {
+      id: 8,
+      name: "Water Lubricated Stern Tube Seal - EVK2RV",
+      category: "water-lubricated-stern-tube-seal",
+      image: "/assets/img/product/EVK2RV-1.png",
+      description: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.",
+      detailsLink: "/products/evk2rv-details"
+    },
+    {
+      id: 9,
+      name: "Water Lubricated Stern Tube Seal - EVK2RT",
+      category: "water-lubricated-stern-tube-seal",
+      image: "/assets/img/product/EVK2RT.jpg",
+      description: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.",
+      detailsLink: "/products/evk2rt-details"
+    },
+    {
+      id: 10,
+      name: "Marine Ace Seal (MAS)",
+      category: "water-lubricated-stern-tube-seal",
+      image: "/assets/img/product/marine ace.png",
+      description: "Water-lubricated stern seal for small vessels with direct drive systems. Features end-face seal structure for excellent sealing performance.",
+      detailsLink: "/products/mas-details"
+    },
+    {
+      id: 11,
+      name: "Rudder Seal",
+      category: "water-lubricated-stern-tube-seal",
+      image: "/assets/img/product/Rudder_seal.PNG",
+      description: "Rudder seals with lip seals designed to prevent lubricant leakage and seawater ingress. Approved by classification societies with multiple types available.",
+      detailsLink: "/products/rudderSeal-details"
+    },
+    {
+      id: 12,
+      name: "Water Lubricated Stern Tube Bearing - EVR",
+      category: "water-lubricated-stern-tube-bearing",
+      image: "/assets/img/product/EVR.png",
+      description: "Excellent Durability and Vibration Absorption. Designed specifically for marine applications with water lubricated shafting systems.",
+      detailsLink: "/products/evr-details"
+    },
+    {
+      id: 13,
+      name: "Water Lubricated Stern Tube Bearing - EVU",
+      category: "water-lubricated-stern-tube-bearing",
+      image: "/assets/img/product/EVU.png",
+      description: "Poly-Urethane bearing developed for water lubricated stern tube systems based on our extensive water lubricated bearing technology and experience.",
+      detailsLink: "/products/evu-details"
+    },
+    {
+      id: 14,
+      name: "Service Engineer",
+      category: "service-engineer",
+      image: "/assets/img/product/Enginer.png",
+      description: "Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing.",
+      detailsLink: "/products/serviceEngineer-details"
+    }
+  ];
   
   // Check for filter parameters on component mount
   useEffect(() => {
@@ -19,20 +137,69 @@ const Products = () => {
         type: location.state.filter,
         value: location.state.value
       });
+      setActiveCategory(location.state.value);
+      
+      // Filter products based on category
+      if (location.state.filter === 'category') {
+        const filtered = allProducts.filter(product => product.category === location.state.value);
+        setFilteredProducts(filtered);
+      }
+    } else {
+      // Show all products if no filter is applied
+      setFilteredProducts(allProducts);
+      setActiveCategory(null);
     }
   }, [location.state]);
   
+  // Handle category filter click
+  const handleCategoryFilter = (category) => {
+    if (category === 'all') {
+      setFilteredProducts(allProducts);
+      setFilterInfo(null);
+      setActiveCategory(null);
+    } else {
+      const filtered = allProducts.filter(product => product.category === category);
+      setFilteredProducts(filtered);
+      setFilterInfo({
+        type: 'category',
+        value: category
+      });
+      setActiveCategory(category);
+    }
+  };
+  
   // Load custom CSS for filter info and button styling
   useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
-    document.head.appendChild(link);
+    const link1 = document.createElement('link');
+    link1.rel = 'stylesheet';
+    link1.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
+    document.head.appendChild(link1);
+    
+    const link2 = document.createElement('link');
+    link2.rel = 'stylesheet';
+    link2.href = `${process.env.PUBLIC_URL}/assets/css/product-filter.css`;
+    document.head.appendChild(link2);
     
     return () => {
-      document.head.removeChild(link);
+      document.head.removeChild(link1);
+      document.head.removeChild(link2);
     };
   }, []);
+
+  // Helper function to get display name for category
+  const getCategoryDisplayName = (category) => {
+    const categoryNames = {
+      'mechanical-seals': 'Mechanical Seals',
+      'lip-seal': 'Lip Seal',
+      'valves': 'Valves',
+      'floating-seal': 'Floating Seal',
+      'accumulators': 'Accumulators',
+      'water-lubricated-stern-tube-seal': 'Water Lubricated Stern Tube Seal',
+      'water-lubricated-stern-tube-bearing': 'Water Lubricated Stern Tube Bearing',
+      'service-engineer': 'Service Engineer'
+    };
+    return categoryNames[category] || category;
+  };
 
   return (
     <div className="projects-page">
@@ -62,184 +229,172 @@ const Products = () => {
             <p>Explore our range of high-quality sealing solutions and precision components designed for automotive, marine, aerospace, and general industry applications.</p>
           )}
         </div>
+        
+        {/* Category Filter Section */}
+        <div className="container mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div className="category-filter-section">
+            <div className="section-header mb-4">
+              <h3 className="section-title">Filter by Category</h3>
+              {activeCategory && (
+                <div className="current-category-display">
+                  <span className="current-category-label">Currently Viewing:</span>
+                  <span className="current-category-name">{getCategoryDisplayName(activeCategory)}</span>
+                  <button
+                    className="btn btn-sm btn-outline-secondary ms-2"
+                    onClick={() => handleCategoryFilter('all')}
+                  >
+                    <i className="bi bi-x-circle"></i> Clear Filter
+                  </button>
+                </div>
+              )}
+            </div>
+            
+            <div className="category-filter-grid">
+              <button
+                className={`category-filter-item ${activeCategory === null ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('all')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-grid-3x3-gap"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">All Products</span>
+                  <span className="filter-count">{allProducts.length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'mechanical-seals' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('mechanical-seals')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-gear"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Mechanical Seals</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'mechanical-seals').length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'lip-seal' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('lip-seal')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-circle"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Lip Seal</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'lip-seal').length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'valves' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('valves')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-valve"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Valves</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'valves').length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'floating-seal' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('floating-seal')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-hexagon"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Floating Seal</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'floating-seal').length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'accumulators' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('accumulators')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-droplet"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Accumulators</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'accumulators').length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'water-lubricated-stern-tube-seal' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('water-lubricated-stern-tube-seal')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-water"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Water Lubricated Stern Tube Seal</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'water-lubricated-stern-tube-seal').length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'water-lubricated-stern-tube-bearing' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('water-lubricated-stern-tube-bearing')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-buoy"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Water Lubricated Stern Tube Bearing</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'water-lubricated-stern-tube-bearing').length} items</span>
+                </div>
+              </button>
+              
+              <button
+                className={`category-filter-item ${activeCategory === 'service-engineer' ? 'active' : ''}`}
+                onClick={() => handleCategoryFilter('service-engineer')}
+              >
+                <div className="filter-icon">
+                  <i className="bi bi-person-workspace"></i>
+                </div>
+                <div className="filter-text">
+                  <span className="filter-title">Service Engineer</span>
+                  <span className="filter-count">{allProducts.filter(p => p.category === 'service-engineer').length} items</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4">
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-img-top" alt="Floating Seal" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">EH795 EH790 for Water Pump</h4>
-                  <p className="card-text">Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. By its unitized design, EH795 supports easy installation into customer application.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/eh795-details" className="btn btn-outline-primary btn-sm">View Details</a>
+            {filteredProducts.length > 0 ? (
+              filteredProducts.map((product) => (
+                <div key={product.id} className="col-lg-4 col-md-6 product-item">
+                  <div className="card product-card h-100">
+                    <img src={`${process.env.PUBLIC_URL}${product.image}`} className="card-img-top" alt={product.name} />
+                    <div className="card-body product-info">
+                      <h4 className="card-title">{product.name}</h4>
+                      <p className="card-text">{product.description}</p>
+                      <div className="btn-container">
+                        <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
+                        <a href={product.detailsLink} className="btn btn-outline-primary btn-sm">View Details</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-img-top" alt="Mechanical Seal" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Lip Seal For A/C Compressor</h4>
-                  <p className="card-text">Rotating shaft seals exclusively designed for car air-conditioning compressors. Eagle Industry's original design featuring compactness and high reliability. Helps eliminate CFC leakage causing global warming.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/lipSeal-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
+              ))
+            ) : (
+              <div className="col-12">
+                <div className="alert alert-info text-center">
+                  <h4>No products found</h4>
+                  <p>There are no products available for the selected category.</p>
                 </div>
               </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="card-img-top" alt="Rudder Seal" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Rudder Seal</h4>
-                  <p className="card-text">Rudder seals with lip seals designed to prevent lubricant leakage and seawater ingress. Approved by classification societies with multiple types available.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/rudderSeal-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/floating_seal.jpg`} className="card-img-top" alt="Floating Seal" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Floating Seal</h4>
-                  <p className="card-text">Seals for undercarriages of construction machinery. Simple structure consisting of an O-ring and a seal ring made of special cast iron. Optimum seals for undercarriages of bulldozers and hydraulic excavators.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/floatingSeal-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Detail EVK.jpg`} className="card-img-top" alt="Water Lubricated Stern Tube Seal" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Water Lubricated Stern Tube Seal - EVK2RV</h4>
-                  <p className="card-text">A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/evk2rv-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR.png`} className="card-img-top" alt="Water Lubricated Stern Tube Bearing" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Water Lubricated Stern Tube Bearing - EVR</h4>
-                  <p className="card-text">Excellent Durability and Vibration Absorption. Designed specifically for marine applications with water lubricated shafting systems.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/evr-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU.png`} className="card-img-top" alt="Water Lubricated Stern Tube Bearing" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Water Lubricated Stern Tube Bearing - EVU</h4>
-                  <p className="card-text">Poly-Urethane bearing developed for water lubricated stern tube systems based on our extensive water lubricated bearing technology and experience.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/evu-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Enginer.png`} className="card-img-top" alt="Service Engineer" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Service Engineer</h4>
-                  <p className="card-text">Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/serviceEngineer-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/AirCutValve.jpg`} className="card-img-top" alt="Air Cut Valve" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Air Cut Valve</h4>
-                  <p className="card-text">Control valve for variable displacement A/C compressors. Controls swash plate angle to adjust compressor displacement according to A/C load for improved fuel economy.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/airCutValve-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed_valve_double.jpg`} className="card-img-top" alt="Reed Valve" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Reed Valve</h4>
-                  <p className="card-text">Designed for four-stroke motorcycle engines for emission control. Substantially reduces carbon monoxide and hydrocarbon emissions to mitigate air pollution.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/reedValve-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} className="card-img-top" alt="SUPERIOR O-Ring" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">SUPERIOR O-Ring</h4>
-                  <p className="card-text">Newly developed O-Ring material with better chemical resistance, low outgas generation, and light heat resistance for semiconductor process industry.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/oRing-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/marine ace.png`} className="card-img-top" alt="Marine Ace Seal" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Marine Ace Seal (MAS)</h4>
-                  <p className="card-text">Water-lubricated stern seal for small vessels with direct drive systems. Features end-face seal structure for excellent sealing performance.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/bladder-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 product-item">
-              <div className="card product-card h-100">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/bladder_type_accumulators.jpeg`} className="card-img-top" alt="Marine Ace Seal" />
-                <div className="card-body product-info">
-                  <h4 className="card-title">Bladder Type Accumulator</h4>
-                  <p className="card-text">These standard bladder accumulators are manufactured based on years of experience and proven performance.</p>
-                  <div className="btn-container">
-                    <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                    <a href="/products/bladder-details" className="btn btn-outline-primary btn-sm">View Details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </section>

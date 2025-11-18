@@ -166,34 +166,10 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleCategoryClick('accumulator');
+                      handleCategoryClick('lip-seal');
                     }}
                   >
-                    Accumulators
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('stern-tube-seals');
-                    }}
-                  >
-                    Stern tube seals
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('joint-joint');
-                    }}
-                  >
-                    Stern tube bearing
+                    Lip Seal
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -226,10 +202,34 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleCategoryClick('lip-seal');
+                      handleCategoryClick('accumulators');
                     }}
                   >
-                    Lip Seal
+                    Accumulators
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('water-lubricated-stern-tube-seal');
+                    }}
+                  >
+                    Water Lubricated Stern Tube Seal
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleCategoryClick('water-lubricated-stern-tube-bearing');
+                    }}
+                  >
+                    Water Lubricated Stern Tube Bearing
                   </Link>
                 </li>
                 <li className="p-top-list__item">
