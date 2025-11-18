@@ -13,6 +13,9 @@ const Products = () => {
   const [filterInfo, setFilterInfo] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [activeCategory, setActiveCategory] = useState(null);
+  const [activeTab, setActiveTab] = useState('category');
+  const [searchKeyword, setSearchKeyword] = useState('');
+  const [activeIndustry, setActiveIndustry] = useState(null);
   
   // Product data structure with categories
   const allProducts = [
@@ -130,6 +133,15 @@ const Products = () => {
     }
   ];
   
+  // Industry mapping for products
+  const industryMapping = {
+    'oil-gas': ['mechanical-seals', 'valves', 'floating-seal'],
+    'water-irrigation': ['valves', 'accumulators'],
+    'marine': ['water-lubricated-stern-tube-seal', 'water-lubricated-stern-tube-bearing', 'rudder-seal', 'service-engineer'],
+    'semiconductor': ['floating-seal', 'mechanical-seals'],
+    'automobile': ['lip-seal', 'valves', 'mechanical-seals']
+  };
+  
   // Check for filter parameters on component mount
   useEffect(() => {
     if (location.state && location.state.filter) {
@@ -137,17 +149,24 @@ const Products = () => {
         type: location.state.filter,
         value: location.state.value
       });
-      setActiveCategory(location.state.value);
       
-      // Filter products based on category
       if (location.state.filter === 'category') {
+        setActiveCategory(location.state.value);
+        setActiveTab('category');
         const filtered = allProducts.filter(product => product.category === location.state.value);
+        setFilteredProducts(filtered);
+      } else if (location.state.filter === 'industry') {
+        setActiveIndustry(location.state.value);
+        setActiveTab('industry');
+        const categories = industryMapping[location.state.value] || [];
+        const filtered = allProducts.filter(product => categories.includes(product.category));
         setFilteredProducts(filtered);
       }
     } else {
       // Show all products if no filter is applied
       setFilteredProducts(allProducts);
       setActiveCategory(null);
+      setActiveIndustry(null);
     }
   }, [location.state]);
   
@@ -165,6 +184,69 @@ const Products = () => {
         value: category
       });
       setActiveCategory(category);
+    }
+  };
+  
+  // Handle industry filter click
+  const handleIndustryFilter = (industry) => {
+    if (industry === 'all') {
+      setFilteredProducts(allProducts);
+      setFilterInfo(null);
+      setActiveIndustry(null);
+    } else {
+      const categories = industryMapping[industry] || [];
+      const filtered = allProducts.filter(product => categories.includes(product.category));
+      setFilteredProducts(filtered);
+      setFilterInfo({
+        type: 'industry',
+        value: industry
+      });
+      setActiveIndustry(industry);
+    }
+  };
+  
+  // Handle keyword search
+  const handleKeywordSearch = (keyword) => {
+    if (!keyword.trim()) {
+      setFilteredProducts(allProducts);
+      setFilterInfo(null);
+      setSearchKeyword('');
+    } else {
+      const filtered = allProducts.filter(product =>
+        product.name.toLowerCase().includes(keyword.toLowerCase()) ||
+        product.description.toLowerCase().includes(keyword.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+      setFilterInfo({
+        type: 'keyword',
+        value: keyword
+      });
+      setSearchKeyword(keyword);
+    }
+  };
+  
+  // Handle tab navigation
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    // Reset filters when switching tabs
+    if (tab === 'category') {
+      setFilteredProducts(activeCategory ?
+        allProducts.filter(product => product.category === activeCategory) :
+        allProducts
+      );
+    } else if (tab === 'industry') {
+      setFilteredProducts(activeIndustry ?
+        allProducts.filter(product => industryMapping[activeIndustry].includes(product.category)) :
+        allProducts
+      );
+    } else if (tab === 'keyword') {
+      setFilteredProducts(searchKeyword ?
+        allProducts.filter(product =>
+          product.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+          product.description.toLowerCase().includes(searchKeyword.toLowerCase())
+        ) :
+        allProducts
+      );
     }
   };
   
@@ -201,6 +283,36 @@ const Products = () => {
     return categoryNames[category] || category;
   };
 
+  // Handle tab navigation effect
+  useEffect(() => {
+    const tabNavs = document.querySelectorAll('.js-tab-nav');
+    const tabBoxes = document.querySelectorAll('.js-tab-box');
+
+    tabNavs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Remove active class from all tabs
+        tabNavs.forEach(nav => nav.classList.remove('is-active'));
+        
+        // Add active class to clicked tab
+        tab.classList.add('is-active');
+        
+        // Hide all tab boxes
+        tabBoxes.forEach(box => {
+          box.style.display = 'none';
+        });
+        
+        // Show the corresponding tab box
+        const targetId = tab.getAttribute('href').substring(1);
+        const targetBox = document.getElementById(targetId);
+        if (targetBox) {
+          targetBox.style.display = 'block';
+        }
+      });
+    });
+  }, []);
+
   return (
     <div className="projects-page">
       {/* Page Title */}
@@ -218,154 +330,213 @@ const Products = () => {
 
       {/* Products Section */}
       <section id="products" className="products section">
-        <div className="container section-title" data-aos="fade-up">
-          <h2>Our Products</h2>
+        <div className="container section-title" data-aos="fade-up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', textAlign: 'center' }}>
+          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', textAlign: 'center' }}>Our Products</h2>
           {filterInfo && (
-            <p className="filter-info">
-              Showing products for: <strong>{filterInfo.type === 'category' ? 'Category' : 'Industry'}</strong> - <strong>{filterInfo.value}</strong>
+            <p className="filter-info" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+              Showing products for: <strong>{filterInfo.type === 'category' ? 'Category' : filterInfo.type === 'industry' ? 'Industry' : 'Keyword'}</strong> - <strong>{filterInfo.value}</strong>
             </p>
           )}
           {!filterInfo && (
-            <p>Explore our range of high-quality sealing solutions and precision components designed for automotive, marine, aerospace, and general industry applications.</p>
+            <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>Explore our range of high-quality sealing solutions and precision components designed for automotive, marine, aerospace, and general industry applications.</p>
           )}
         </div>
         
-        {/* Category Filter Section */}
-        <div className="container mb-5" data-aos="fade-up" data-aos-delay="100">
-          <div className="category-filter-section">
-            <div className="section-header mb-4">
-              <h3 className="section-title">Filter by Category</h3>
-              {activeCategory && (
-                <div className="current-category-display">
-                  <span className="current-category-label">Currently Viewing:</span>
-                  <span className="current-category-name">{getCategoryDisplayName(activeCategory)}</span>
-                  <button
-                    className="btn btn-sm btn-outline-secondary ms-2"
-                    onClick={() => handleCategoryFilter('all')}
-                  >
-                    <i className="bi bi-x-circle"></i> Clear Filter
-                  </button>
-                </div>
-              )}
+        {/* Product Filter Section - Similar to Home.js */}
+        <div className="p-top-bg -product">
+          <div className="p-top-bg__inner">
+            <div className="p-top-heading -product -white">
+              <ul className="p-top-product-tab__list">
+                <li className="p-top-product-tab__list-item">
+                  <a className={`p-top-product-tab__list-link js-tab-nav ${activeTab === 'category' ? 'is-active' : ''}`} href="#tab-products-category" onClick={(e) => { e.preventDefault(); handleTabClick('category'); }}>
+                    Search by <br className="_d-md-none" />category
+                  </a>
+                </li>
+                <li className="p-top-product-tab__list-item">
+                  <a className={`p-top-product-tab__list-link js-tab-nav ${activeTab === 'industry' ? 'is-active' : ''}`} href="#tab-products-industry" onClick={(e) => { e.preventDefault(); handleTabClick('industry'); }}>
+                    Search by <br className="_d-md-none" />Industry
+                  </a>
+                </li>
+                <li className="p-top-product-tab__list-item">
+                  <a className={`p-top-product-tab__list-link js-tab-nav ${activeTab === 'keyword' ? 'is-active' : ''}`} href="#tab-products-keyword" onClick={(e) => { e.preventDefault(); handleTabClick('keyword'); }}>
+                    Search by <br className="_d-md-none" />keyword
+                  </a>
+                </li>
+              </ul>
             </div>
-            
-            <div className="category-filter-grid">
-              <button
-                className={`category-filter-item ${activeCategory === null ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('all')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-grid-3x3-gap"></i>
+            <div className="p-top-product-tab">
+              <div className={`p-top-product-tab__box js-tab-box ${activeTab === 'category' ? '' : 'd-none'}`} id="tab-products-category" style={{}}>
+                <ul className="p-top-list aos-init" data-aos="fade-up">
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === null ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('all')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      All Products
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'mechanical-seals' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('mechanical-seals')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Mechanical Seals
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}><br></br>({allProducts.filter(p => p.category === 'mechanical-seals').length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'lip-seal' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('lip-seal')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Lip Seal
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'lip-seal').length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'valves' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('valves')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Valves
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'valves').length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'floating-seal' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('floating-seal')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Floating Seal
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'floating-seal').length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'accumulators' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('accumulators')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Accumulators
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'accumulators').length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'water-lubricated-stern-tube-seal' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('water-lubricated-stern-tube-seal')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Water Lubricated Stern Tube Seal
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'water-lubricated-stern-tube-seal').length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'water-lubricated-stern-tube-bearing' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('water-lubricated-stern-tube-bearing')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Water Lubricated Stern Tube Bearing
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'water-lubricated-stern-tube-bearing').length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeCategory === 'service-engineer' ? 'active' : ''}`}
+                      onClick={() => handleCategoryFilter('service-engineer')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Service Engineer
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'service-engineer').length} items)</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div className={`p-top-product-tab__box js-tab-box ${activeTab === 'industry' ? '' : 'd-none'}`} id="tab-products-industry" style={{ display: activeTab === 'industry' ? 'block' : 'none' }}>
+                <ul className="p-top-list">
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeIndustry === null ? 'active' : ''}`}
+                      onClick={() => handleIndustryFilter('all')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      All Industries
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeIndustry === 'oil-gas' ? 'active' : ''}`}
+                      onClick={() => handleIndustryFilter('oil-gas')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Oil & Gas
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['oil-gas'].includes(p.category)).length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeIndustry === 'water-irrigation' ? 'active' : ''}`}
+                      onClick={() => handleIndustryFilter('water-irrigation')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Machinery
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['water-irrigation'].includes(p.category)).length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeIndustry === 'automobile' ? 'active' : ''}`}
+                      onClick={() => handleIndustryFilter('automobile')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Automobile
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['automobile'].includes(p.category)).length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeIndustry === 'marine' ? 'active' : ''}`}
+                      onClick={() => handleIndustryFilter('marine')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Marine
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['marine'].includes(p.category)).length} items)</span>
+                    </button>
+                  </li>
+                  <li className="p-top-list__item">
+                    <button
+                      className={`p-top-list__link ${activeIndustry === 'semiconductor' ? 'active' : ''}`}
+                      onClick={() => handleIndustryFilter('semiconductor')}
+                      style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
+                    >
+                      Semiconductor
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['semiconductor'].includes(p.category)).length} items)</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div className={`p-top-product-tab__box js-tab-box ${activeTab === 'keyword' ? '' : 'd-none'}`} id="tab-products-keyword" style={{ display: activeTab === 'keyword' ? 'block' : 'none' }}>
+                <div className="p-product-search _mt-0">
+                  <form role="search" onSubmit={(e) => { e.preventDefault(); handleKeywordSearch(document.getElementById('product-search-input').value); }}>
+                    <input
+                      className="p-product-search__box"
+                      type="search"
+                      defaultValue={searchKeyword}
+                      id="product-search-input"
+                      placeholder="Enter product keywords"
+                    />
+                    <button className="p-product-search__button" type="submit"></button>
+                  </form>
                 </div>
-                <div className="filter-text">
-                  <span className="filter-title">All Products</span>
-                  <span className="filter-count">{allProducts.length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'mechanical-seals' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('mechanical-seals')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-gear"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Mechanical Seals</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'mechanical-seals').length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'lip-seal' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('lip-seal')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-circle"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Lip Seal</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'lip-seal').length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'valves' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('valves')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-valve"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Valves</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'valves').length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'floating-seal' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('floating-seal')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-hexagon"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Floating Seal</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'floating-seal').length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'accumulators' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('accumulators')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-droplet"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Accumulators</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'accumulators').length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'water-lubricated-stern-tube-seal' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('water-lubricated-stern-tube-seal')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-water"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Water Lubricated Stern Tube Seal</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'water-lubricated-stern-tube-seal').length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'water-lubricated-stern-tube-bearing' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('water-lubricated-stern-tube-bearing')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-buoy"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Water Lubricated Stern Tube Bearing</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'water-lubricated-stern-tube-bearing').length} items</span>
-                </div>
-              </button>
-              
-              <button
-                className={`category-filter-item ${activeCategory === 'service-engineer' ? 'active' : ''}`}
-                onClick={() => handleCategoryFilter('service-engineer')}
-              >
-                <div className="filter-icon">
-                  <i className="bi bi-person-workspace"></i>
-                </div>
-                <div className="filter-text">
-                  <span className="filter-title">Service Engineer</span>
-                  <span className="filter-count">{allProducts.filter(p => p.category === 'service-engineer').length} items</span>
-                </div>
-              </button>
+              </div>
             </div>
           </div>
         </div>
@@ -391,7 +562,7 @@ const Products = () => {
               <div className="col-12">
                 <div className="alert alert-info text-center">
                   <h4>No products found</h4>
-                  <p>There are no products available for the selected category.</p>
+                  <p>There are no products available for the selected filter.</p>
                 </div>
               </div>
             )}

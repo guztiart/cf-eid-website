@@ -972,12 +972,21 @@ section,
   text-align: center;
   padding-bottom: 60px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .section-title h2:before,
@@ -999,6 +1008,8 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+  max-width: 800px;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -3674,6 +3685,11 @@ section,
   color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
+/* Add margin-top to products container to create space after filter section */
+.products .container {
+  margin-top: 30px;
+}
+
 .products .product-item {
   transition: all 0.3s ease-in-out;
   margin-bottom: 40px;
@@ -3742,6 +3758,16 @@ section,
 
   .products .card-text {
     font-size: 14px;
+  }
+  
+  .products .container {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products .container {
+    margin-top: 15px;
   }
 }
 

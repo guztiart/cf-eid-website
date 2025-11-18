@@ -1,5 +1,10 @@
 /* Product Filter Styles */
 
+/* Add spacing after the product filter section */
+.p-top-bg.-product {
+  margin-bottom: 50px;
+}
+
 /* Center the section title and description */
 .section-title {
   font-size: 1.5rem;
@@ -254,4 +259,53 @@
 
 .category-filter-item.active {
   animation: pulse 2s infinite;
+}
+
+/* Responsive spacing for product filter section */
+@media (max-width: 768px) {
+  .p-top-bg.-product {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .p-top-bg.-product {
+    margin-bottom: 20px;
+  }
+}
+
+/* Additional styling for Products page section title to ensure it's centered */
+.products .section-title {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+.products .section-title h2 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-bottom: 15px !important;
+  text-align: center !important;
+}
+
+.products .section-title p {
+  text-align: center !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+}
+
+.products .container.section-title {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
