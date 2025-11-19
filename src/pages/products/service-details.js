@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
+import { setDefaultFavicon } from '../../utils/setFavicon';
 
 const ProjectDetails = () => {
   // Initialize external libraries using custom hooks
@@ -23,6 +24,11 @@ const ProjectDetails = () => {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // Set favicon
+  useEffect(() => {
+    setDefaultFavicon();
+  }, []);
 
   return (
     <div className="project-details-page">

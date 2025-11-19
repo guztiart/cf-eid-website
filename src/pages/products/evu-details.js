@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
+import { setDefaultFavicon } from '../../utils/setFavicon';
 
 const ProjectDetails = () => {
   // Initialize external libraries using custom hooks
@@ -24,12 +25,15 @@ const ProjectDetails = () => {
     },
   });
 
-  // Load custom CSS
+  // Load custom CSS and set favicon
   useEffect(() => {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = `${process.env.PUBLIC_URL}/assets/css/product-details.css`;
     document.head.appendChild(link);
+    
+    // Set the favicon
+    setDefaultFavicon();
     
     return () => {
       document.head.removeChild(link);
