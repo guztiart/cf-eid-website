@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAOS, useIsotope, useGLightbox } from '../hooks/useExternalLibs';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Products = () => {
   // Initialize external libraries using custom hooks
@@ -10,6 +11,7 @@ const Products = () => {
   
   // Get location to access state passed from navigation
   const location = useLocation();
+  const { t } = useLanguage();
   const [filterInfo, setFilterInfo] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [activeCategory, setActiveCategory] = useState(null);
@@ -21,114 +23,114 @@ const Products = () => {
   const allProducts = [
     {
       id: 1,
-      name: "EH795 EH790 for Water Pump",
+      nameKey: "products.eh795",
+      descKey: "products.eh795Desc",
       category: "mechanical-seals",
       image: "/assets/img/product/WP_compact_mechanical_seal.jpg",
-      description: "Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. By its unitized design, EH795 supports easy installation into customer application.",
       detailsLink: "/products/eh795-details"
     },
     {
       id: 2,
-      name: "Lip Seal For A/C Compressor",
+      nameKey: "products.lipSealAc",
+      descKey: "products.lipSealAcDesc",
       category: "lip-seal",
       image: "/assets/img/product/AC_compressor_lip_seal.jpg",
-      description: "Rotating shaft seals exclusively designed for car air-conditioning compressors. Eagle Industry's original design featuring compactness and high reliability. Helps eliminate CFC leakage causing global warming.",
       detailsLink: "/products/lipSeal-details"
     },
     {
       id: 3,
-      name: "Reed Valve",
+      nameKey: "products.reedValve",
+      descKey: "products.reedValveDesc",
       category: "valves",
       image: "/assets/img/product/reed_valve_double.jpg",
-      description: "Designed for four-stroke motorcycle engines for emission control. Substantially reduces carbon monoxide and hydrocarbon emissions to mitigate air pollution.",
       detailsLink: "/products/reedValve-details"
     },
     {
       id: 4,
-      name: "Air Cut Valve",
+      nameKey: "products.airCutValve",
+      descKey: "products.airCutValveDesc",
       category: "valves",
       image: "/assets/img/product/AirCutValve.jpg",
-      description: "Control valve for variable displacement A/C compressors. Controls swash plate angle to adjust compressor displacement according to A/C load for improved fuel economy.",
       detailsLink: "/products/airCutValve-details"
     },
     {
       id: 5,
-      name: "Floating Seal",
+      nameKey: "products.floatingSeal",
+      descKey: "products.floatingSealDesc",
       category: "floating-seal",
       image: "/assets/img/product/floating_seal.jpg",
-      description: "Seals for undercarriages of construction machinery. Simple structure consisting of an O-ring and a seal ring made of special cast iron. Optimum seals for undercarriages of bulldozers and hydraulic excavators.",
       detailsLink: "/products/floatingSeal-details"
     },
     {
       id: 6,
-      name: "SUPERIOR O-Ring",
+      nameKey: "products.superiorORing",
+      descKey: "products.superiorORingDesc",
       category: "floating-seal",
       image: "/assets/img/product/oring-2.png",
-      description: "Newly developed O-Ring material with better chemical resistance, low outgas generation, and light heat resistance for semiconductor process industry.",
       detailsLink: "/products/oRing-details"
     },
     {
       id: 7,
-      name: "Bladder Type Accumulator",
+      nameKey: "products.bladderAccumulator",
+      descKey: "products.bladderAccumulatorDesc",
       category: "accumulators",
       image: "/assets/img/product/bladder_type_accumulators.jpeg",
-      description: "These standard bladder accumulators are manufactured based on years of experience and proven performance.",
       detailsLink: "/products/bladder-details"
     },
     {
       id: 8,
-      name: "Water Lubricated Stern Tube Seal - EVK2RV",
+      nameKey: "products.evk2rv",
+      descKey: "products.evk2rvDesc",
       category: "water-lubricated-stern-tube-seal",
       image: "/assets/img/product/EVK2RV-1.png",
-      description: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.",
       detailsLink: "/products/evk2rv-details"
     },
     {
       id: 9,
-      name: "Water Lubricated Stern Tube Seal - EVK2RT",
+      nameKey: "products.evk2rt",
+      descKey: "products.evk2rtDesc",
       category: "water-lubricated-stern-tube-seal",
       image: "/assets/img/product/EVK2RT.jpg",
-      description: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.",
       detailsLink: "/products/evk2rt-details"
     },
     {
       id: 10,
-      name: "Marine Ace Seal (MAS)",
+      nameKey: "products.mas",
+      descKey: "products.masDesc",
       category: "water-lubricated-stern-tube-seal",
       image: "/assets/img/product/marine ace.png",
-      description: "Water-lubricated stern seal for small vessels with direct drive systems. Features end-face seal structure for excellent sealing performance.",
       detailsLink: "/products/mas-details"
     },
     {
       id: 11,
-      name: "Rudder Seal",
+      nameKey: "products.rudderSeal",
+      descKey: "products.rudderSealDesc",
       category: "water-lubricated-stern-tube-seal",
       image: "/assets/img/product/Rudder_seal.PNG",
-      description: "Rudder seals with lip seals designed to prevent lubricant leakage and seawater ingress. Approved by classification societies with multiple types available.",
       detailsLink: "/products/rudderSeal-details"
     },
     {
       id: 12,
-      name: "Water Lubricated Stern Tube Bearing - EVR",
+      nameKey: "products.evr",
+      descKey: "products.evrDesc",
       category: "water-lubricated-stern-tube-bearing",
       image: "/assets/img/product/EVR.png",
-      description: "Excellent Durability and Vibration Absorption. Designed specifically for marine applications with water lubricated shafting systems.",
       detailsLink: "/products/evr-details"
     },
     {
       id: 13,
-      name: "Water Lubricated Stern Tube Bearing - EVU",
+      nameKey: "products.evu",
+      descKey: "products.evuDesc",
       category: "water-lubricated-stern-tube-bearing",
       image: "/assets/img/product/EVU.png",
-      description: "Poly-Urethane bearing developed for water lubricated stern tube systems based on our extensive water lubricated bearing technology and experience.",
       detailsLink: "/products/evu-details"
     },
     {
       id: 14,
-      name: "Service Engineer",
+      nameKey: "products.serviceEngineer",
+      descKey: "products.serviceEngineerDesc",
       category: "service-engineer",
       image: "/assets/img/product/Enginer.png",
-      description: "Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing.",
       detailsLink: "/products/serviceEngineer-details"
     }
   ];
@@ -270,17 +272,17 @@ const Products = () => {
 
   // Helper function to get display name for category
   const getCategoryDisplayName = (category) => {
-    const categoryNames = {
-      'mechanical-seals': 'Mechanical Seals',
-      'lip-seal': 'Lip Seal',
-      'valves': 'Valves',
-      'floating-seal': 'Floating Seal',
-      'accumulators': 'Accumulators',
-      'water-lubricated-stern-tube-seal': 'Water Lubricated Stern Tube Seal',
-      'water-lubricated-stern-tube-bearing': 'Water Lubricated Stern Tube Bearing',
-      'service-engineer': 'Service Engineer'
+    const categoryKeys = {
+      'mechanical-seals': 'products.mechanicalSeals',
+      'lip-seal': 'products.lipSeal',
+      'valves': 'products.valves',
+      'floating-seal': 'products.floatingSeal',
+      'accumulators': 'products.accumulators',
+      'water-lubricated-stern-tube-seal': 'products.waterLubricatedSternTubeSeal',
+      'water-lubricated-stern-tube-bearing': 'products.waterLubricatedSternTubeBearing',
+      'service-engineer': 'products.serviceEngineer'
     };
-    return categoryNames[category] || category;
+    return t(categoryKeys[category] || category);
   };
 
   // Handle tab navigation effect
@@ -318,11 +320,11 @@ const Products = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Products</h1>
+          <h1>{t('products.title')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li className="current">Products</li>
+              <li><Link to="/">{t('products.breadcrumbHome')}</Link></li>
+              <li className="current">{t('products.breadcrumbProducts')}</li>
             </ol>
           </nav>
         </div>
@@ -331,14 +333,14 @@ const Products = () => {
       {/* Products Section */}
       <section id="products" className="products section">
         <div className="container section-title" data-aos="fade-up" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', textAlign: 'center' }}>
-          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', textAlign: 'center' }}>Our Products</h2>
+          <h2 style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', textAlign: 'center' }}>{t('products.title')}</h2>
           {filterInfo && (
             <p className="filter-info" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-              Showing products for: <strong>{filterInfo.type === 'category' ? 'Category' : filterInfo.type === 'industry' ? 'Industry' : 'Keyword'}</strong> - <strong>{filterInfo.value}</strong>
+              {t('products.showingProductsFor')} <strong>{filterInfo.type === 'category' ? t('products.category') : filterInfo.type === 'industry' ? t('products.industry') : t('products.keyword')}</strong> - <strong>{filterInfo.value}</strong>
             </p>
           )}
           {!filterInfo && (
-            <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>Explore our range of high-quality sealing solutions and precision components designed for automotive, marine, aerospace, and general industry applications.</p>
+            <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>{t('products.description')}</p>
           )}
         </div>
         
@@ -349,17 +351,17 @@ const Products = () => {
               <ul className="p-top-product-tab__list">
                 <li className="p-top-product-tab__list-item">
                   <a className={`p-top-product-tab__list-link js-tab-nav ${activeTab === 'category' ? 'is-active' : ''}`} href="#tab-products-category" onClick={(e) => { e.preventDefault(); handleTabClick('category'); }}>
-                    Search by <br className="_d-md-none" />category
+                    {t('products.searchByCategory')}
                   </a>
                 </li>
                 <li className="p-top-product-tab__list-item">
                   <a className={`p-top-product-tab__list-link js-tab-nav ${activeTab === 'industry' ? 'is-active' : ''}`} href="#tab-products-industry" onClick={(e) => { e.preventDefault(); handleTabClick('industry'); }}>
-                    Search by <br className="_d-md-none" />Industry
+                    {t('products.searchByIndustry')}
                   </a>
                 </li>
                 <li className="p-top-product-tab__list-item">
                   <a className={`p-top-product-tab__list-link js-tab-nav ${activeTab === 'keyword' ? 'is-active' : ''}`} href="#tab-products-keyword" onClick={(e) => { e.preventDefault(); handleTabClick('keyword'); }}>
-                    Search by <br className="_d-md-none" />keyword
+                    {t('products.searchByKeyword')}
                   </a>
                 </li>
               </ul>
@@ -373,8 +375,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('all')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      All Products
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.length} items)</span>
+                      {t('products.allProducts')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -383,8 +385,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('mechanical-seals')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Mechanical Seals
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}><br></br>({allProducts.filter(p => p.category === 'mechanical-seals').length} items)</span>
+                      {getCategoryDisplayName('mechanical-seals')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}><br></br>({allProducts.filter(p => p.category === 'mechanical-seals').length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -393,8 +395,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('lip-seal')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Lip Seal
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'lip-seal').length} items)</span>
+                      {getCategoryDisplayName('lip-seal')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'lip-seal').length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -403,8 +405,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('valves')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Valves
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'valves').length} items)</span>
+                      {getCategoryDisplayName('valves')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'valves').length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -413,8 +415,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('floating-seal')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Floating Seal
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'floating-seal').length} items)</span>
+                      {getCategoryDisplayName('floating-seal')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'floating-seal').length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -423,8 +425,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('accumulators')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Accumulators
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'accumulators').length} items)</span>
+                      {getCategoryDisplayName('accumulators')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'accumulators').length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -433,8 +435,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('water-lubricated-stern-tube-seal')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Water Lubricated Stern Tube Seal
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'water-lubricated-stern-tube-seal').length} items)</span>
+                      {getCategoryDisplayName('water-lubricated-stern-tube-seal')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'water-lubricated-stern-tube-seal').length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -443,8 +445,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('water-lubricated-stern-tube-bearing')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Water Lubricated Stern Tube Bearing
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'water-lubricated-stern-tube-bearing').length} items)</span>
+                      {getCategoryDisplayName('water-lubricated-stern-tube-bearing')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'water-lubricated-stern-tube-bearing').length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -453,8 +455,8 @@ const Products = () => {
                       onClick={() => handleCategoryFilter('service-engineer')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Service Engineer
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'service-engineer').length} items)</span>
+                      {getCategoryDisplayName('service-engineer')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => p.category === 'service-engineer').length} {t('products.items')})</span>
                     </button>
                   </li>
                 </ul>
@@ -467,8 +469,8 @@ const Products = () => {
                       onClick={() => handleIndustryFilter('all')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      All Industries
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.length} items)</span>
+                      {t('products.allIndustries')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -477,8 +479,8 @@ const Products = () => {
                       onClick={() => handleIndustryFilter('oil-gas')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Oil & Gas
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['oil-gas'].includes(p.category)).length} items)</span>
+                      {t('products.oilGas')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['oil-gas'].includes(p.category)).length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -487,8 +489,8 @@ const Products = () => {
                       onClick={() => handleIndustryFilter('water-irrigation')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Machinery
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['water-irrigation'].includes(p.category)).length} items)</span>
+                      {t('products.machinery')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['water-irrigation'].includes(p.category)).length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -497,8 +499,8 @@ const Products = () => {
                       onClick={() => handleIndustryFilter('automobile')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Automobile
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['automobile'].includes(p.category)).length} items)</span>
+                      {t('products.automobile')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['automobile'].includes(p.category)).length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -507,8 +509,8 @@ const Products = () => {
                       onClick={() => handleIndustryFilter('marine')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Marine
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['marine'].includes(p.category)).length} items)</span>
+                      {t('products.marine')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['marine'].includes(p.category)).length} {t('products.items')})</span>
                     </button>
                   </li>
                   <li className="p-top-list__item">
@@ -517,8 +519,8 @@ const Products = () => {
                       onClick={() => handleIndustryFilter('semiconductor')}
                       style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left', width: '100%', padding: '15px 20px' }}
                     >
-                      Semiconductor
-                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['semiconductor'].includes(p.category)).length} items)</span>
+                      {t('products.semiconductor')}
+                      <span className="filter-count" style={{ marginLeft: '10px', fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.7)' }}>({allProducts.filter(p => industryMapping['semiconductor'].includes(p.category)).length} {t('products.items')})</span>
                     </button>
                   </li>
                 </ul>
@@ -531,7 +533,7 @@ const Products = () => {
                       type="search"
                       defaultValue={searchKeyword}
                       id="product-search-input"
-                      placeholder="Enter product keywords"
+                      placeholder={t('products.enterKeywords')}
                     />
                     <button className="p-product-search__button" type="submit"></button>
                   </form>
@@ -546,13 +548,13 @@ const Products = () => {
               filteredProducts.map((product) => (
                 <div key={product.id} className="col-lg-4 col-md-6 product-item">
                   <div className="card product-card h-100">
-                    <img src={`${process.env.PUBLIC_URL}${product.image}`} className="card-img-top" alt={product.name} />
+                    <img src={`${process.env.PUBLIC_URL}${product.image}`} className="card-img-top" alt={t(product.nameKey)} />
                     <div className="card-body product-info">
-                      <h4 className="card-title">{product.name}</h4>
-                      <p className="card-text">{product.description}</p>
+                      <h4 className="card-title">{t(product.nameKey)}</h4>
+                      <p className="card-text">{t(product.descKey)}</p>
                       <div className="btn-container">
-                        <a href="/contact" className="btn btn-outline-primary btn-sm">Inquire Now</a>
-                        <a href={product.detailsLink} className="btn btn-outline-primary btn-sm">View Details</a>
+                        <a href="/contact" className="btn btn-outline-primary btn-sm">{t('products.inquireNow')}</a>
+                        <a href={product.detailsLink} className="btn btn-outline-primary btn-sm">{t('products.viewDetails')}</a>
                       </div>
                     </div>
                   </div>
@@ -561,8 +563,8 @@ const Products = () => {
             ) : (
               <div className="col-12">
                 <div className="alert alert-info text-center">
-                  <h4>No products found</h4>
-                  <p>There are no products available for the selected filter.</p>
+                  <h4>{t('products.noProductsFound')}</h4>
+                  <p>{t('products.noProductsDescription')}</p>
                 </div>
               </div>
             )}

@@ -448,6 +448,63 @@ h6 {
   }
 }
 
+/* Language Switcher Styles */
+.language-switcher {
+  margin-left: 10px;
+}
+
+.language-btn {
+  background-color: transparent;
+  border: 1px solid var(--nav-color);
+  color: var(--nav-color);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.language-btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.scrolled .language-btn {
+  border-color: var(--nav-color);
+  color: var(--nav-color);
+}
+
+.scrolled .language-btn:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+/* Mobile navigation language switcher */
+@media (max-width: 1199px) {
+  .language-switcher {
+    padding: 10px 20px;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 10%);
+    margin-top: 10px;
+  }
+  
+  .language-btn {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+  
+  .language-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/

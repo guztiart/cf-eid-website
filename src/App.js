@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Import components
 import Header from './components/Header';
@@ -77,11 +78,12 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="App">
-        <Header />
-        <main>
+    <LanguageProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="App">
+          <Header />
+          <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/company" element={<Company />} />
@@ -118,11 +120,12 @@ function App() {
             <Route path="/products/serviceEngineer-details" element={< ServiceEngineerDetails/>} />
             <Route path="/products/oRing-details" element={< ORing/>} />
           </Routes>
-        </main>
-        <Footer />
-        <ScrollTop />
-      </div>
-    </Router>
+          </main>
+          <Footer />
+          <ScrollTop />
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 }
 

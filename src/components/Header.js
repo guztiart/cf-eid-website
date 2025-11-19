@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileNavActive, setIsMobileNavActive] = useState(false);
   const location = useLocation();
+  const { language, toggleLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,22 +44,22 @@ const Header = () => {
           <ul>
             <li>
               <Link to="/" className={`${location.pathname === '/' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
-                Home
+                {t('header.home')}
               </Link>
             </li>
             <li>
               <Link to="/company" className={`${location.pathname === '/company' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
-                Company
+                {t('header.company')}
               </Link>
             </li>
             <li>
               <Link to="/sustainability" className={`${location.pathname === '/sustainability' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
-                Sustainability
+                {t('header.sustainability')}
               </Link>
             </li>
             <li>
               <Link to="/products" className={`${location.pathname === '/products' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
-                Products
+                {t('header.products')}
               </Link>
             </li>
             {/* <li>
@@ -67,8 +69,17 @@ const Header = () => {
             </li> */}
             <li>
               <Link to="/contact" className={`${location.pathname === '/contact' ? 'active' : ''} ${isScrolled ? 'nav-scrolled' : ''}`} onClick={closeMobileNav}>
-                Inquiry Form
+                {t('header.inquiryForm')}
               </Link>
+            </li>
+            <li className="language-switcher">
+              <button
+                className={`language-btn ${isScrolled ? 'nav-scrolled' : ''}`}
+                onClick={toggleLanguage}
+                title={t('header.language')}
+              >
+                {language === 'en' ? 'ID' : 'EN'}
+              </button>
             </li>
           </ul>
           <i

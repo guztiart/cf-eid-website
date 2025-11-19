@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAOS, usePureCounter, useIsotope, useGLightbox } from '../hooks/useExternalLibs';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Home = () => {
   // Initialize external libraries using custom hooks
@@ -11,6 +12,9 @@ const Home = () => {
   
   // Get navigate function for programmatic navigation
   const navigate = useNavigate();
+  
+  // Get translation function
+  const { t } = useLanguage();
   
   // Load custom CSS for button styling
   useEffect(() => {
@@ -95,13 +99,13 @@ const Home = () => {
                 <span></span>
                 <span></span>
               </div>
-              <div className="scroll-text">Scroll Down</div>
+              <div className="scroll-text">{t('home.scrollDown')}</div>
             </div>
           </div>
           <div className="p-hero-top__button" >
             <a className="p-hero-top__button-link glightbox" href="https://www.youtube.com/watch?v=LK56SEZupRQ" rel="noopener noreferrer">
               <i className="bi bi-play-circle"></i>
-              <span>Play full movie</span>
+              <span>{t('home.playFullMovie')}</span>
             </a>
           </div>
         </div>
@@ -113,9 +117,9 @@ const Home = () => {
           <div className="row justify-content-center gy-4">
             <div className="col-lg-8 text-center" data-aos="zoom-out" data-aos-delay="100">
               <div className="content">
-                <h3 className="mb-4">Innovation and Excellence in Precision Manufacturing.</h3>
-                <p className="mb-3">PT Eagle Industry Indonesia is part of Eagle Industry Co., Ltd., Japan, which has been operating for decades in providing high-quality components for various industries. We prioritize advanced technology, product reliability, and customer satisfaction to support global market needs.</p>
-                <p>With modern production facilities in Indonesia, we ensure international quality standards and timely delivery to meet the needs of our customers across various sectors.</p>
+                <h3 className="mb-4">{t('home.innovationTitle')}</h3>
+                <p className="mb-3">{t('home.innovationDesc1')}</p>
+                <p>{t('home.innovationDesc2')}</p>
               </div>
             </div>
           </div>
@@ -127,21 +131,21 @@ const Home = () => {
         <div className="p-top-bg__inner">
           <div className="p-top-heading -product -white">
             <div className="p-top-heading__title aos-init" data-aos="fade-up">
-              <h2 className="p-top-heading__title-main text-white">PRODUCTS</h2>
-              <p className="p-top-heading__title-text">We provide mechanical seals and various mechanical products for land, sea and air mobility, plant equipment and semiconductor manufacturing equipment.</p>
+              <h2 className="p-top-heading__title-main text-white">{t('home.productsTitle')}</h2>
+              <p className="p-top-heading__title-text">{t('home.productsDesc')}</p>
             </div>
             <div className="p-top-heading__link aos-init" data-aos="fade-up">
-              <Link to="/products" className="p-top-heading__link-text">Learn More</Link>
+              <Link to="/products" className="p-top-heading__link-text">{t('home.learnMore')}</Link>
             </div>
             <ul className="p-top-product-tab__list">
               <li className="p-top-product-tab__list-item">
-                <a className="p-top-product-tab__list-link js-tab-nav is-active" href="#tab-top-category">Search by <br className="_d-md-none" />category</a>
+                <a className="p-top-product-tab__list-link js-tab-nav is-active" href="#tab-top-category">{t('home.searchByCategory')}</a>
               </li>
               <li className="p-top-product-tab__list-item">
-                <a className="p-top-product-tab__list-link js-tab-nav" href="#tab-top-industry">Search by <br className="_d-md-none" />Industry</a>
+                <a className="p-top-product-tab__list-link js-tab-nav" href="#tab-top-industry">{t('home.searchByIndustry')}</a>
               </li>
               <li className="p-top-product-tab__list-item">
-                <a className="p-top-product-tab__list-link js-tab-nav" href="#tab-top-keyword">Search by <br className="_d-md-none" />keyword</a>
+                <a className="p-top-product-tab__list-link js-tab-nav" href="#tab-top-keyword">{t('home.searchByKeyword')}</a>
               </li>
             </ul>
           </div>
@@ -157,7 +161,7 @@ const Home = () => {
                       handleCategoryClick('mechanical-seals');
                     }}
                   >
-                    Mechanical Seals
+                    {t('home.mechanicalSeals')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -169,7 +173,7 @@ const Home = () => {
                       handleCategoryClick('lip-seal');
                     }}
                   >
-                    Lip Seal
+                    {t('home.lipSeal')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -181,7 +185,7 @@ const Home = () => {
                       handleCategoryClick('valves');
                     }}
                   >
-                    Valves
+                    {t('home.valves')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -193,7 +197,7 @@ const Home = () => {
                       handleCategoryClick('floating-seal');
                     }}
                   >
-                    Floating Seal
+                    {t('home.floatingSeal')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -205,7 +209,7 @@ const Home = () => {
                       handleCategoryClick('accumulators');
                     }}
                   >
-                    Accumulators
+                    {t('home.accumulators')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -217,7 +221,7 @@ const Home = () => {
                       handleCategoryClick('water-lubricated-stern-tube-seal');
                     }}
                   >
-                    Water Lubricated Stern Tube Seal
+                    {t('home.waterLubricatedSternTubeSeal')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -229,7 +233,7 @@ const Home = () => {
                       handleCategoryClick('water-lubricated-stern-tube-bearing');
                     }}
                   >
-                    Water Lubricated Stern Tube Bearing
+                    {t('home.waterLubricatedSternTubeBearing')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -241,7 +245,7 @@ const Home = () => {
                       handleCategoryClick('service-engineer');
                     }}
                   >
-                    Service Engineer
+                    {t('home.serviceEngineer')}
                   </Link>
                 </li>
               </ul>
@@ -257,7 +261,7 @@ const Home = () => {
                       handleIndustryClick('oil-gas');
                     }}
                   >
-                    Oil & Gas
+                    {t('home.oilGas')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -269,7 +273,7 @@ const Home = () => {
                       handleIndustryClick('water-irrigation');
                     }}
                   >
-                    Machinery
+                    {t('home.machinery')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -281,7 +285,7 @@ const Home = () => {
                       handleIndustryClick('marine');
                     }}
                   >
-                    Automobile
+                    {t('home.automobile')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">
@@ -293,7 +297,7 @@ const Home = () => {
                       handleIndustryClick('semiconductor');
                     }}
                   >
-                    Marine
+                    {t('home.marine')}
                   </Link>
                 </li>
               </ul>
@@ -301,7 +305,7 @@ const Home = () => {
             <div className="p-top-product-tab__box js-tab-box" id="tab-top-keyword" style={{ display: 'none' }}>
               <div className="p-product-search _mt-0">
                 <form role="search" action="/products" id="searchform">
-                  <input className="p-product-search__box" type="search" defaultValue="" name="s" id="s" placeholder="Enter product keywords" />
+                  <input className="p-product-search__box" type="search" defaultValue="" name="s" id="s" placeholder={t('home.enterKeywords')} />
                   <button className="p-product-search__button" type="submit"></button>
                 </form>
               </div>
@@ -313,8 +317,8 @@ const Home = () => {
      {/* Service Section */}
       <section id="services" className="services section light-background">
         <div className="container section-title" data-aos="fade-up">
-          <h2>Our Services</h2>
-          <p>We provide comprehensive solutions for your precision component needs.</p>
+          <h2>{t('home.ourServices')}</h2>
+          <p>{t('home.servicesDesc')}</p>
         </div>
         <div className="container">
           <div className="row gy-4">
@@ -323,9 +327,9 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-mountain-city"></i>
                 </div>
-                <h3>Custom Manufacturing</h3>
-                <p>We offer custom manufacturing solutions to meet specific customer needs across various industries.</p>
-                <Link to="/services/custom-manufacturing" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
+                <h3>{t('home.customManufacturing')}</h3>
+                <p>{t('home.customManufacturingDesc')}</p>
+                <Link to="/services/custom-manufacturing" className="readmore stretched-link">{t('home.readMore')} <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -333,9 +337,9 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-arrow-up-from-ground-water"></i>
                 </div>
-                <h3>Technical Support</h3>
-                <p>Our expert team provides technical support to ensure optimal performance of our products.</p>
-                <Link to="/services/technical-support" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
+                <h3>{t('home.technicalSupport')}</h3>
+                <p>{t('home.technicalSupportDesc')}</p>
+                <Link to="/services/technical-support" className="readmore stretched-link">{t('home.readMore')} <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
@@ -343,9 +347,9 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-compass-drafting"></i>
                 </div>
-                <h3>After-Sales Service</h3>
-                <p>We provide reliable after-sales service to ensure customer satisfaction.</p>
-                <Link to="/services/after-sales-service" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
+                <h3>{t('home.afterSalesService')}</h3>
+                <p>{t('home.afterSalesServiceDesc')}</p>
+                <Link to="/services/after-sales-service" className="readmore stretched-link">{t('home.readMore')} <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
@@ -353,9 +357,9 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-trowel-bricks"></i>
                 </div>
-                <h3>Quality Assurance</h3>
-                <p>Our rigorous quality control processes ensure that all products meet international standards and customer specifications.</p>
-                <Link to="/services/quality-assurance" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
+                <h3>{t('home.qualityAssurance')}</h3>
+                <p>{t('home.qualityAssuranceDesc')}</p>
+                <Link to="/services/quality-assurance" className="readmore stretched-link">{t('home.readMore')} <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
@@ -363,9 +367,9 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-helmet-safety"></i>
                 </div>
-                <h3>Research & Development</h3>
-                <p>Our R&D team continuously innovates to develop advanced sealing solutions that address evolving industry challenges.</p>
-                <Link to="/services/research-development" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
+                <h3>{t('home.researchDevelopment')}</h3>
+                <p>{t('home.researchDevelopmentDesc')}</p>
+                <Link to="/services/research-development" className="readmore stretched-link">{t('home.readMore')} <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
@@ -373,9 +377,9 @@ const Home = () => {
                 <div className="icon">
                   <i className="fa-solid fa-arrow-up-from-ground-water"></i>
                 </div>
-                <h3>Global Supply Chain</h3>
-                <p>We maintain an efficient global supply network to ensure timely delivery of products to customers worldwide.</p>
-                <Link to="/services/global-supply-chain" className="readmore stretched-link">Read more <i className="bi bi-arrow-right"></i></Link>
+                <h3>{t('home.globalSupplyChain')}</h3>
+                <p>{t('home.globalSupplyChainDesc')}</p>
+                <Link to="/services/global-supply-chain" className="readmore stretched-link">{t('home.readMore')} <i className="bi bi-arrow-right"></i></Link>
               </div>
             </div>
           </div>
@@ -431,22 +435,22 @@ const Home = () => {
           <ul className="nav nav-tabs row g-2 d-flex" data-aos="fade-up" data-aos-delay="100" role="tablist">
             <li className="nav-item col-3" role="presentation">
               <a className="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1" aria-selected="true" role="tab">
-                <h4>Floating Seal</h4>
+                <h4>{t('home.floatingSeal')}</h4>
               </a>
             </li>
             <li className="nav-item col-3" role="presentation">
               <a className="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2" aria-selected="false" tabIndex="-1" role="tab">
-                <h4>Mechanical Seal</h4>
+                <h4>{t('home.mechanicalSealFeature')}</h4>
               </a>
             </li>
             <li className="nav-item col-3" role="presentation">
               <a className="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3" aria-selected="false" tabIndex="-1" role="tab">
-                <h4>Lip Seal</h4>
+                <h4>{t('home.lipSealFeature')}</h4>
               </a>
             </li>
             <li className="nav-item col-3" role="presentation">
               <a className="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4" aria-selected="false" tabIndex="-1" role="tab">
-                <h4>Rudder</h4>
+                <h4>{t('home.rudder')}</h4>
               </a>
             </li>
           </ul>
@@ -454,15 +458,15 @@ const Home = () => {
             <div className="tab-pane fade active show" id="features-tab-1" role="tabpanel">
               <div className="row">
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
-                  <h3>Floating Seal</h3>
+                  <h3>{t('home.floatingSeal')}</h3>
                   <p className="fst-italic">
-                    Precision floating seals for heavy-duty applications in harsh environments.
+                    {t('home.floatingSealDesc')}
                   </p>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Excellent resistance to wear and extreme operating conditions</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Self-lubricating design for enhanced performance and longevity</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Ideal for construction, mining, and agricultural equipment</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Customizable configurations to meet specific application needs</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.floatingSealFeature1')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.floatingSealFeature2')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.floatingSealFeature3')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.floatingSealFeature4')}</span></li>
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
@@ -473,14 +477,14 @@ const Home = () => {
             <div className="tab-pane fade" id="features-tab-2" role="tabpanel">
               <div className="row">
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
-                  <h3>Mechanical Seal</h3>
+                  <h3>{t('home.mechanicalSealFeature')}</h3>
                   <p className="fst-italic">
-                    High-performance mechanical seals designed for demanding industrial applications.
+                    {t('home.mechanicalSealDesc')}
                   </p>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Engineered for superior durability and extended service life</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Suitable for high-pressure, high-temperature environments</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Available in various materials to match specific application requirements</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.mechanicalSealFeature1')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.mechanicalSealFeature2')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.mechanicalSealFeature3')}</span></li>
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
@@ -491,14 +495,14 @@ const Home = () => {
             <div className="tab-pane fade" id="features-tab-3" role="tabpanel">
               <div className="row">
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
-                  <h3>Lip Seal</h3>
+                  <h3>{t('home.lipSealFeature')}</h3>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>High-quality sealing for rotary and reciprocating applications</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Available in various materials including NBR, FKM, and PTFE</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Designed to prevent fluid leakage and contamination</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.lipSealFeature1')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.lipSealFeature2')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.lipSealFeature3')}</span></li>
                   </ul>
                   <p className="fst-italic">
-                    Reliable lip seals for automotive, industrial, and marine applications.
+                    {t('home.lipSealDesc')}
                   </p>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
@@ -509,14 +513,14 @@ const Home = () => {
             <div className="tab-pane fade" id="features-tab-4" role="tabpanel">
               <div className="row">
                 <div className="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center text-start">
-                  <h3>Rudder</h3>
+                  <h3>{t('home.rudder')}</h3>
                   <p className="fst-italic">
-                    Advanced rudder seals for marine vessels ensuring optimal steering performance.
+                    {t('home.rudderDesc')}
                   </p>
                   <ul>
-                    <li><i className="bi bi-check2-all"></i> <span>Engineered for maximum durability in marine environments</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Superior resistance to corrosion and seawater conditions</span></li>
-                    <li><i className="bi bi-check2-all"></i> <span>Designed to maintain vessel maneuverability and safety</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.rudderFeature1')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.rudderFeature2')}</span></li>
+                    <li><i className="bi bi-check2-all"></i> <span>{t('home.rudderFeature3')}</span></li>
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">

@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../hooks/useExternalLibs';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Sustainability = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
 
@@ -29,11 +31,11 @@ const Sustainability = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Sustainability</h1>
+          <h1>{t('sustainability.title')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li className="current">Sustainability</li>
+              <li><Link to="/">{t('sustainability.breadcrumbHome')}</Link></li>
+              <li className="current">{t('sustainability.breadcrumbSustainability')}</li>
             </ol>
           </nav>
         </div>
@@ -42,8 +44,8 @@ const Sustainability = () => {
       {/* Our Concepts of Sustainability Section */}
       <section id="sustainability-concepts" className="sustainability-concepts section">
         <div className="container section-title" data-aos="fade-up">
-          <h2>Our Concepts of Sustainability</h2>
-          <p>Creating a sustainable future through innovation and responsibility</p>
+          <h2>{t('sustainability.conceptsTitle')}</h2>
+          <p>{t('sustainability.conceptsSubtitle')}</p>
         </div>
         <div className="container">
           <div className="row justify-content-around gy-4">
@@ -51,18 +53,18 @@ const Sustainability = () => {
               <img src={`${process.env.PUBLIC_URL}/assets/img/Sustainability/skateHolder.png`} alt="Sustainability" style={{ height: 'auto', maxHeight: 'none', objectFit: 'contain', width: '100%' }} />
             </div>
             <div className="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-              <h3>Eagle Industry's Sustainability Vision</h3>
-              <p>At Eagle Industry Indonesia, we believe that companies belong to not only their shareholders but also their employees and society. This philosophy has long permeated every aspect of the EKK Group's management since our establishment in 1996.</p>
-              <p>As part of Eagle Industry Co., Ltd., a global leader in sealing solutions, we contribute to environmental protection through our core business. Our mechanical seals prevent gases, oil, and other fluids from leaking machinery, directly helping to preserve the environment and prevent pollution.</p>
-              <h4 className="mt-4">Our Core Principles:</h4>
+              <h3>{t('sustainability.visionTitle')}</h3>
+              <p>{t('sustainability.visionDesc1')}</p>
+              <p>{t('sustainability.visionDesc2')}</p>
+              <h4 className="mt-4">{t('sustainability.corePrinciples')}</h4>
               <ul>
-                <li><i className="bi bi-check-circle"></i> <span>Environmental protection through leak prevention technology</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Building trust through dialogue with all stakeholders</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Creating fair profits that support perpetual growth</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Developing products that resolve environmental regulatory issues</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>{t('sustainability.principle1')}</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>{t('sustainability.principle2')}</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>{t('sustainability.principle3')}</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>{t('sustainability.principle4')}</span></li>
               </ul>
               <div className="mt-4">
-                <Link to="/sustainability/concept-of-sustainability" className="btn btn-primary">Learn More About Our Sustainability Concept</Link>
+                <Link to="/sustainability/concept-of-sustainability" className="btn btn-primary">{t('sustainability.learnMoreConcept')}</Link>
               </div>
             </div>
           </div>
@@ -72,8 +74,8 @@ const Sustainability = () => {
       {/* ESG Initiatives Section */}
       <section id="esg-initiatives" className="esg-initiatives section">
         <div className="container section-title" data-aos="fade-up">
-          <h2>ESG Initiatives</h2>
-          <p>Strengthening our Environmental, Social, and Governance framework</p>
+          <h2>{t('sustainability.esgTitle')}</h2>
+          <p>{t('sustainability.esgSubtitle')}</p>
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4">
@@ -82,15 +84,15 @@ const Sustainability = () => {
                 <div className="icon">
                   <i className="bi bi-tree"></i>
                 </div>
-                <h3>Environmental Initiatives</h3>
-                <p>Comprehensive environmental preservation activities in accordance with our environmental policy and ISO 14001 certification.</p>
+                <h3>{t('sustainability.environmentalTitle')}</h3>
+                <p>{t('sustainability.environmentalDesc')}</p>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Water resource management</span></li>
-                  <li><i className="bi bi-check"></i><span>Global warming mitigation</span></li>
-                  <li><i className="bi bi-check"></i><span>Industrial waste reduction</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.environmentalFeature1')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.environmentalFeature2')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.environmentalFeature3')}</span></li>
                 </ul>
                 <div className="mt-3">
-                  <Link to="/sustainability/environmental-initiatives" className="btn btn-outline-primary btn-sm">Learn More</Link>
+                  <Link to="/sustainability/environmental-initiatives" className="btn btn-outline-primary btn-sm">{t('sustainability.learnMore')}</Link>
                 </div>
               </div>
             </div>
@@ -99,15 +101,15 @@ const Sustainability = () => {
                 <div className="icon">
                   <i className="bi bi-thermometer-half"></i>
                 </div>
-                <h3>Climate Change Disclosure</h3>
-                <p>TCFD-aligned climate-related financial disclosure addressing risks and opportunities of climate change.</p>
+                <h3>{t('sustainability.climateTitle')}</h3>
+                <p>{t('sustainability.climateDesc')}</p>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Governance framework</span></li>
-                  <li><i className="bi bi-check"></i><span>Climate strategy</span></li>
-                  <li><i className="bi bi-check"></i><span>Risk management</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.climateFeature1')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.climateFeature2')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.climateFeature3')}</span></li>
                 </ul>
                 <div className="mt-3">
-                  <Link to="/sustainability/climate-change-disclosure" className="btn btn-outline-primary btn-sm">Learn More</Link>
+                  <Link to="/sustainability/climate-change-disclosure" className="btn btn-outline-primary btn-sm">{t('sustainability.learnMore')}</Link>
                 </div>
               </div>
             </div>
@@ -116,15 +118,15 @@ const Sustainability = () => {
                 <div className="icon">
                   <i className="bi bi-heart-pulse"></i>
                 </div>
-                <h3>Occupational Health & Safety</h3>
-                <p>Comprehensive OHS management system ensuring workplace safety and employee well-being.</p>
+                <h3>{t('sustainability.healthTitle')}</h3>
+                <p>{t('sustainability.healthDesc')}</p>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Safety management systems</span></li>
-                  <li><i className="bi bi-check"></i><span>Health promotion programs</span></li>
-                  <li><i className="bi bi-check"></i><span>Safety training and education</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.healthFeature1')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.healthFeature2')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.healthFeature3')}</span></li>
                 </ul>
                 <div className="mt-3">
-                  <Link to="/sustainability/occupational-health-safety" className="btn btn-outline-primary btn-sm">Learn More</Link>
+                  <Link to="/sustainability/occupational-health-safety" className="btn btn-outline-primary btn-sm">{t('sustainability.learnMore')}</Link>
                 </div>
               </div>
             </div>
@@ -133,15 +135,15 @@ const Sustainability = () => {
                 <div className="icon">
                   <i className="bi bi-share"></i>
                 </div>
-                <h3>Social Media Contribution</h3>
-                <p>Leveraging social platforms to promote sustainability awareness and stakeholder engagement.</p>
+                <h3>{t('sustainability.socialTitle')}</h3>
+                <p>{t('sustainability.socialDesc')}</p>
                 <ul>
-                  <li><i className="bi bi-check"></i><span>Sustainability awareness campaigns</span></li>
-                  <li><i className="bi bi-check"></i><span>ESG performance transparency</span></li>
-                  <li><i className="bi bi-check"></i><span>Community engagement</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.socialFeature1')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.socialFeature2')}</span></li>
+                  <li><i className="bi bi-check"></i><span>{t('sustainability.socialFeature3')}</span></li>
                 </ul>
                 <div className="mt-3">
-                  <Link to="/sustainability/social-media-contribution" className="btn btn-outline-primary btn-sm">Learn More</Link>
+                  <Link to="/sustainability/social-media-contribution" className="btn btn-outline-primary btn-sm">{t('sustainability.learnMore')}</Link>
                 </div>
               </div>
             </div>
@@ -155,11 +157,11 @@ const Sustainability = () => {
         <div className="container">
           <div className="row justify-content-between" data-aos="fade-up" data-aos-delay="100">
             <div className="col-lg-7">
-              <h3>Join Our Sustainability Journey</h3>
-              <p>We are committed to creating sustainable value for all our stakeholders. Together, we can build a more sustainable future through innovation, responsibility, and collaboration.</p>
+              <h3>{t('sustainability.ctaTitle')}</h3>
+              <p>{t('sustainability.ctaDesc')}</p>
             </div>
             <div className="col-lg-5 text-center">
-              <Link to="/contact" className="btn btn-primary">Contact Us</Link>
+              <Link to="/contact" className="btn btn-primary">{t('sustainability.contactUs')}</Link>
             </div>
           </div>
         </div>

@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, usePureCounter, useGLightbox } from '../hooks/useExternalLibs';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Company = () => {
   // Initialize external libraries using custom hooks
   useAOS();
   usePureCounter();
   useGLightbox();
+  
+  // Get translation function
+  const { t } = useLanguage();
   
   // Additional initialization for PureCounter to ensure it works properly
   useEffect(() => {
@@ -26,11 +30,11 @@ const Company = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>About Company Eagle Industry Indonesia</h1>
+          <h1>{t('company.pageTitle')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li className="current">Company</li>
+              <li><Link to="/">{t('company.breadcrumbHome')}</Link></li>
+              <li className="current">{t('company.breadcrumbCompany')}</li>
             </ol>
           </nav>
         </div>
@@ -44,27 +48,20 @@ const Company = () => {
               <img src={`${process.env.PUBLIC_URL}/assets/img/building/eid_building_front.jpg`} alt="About Eagle Industry Indonesia" />
             </div>
             <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
-              <h2 className="inner-title">PT Eagle Industry Indonesia</h2>
+              <h2 className="inner-title">{t('company.title')}</h2>
               <div className="our-story">
-                <h4>Established Since 1996</h4>
-                <h3>Our History</h3>
-                <p>PT Eagle Industry Indonesia is part of Eagle Industry Co., Ltd., a global company based in Japan
-                  known as a leader in manufacturing automotive and industrial components. Established in Indonesia in 1996,
-                  we focus on producing mechanical seals, rubber bellows, and other precision components used in various industries,
-                  including automotive, aerospace, and industrial equipment. With a commitment to quality and innovation, we continue to grow
-                  to meet customer needs worldwide.
-                </p>
+                <h4>{t('company.establishedSince')}</h4>
+                <h3>{t('company.ourHistory')}</h3>
+                <p>{t('company.historyDesc1')}</p>
                 <ul>
-                  <li><i className="bi bi-check-circle"></i> <span>Producing high-quality automotive components with international standards.</span></li>
-                  <li><i className="bi bi-check-circle"></i> <span>Prioritizing technological innovation in every production process.</span></li>
-                  <li><i className="bi bi-check-circle"></i> <span>Committed to sustainability and corporate social responsibility.</span></li>
+                  <li><i className="bi bi-check-circle"></i> <span>{t('company.qualityFeature')}</span></li>
+                  <li><i className="bi bi-check-circle"></i> <span>{t('company.innovationFeature')}</span></li>
+                  <li><i className="bi bi-check-circle"></i> <span>{t('company.sustainabilityFeature')}</span></li>
                 </ul>
-                <p>We believe that our success is built on the dedication of our team and customer trust. With modern production facilities and a professional team,
-                  PT Eagle Industry Indonesia is ready to be your trusted partner.
-                </p>
+                <p>{t('company.historyDesc2')}</p>
                 <div className="watch-video d-flex align-items-center position-relative">
                   <i className="bi bi-play-circle"></i>
-                  <a href="https://www.youtube.com/watch?v=4335-VJuJeA" className="glightbox stretched-link">Watch Video</a>
+                  <a href="https://www.youtube.com/watch?v=4335-VJuJeA" className="glightbox stretched-link">{t('company.watchVideo')}</a>
                 </div>
               </div>
             </div>
@@ -75,8 +72,8 @@ const Company = () => {
       {/* Stats Counter Section */}
       <section id="stats-counter" className="stats-counter section">
         <div className="container section-title" data-aos="fade-up">
-          <h2>Our Statistics</h2>
-          <p>We are proud of our achievements in providing the best solutions for customers and supporting industry growth.</p>
+          <h2>{t('company.ourStatistics')}</h2>
+          <p>{t('company.statisticsDesc')}</p>
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4">
@@ -85,7 +82,7 @@ const Company = () => {
                 <i className="bi bi-emoji-smile color-blue flex-shrink-0"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2" className="purecounter"></span>
-                  <p>Global Customers</p>
+                  <p>{t('company.globalCustomers')}</p>
                 </div>
               </div>
             </div>
@@ -94,7 +91,7 @@ const Company = () => {
                 <i className="bi bi-journal-richtext color-orange flex-shrink-0"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2" className="purecounter"></span>
-                  <p>Million Products Produced</p>
+                  <p>{t('company.millionProducts')}</p>
                 </div>
               </div>
             </div>
@@ -103,7 +100,7 @@ const Company = () => {
                 <i className="bi bi-headset color-green flex-shrink-0"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="1" className="purecounter"></span>
-                  <p>Years of Excellence</p>
+                  <p>{t('company.yearsExcellence')}</p>
                 </div>
               </div>
             </div>
@@ -112,7 +109,7 @@ const Company = () => {
                 <i className="bi bi-people color-pink flex-shrink-0"></i>
                 <div>
                   <span data-purecounter-start="0" data-purecounter-end="199" data-purecounter-duration="2" className="purecounter"></span>
-                  <p>Dedicated Employees</p>
+                  <p>{t('company.dedicatedEmployees')}</p>
                 </div>
               </div>
             </div>
@@ -151,43 +148,43 @@ const Company = () => {
         <div className="container">
           <div className="row justify-content-around gy-4">
             <div className="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1 management-message" data-aos="fade-up" data-aos-delay="100">
-              <h3 className="text-start">Managing Director Message</h3>
-              <p>PT Eagle Industry Indonesia was established in 1996 as part of Eagle Industry Co., Ltd.'s global expansion strategy. Located in EJIP Industrial Park, Cikarang, our facility represents Eagle Industry's commitment to the growing Southeast Asian market.
-
-              Our Indonesian operations specialize in manufacturing high-precision mechanical seals, rubber bellows, and sealing components for automotive, industrial, and marine applications. We serve both domestic and international markets, with a focus on quality that meets Japanese manufacturing standards.
-
-              Since our establishment, we have built strong relationships with major automotive manufacturers and industrial companies in Indonesia and throughout the region. Our commitment to excellence has earned us recognition as a reliable supplier of critical sealing solutions.
-
-              We continue to invest in technology and human resources development to ensure we meet the evolving needs of our customers. Our team of skilled engineers and technicians work diligently to maintain the highest standards of quality and innovation that Eagle Industry is known for worldwide.
-
-              We are grateful for the trust our customers place in us and remain dedicated to contributing to Indonesia's industrial development through our products and services.</p>
+              <h3 className="text-start">{t('company.managingDirectorMessage')}</h3>
+              <p>{t('company.managingDirectorDesc1')}
+              
+              {t('company.managingDirectorDesc2')}
+              
+              {t('company.managingDirectorDesc3')}
+              
+              {t('company.managingDirectorDesc4')}
+              
+              {t('company.managingDirectorDesc5')}</p>
               <div className="row">
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-easel flex-shrink-0"></i>
                   <div>
-                    <h4 className="text-start">Quality Excellence</h4>
-                    <p>Maintaining Japanese quality standards in all our manufacturing processes and products</p>
+                    <h4 className="text-start">{t('company.qualityExcellence')}</h4>
+                    <p>{t('company.qualityExcellenceDesc')}</p>
                   </div>
                 </div>
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-patch-check flex-shrink-0"></i>
                   <div>
-                    <h4 className="text-start">Technical Innovation</h4>
-                    <p>Continuously developing advanced sealing solutions for demanding applications</p>
+                    <h4 className="text-start">{t('company.technicalInnovation')}</h4>
+                    <p>{t('company.technicalInnovationDesc')}</p>
                   </div>
                 </div>
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-brightness-high flex-shrink-0"></i>
                   <div>
-                    <h4 className="text-start">Customer Focus</h4>
-                    <p>Building long-term partnerships through reliability and exceptional service</p>
+                    <h4 className="text-start">{t('company.customerFocus')}</h4>
+                    <p>{t('company.customerFocusDesc')}</p>
                   </div>
                 </div>
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-brightness-high flex-shrink-0"></i>
                   <div>
-                    <h4 className="text-start">Sustainable Growth</h4>
-                    <p>Contributing to environmental protection through efficient sealing technology</p>
+                    <h4 className="text-start">{t('company.sustainableGrowth')}</h4>
+                    <p>{t('company.sustainableGrowthDesc')}</p>
                   </div>
                 </div>
               </div>
@@ -202,8 +199,8 @@ const Company = () => {
       {/* History Section */}
       <section id="history" className="history section">
         <div className="container section-title" data-aos="fade-up">
-          <h2>Our History</h2>
-          <p>The journey of PT Eagle Industry Indonesia as part of Eagle Industry Co., Ltd., a global leader in sealing technology and precision components.</p>
+          <h2>{t('company.ourHistoryTitle')}</h2>
+          <p>{t('company.historyTitleDesc')}</p>
         </div>
         <div className="container">
           <div className="row justify-content-around gy-4">
@@ -218,13 +215,13 @@ const Company = () => {
           </div>
           <div className="row justify-content-around gy-4 mt-5">
             <div className="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-              <h3>Growth and Innovation</h3>
-              <p>Since our establishment, we have grown rapidly by adopting advanced technology from Japan. In the 2000s, we expanded production facilities to meet global demand, including an alliance with Burgmann Industries for EagleBurgmann products.</p>
-              <p>We developed an integrated production system from material development to final production, supporting the needs of high-speed, high-temperature, and high-pressure rotating machines.</p>
+              <h3>{t('company.growthInnovation')}</h3>
+              <p>{t('company.growthDesc1')}</p>
+              <p>{t('company.growthDesc2')}</p>
               <ul>
-                <li><i className="bi bi-check-circle"></i> <span>Factory expansion in 2010 to increase capacity.</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Implementation of international quality standards such as ISO 9001 and IATF 16949.</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>Contribution to environmental protection through fluid leakage prevention.</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>{t('company.factoryExpansion')}</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>{t('company.qualityStandards')}</span></li>
+                <li><i className="bi bi-check-circle"></i> <span>{t('company.envProtection')}</span></li>
               </ul>
             </div>
             <div className="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
@@ -233,12 +230,12 @@ const Company = () => {
           </div>
           <div className="row justify-content-around gy-4 mt-5">
             <div className="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-              <h3>Present and Future</h3>
-              <p>To date, PT Eagle Industry Indonesia has served hundreds of clients in various sectors, with a commitment to innovation, sustainability, and social responsibility. We continue to sharpen our technological capabilities to meet increasingly complex customer needs.</p>
-              <p>In the future, we aim to become a leader in mobility solutions on land, sea, and air, while supporting energy conservation and environmental protection.</p>
+              <h3>{t('company.presentFuture')}</h3>
+              <p>{t('company.presentDesc1')}</p>
+              <p>{t('company.presentDesc2')}</p>
               <div className="watch-video d-flex align-items-center position-relative">
                 <i className="bi bi-play-circle"></i>
-                <a href="https://youtu.be/FW3e8x1CNEo?si=B8lB0Svd3DXW3A11" className="glightbox stretched-link">Watch History Video</a>
+                <a href="https://youtu.be/FW3e8x1CNEo?si=B8lB0Svd3DXW3A11" className="glightbox stretched-link">{t('company.watchHistoryVideo')}</a>
               </div>
             </div>
             <div className="features-image col-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -251,8 +248,8 @@ const Company = () => {
       {/* Company Overview Section */}
       <section id="company-overview" className="company-overview section">
         <div className="container section-title" data-aos="fade-up">
-          <h2>Company Overview</h2>
-          <p>Information about PT Eagle Industry Indonesia, part of Eagle Industry Co., Ltd., dedicated to providing high-quality sealing solutions and precision components.</p>
+          <h2>{t('company.companyOverview')}</h2>
+          <p>{t('company.companyOverviewDesc')}</p>
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4">
@@ -260,35 +257,35 @@ const Company = () => {
               <table className="table table-bordered">
                 <tbody>
                   <tr>
-                    <th scope="row">Name</th>
-                    <td>PT Eagle Industry Indonesia</td>
+                    <th scope="row">{t('company.name')}</th>
+                    <td>{t('company.title')}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Established</th>
+                    <th scope="row">{t('company.established')}</th>
                     <td>1996</td>
                   </tr>
                   <tr>
-                    <th scope="row">Representative</th>
+                    <th scope="row">{t('company.representative')}</th>
                     <td>Mr. Tsuru: President Director</td>
                   </tr>
                   <tr>
-                    <th scope="row">Headquarters</th>
+                    <th scope="row">{t('company.headquarters')}</th>
                     <td>EJIP Industrial Park, Plot 8G, Sukaresmi, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17550<br/>Tel: (021) 8970178<br/>Email: riyanda.senjaya@ekkeagle.com</td>
                   </tr>
                   <tr>
-                    <th scope="row">Paid-in Capital</th>
+                    <th scope="row">{t('company.paidInCapital')}</th>
                     <td>IDR 45,000,000,000</td>
                   </tr>
                   <tr>
-                    <th scope="row">Number of Employees</th>
+                    <th scope="row">{t('company.numberOfEmployees')}</th>
                     <td>300 (As of the end of December 2024)</td>
                   </tr>
                   <tr>
-                    <th scope="row">Business Outline</th>
+                    <th scope="row">{t('company.businessOutline')}</th>
                     <td>Manufacturing and marketing of mechanical seals, rubber bellows, and precision components for automotive, aerospace, and industrial equipment</td>
                   </tr>
                   <tr>
-                    <th scope="row">Public Auditing Firm</th>
+                    <th scope="row">{t('company.publicAuditingFirm')}</th>
                     <td>PRICEWATERHOUSECOOPERS Indonesia</td>
                   </tr>
                 </tbody>
