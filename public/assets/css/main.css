@@ -473,8 +473,8 @@ h6 {
 }
 
 .scrolled .language-btn {
-  border-color: var(--nav-color);
-  color: var(--nav-color);
+  border-color: #3c3c3c;
+  color: #3c3c3c;
 }
 
 .scrolled .language-btn:hover {
@@ -502,6 +502,12 @@ h6 {
   .language-btn:hover {
     background-color: var(--accent-color);
     color: var(--contrast-color);
+  }
+  
+  /* Ensure mobile language button also changes color when header is scrolled */
+  .scrolled .language-btn {
+    border-color: #3c3c3c;
+    color: #3c3c3c;
   }
 }
 

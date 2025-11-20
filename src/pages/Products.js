@@ -18,6 +18,8 @@ const Products = () => {
   const [activeTab, setActiveTab] = useState('category');
   const [searchKeyword, setSearchKeyword] = useState('');
   const [activeIndustry, setActiveIndustry] = useState(null);
+  const [isFiltering, setIsFiltering] = useState(false);
+  const [animatingProducts, setAnimatingProducts] = useState(false);
   
   // Product data structure with categories
   const allProducts = [
@@ -174,57 +176,138 @@ const Products = () => {
   
   // Handle category filter click
   const handleCategoryFilter = (category) => {
-    if (category === 'all') {
-      setFilteredProducts(allProducts);
-      setFilterInfo(null);
-      setActiveCategory(null);
-    } else {
-      const filtered = allProducts.filter(product => product.category === category);
-      setFilteredProducts(filtered);
-      setFilterInfo({
-        type: 'category',
-        value: category
-      });
-      setActiveCategory(category);
-    }
+    setIsFiltering(true);
+    setAnimatingProducts(true);
+    
+    // Fade out current products
+    const productItems = document.querySelectorAll('.product-item');
+    productItems.forEach(item => item.classList.add('fade-out'));
+    
+    // Wait for fade out animation to complete
+    setTimeout(() => {
+      if (category === 'all') {
+        setFilteredProducts(allProducts);
+        setFilterInfo(null);
+        setActiveCategory(null);
+      } else {
+        const filtered = allProducts.filter(product => product.category === category);
+        setFilteredProducts(filtered);
+        setFilterInfo({
+          type: 'category',
+          value: category
+        });
+        setActiveCategory(category);
+      }
+      
+      setIsFiltering(false);
+      
+      // Trigger fade in animation after state update
+      setTimeout(() => {
+        const newProductItems = document.querySelectorAll('.product-item');
+        newProductItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.remove('fade-out');
+            item.classList.add('fade-in');
+          }, index * 50); // Stagger the animation
+        });
+        
+        setTimeout(() => {
+          setAnimatingProducts(false);
+        }, newProductItems.length * 50 + 500); // Wait for all animations to complete
+      }, 50);
+    }, 300);
   };
   
   // Handle industry filter click
   const handleIndustryFilter = (industry) => {
-    if (industry === 'all') {
-      setFilteredProducts(allProducts);
-      setFilterInfo(null);
-      setActiveIndustry(null);
-    } else {
-      const categories = industryMapping[industry] || [];
-      const filtered = allProducts.filter(product => categories.includes(product.category));
-      setFilteredProducts(filtered);
-      setFilterInfo({
-        type: 'industry',
-        value: industry
-      });
-      setActiveIndustry(industry);
-    }
+    setIsFiltering(true);
+    setAnimatingProducts(true);
+    
+    // Fade out current products
+    const productItems = document.querySelectorAll('.product-item');
+    productItems.forEach(item => item.classList.add('fade-out'));
+    
+    // Wait for fade out animation to complete
+    setTimeout(() => {
+      if (industry === 'all') {
+        setFilteredProducts(allProducts);
+        setFilterInfo(null);
+        setActiveIndustry(null);
+      } else {
+        const categories = industryMapping[industry] || [];
+        const filtered = allProducts.filter(product => categories.includes(product.category));
+        setFilteredProducts(filtered);
+        setFilterInfo({
+          type: 'industry',
+          value: industry
+        });
+        setActiveIndustry(industry);
+      }
+      
+      setIsFiltering(false);
+      
+      // Trigger fade in animation after state update
+      setTimeout(() => {
+        const newProductItems = document.querySelectorAll('.product-item');
+        newProductItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.remove('fade-out');
+            item.classList.add('fade-in');
+          }, index * 50); // Stagger the animation
+        });
+        
+        setTimeout(() => {
+          setAnimatingProducts(false);
+        }, newProductItems.length * 50 + 500); // Wait for all animations to complete
+      }, 50);
+    }, 300);
   };
   
   // Handle keyword search
   const handleKeywordSearch = (keyword) => {
-    if (!keyword.trim()) {
-      setFilteredProducts(allProducts);
-      setFilterInfo(null);
-      setSearchKeyword('');
-    } else {
-      const filtered = allProducts.filter(product =>
-        product.name.toLowerCase().includes(keyword.toLowerCase()) ||
-        product.description.toLowerCase().includes(keyword.toLowerCase())
-      );
-      setFilteredProducts(filtered);
-      setFilterInfo({
-        type: 'keyword',
-        value: keyword
-      });
-      setSearchKeyword(keyword);
-    }
+    setIsFiltering(true);
+    setAnimatingProducts(true);
+    
+    // Fade out current products
+    const productItems = document.querySelectorAll('.product-item');
+    productItems.forEach(item => item.classList.add('fade-out'));
+    
+    // Wait for fade out animation to complete
+    setTimeout(() => {
+      if (!keyword.trim()) {
+        setFilteredProducts(allProducts);
+        setFilterInfo(null);
+        setSearchKeyword('');
+      } else {
+        const filtered = allProducts.filter(product =>
+          t(product.nameKey).toLowerCase().includes(keyword.toLowerCase()) ||
+          t(product.descKey).toLowerCase().includes(keyword.toLowerCase())
+        );
+        setFilteredProducts(filtered);
+        setFilterInfo({
+          type: 'keyword',
+          value: keyword
+        });
+        setSearchKeyword(keyword);
+      }
+      
+      setIsFiltering(false);
+      
+      // Trigger fade in animation after state update
+      setTimeout(() => {
+        const newProductItems = document.querySelectorAll('.product-item');
+        newProductItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.remove('fade-out');
+            item.classList.add('fade-in');
+          }, index * 50); // Stagger the animation
+        });
+        
+        setTimeout(() => {
+          setAnimatingProducts(false);
+        }, newProductItems.length * 50 + 500); // Wait for all animations to complete
+      }, 50);
+    }, 300);
   };
   
   // Handle tab navigation
@@ -244,8 +327,8 @@ const Products = () => {
     } else if (tab === 'keyword') {
       setFilteredProducts(searchKeyword ?
         allProducts.filter(product =>
-          product.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
-          product.description.toLowerCase().includes(searchKeyword.toLowerCase())
+          t(product.nameKey).toLowerCase().includes(searchKeyword.toLowerCase()) ||
+          t(product.descKey).toLowerCase().includes(searchKeyword.toLowerCase())
         ) :
         allProducts
       );
@@ -527,12 +610,12 @@ const Products = () => {
               </div>
               <div className={`p-top-product-tab__box js-tab-box ${activeTab === 'keyword' ? '' : 'd-none'}`} id="tab-products-keyword" style={{ display: activeTab === 'keyword' ? 'block' : 'none' }}>
                 <div className="p-product-search _mt-0">
-                  <form role="search" onSubmit={(e) => { e.preventDefault(); handleKeywordSearch(document.getElementById('product-search-input').value); }}>
+                  <form role="search" onSubmit={(e) => { e.preventDefault(); const searchValue = e.target.elements.searchInput.value; handleKeywordSearch(searchValue); }}>
                     <input
                       className="p-product-search__box"
                       type="search"
                       defaultValue={searchKeyword}
-                      id="product-search-input"
+                      name="searchInput"
                       placeholder={t('products.enterKeywords')}
                     />
                     <button className="p-product-search__button" type="submit"></button>
@@ -543,32 +626,38 @@ const Products = () => {
           </div>
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
-          <div className="row gy-4">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
-                <div key={product.id} className="col-lg-4 col-md-6 product-item">
-                  <div className="card product-card h-100">
-                    <img src={`${process.env.PUBLIC_URL}${product.image}`} className="card-img-top" alt={t(product.nameKey)} />
-                    <div className="card-body product-info">
-                      <h4 className="card-title">{t(product.nameKey)}</h4>
-                      <p className="card-text">{t(product.descKey)}</p>
-                      <div className="btn-container">
-                        <a href="/contact" className="btn btn-outline-primary btn-sm">{t('products.inquireNow')}</a>
-                        <a href={product.detailsLink} className="btn btn-outline-primary btn-sm">{t('products.viewDetails')}</a>
+          {isFiltering ? (
+            <div className="filter-loading">
+              <div className="filter-loading-spinner"></div>
+            </div>
+          ) : (
+            <div className="row gy-4">
+              {filteredProducts.length > 0 ? (
+                filteredProducts.map((product) => (
+                  <div key={product.id} className="col-lg-4 col-md-6 product-item">
+                    <div className="card product-card h-100">
+                      <img src={`${process.env.PUBLIC_URL}${product.image}`} className="card-img-top" alt={t(product.nameKey)} />
+                      <div className="card-body product-info">
+                        <h4 className="card-title">{t(product.nameKey)}</h4>
+                        <p className="card-text">{t(product.descKey)}</p>
+                        <div className="btn-container">
+                          <a href="/contact" className="btn btn-outline-primary btn-sm">{t('products.inquireNow')}</a>
+                          <a href={product.detailsLink} className="btn btn-outline-primary btn-sm">{t('products.viewDetails')}</a>
+                        </div>
                       </div>
                     </div>
                   </div>
+                ))
+              ) : (
+                <div className="col-12">
+                  <div className="alert alert-info text-center">
+                    <h4>{t('products.noProductsFound')}</h4>
+                    <p>{t('products.noProductsDescription')}</p>
+                  </div>
                 </div>
-              ))
-            ) : (
-              <div className="col-12">
-                <div className="alert alert-info text-center">
-                  <h4>{t('products.noProductsFound')}</h4>
-                  <p>{t('products.noProductsDescription')}</p>
-                </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          )}
         </div>
       </section>
     </div>
