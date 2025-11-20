@@ -319,6 +319,25 @@ export const translations = {
       evuDesc: "Poly-Urethane bearing developed for water lubricated stern tube systems based on our extensive water lubricated bearing technology and experience.",
       serviceEngineer: "Service Engineer",
       serviceEngineerDesc: "Professional engineering services for your ship's sealing systems. We provide highly skilled and experienced service engineers to handle all aspects of marine sealing."
+    },
+    
+    // Footer
+    footer: {
+      quickLinks: "Quick Links",
+      home: "Home",
+      company: "Company",
+      products: "Products",
+      sustainability: "Sustainability",
+      inquiryForm: "Inquiry Form",
+      officeHours: "Office Hours",
+      mondayFriday: "Monday - Friday",
+      saturday: "Saturday",
+      sunday: "Sunday",
+      closed: "Closed",
+      ourCertifications: "Our Certifications",
+      allRightsReserved: "All Rights Reserved",
+      subsidiaryOf: "A subsidiary of",
+      designedBy: "Designed by"
     }
   },
   id: {
@@ -635,6 +654,25 @@ export const translations = {
       evuDesc: "Bantalan Poly-Urethane yang dikembangkan untuk sistem stern tube pelumas air berdasarkan teknologi dan pengalaman bantalan pelumas air yang luas kami.",
       serviceEngineer: "Service Engineer",
       serviceEngineerDesc: "Layanan teknik profesional untuk sistem segel kapal Anda. Kami menyediakan service engineer yang terampil dan berpengalaman untuk menangani semua aspek segel maritim."
+    },
+    
+    // Footer
+    footer: {
+      quickLinks: "Tautan Cepat",
+      home: "Beranda",
+      company: "Perusahaan",
+      products: "Produk",
+      sustainability: "Keberlanjutan",
+      inquiryForm: "Formulir Inkuiri",
+      officeHours: "Jam Kantor",
+      mondayFriday: "Senin - Jumat",
+      saturday: "Sabtu",
+      sunday: "Minggu",
+      closed: "Tutup",
+      ourCertifications: "Sertifikasi Kami",
+      allRightsReserved: "Hak Cipta Dilindungi",
+      subsidiaryOf: "Anak perusahaan dari",
+      designedBy: "Dirancang oleh"
     }
   }
 };

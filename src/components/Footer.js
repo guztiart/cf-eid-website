@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer id="footer" className="footer dark-background">
       <div className="container footer-top">
@@ -24,22 +26,22 @@ const Footer = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 footer-links">
-            <h4 className="text-center">Quick Links</h4>
+            <h4 className="text-center">{t('footer.quickLinks')}</h4>
             <ul className="quick-links-horizontal">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/company">Company</Link></li>
-              <li><Link to="/products">Products</Link></li>
-              <li><Link to="/sustainability">Sustainability</Link></li>
-              <li><Link to="/contact">Inquiry Form</Link></li>
+              <li><Link to="/">{t('footer.home')}</Link></li>
+              <li><Link to="/company">{t('footer.company')}</Link></li>
+              <li><Link to="/products">{t('footer.products')}</Link></li>
+              <li><Link to="/sustainability">{t('footer.sustainability')}</Link></li>
+              <li><Link to="/contact">{t('footer.inquiryForm')}</Link></li>
             </ul>
           </div>
 
           <div className="col-lg-4 col-md-12 footer-info">
-            <h4 className="text-center">Office Hours</h4>
+            <h4 className="text-center">{t('footer.officeHours')}</h4>
             <div className="footer-hours text-center">
-              <p><strong>Monday - Friday:</strong> 07:00 - 16:00</p>
-              <p><strong>Saturday:</strong> Closed</p>
-              <p><strong>Sunday:</strong> Closed</p>
+              <p><strong>{t('footer.mondayFriday')}:</strong> 07:00 - 16:00</p>
+              <p><strong>{t('footer.saturday')}:</strong> {t('footer.closed')}</p>
+              <p><strong>{t('footer.sunday')}:</strong> {t('footer.closed')}</p>
             </div>
           </div>
         </div>
@@ -48,7 +50,7 @@ const Footer = () => {
       <div className="container footer-certifications">
         <div className="row">
           <div className="col-12">
-            <h4 className="text-center mb-3">Our Certifications</h4>
+            <h4 className="text-center mb-3">{t('footer.ourCertifications')}</h4>
             <div className="certifications-list d-flex justify-content-center flex-wrap">
               <div className="certification-item mx-3 mb-2">
                 <i className="bi bi-award-fill text-primary me-2"></i>
@@ -68,10 +70,10 @@ const Footer = () => {
       </div>
 
       <div className="container copyright text-center mt-4">
-        <p>© <span>2024</span> <strong className="px-1 sitename">PT. Eagle Industry Indonesia</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>2024</span> <strong className="px-1 sitename">PT. Eagle Industry Indonesia</strong> <span>{t('footer.allRightsReserved')}</span></p>
         <div className="credits">
-          A subsidiary of <a href="https://www.eagle-e.co.jp/english/" target="_blank" rel="noopener noreferrer">Eagle Industry Co., Ltd.</a> |
-          Designed by <a href="https://www.instagram.com/riyy2410/" target="_blank" rel="noopener noreferrer">Riyanda Aditiya Senjaya</a>
+          {t('footer.subsidiaryOf')} <a href="https://www.eagle-e.co.jp/english/" target="_blank" rel="noopener noreferrer">Eagle Industry Co., Ltd.</a> |
+          {t('footer.designedBy')} <a href="https://www.instagram.com/riyy2410/" target="_blank" rel="noopener noreferrer">Riyanda Aditiya Senjaya</a>
         </div>
       </div>
     </footer>
