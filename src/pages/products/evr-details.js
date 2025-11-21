@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">Water Lubricated Stern Tube Bearing (EVR)</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.evr.title')}</li>
             </ol>
           </nav>
         </div>
@@ -61,11 +63,11 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Water Lubricated Stern Tube Bearing (EVR)</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.evr.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=marine">Marine</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=water-lubricated">Water Lubricated Stern Tube Bearing</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=marine">{t('products.marine')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=water-lubricated">{t('products.waterLubricatedSternTubeBearing')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -96,39 +98,34 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>Water Lubricated Stern Tube Bearing (EVR)</h2>
+                <h2>{t('productDetails.evr.title')}</h2>
                 <p>
-                  <strong>Excellent Durability and Vibration Absorption</strong>
+                  <strong>{t('productDetails.evr.description1')}</strong>
                 </p>
                 <p>
-                  No peeling off by combination of reinforced plastics outer shell and rubber. Outstanding durability and stable performance.
+                  {t('productDetails.evr.description2')}
                 </p>
                 <p>
-                  Effective absorption of shaft vibration. Prevention of electric corrosion on the shaft sleeve.
-                </p>
-                <p>
-                  The EVR water lubricated stern tube bearing is designed with advanced materials to provide exceptional performance in marine applications. The combination of reinforced plastics outer shell and rubber components ensures long-lasting durability without peeling issues, even under harsh marine conditions.
-                </p>
-                <p>
-                  This bearing system effectively absorbs shaft vibrations, reducing stress on the propulsion system and extending the service life of connected components. Additionally, it prevents electric corrosion on the shaft sleeve, a common issue in marine environments where galvanic corrosion can damage critical components.
+                  {t('productDetails.evr.description3')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Marine, Water Lubricated Stern Tube Bearing</span></li>
-                  <li><strong>Model</strong> <span>EVR</span></li>
-                  <li><strong>Outer Shell Material</strong> <span>Reinforced Plastics</span></li>
-                  <li><strong>Inner Material</strong> <span>Special Rubber Compound</span></li>
-                  <li><strong>Key Features</strong> <span>Vibration Absorption, Electric Corrosion Prevention</span></li>
-                  <li><strong>Applications</strong> <span>Marine Propulsion Systems, Stern Tube Bearings</span></li>
+                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.evr.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.model')}</strong> <span>{t('productDetails.evr.modelValue')}</span></li>
+                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.evr.materialValue')}</span></li>
+                  <li><strong>{t('productDetails.type')}</strong> <span>{t('productDetails.evr.typeValue')}</span></li>
+                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.evr.temperatureRangeValue')}</span></li>
+                  <li><strong>{t('productDetails.maxPressure')}</strong> <span>{t('productDetails.evr.maxPressureValue')}</span></li>
+                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.evr.applicationsValue')}</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -142,35 +139,35 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product Features</h2>
-                <p>Key features and benefits of EVR Water Lubricated Stern Tube Bearing</p>
+                <h2>{t('productDetails.productFeatures')}</h2>
+                <p>{t('productDetails.exploreSimilarProducts')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Durability</th>
-                      <td>No peeling off by combination of reinforced plastics outer shell and rubber</td>
+                      <th style={{ width: '30%' }}>{t('productDetails.benefits')}</th>
+                      <td>{t('productDetails.evr.description1')}</td>
                     </tr>
                     <tr>
-                      <th>Performance</th>
-                      <td>Outstanding durability and stable performance</td>
+                      <th>{t('productDetails.applications')}</th>
+                      <td>{t('productDetails.evr.applicationsValue')}</td>
                     </tr>
                     <tr>
-                      <th>Vibration Control</th>
-                      <td>Effective absorption of shaft vibration</td>
+                      <th>{t('productDetails.type')}</th>
+                      <td>{t('productDetails.evr.typeValue')}</td>
                     </tr>
                     <tr>
-                      <th>Corrosion Protection</th>
-                      <td>Prevention of electric corrosion on the shaft sleeve</td>
+                      <th>{t('productDetails.material')}</th>
+                      <td>{t('productDetails.evr.materialValue')}</td>
                     </tr>
                     <tr>
-                      <th>Material Construction</th>
-                      <td>Reinforced plastics outer shell with special rubber compound</td>
+                      <th>{t('productDetails.temperatureRange')}</th>
+                      <td>{t('productDetails.evr.temperatureRangeValue')}</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: Specifications may vary according to application requirements. Contact us for detailed technical specifications.</p>
+                <p className="note-text">{t('productDetails.noteText')}</p>
               </div>
             </div>
           </div>
@@ -184,8 +181,8 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Us</h3>
-                  <p className="contact-text">Please contact us via our email form</p>
+                  <h3 className="contact-title">{t('productDetails.contactUs')}</h3>
+                  <p className="contact-text">{t('productDetails.contactViaEmail')}</p>
                 </Link>
               </div>
             </div>
@@ -197,8 +194,8 @@ const ProjectDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -240,7 +237,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -253,9 +250,9 @@ const ProjectDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">Water Lubricated Stern Tube Bearing (EVR)</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.evr.title')}</li>
                 </ol>
               </nav>
             </div>

@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">Service Engineer</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.serviceEngineer.breadcrumb')}</li>
             </ol>
           </nav>
         </div>
@@ -61,7 +63,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Service Engineer</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.serviceEngineer.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/products?tag=service">Service</Link></li>
@@ -97,36 +99,33 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>Service Engineer</h2>
+                <h2>{t('productDetails.serviceEngineer.title')}</h2>
                 <p>
-                  Our service engineering team provides comprehensive technical support and maintenance solutions for all Eagle Industry products worldwide. 
-                  With extensive knowledge and experience in marine sealing systems, our engineers ensure optimal performance and longevity of your equipment.
+                  {t('productDetails.serviceEngineer.description1')}
                 </p>
                 <p>
-                  KEMEL EAGLE INDUSTRY offers a global service network with trained professionals across Asia, Europe, North America, South America, and Oceania. 
-                  Our service engineers are equipped with the latest tools and technologies to diagnose, repair, and maintain sealing systems in various marine applications.
+                  {t('productDetails.serviceEngineer.description2')}
                 </p>
                 <p>
-                  From routine maintenance to emergency repairs, our service engineering team delivers prompt and reliable support to minimize downtime and maximize operational efficiency. 
-                  We provide on-site services, technical consultations, and training programs to ensure your crew can properly maintain and operate our sealing systems.
+                  {t('productDetails.serviceEngineer.description3')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Service Information</h3>
+                <h3>{t('productDetails.serviceEngineer.serviceInformation')}</h3>
                 <ul>
-                  <li><strong>Service Type</strong> <span>Technical Support & Maintenance</span></li>
-                  <li><strong>Service Area</strong> <span>Worldwide Coverage</span></li>
-                  <li><strong>Response Time</strong> <span>24-48 hours (Emergency)</span></li>
-                  <li><strong>Service Availability</strong> <span>24/7 Support</span></li>
-                  <li><strong>Specialization</strong> <span>Marine Sealing Systems</span></li>
-                  <li><strong>Service Centers</strong> <span>Global Network</span></li>
+                  <li><strong>{t('productDetails.serviceType')}</strong> <span>{t('productDetails.serviceEngineer.serviceTypeValue')}</span></li>
+                  <li><strong>{t('productDetails.serviceArea')}</strong> <span>{t('productDetails.serviceEngineer.serviceAreaValue')}</span></li>
+                  <li><strong>{t('productDetails.responseTime')}</strong> <span>{t('productDetails.serviceEngineer.responseTimeValue')}</span></li>
+                  <li><strong>{t('productDetails.serviceAvailability')}</strong> <span>{t('productDetails.serviceEngineer.serviceAvailabilityValue')}</span></li>
+                  <li><strong>{t('productDetails.specialization')}</strong> <span>{t('productDetails.serviceEngineer.specializationValue')}</span></li>
+                  <li><strong>{t('productDetails.serviceCenters')}</strong> <span>{t('productDetails.serviceEngineer.serviceCentersValue')}</span></li>
                 </ul>
-                              
+                               
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Contact Service Engineer</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.serviceEngineer.contactServiceEngineer')}</Link>
                 </div>
               </div>
             </div>
@@ -140,56 +139,51 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Global Service Network</h2>
-                <p>Our service engineering team is available worldwide</p>
+                <h2>{t('productDetails.serviceEngineer.globalServiceNetwork')}</h2>
+                <p>{t('productDetails.serviceEngineer.ourServiceEngineersAvailableWorldwide')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Asia</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.serviceEngineer.asia')}</th>
                       <td>
-                        <p>Japan (Tokyo, Kobe, Hiroshima)</p>
-                        <p>China, Singapore, Taiwan, South Korea</p>
-                        <p>Indonesia, Philippines, Thailand, India</p>
+                        <p>{t('productDetails.serviceEngineer.asiaLocations')}</p>
                       </td>
                     </tr>
                     <tr>
-                      <th>Europe</th>
+                      <th>{t('productDetails.serviceEngineer.europe')}</th>
                       <td>
-                        <p>United Kingdom, Germany, Greece</p>
-                        <p>Norway, Sweden, Denmark, Finland</p>
-                        <p>Italy, France, Portugal, Poland, Netherlands</p>
-                        <p>Russia, Bulgaria, Spain</p>
+                        <p>{t('productDetails.serviceEngineer.europeLocations')}</p>
                       </td>
                     </tr>
                     <tr>
-                      <th>North America</th>
+                      <th>{t('productDetails.serviceEngineer.northAmerica')}</th>
                       <td>
-                        <p>USA, Canada, Mexico, Caribbean Sea</p>
+                        <p>{t('productDetails.serviceEngineer.northAmericaLocations')}</p>
                       </td>
                     </tr>
                     <tr>
-                      <th>South America</th>
+                      <th>{t('productDetails.serviceEngineer.southAmerica')}</th>
                       <td>
-                        <p>Chile, Brazil</p>
+                        <p>{t('productDetails.serviceEngineer.southAmericaLocations')}</p>
                       </td>
                     </tr>
                     <tr>
-                      <th>Oceania</th>
+                      <th>{t('productDetails.serviceEngineer.oceania')}</th>
                       <td>
-                        <p>Australia</p>
+                        <p>{t('productDetails.serviceEngineer.oceaniaLocations')}</p>
                       </td>
                     </tr>
                     <tr>
-                      <th>Middle East</th>
+                      <th>{t('productDetails.serviceEngineer.middleEast')}</th>
                       <td>
-                        <p>UAE & Gulf</p>
+                        <p>{t('productDetails.serviceEngineer.middleEastLocations')}</p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: Our service engineers are available 24/7 for emergency support. Contact us for immediate assistance.</p>
+                <p className="note-text">{t('productDetails.serviceEngineer.noteText')}</p>
               </div>
             </div>
           </div>
@@ -203,8 +197,8 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Service Engineer</h3>
-                  <p className="contact-text">Please contact us via our email form for technical support</p>
+                  <h3 className="contact-title">{t('productDetails.serviceEngineer.contactServiceEngineerSection')}</h3>
+                  <p className="contact-text">{t('productDetails.serviceEngineer.pleaseContactUsViaOurEmailForm')}</p>
                 </Link>
               </div>
             </div>
@@ -216,8 +210,8 @@ const ProjectDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -227,7 +221,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for A/C compressor<br />Type A Mechanical seal</span>
+                    <span>{t('productDetails.serviceEngineer.forAcCompressor')}<br />{t('productDetails.serviceEngineer.typeAMechanicalSeal')}</span>
                   </div>
                 </Link>
               </div>
@@ -239,7 +233,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for Water Pump<br />EH795/EH790</span>
+                    <span>{t('productDetails.serviceEngineer.forWaterPump')}<br />{t('productDetails.serviceEngineer.eh795EH790')}</span>
                   </div>
                 </Link>
               </div>
@@ -251,7 +245,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>for Variable Displacement A/C Compressor<br />Control Valve</span>
+                    <span>{t('productDetails.serviceEngineer.forVariableDisplacementAcCompressor')}<br />{t('productDetails.serviceEngineer.controlValve')}</span>
                   </div>
                 </Link>
               </div>
@@ -259,7 +253,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -272,9 +266,9 @@ const ProjectDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">Service Engineer</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.serviceEngineer.breadcrumb')}</li>
                 </ol>
               </nav>
             </div>
@@ -288,7 +282,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">Contact</p>
+          <p className="contact-text">{t('productDetails.serviceEngineer.contact')}</p>
         </Link>
       </div>
     </div>

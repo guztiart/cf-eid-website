@@ -3957,15 +3957,15 @@ section,
 .sustainability-concepts .features-image {
   position: relative;
   min-height: 400px;
+  overflow: visible;
 }
 
 .sustainability-concepts .features-image img {
-  position: absolute;
-  inset: 0;
+  position: relative;
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   z-index: 1;
 }
 

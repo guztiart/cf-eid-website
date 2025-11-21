@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const BladderDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const BladderDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">Bladder Type Accumulator</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.bladderAccumulator.breadcrumb')}</li>
             </ol>
           </nav>
         </div>
@@ -61,7 +63,7 @@ const BladderDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Bladder Type Accumulator</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.bladderAccumulator.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/products?tag=industrial">Industrial</Link></li>
@@ -96,54 +98,46 @@ const BladderDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>Bladder Type Accumulator</h2>
+                <h2>{t('productDetails.bladderAccumulator.title')}</h2>
                 <p>
-                  These standard bladder accumulators are manufactured based on years of experience and proven performance.
-                  They are designed to store energy under pressure in the form of compressed gas, providing hydraulic power
-                  when needed in various industrial applications.
+                  {t('productDetails.bladderAccumulator.description1')}
                 </p>
                 <p>
-                  The bladder accumulator consists of a high-strength pressure vessel containing an elastic bladder
-                  that separates the hydraulic fluid from the gas pre-charge. When hydraulic fluid enters the accumulator,
-                  the bladder compresses the gas, storing energy. When the system requires additional power, the compressed
-                  gas expands, pushing the fluid back into the system.
+                  {t('productDetails.bladderAccumulator.description2')}
                 </p>
                 <p>
-                  Eagle Industry Indonesia's bladder type accumulators feature superior construction with high-quality
-                  materials ensuring durability and reliability in demanding industrial environments. These accumulators
-                  are suitable for applications requiring energy storage, shock absorption, pulsation dampening, and
-                  emergency power supply.
+                  {t('productDetails.bladderAccumulator.description3')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Industrial, Hydraulic Components</span></li>
-                  <li><strong>Type</strong> <span>Bladder Type Accumulator</span></li>
-                  <li><strong>Material</strong> <span>High-grade Steel Shell, Nitrile Bladder</span></li>
-                  <li><strong>Temperature Range</strong> <span>-20°C to 120°C</span></li>
-                  <li><strong>Max Pressure</strong> <span>Up to 350 bar</span></li>
-                  <li><strong>Volume Range</strong> <span>0.5 to 50 liters</span></li>
-                  <li><strong>Applications</strong> <span>Hydraulic Systems</span></li>
+                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.bladderAccumulator.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.type')}</strong> <span>{t('productDetails.bladderAccumulator.typeValue')}</span></li>
+                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.bladderAccumulator.materialValue')}</span></li>
+                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.bladderAccumulator.temperatureRangeValue')}</span></li>
+                  <li><strong>{t('productDetails.maxPressure')}</strong> <span>{t('productDetails.bladderAccumulator.maxPressureValue')}</span></li>
+                  <li><strong>{t('productDetails.volumeRange')}</strong> <span>{t('productDetails.bladderAccumulator.volumeRangeValue')}</span></li>
+                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.bladderAccumulator.applicationsValue')}</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <h3>Product Features</h3>
+                  <h3>{t('productDetails.productFeatures')}</h3>
                   <ul>
-                    <li><i className="bi bi-check"></i> <span>High energy storage capacity</span></li>
-                    <li><i className="bi bi-check"></i> <span>Excellent response time</span></li>
-                    <li><i className="bi bi-check"></i> <span>Low gas permeability</span></li>
-                    <li><i className="bi bi-check"></i> <span>Easy maintenance</span></li>
-                    <li><i className="bi bi-check"></i> <span>Long service life</span></li>
-                    <li><i className="bi bi-check"></i> <span>Wide temperature range</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.highEnergyStorageCapacity')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.excellentResponseTime')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.lowGasPermeability')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.easyMaintenance')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.longServiceLife')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.wideTemperatureRange')}</span></li>
                   </ul>
                 </div>
                 
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -157,57 +151,57 @@ const BladderDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product specification example</h2>
-                <p>Information about specification Product.</p>
+                <h2>{t('productDetails.productSpecification')}</h2>
+                <p>{t('productDetails.specificationInfo')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Category</th>
-                      <td>Industrial, Hydraulic Components</td>
+                      <th style={{ width: '30%' }}>{t('productDetails.category')}</th>
+                      <td>{t('productDetails.bladderAccumulator.categoryValue')}</td>
                     </tr>
                     <tr>
-                      <th>Type</th>
-                      <td>Bladder Type Accumulator</td>
+                      <th>{t('productDetails.type')}</th>
+                      <td>{t('productDetails.bladderAccumulator.typeValue')}</td>
                     </tr>
                     <tr>
-                      <th>Material</th>
-                      <td>High-grade Steel Shell, Nitrile Bladder</td>
+                      <th>{t('productDetails.material')}</th>
+                      <td>{t('productDetails.bladderAccumulator.materialValue')}</td>
                     </tr>
                     <tr>
-                      <th>Temperature Range</th>
-                      <td>-20°C to 120°C</td>
+                      <th>{t('productDetails.temperatureRange')}</th>
+                      <td>{t('productDetails.bladderAccumulator.temperatureRangeValue')}</td>
                     </tr>
                     <tr>
-                      <th>Max Pressure</th>
-                      <td>Up to 350 bar</td>
+                      <th>{t('productDetails.maxPressure')}</th>
+                      <td>{t('productDetails.bladderAccumulator.maxPressureValue')}</td>
                     </tr>
                     <tr>
-                      <th>Volume Range</th>
-                      <td>0.5 to 50 liters</td>
+                      <th>{t('productDetails.volumeRange')}</th>
+                      <td>{t('productDetails.bladderAccumulator.volumeRangeValue')}</td>
                     </tr>
                     <tr>
-                      <th>Applications</th>
+                      <th>{t('productDetails.applications')}</th>
                       <td>
-                        <p>Energy storage in hydraulic systems</p>
-                        <p>Shock absorption</p>
-                        <p>Pulsation dampening</p>
-                        <p>Emergency power supply</p>
+                        <p>{t('productDetails.energyStorageInHydraulicSystems')}</p>
+                        <p>{t('productDetails.shockAbsorption')}</p>
+                        <p>{t('productDetails.pulsationDampening')}</p>
+                        <p>{t('productDetails.emergencyPowerSupply')}</p>
                       </td>
                     </tr>
                     <tr>
-                      <th>Benefits</th>
+                      <th>{t('productDetails.benefits')}</th>
                       <td>
-                        <p>High energy storage capacity</p>
-                        <p>Excellent response time</p>
-                        <p>Low gas permeability</p>
-                        <p>Easy maintenance</p>
+                        <p>{t('productDetails.highEnergyStorageCapacity')}</p>
+                        <p>{t('productDetails.excellentResponseTime')}</p>
+                        <p>{t('productDetails.lowGasPermeability')}</p>
+                        <p>{t('productDetails.easyMaintenance')}</p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: The above figures indicate the best conditions in individual cases and may differ according to the accumulator size and application. Contact us before use.</p>
+                <p className="note-text">{t('productDetails.noteText')}</p>
               </div>
             </div>
           </div>
@@ -221,8 +215,8 @@ const BladderDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Us</h3>
-                  <p className="contact-text">Please contact us via our email form</p>
+                  <h3 className="contact-title">{t('productDetails.contactUs')}</h3>
+                  <p className="contact-text">{t('productDetails.contactViaEmail')}</p>
                 </Link>
               </div>
             </div>
@@ -234,8 +228,8 @@ const BladderDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -277,7 +271,7 @@ const BladderDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -290,9 +284,9 @@ const BladderDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">Bladder Type Accumulator</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.bladderAccumulator.breadcrumb')}</li>
                 </ol>
               </nav>
             </div>

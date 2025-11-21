@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">EH795/EH790 for Water Pump</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.eh795.breadcrumb')}</li>
             </ol>
           </nav>
         </div>
@@ -61,7 +63,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">EH795/EH790 for Water Pump</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.eh795.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/products?tag=oil-gas">Oil & Gas</Link></li>
@@ -99,36 +101,32 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>EH795/EH790 for Water Pump</h2>
+                <h2>{t('productDetails.eh795.title')}</h2>
                 <p>
-                  Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. 
-                  By its unitized design, EH795 supports easy installation into customer application.
+                  {t('productDetails.eh795.description1')}
                 </p>
                 <p>
-                  These seals are suitable for high-speed rotation due to its simple and compact construction. 
-                  The materials of the seal face are Eagle Industry's proprietary carbon components and SiC which provides high resistance to heat, wear and corrosion. 
-                  These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. 
-                  These seals are also suitable for industrial pumps. EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.
+                  {t('productDetails.eh795.description2')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Mechanical Seals, Water Pump</span></li>
-                  <li><strong>Model</strong> <span>EH795/EH790</span></li>
-                  <li><strong>Sealed fluid</strong> <span>Water, Coolant, etc.</span></li>
-                  <li><strong>Temperature</strong> <span>-20°C to 110°C (120°C max.)</span></li>
-                  <li><strong>Maximum circumferential velocity</strong> <span>12 m/s</span></li>
-                  <li><strong>Pressure</strong> <span>-67 kPa to 0.3 MPaG</span></li>
-                  <li><strong>Shaft diameter</strong> <span>Up to 30 mm</span></li>
-                  <li><strong>Applications</strong> <span>Water pumps for automotive and industrial applications</span></li>
+                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.eh795.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.model')}</strong> <span>{t('productDetails.eh795.modelValue')}</span></li>
+                  <li><strong>{t('productDetails.sealedFluid')}</strong> <span>{t('productDetails.eh795.sealedFluidValue')}</span></li>
+                  <li><strong>{t('productDetails.temperature')}</strong> <span>{t('productDetails.eh795.temperatureValue')}</span></li>
+                  <li><strong>{t('productDetails.maximumCircumferentialVelocity')}</strong> <span>{t('productDetails.eh795.maximumCircumferentialVelocityValue')}</span></li>
+                  <li><strong>{t('productDetails.pressure')}</strong> <span>{t('productDetails.eh795.pressureValue')}</span></li>
+                  <li><strong>{t('productDetails.shaftDiameter')}</strong> <span>{t('productDetails.eh795.shaftDiameterValue')}</span></li>
+                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.eh795.applicationsValue')}</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -142,35 +140,35 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product specification example</h2>
-                <p>Information about specification Product.</p>
+                <h2>{t('productDetails.productSpecification')}</h2>
+                <p>{t('productDetails.specificationInfo')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Sealed fluid</th>
-                      <td>Water, Coolant, etc.</td>
+                      <th style={{ width: '30%' }}>{t('productDetails.sealedFluid')}</th>
+                      <td>{t('productDetails.eh795.sealedFluidValue')}</td>
                     </tr>
                     <tr>
-                      <th>Temperature</th>
-                      <td>-20°C to 110°C (120°C max.)</td>
+                      <th>{t('productDetails.temperature')}</th>
+                      <td>{t('productDetails.eh795.temperatureValue')}</td>
                     </tr>
                     <tr>
-                      <th>Maximum circumferential velocity</th>
-                      <td>12 m/s</td>
+                      <th>{t('productDetails.maximumCircumferentialVelocity')}</th>
+                      <td>{t('productDetails.eh795.maximumCircumferentialVelocityValue')}</td>
                     </tr>
                     <tr>
-                      <th>Pressure</th>
-                      <td>-67 kPa to 0.3 MPaG</td>
+                      <th>{t('productDetails.pressure')}</th>
+                      <td>{t('productDetails.eh795.pressureValue')}</td>
                     </tr>
                     <tr>
-                      <th>Shaft diameter</th>
-                      <td>Up to 30 mm</td>
+                      <th>{t('productDetails.shaftDiameter')}</th>
+                      <td>{t('productDetails.eh795.shaftDiameterValue')}</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: Above shows typical conditions, please contact us with your specific requirements.</p>
+                <p className="note-text">{t('productDetails.noteText')}</p>
               </div>
             </div>
           </div>
@@ -184,8 +182,8 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Us</h3>
-                  <p className="contact-text">Please contact us via our email form</p>
+                  <h3 className="contact-title">{t('productDetails.contactUs')}</h3>
+                  <p className="contact-text">{t('productDetails.contactViaEmail')}</p>
                 </Link>
               </div>
             </div>
@@ -197,8 +195,8 @@ const ProjectDetails = () => {
             <section id="related-products" className="related-products section">
               <div className="container">
                 <div className="section-title" data-aos="fade-up">
-                  <h2>Related Products</h2>
-                  <p>Explore our other similar products</p>
+                  <h2>{t('productDetails.relatedProducts')}</h2>
+                  <p>{t('productDetails.exploreSimilarProducts')}</p>
                 </div>
                 <div className="row gy-4">
                   <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -240,7 +238,7 @@ const ProjectDetails = () => {
                 </div>
                 <div className="row mt-4">
                   <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-                    <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+                    <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
                   </div>
                 </div>
               </div>
@@ -253,9 +251,9 @@ const ProjectDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">EH795/EH790 for Water Pump</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.eh795.breadcrumb')}</li>
                 </ol>
               </nav>
             </div>

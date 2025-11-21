@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">EVK2RV Water Lubricated Stern Tube Seal</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.evk2rv.title')}</li>
             </ol>
           </nav>
         </div>
@@ -61,11 +63,11 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">EVK2RV Water Lubricated Stern Tube Seal</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.evk2rv.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=marine">Marine</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=water-lubricated-stern-tube-seal">Water Lubricated Stern Tube Seal</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=marine">{t('products.marine')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=water-lubricated-stern-tube-seal">{t('products.waterLubricatedSternTubeSeal')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -96,41 +98,35 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>EVK2RV Water Lubricated Stern Tube Seal</h2>
+                <h2>{t('productDetails.evk2rv.title')}</h2>
                 <p>
-                  The EVK2RV is a water lubricated stern tube seal designed for marine vessels. This advanced sealing system provides
-                  reliable protection against water ingress while ensuring smooth operation of the vessel's propulsion system.
-                  The EVK2RV model features a compact design that allows for easy installation and maintenance.
+                  {t('productDetails.evk2rv.description1')}
                 </p>
                 <p>
-                  Engineered with precision, the EVK2RV seal utilizes high-quality materials that offer excellent resistance to
-                  seawater corrosion and wear. The innovative design ensures optimal performance even under demanding marine
-                  conditions, making it an ideal choice for various types of vessels including commercial ships and coastal vessels.
+                  {t('productDetails.evk2rv.description2')}
                 </p>
                 <p>
-                  The EVK2RV water lubricated stern tube seal is manufactured with strict quality control processes to meet
-                  international maritime standards. Its robust construction and advanced sealing technology provide long service
-                  life, reducing maintenance requirements and operational costs for vessel owners.
+                  {t('productDetails.evk2rv.description3')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Marine, Water Lubricated Stern Tube Seal</span></li>
-                  <li><strong>Sealed fluid</strong> <span>Seawater</span></li>
-                  <li><strong>Operating Temperature</strong> <span>-10°C to 80°C</span></li>
-                  <li><strong>Maximum circumferential velocity</strong> <span>8 m/s (approx. 3,000 rpm)</span></li>
-                  <li><strong>Fluid Pressure Range</strong> <span>0 to 0.3 MPaG</span></li>
-                  <li><strong>Shaft diameter</strong> <span>200 to 800 mm</span></li>
-                  <li><strong>Material</strong> <span>Special rubber compound for marine applications</span></li>
-                  <li><strong>Applications</strong> <span>Marine vessels, commercial ships, coastal vessels</span></li>
+                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.evk2rv.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.sealedFluid')}</strong> <span>Seawater</span></li>
+                  <li><strong>{t('productDetails.operatingTemperature')}</strong> <span>{t('productDetails.evk2rv.temperatureRangeValue')}</span></li>
+                  <li><strong>{t('productDetails.maximumCircumferentialVelocity')}</strong> <span>8 m/s (approx. 3,000 rpm)</span></li>
+                  <li><strong>{t('productDetails.pressure')}</strong> <span>0 to 0.3 MPaG</span></li>
+                  <li><strong>{t('productDetails.shaftDiameter')}</strong> <span>200 to 800 mm</span></li>
+                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.evk2rv.materialValue')}</span></li>
+                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.evk2rv.applicationsValue')}</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -144,42 +140,42 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product specification example</h2>
-                <p>Information about specification Product.</p>
+                <h2>{t('productDetails.productSpecification')}</h2>
+                <p>{t('productDetails.specificationInfo')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Sealed fluid</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.sealedFluid')}</th>
                       <td>Seawater</td>
                     </tr>
                     <tr>
-                      <th>Operating Temperature</th>
-                      <td>-10°C to 80°C</td>
+                      <th>{t('productDetails.operatingTemperature')}</th>
+                      <td>{t('productDetails.evk2rv.temperatureRangeValue')}</td>
                     </tr>
                     <tr>
-                      <th>Maximum circumferential velocity</th>
+                      <th>{t('productDetails.maximumCircumferentialVelocity')}</th>
                       <td>8 m/s (approx. 3,000 rpm)</td>
                     </tr>
                     <tr>
-                      <th>Fluid Pressure Range</th>
+                      <th>{t('productDetails.pressure')}</th>
                       <td>0 to 0.3 MPaG</td>
                     </tr>
                     <tr>
-                      <th>Shaft diameter</th>
+                      <th>{t('productDetails.shaftDiameter')}</th>
                       <td>200 to 800 mm</td>
                     </tr>
                     <tr>
-                      <th>Types Available</th>
+                      <th>{t('productDetails.type')}</th>
                       <td>
-                        <p>EVK2RV: Standard water lubricated stern tube seal</p>
+                        <p>{t('productDetails.evk2rv.modelValue')}: {t('productDetails.evk2rv.typeValue')}</p>
                         <p>Custom sizes available upon request</p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: The above figures indicate the best conditions in individual cases and may differ according to the seal size. Contact us before use.</p>
+                <p className="note-text">{t('productDetails.noteText')}</p>
               </div>
             </div>
           </div>
@@ -193,8 +189,8 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Us</h3>
-                  <p className="contact-text">Please contact us via our email form</p>
+                  <h3 className="contact-title">{t('productDetails.contactUs')}</h3>
+                  <p className="contact-text">{t('productDetails.contactViaEmail')}</p>
                 </Link>
               </div>
             </div>
@@ -206,8 +202,8 @@ const ProjectDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -249,7 +245,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -262,9 +258,9 @@ const ProjectDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">EVK2RV Water Lubricated Stern Tube Seal</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.evk2rv.title')}</li>
                 </ol>
               </nav>
             </div>
@@ -278,7 +274,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">Contact</p>
+          <p className="contact-text">{t('header.inquiryForm')}</p>
         </Link>
       </div>
     </div>

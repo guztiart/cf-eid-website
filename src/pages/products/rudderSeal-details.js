@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">Rudder Seal</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.rudderSeal.breadcrumb')}</li>
             </ol>
           </nav>
         </div>
@@ -61,7 +63,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Rudder Seal</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.rudderSeal.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/products?tag=marine">Marine</Link></li>
@@ -96,42 +98,35 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>Rudder Seal</h2>
+                <h2>{t('productDetails.rudderSeal.title')}</h2>
                 <p>
-                  Rudder seals with lip seals designed to prevent the leakage of lubricant and the ingress of seawater.
-                  They are approved by classification societies of each country. Their comprehensive lineup includes the standard CX type, 
-                  the DX type with an additional standby seal, the pollution-free AX type, and the EVA type equipped with face seals.
+                  {t('productDetails.rudderSeal.description1')}
                 </p>
                 <p>
-                  As the Seto Inland Sea has long been a prosperous shipping area, we manufacture marine related products such as 
-                  vulcanization molding of rubber for rudder sealing, intermediate bearings for propeller shafts, etc.
-                  Our rudder seals are engineered with precision to provide optimal performance in marine applications, ensuring
-                  maximum durability and efficiency in preventing oil leakage while maintaining smooth operation of the vessel's propulsion system.
+                  {t('productDetails.rudderSeal.description2')}
                 </p>
                 <p>
-                  Our rudder seals undergo rigorous quality control processes to meet international maritime standards.
-                  The specialized materials used in manufacturing offer excellent resistance to seawater corrosion and various lubricants, 
-                  ensuring long service life even under extreme operating conditions in marine environments.
+                  {t('productDetails.rudderSeal.description3')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.rudderSeal.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Marine, Rudder Seals</span></li>
-                  <li><strong>Sealed fluid</strong> <span>Oil & Seawater</span></li>
-                  <li><strong>Operating Temperature</strong> <span>-20°C to 120°C</span></li>
-                  <li><strong>Maximum circumferential velocity</strong> <span>15 m/s (approx. 5,000 rpm)</span></li>
-                  <li><strong>Fluid Pressure Range</strong> <span>0 to 0.5 MPaG</span></li>
-                  <li><strong>Shaft diameter</strong> <span>100 to 800 mm</span></li>
-                  <li><strong>Material</strong> <span>Special rubber compound for marine applications</span></li>
-                  <li><strong>Applications</strong> <span>Marine vessels, commercial ships, coastal vessels</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.category')}</strong> <span>{t('productDetails.rudderSeal.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.sealedFluid')}</strong> <span>{t('productDetails.rudderSeal.sealedFluidValue')}</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.operatingTemperature')}</strong> <span>{t('productDetails.rudderSeal.operatingTemperatureValue')}</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.maximumCircumferentialVelocity')}</strong> <span>{t('productDetails.rudderSeal.maximumCircumferentialVelocityValue')}</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.fluidPressureRange')}</strong> <span>{t('productDetails.rudderSeal.fluidPressureRangeValue')}</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.shaftDiameter')}</strong> <span>{t('productDetails.rudderSeal.shaftDiameterValue')}</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.material')}</strong> <span>{t('productDetails.rudderSeal.materialValue')}</span></li>
+                  <li><strong>{t('productDetails.rudderSeal.applications')}</strong> <span>{t('productDetails.rudderSeal.applicationsValue')}</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.rudderSeal.inquireAboutThisProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -145,44 +140,44 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product specification example</h2>
-                <p>Information about specification Product.</p>
+                <h2>{t('productDetails.productSpecification')}</h2>
+                <p>{t('productDetails.specificationInfo')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Sealed fluid</th>
-                      <td>Oil & Seawater</td>
+                      <th style={{ width: '30%' }}>{t('productDetails.rudderSeal.sealedFluid')}</th>
+                      <td>{t('productDetails.rudderSeal.sealedFluidValue')}</td>
                     </tr>
                     <tr>
-                      <th>Operating Temperature</th>
-                      <td>-20°C to 120°C</td>
+                      <th>{t('productDetails.rudderSeal.operatingTemperature')}</th>
+                      <td>{t('productDetails.rudderSeal.operatingTemperatureValue')}</td>
                     </tr>
                     <tr>
-                      <th>Maximum circumferential velocity</th>
-                      <td>15 m/s (approx. 5,000 rpm)</td>
+                      <th>{t('productDetails.rudderSeal.maximumCircumferentialVelocity')}</th>
+                      <td>{t('productDetails.rudderSeal.maximumCircumferentialVelocityValue')}</td>
                     </tr>
                     <tr>
-                      <th>Fluid Pressure Range</th>
-                      <td>0 to 0.5 MPaG</td>
+                      <th>{t('productDetails.rudderSeal.fluidPressureRange')}</th>
+                      <td>{t('productDetails.rudderSeal.fluidPressureRangeValue')}</td>
                     </tr>
                     <tr>
-                      <th>Shaft diameter</th>
-                      <td>100 to 800 mm</td>
+                      <th>{t('productDetails.rudderSeal.shaftDiameter')}</th>
+                      <td>{t('productDetails.rudderSeal.shaftDiameterValue')}</td>
                     </tr>
                     <tr>
-                      <th>Types Available</th>
+                      <th>{t('productDetails.rudderSeal.typesAvailable')}</th>
                       <td>
-                        <p>CX Type: Standard model</p>
-                        <p>DX Type: With additional standby seal</p>
-                        <p>AX Type: Pollution-free model</p>
-                        <p>EVA Type: Equipped with face seals</p>
+                        <p>{t('productDetails.rudderSeal.cxType')}</p>
+                        <p>{t('productDetails.rudderSeal.dxType')}</p>
+                        <p>{t('productDetails.rudderSeal.axType')}</p>
+                        <p>{t('productDetails.rudderSeal.evaType')}</p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: The above figures indicate the best conditions in individual cases and may differ according to the seal size. Contact us before use.</p>
+                <p className="note-text">{t('productDetails.rudderSeal.noteText')}</p>
               </div>
             </div>
           </div>
@@ -196,8 +191,8 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Us</h3>
-                  <p className="contact-text">Please contact us via our email form</p>
+                  <h3 className="contact-title">{t('productDetails.contactUs')}</h3>
+                  <p className="contact-text">{t('productDetails.contactViaEmail')}</p>
                 </Link>
               </div>
             </div>
@@ -209,8 +204,8 @@ const ProjectDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -220,7 +215,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for A/C compressor<br />Type A Mechanical seal</span>
+                    <span>{t('productDetails.rudderSeal.forAcCompressor')}<br />{t('productDetails.rudderSeal.typeAMechanicalSeal')}</span>
                   </div>
                 </Link>
               </div>
@@ -232,7 +227,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for Water Pump<br />EH795/EH790</span>
+                    <span>{t('productDetails.rudderSeal.forWaterPump')}<br />{t('productDetails.rudderSeal.eh795EH790')}</span>
                   </div>
                 </Link>
               </div>
@@ -244,7 +239,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>for Variable Displacement A/C Compressor<br />Control Valve</span>
+                    <span>{t('productDetails.rudderSeal.forVariableDisplacementAcCompressor')}<br />{t('productDetails.rudderSeal.controlValve')}</span>
                   </div>
                 </Link>
               </div>
@@ -252,7 +247,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -265,9 +260,9 @@ const ProjectDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">Rudder Seal</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.rudderSeal.breadcrumb')}</li>
                 </ol>
               </nav>
             </div>
@@ -281,7 +276,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">Contact</p>
+          <p className="contact-text">{t('productDetails.rudderSeal.contact')}</p>
         </Link>
       </div>
     </div>

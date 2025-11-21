@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">Reed Valves</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.reedValve.title')}</li>
             </ol>
           </nav>
         </div>
@@ -61,11 +63,11 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Reed Valves</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.reedValve.productTitle')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=automobile">Automobile</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=motorcycle-engine">Motorcycle Engine</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=automobile">{t('products.automobile')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=motorcycle-engine">{t('products.machinery')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -96,38 +98,34 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>Reed Valves</h2>
+                <h2>{t('productDetails.reedValve.productTitle')}</h2>
                 <p>
-                  Designed to be used in four-stroke motorcycle engines for emission control (secondary air supply).
-                  Substantially reduces carbon monoxide (CO) and hydrocarbon (HC) emissions to mitigate air pollution.
+                  {t('productDetails.reedValve.description1')}
                 </p>
                 <p>
-                  These compact and lightweight Reed Valve installed in a limited space ensure large flows.
-                  Highly responsive valves for high-speed mode.
+                  {t('productDetails.reedValve.description2')}
                 </p>
                 <p>
-                  Our reed valves are engineered with precision to provide optimal performance in motorcycle engines. 
-                  With advanced materials and innovative design, these valves ensure maximum durability and efficiency 
-                  in controlling emissions while maintaining smooth engine operation.
+                  {t('productDetails.reedValve.description3')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Automobile, Motorcycle Engine</span></li>
-                  <li><strong>Application</strong> <span>Four-stroke motorcycle engines</span></li>
-                  <li><strong>Function</strong> <span>Emission control (secondary air supply)</span></li>
-                  <li><strong>Temperature Range</strong> <span>-20 to 140°C</span></li>
-                  <li><strong>Vibration Durability</strong> <span>20 G at 200Hz for 10^7 cycles</span></li>
-                  <li><strong>Material</strong> <span>High-grade stainless steel</span></li>
-                  <li><strong>Applications</strong> <span>Motorcycle emission control systems</span></li>
+                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.reedValve.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.application')}</strong> <span>{t('productDetails.reedValve.applicationValue')}</span></li>
+                  <li><strong>{t('productDetails.function')}</strong> <span>{t('productDetails.reedValve.functionValue')}</span></li>
+                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.reedValve.temperatureRangeValue')}</span></li>
+                  <li><strong>Vibration Durability</strong> <span>{t('productDetails.reedValve.vibrationDurabilityValue')}</span></li>
+                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.reedValve.materialValue')}</span></li>
+                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.reedValve.applicationsValue')}</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -141,23 +139,23 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product Specification Example</h2>
-                <p>Information about specification Product.</p>
+                <h2>{t('productDetails.reedValve.productSpecification')}</h2>
+                <p>{t('productDetails.reedValve.specificationInfo')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Temperature</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.reedValve.temperature')}</th>
                       <td>-20～140℃</td>
                     </tr>
                     <tr>
-                      <th>Vibration durability</th>
-                      <td>20 G at 200Hz for 10^7 cycles</td>
+                      <th>{t('productDetails.reedValve.vibrationDurability')}</th>
+                      <td>{t('productDetails.reedValve.vibrationDurabilityValue')}</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: The above figures show some examples. Contact us when you are considering making a purchase.</p>
+                <p className="note-text">{t('productDetails.reedValve.noteText')}</p>
               </div>
             </div>
           </div>
@@ -171,8 +169,8 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Us</h3>
-                  <p className="contact-text">Please contact us via our email form</p>
+                  <h3 className="contact-title">{t('productDetails.contactUs')}</h3>
+                  <p className="contact-text">{t('productDetails.contactViaEmail')}</p>
                 </Link>
               </div>
             </div>
@@ -184,8 +182,8 @@ const ProjectDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -195,7 +193,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for A/C compressor<br />Type A Mechanical seal</span>
+                    <span>{t('productDetails.reedValve.forAcCompressor')}<br />{t('productDetails.reedValve.typeAMechanicalSeal')}</span>
                   </div>
                 </Link>
               </div>
@@ -207,7 +205,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for Water Pump<br />EH795/EH790</span>
+                    <span>{t('productDetails.reedValve.forWaterPump')}<br />{t('productDetails.reedValve.eh795EH790')}</span>
                   </div>
                 </Link>
               </div>
@@ -219,7 +217,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>for Variable Displacement A/C Compressor<br />Control Valve</span>
+                    <span>{t('productDetails.reedValve.forVariableDisplacementAcCompressor')}<br />{t('productDetails.reedValve.controlValve')}</span>
                   </div>
                 </Link>
               </div>
@@ -227,7 +225,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -240,9 +238,9 @@ const ProjectDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">Reed Valves</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.reedValve.title')}</li>
                 </ol>
               </nav>
             </div>
@@ -256,7 +254,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">Contact</p>
+          <p className="contact-text">{t('productDetails.reedValve.contact')}</p>
         </Link>
       </div>
     </div>

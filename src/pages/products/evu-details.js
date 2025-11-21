@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -45,12 +47,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>PRODUCTS</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">EVU Valve Stem Seal</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.evuValveStemSeal.title')}</li>
             </ol>
           </nav>
         </div>
@@ -61,11 +63,11 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">EVU Valve Stem Seal</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.evuValveStemSeal.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=automobile">Automobile</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=valve-stem-seal">Valve Stem Seal</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=automobile">{t('products.automobile')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=valve-stem-seal">{t('productDetails.evuValveStemSeal.title')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -79,10 +81,10 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU.png`} alt="EVU Valve Stem Seal" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU.png`} alt={t('productDetails.evuValveStemSeal.title')} />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evu copy.png`} alt="EVU Valve Stem Seal Detail" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evu copy.png`} alt={`${t('productDetails.evuValveStemSeal.title')} Detail`} />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -93,37 +95,33 @@ const ProjectDetails = () => {
           <div className="row justify-content-between gy-4 mt-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>EVU Valve Stem Seal</h2>
+                <h2>{t('productDetails.evuValveStemSeal.title')}</h2>
                 <p>
-                  EVU valve stem seals are designed to provide excellent sealing performance for engine valve applications. 
-                  These seals prevent oil from entering the combustion chamber through the valve guide while allowing proper lubrication of the valve stem.
+                  {t('productDetails.evuValveStemSeal.description1')}
                 </p>
                 <p>
-                  Manufactured with high-quality materials and precision engineering, EVU valve stem seals offer superior durability and reliability. 
-                  The seals are designed to withstand extreme temperature variations and harsh operating conditions in modern engines. 
-                  Eagle Industry's advanced manufacturing processes ensure consistent quality and performance across all EVU products.
+                  {t('productDetails.evuValveStemSeal.description2')}
                 </p>
                 <p>
-                  The EVU series features a compact design that allows for easy installation and replacement. 
-                  These seals are compatible with a wide range of engine applications and provide optimal sealing efficiency throughout their service life.
+                  {t('productDetails.evuValveStemSeal.description3')}
                 </p>
               </div>
             </div>
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Valve Stem Seals</span></li>
-                  <li><strong>Model</strong> <span>EVU Series</span></li>
-                  <li><strong>Material</strong> <span>High-grade Fluoroelastomer</span></li>
-                  <li><strong>Temperature Range</strong> <span>-40°C to 250°C</span></li>
-                  <li><strong>Pressure Rating</strong> <span>Up to 5 MPa</span></li>
-                  <li><strong>Applications</strong> <span>Engine Valve Systems</span></li>
+                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.evuValveStemSeal.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.model')}</strong> <span>{t('productDetails.evuValveStemSeal.modelValue')}</span></li>
+                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.evuValveStemSeal.materialValue')}</span></li>
+                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.evuValveStemSeal.temperatureRangeValue')}</span></li>
+                  <li><strong>{t('productDetails.pressure')}</strong> <span>{t('productDetails.evuValveStemSeal.pressureRatingValue')}</span></li>
+                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.evuValveStemSeal.applicationsValue')}</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -137,40 +135,40 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product specification example</h2>
-                <p>Information about specification Product.</p>
+                <h2>{t('productDetails.productSpecification')}</h2>
+                <p>{t('productDetails.specificationInfo')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Material</th>
-                      <td>High-grade Fluoroelastomer</td>
+                      <th style={{ width: '30%' }}>{t('productDetails.material')}</th>
+                      <td>{t('productDetails.evuValveStemSeal.materialValue')}</td>
                     </tr>
                     <tr>
-                      <th>Operating Temperature</th>
-                      <td>-40°C to 250°C</td>
+                      <th>{t('productDetails.operatingTemperature')}</th>
+                      <td>{t('productDetails.evuValveStemSeal.temperatureRangeValue')}</td>
                     </tr>
                     <tr>
-                      <th>Pressure Rating</th>
-                      <td>Up to 5 MPa</td>
+                      <th>{t('productDetails.pressure')}</th>
+                      <td>{t('productDetails.evuValveStemSeal.pressureRatingValue')}</td>
                     </tr>
                     <tr>
-                      <th>Applications</th>
-                      <td>Engine Valve Systems</td>
+                      <th>{t('productDetails.applications')}</th>
+                      <td>{t('productDetails.evuValveStemSeal.applicationsValue')}</td>
                     </tr>
                     <tr>
-                      <th>Features</th>
+                      <th>{t('productDetails.productFeatures')}</th>
                       <td>
-                        <p>Excellent oil resistance</p>
-                        <p>Superior heat resistance</p>
-                        <p>Precise dimensional control</p>
-                        <p>Enhanced durability</p>
+                        <p>{t('productDetails.evuValveStemSeal.features.excellentOilResistance')}</p>
+                        <p>{t('productDetails.evuValveStemSeal.features.superiorHeatResistance')}</p>
+                        <p>{t('productDetails.evuValveStemSeal.features.preciseDimensionalControl')}</p>
+                        <p>{t('productDetails.evuValveStemSeal.features.enhancedDurability')}</p>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: The above figures indicate the best conditions in individual cases and may differ according to the seal size. Contact us before use.</p>
+                <p className="note-text">{t('productDetails.evuValveStemSeal.noteText')}</p>
               </div>
             </div>
           </div>
@@ -184,8 +182,8 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="contact-box" data-aos="fade-up">
                 <Link to="/contact" className="contact-link">
-                  <h3 className="contact-title">Contact Us</h3>
-                  <p className="contact-text">Please contact us via our email form</p>
+                  <h3 className="contact-title">{t('productDetails.contactUs')}</h3>
+                  <p className="contact-text">{t('productDetails.contactViaEmail')}</p>
                 </Link>
               </div>
             </div>
@@ -197,18 +195,18 @@ const ProjectDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
                 <Link to="/products/evr-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR.png`} className="card-image" alt="EVR Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR.png`} className="card-image" alt={`${t('products.mechanicalSeals')} EVR Series`} />
                   </div>
                   <div className="card-caption">
-                    <span>Mechanical Seal<br />EVR Series</span>
+                    <span>{t('products.mechanicalSeals')}<br />EVR Series</span>
                   </div>
                 </Link>
               </div>
@@ -217,10 +215,10 @@ const ProjectDetails = () => {
               <div className="product-card h-100">
                 <Link to="/products/evk2rt-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK.jpg`} className="card-image" alt="EVK Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK.jpg`} className="card-image" alt={`${t('products.mechanicalSeals')} EVK Series`} />
                   </div>
                   <div className="card-caption">
-                    <span>Mechanical Seal<br />EVK Series</span>
+                    <span>{t('products.mechanicalSeals')}<br />EVK Series</span>
                   </div>
                 </Link>
               </div>
@@ -229,10 +227,10 @@ const ProjectDetails = () => {
               <div className="product-card h-100">
                 <Link to="/products/lipSeal-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="AC Compressor Lip Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt={`${t('products.lipSeal')} ${t('products.lipSealAc')}`} />
                   </div>
                   <div className="card-caption">
-                    <span>Lip Seal<br />For A/C Compressor</span>
+                    <span>{t('products.lipSeal')}<br />{t('products.lipSealAc')}</span>
                   </div>
                 </Link>
               </div>
@@ -240,7 +238,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">To Products TOP</Link>
+              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -253,9 +251,9 @@ const ProjectDetails = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/projects">Products</Link></li>
-                  <li className="current">EVU Valve Stem Seal</li>
+                  <li><Link to="/">{t('productDetails.home')}</Link></li>
+                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li className="current">{t('productDetails.evuValveStemSeal.title')}</li>
                 </ol>
               </nav>
             </div>
@@ -269,7 +267,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">Contact</p>
+          <p className="contact-text">{t('productDetails.contactUs')}</p>
         </Link>
       </div>
     </div>

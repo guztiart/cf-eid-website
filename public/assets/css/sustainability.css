@@ -962,3 +962,22 @@
 .portfolio-info .pt-3 {
   text-align: center;
 }
+
+/* Remove dots from list items in sustainability-concepts section */
+.sustainability-concepts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sustainability-concepts ul li {
+  padding: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 0;
+}
+
+.sustainability-concepts ul li::before {
+  content: none;
+}
