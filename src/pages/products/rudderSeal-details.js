@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
-              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
               <li className="current">{t('productDetails.rudderSeal.breadcrumb')}</li>
             </ol>
           </nav>
@@ -66,8 +66,8 @@ const ProjectDetails = () => {
               <h2 className="product-title" data-aos="fade-up">{t('productDetails.rudderSeal.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=marine">Marine</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=stern-tube-seals">Rudder Seals</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=marine">{t('products.marine')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=stern-tube-seals">{language === 'id' ? 'Segel Kemudi' : 'Rudder Seals'}</Link></li>
                 </ul>
               </div>
             </div>
@@ -210,7 +210,7 @@ const ProjectDetails = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/lipSeal-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
@@ -222,7 +222,7 @@ const ProjectDetails = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/eh795-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
@@ -234,7 +234,7 @@ const ProjectDetails = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/airCutValve-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
@@ -247,7 +247,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -261,7 +261,7 @@ const ProjectDetails = () => {
               <nav className="breadcrumbs">
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
-                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
                   <li className="current">{t('productDetails.rudderSeal.breadcrumb')}</li>
                 </ol>
               </nav>
@@ -276,7 +276,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">{t('productDetails.rudderSeal.contact')}</p>
+          <p className="contact-text">{t('productDetails.contactUs')}</p>
         </Link>
       </div>
     </div>

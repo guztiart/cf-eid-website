@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS, useGLightbox, useSwiper } from '../../hooks/useExternalLibs';
 import { setDefaultFavicon } from '../../utils/setFavicon';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -35,12 +37,12 @@ const ProjectDetails = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Product Details</h1>
+          <h1>{t('productDetails.products')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/projects">Products</Link></li>
-              <li className="current">EH795 EH790 for Water Pump</li>
+              <li><Link to="/">{t('productDetails.home')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li className="current">{t('productDetails.eh795.breadcrumb')}</li>
             </ol>
           </nav>
         </div>
@@ -85,30 +87,30 @@ const ProjectDetails = () => {
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>Product Information</h3>
+                <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
-                  <li><strong>Category</strong> <span>Mechanical Seals</span></li>
-                  <li><strong>Model</strong> <span>EH795</span></li>
-                  <li><strong>Material</strong> <span>High-grade Stainless Steel</span></li>
-                  <li><strong>Temperature Range</strong> <span>-40°C to 200°C</span></li>
-                  <li><strong>Pressure Rating</strong> <span>Up to 10 MPa</span></li>
-                  
-                  <li><strong>Applications</strong> <span>Water Pumps</span></li>
+                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.eh795.categoryValue')}</span></li>
+                  <li><strong>{t('productDetails.model')}</strong> <span>{t('productDetails.eh795.modelValue')}</span></li>
+                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.eh795.materialValue')}</span></li>
+                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.eh795.temperatureValue')}</span></li>
+                  <li><strong>{t('productDetails.maxPressure')}</strong> <span>{t('productDetails.eh795.maxPressureValue')}</span></li>
+                   
+                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.eh795.applicationsValue')}</span></li>
                 </ul>
-                
+               
                 <div className="pt-3">
-                  <h3>Product Features</h3>
+                  <h3>{t('productDetails.productFeatures')}</h3>
                   <ul>
-                    <li><i className="bi bi-check"></i> <span>Self-lubricating design</span></li>
-                    <li><i className="bi bi-check"></i> <span>Low friction coefficient</span></li>
-                    <li><i className="bi bi-check"></i> <span>High wear resistance</span></li>
-                    <li><i className="bi bi-check"></i> <span>Easy installation</span></li>
-                    <li><i className="bi bi-check"></i> <span>Long service life</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.improvedFuelEconomy')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.reducedEmissions')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.enhancedACSystemEfficiency')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.easyMaintenance')}</span></li>
+                    <li><i className="bi bi-check"></i> <span>{t('productDetails.longServiceLife')}</span></li>
                   </ul>
                 </div>
-                
+               
                 <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">Inquire About This Product</Link>
+                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
                 </div>
               </div>
             </div>
@@ -120,16 +122,16 @@ const ProjectDetails = () => {
       <section id="related-products" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Products</h2>
-            <p>Explore our other similar products</p>
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-content h-100">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="img-fluid" alt="" />
                 <div className="portfolio-info">
-                  <h4>Compressor Lip Seal</h4>
-                  <p>High-quality lip seals for AC compressors</p>
+                  <h4>{t('products.lipSealAc')}</h4>
+                  <p>{language === 'id' ? 'Segel bibir berkualitas tinggi untuk kompresor AC' : 'High-quality lip seals for AC compressors'}</p>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} title="Product 1" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                   <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
                 </div>
@@ -139,8 +141,8 @@ const ProjectDetails = () => {
               <div className="portfolio-content h-100">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="img-fluid" alt="" />
                 <div className="portfolio-info">
-                  <h4>Mechanical Seal</h4>
-                  <p>Durable mechanical seals for various applications</p>
+                  <h4>{t('products.mechanicalSeals')}</h4>
+                  <p>{language === 'id' ? 'Segel mekanis yang tahan lama untuk berbagai aplikasi' : 'Durable mechanical seals for various applications'}</p>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} title="Product 2" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                   <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
                 </div>
@@ -150,8 +152,8 @@ const ProjectDetails = () => {
               <div className="portfolio-content h-100">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="img-fluid" alt="" />
                 <div className="portfolio-info">
-                  <h4>Rudder Seal</h4>
-                  <p>Specialized seals for marine rudder applications</p>
+                  <h4>{t('products.rudderSeal')}</h4>
+                  <p>{language === 'id' ? 'Segel khusus untuk aplikasi kemudi maritim' : 'Specialized seals for marine rudder applications'}</p>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} title="Product 3" data-gallery="related-gallery-product" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                   <Link to="/project-details" title="More Details" className="details-link"><i className="bi bi-link-45deg"></i></Link>
                 </div>

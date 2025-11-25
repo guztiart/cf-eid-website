@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
-              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
               <li className="current">{t('productDetails.mas.breadcrumb')}</li>
             </ol>
           </nav>
@@ -66,7 +66,7 @@ const ProjectDetails = () => {
               <h2 className="product-title" data-aos="fade-up">{t('productDetails.mas.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=marine">{t('header.products')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=marine">{t('products.marine')}</Link></li>
                   <li className="nav-item"><Link to="/products?tag=water-lubricated-stern-tube-seal">{t('productDetails.mas.categoryValue')}</Link></li>
                 </ul>
               </div>
@@ -81,13 +81,19 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/marine ace.png`} alt="Marine Ace Seal Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} alt="Marine Ace Seal Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/marine ace 2.png`} alt="Marine Ace Seal Image 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-2.png`} alt="Marine Ace Seal Image 2" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Marine Ace Seal (MAS).jpg`} alt="Marine Ace Seal Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-3.png`} alt="Marine Ace Seal Image 3" />
+              </div>
+              <div className="swiper-slide">
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-4.png`} alt="Marine Ace Seal Image 4" />
+              </div>
+              <div className="swiper-slide">
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-5.png`} alt="Marine Ace Seal Image 5" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -116,10 +122,10 @@ const ProjectDetails = () => {
                 <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
                   <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.mas.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.mas.shaftRange')}</strong> <span>φ45~φ85 (5mm increment), 2"~3" (0.5" increment)</span></li>
-                  <li><strong>{t('productDetails.mas.allowablePvValue')}</strong> <span>0.3 MPa・m/sec</span></li>
-                  <li><strong>{t('productDetails.mas.pressure')}</strong> <span>Max. 0.1 MPa</span></li>
-                  <li><strong>{t('productDetails.mas.requiredCoolingWater')}</strong> <span>Min. 3 Liter/min</span></li>
+                  <li><strong>{t('productDetails.mas.shaftRange')}</strong> <span>{language === 'id' ? 'φ45~φ85 (5mm increment), 2"~3" (0.5" increment)' : 'φ45~φ85 (5mm increment), 2"~3" (0.5" increment)'}</span></li>
+                  <li><strong>{t('productDetails.mas.allowablePvValue')}</strong> <span>{language === 'id' ? '0.3 MPa・m/detik' : '0.3 MPa・m/sec'}</span></li>
+                  <li><strong>{t('productDetails.mas.pressure')}</strong> <span>{language === 'id' ? 'Maks. 0.1 MPa' : 'Max. 0.1 MPa'}</span></li>
+                  <li><strong>{t('productDetails.mas.requiredCoolingWater')}</strong> <span>{language === 'id' ? 'Min. 3 Liter/menit' : 'Min. 3 Liter/min'}</span></li>
                   <li><strong>{t('productDetails.mas.coolingWaterTemperature')}</strong> <span>0~40°C</span></li>
                   <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.mas.applicationsValue')}</span></li>
                 </ul>
@@ -148,19 +154,19 @@ const ProjectDetails = () => {
                   <tbody>
                     <tr>
                       <th style={{ width: '30%' }}>{t('productDetails.mas.shaftRange')}</th>
-                      <td>φ45~φ85 (5mm increment), 2"~3" (0.5" increment)</td>
+                      <td>{language === 'id' ? 'φ45~φ85 (5mm increment), 2"~3" (0.5" increment)' : 'φ45~φ85 (5mm increment), 2"~3" (0.5" increment)'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.mas.allowablePvValue')}</th>
-                      <td>0.3 MPa・m/sec</td>
+                      <td>{language === 'id' ? '0.3 MPa・m/detik' : '0.3 MPa・m/sec'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.mas.pressure')}</th>
-                      <td>Max. 0.1 MPa</td>
+                      <td>{language === 'id' ? 'Maks. 0.1 MPa' : 'Max. 0.1 MPa'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.mas.requiredCoolingWater')}</th>
-                      <td>Min. 3 Liter/min</td>
+                      <td>{language === 'id' ? 'Min. 3 Liter/menit' : 'Min. 3 Liter/min'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.mas.coolingWaterTemperature')}</th>
@@ -205,7 +211,7 @@ const ProjectDetails = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/lipSeal-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
@@ -217,7 +223,7 @@ const ProjectDetails = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/eh795-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
@@ -229,7 +235,7 @@ const ProjectDetails = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/airCutValve-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
@@ -242,7 +248,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -256,7 +262,7 @@ const ProjectDetails = () => {
               <nav className="breadcrumbs">
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
-                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
                   <li className="current">{t('productDetails.mas.breadcrumb')}</li>
                 </ol>
               </nav>

@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
-              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
               <li className="current">{t('productDetails.evk2rt.breadcrumb')}</li>
             </ol>
           </nav>
@@ -66,7 +66,7 @@ const ProjectDetails = () => {
               <h2 className="product-title" data-aos="fade-up">{t('productDetails.evk2rt.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=marine">{t('home.marine')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=marine">{t('products.marine')}</Link></li>
                   <li className="nav-item"><Link to="/products?tag=stern-tube">{t('products.waterLubricatedSternTubeSeal')}</Link></li>
                 </ul>
               </div>
@@ -81,13 +81,13 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RT.jpg`} alt="Water Lubricated Stern Tube Seal - EVK2RT" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-1.png`} alt="Water Lubricated Stern Tube Seal - EVK2RT" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Detail EVK_xxx.jpg`} alt="EVK2RT Detail View" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-2.png`} alt="EVK2RT Detail View" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Detail EVK.jpg`} alt="EVK Series Detail" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-3.png`} alt="EVK Series Detail" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -240,7 +240,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -254,7 +254,7 @@ const ProjectDetails = () => {
               <nav className="breadcrumbs">
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
-                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
                   <li className="current">{t('productDetails.evk2rt.breadcrumb')}</li>
                 </ol>
               </nav>
@@ -269,7 +269,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">{language === 'en' ? 'Contact' : 'Kontak'}</p>
+          <p className="contact-text">{t('productDetails.contactUs')}</p>
         </Link>
       </div>
     </div>

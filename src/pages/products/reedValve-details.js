@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -67,7 +67,7 @@ const ProjectDetails = () => {
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/products?tag=automobile">{t('products.automobile')}</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=motorcycle-engine">{t('products.machinery')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=motorcycle-engine">{language === 'id' ? 'Mesin Sepeda Motor' : 'Motorcycle Engine'}</Link></li>
                 </ul>
               </div>
             </div>
@@ -81,13 +81,10 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/ReedValve_Square.jpg`} alt="Product Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed-valve-1.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed_valve_double.jpg`} alt="Product Image 2" />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed-valve-2.png`} alt="Product Image 2" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -147,7 +144,7 @@ const ProjectDetails = () => {
                   <tbody>
                     <tr>
                       <th style={{ width: '30%' }}>{t('productDetails.reedValve.temperature')}</th>
-                      <td>-20～140℃</td>
+                      <td>{language === 'id' ? '-20～140℃' : '-20～140℃'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.reedValve.vibrationDurability')}</th>
@@ -188,7 +185,7 @@ const ProjectDetails = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/lipSeal-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
@@ -200,7 +197,7 @@ const ProjectDetails = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/eh795-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
@@ -212,7 +209,7 @@ const ProjectDetails = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/airCutValve-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
@@ -225,7 +222,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -254,7 +251,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">{t('productDetails.reedValve.contact')}</p>
+          <p className="contact-text">{t('productDetails.contactUs')}</p>
         </Link>
       </div>
     </div>

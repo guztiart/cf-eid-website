@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const BladderDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -51,7 +51,7 @@ const BladderDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
-              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
               <li className="current">{t('productDetails.bladderAccumulator.breadcrumb')}</li>
             </ol>
           </nav>
@@ -66,8 +66,8 @@ const BladderDetails = () => {
               <h2 className="product-title" data-aos="fade-up">{t('productDetails.bladderAccumulator.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=industrial">Industrial</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=hydraulic-components">Hydraulic Components</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=industrial">{language === 'id' ? 'Industri' : 'Industrial'}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=hydraulic-components">{language === 'id' ? 'Komponen Hidrolik' : 'Hydraulic Components'}</Link></li>
                 </ul>
               </div>
             </div>
@@ -81,13 +81,10 @@ const BladderDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/bladder_type_accumulators.jpeg`} alt="Bladder Type Accumulator" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/bladder-type-accumulator-1.png`} alt="Bladder Type Accumulator" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} alt="Bladder Type Accumulator Detail 1" />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-2.jpg`} alt="Bladder Type Accumulator Detail 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/bladder-type-accumulator-1.png`} alt="Bladder Type Accumulator Detail 1" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -239,7 +236,7 @@ const BladderDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AirCutValve.jpg`} className="card-image" alt="Air Cut Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>Automobile<br />Air Cut Valve</span>
+                    <span>{language === 'id' ? 'Otomotif<br />Air Cut Valve' : 'Automobile<br />Air Cut Valve'}</span>
                   </div>
                 </Link>
               </div>
@@ -251,7 +248,7 @@ const BladderDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed_valve_double.jpg`} className="card-image" alt="Reed Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>Automobile<br />Reed Valve</span>
+                    <span>{language === 'id' ? 'Otomotif<br />Reed Valve' : 'Automobile<br />Reed Valve'}</span>
                   </div>
                 </Link>
               </div>
@@ -263,7 +260,7 @@ const BladderDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} className="card-image" alt="SUPERIOR O-Ring" />
                   </div>
                   <div className="card-caption">
-                    <span>Sealing Solutions<br />SUPERIOR O-Ring</span>
+                    <span>{language === 'id' ? 'Solusi Penyegelan<br />SUPERIOR O-Ring' : 'Sealing Solutions<br />SUPERIOR O-Ring'}</span>
                   </div>
                 </Link>
               </div>
@@ -271,7 +268,7 @@ const BladderDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -285,7 +282,7 @@ const BladderDetails = () => {
               <nav className="breadcrumbs">
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
-                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
                   <li className="current">{t('productDetails.bladderAccumulator.breadcrumb')}</li>
                 </ol>
               </nav>
@@ -300,7 +297,7 @@ const BladderDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">Contact</p>
+          <p className="contact-text">{t('productDetails.contactUs')}</p>
         </Link>
       </div>
     </div>

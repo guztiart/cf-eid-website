@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
-              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
               <li className="current">{t('productDetails.evuValveStemSeal.title')}</li>
             </ol>
           </nav>
@@ -238,7 +238,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ const ProjectDetails = () => {
               <nav className="breadcrumbs">
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
-                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
                   <li className="current">{t('productDetails.evuValveStemSeal.title')}</li>
                 </ol>
               </nav>

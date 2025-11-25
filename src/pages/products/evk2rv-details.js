@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
-              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
               <li className="current">{t('productDetails.evk2rv.title')}</li>
             </ol>
           </nav>
@@ -116,11 +116,11 @@ const ProjectDetails = () => {
                 <h3>{t('productDetails.productInformation')}</h3>
                 <ul>
                   <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.evk2rv.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.sealedFluid')}</strong> <span>Seawater</span></li>
+                  <li><strong>{t('productDetails.sealedFluid')}</strong> <span>{language === 'id' ? 'Air laut' : 'Seawater'}</span></li>
                   <li><strong>{t('productDetails.operatingTemperature')}</strong> <span>{t('productDetails.evk2rv.temperatureRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.maximumCircumferentialVelocity')}</strong> <span>8 m/s (approx. 3,000 rpm)</span></li>
-                  <li><strong>{t('productDetails.pressure')}</strong> <span>0 to 0.3 MPaG</span></li>
-                  <li><strong>{t('productDetails.shaftDiameter')}</strong> <span>200 to 800 mm</span></li>
+                  <li><strong>{t('productDetails.maximumCircumferentialVelocity')}</strong> <span>{language === 'id' ? '8 m/s (kira-kira. 3.000 rpm)' : '8 m/s (approx. 3,000 rpm)'}</span></li>
+                  <li><strong>{t('productDetails.pressure')}</strong> <span>{language === 'id' ? '0 hingga 0.3 MPaG' : '0 to 0.3 MPaG'}</span></li>
+                  <li><strong>{t('productDetails.shaftDiameter')}</strong> <span>{language === 'id' ? '200 hingga 800 mm' : '200 to 800 mm'}</span></li>
                   <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.evk2rv.materialValue')}</span></li>
                   <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.evk2rv.applicationsValue')}</span></li>
                 </ul>
@@ -148,7 +148,7 @@ const ProjectDetails = () => {
                   <tbody>
                     <tr>
                       <th style={{ width: '30%' }}>{t('productDetails.sealedFluid')}</th>
-                      <td>Seawater</td>
+                      <td>{language === 'id' ? 'Air laut' : 'Seawater'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.operatingTemperature')}</th>
@@ -156,21 +156,21 @@ const ProjectDetails = () => {
                     </tr>
                     <tr>
                       <th>{t('productDetails.maximumCircumferentialVelocity')}</th>
-                      <td>8 m/s (approx. 3,000 rpm)</td>
+                      <td>{language === 'id' ? '8 m/s (kira-kira. 3.000 rpm)' : '8 m/s (approx. 3,000 rpm)'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.pressure')}</th>
-                      <td>0 to 0.3 MPaG</td>
+                      <td>{language === 'id' ? '0 hingga 0.3 MPaG' : '0 to 0.3 MPaG'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.shaftDiameter')}</th>
-                      <td>200 to 800 mm</td>
+                      <td>{language === 'id' ? '200 hingga 800 mm' : '200 to 800 mm'}</td>
                     </tr>
                     <tr>
                       <th>{t('productDetails.type')}</th>
                       <td>
                         <p>{t('productDetails.evk2rv.modelValue')}: {t('productDetails.evk2rv.typeValue')}</p>
-                        <p>Custom sizes available upon request</p>
+                        <p>{language === 'id' ? 'Ukuran kustom tersedia sesuai permintaan' : 'Custom sizes available upon request'}</p>
                       </td>
                     </tr>
                   </tbody>
@@ -213,7 +213,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for A/C compressor<br />Type A Mechanical seal</span>
+                    <span>{language === 'id' ? 'untuk kompresor A/C<br />Tipe A Mechanical seal' : 'for A/C compressor<br />Type A Mechanical seal'}</span>
                   </div>
                 </Link>
               </div>
@@ -225,7 +225,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for Water Pump<br />EH795/EH790</span>
+                    <span>{language === 'id' ? 'untuk Water Pump<br />EH795/EH790' : 'for Water Pump<br />EH795/EH790'}</span>
                   </div>
                 </Link>
               </div>
@@ -237,7 +237,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>for Variable Displacement A/C Compressor<br />Control Valve</span>
+                    <span>{language === 'id' ? 'untuk Kompresor A/C Perpindahan Variabel<br />Katup Kontrol' : 'for Variable Displacement A/C Compressor<br />Control Valve'}</span>
                   </div>
                 </Link>
               </div>
@@ -245,7 +245,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -259,7 +259,7 @@ const ProjectDetails = () => {
               <nav className="breadcrumbs">
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
-                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
                   <li className="current">{t('productDetails.evk2rv.title')}</li>
                 </ol>
               </nav>
@@ -274,7 +274,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">{t('header.inquiryForm')}</p>
+          <p className="contact-text">{t('productDetails.contactUs')}</p>
         </Link>
       </div>
     </div>

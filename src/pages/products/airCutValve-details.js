@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -84,13 +84,16 @@ const ProjectDetails = () => {
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-2.jpg`} alt="Product Image 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-2.png`} alt="Product Image 2" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-3.jpg`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-3.png`} alt="Product Image 3" />
               </div>
               <div className="swiper-slide">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-4.png`} alt="Product Image 4" />
+              </div>
+              <div className="swiper-slide">
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-5.png`} alt="Product Image 5" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -211,7 +214,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('products.lipSealAc')}<br />Type A Mechanical seal</span>
+                    <span>{t('products.lipSealAc')}<br />{language === 'id' ? 'Tipe A Mechanical seal' : 'Type A Mechanical seal'}</span>
                   </div>
                 </Link>
               </div>

@@ -5,7 +5,7 @@ import { setDefaultFavicon } from '../../utils/setFavicon';
 import { useLanguage } from '../../contexts/LanguageContext';
 
 const ProjectDetails = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   useGLightbox();
@@ -51,7 +51,7 @@ const ProjectDetails = () => {
           <nav className="breadcrumbs">
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
-              <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+              <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
               <li className="current">{t('productDetails.evr.title')}</li>
             </ol>
           </nav>
@@ -200,36 +200,36 @@ const ProjectDetails = () => {
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/lipSeal-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for A/C compressor<br />Type A Mechanical seal</span>
+                    <span>{language === 'id' ? 'untuk kompresor A/C<br />Tipe A Mechanical seal' : 'for A/C compressor<br />Type A Mechanical seal'}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/eh795-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for Water Pump<br />EH795/EH790</span>
+                    <span>{language === 'id' ? 'untuk Water Pump<br />EH795/EH790' : 'for Water Pump<br />EH795/EH790'}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/rudderSeal-details" className="card-link">
                   <div className="card-image-container">
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="card-image" alt="Rudder Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>for Marine Applications<br />Rudder Seal</span>
+                    <span>{language === 'id' ? 'untuk Aplikasi Maritim<br />Segel Kemudi' : 'for Marine Applications<br />Rudder Seal'}</span>
                   </div>
                 </Link>
               </div>
@@ -237,7 +237,7 @@ const ProjectDetails = () => {
           </div>
           <div className="row mt-4">
             <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-              <Link to="/projects" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@ const ProjectDetails = () => {
               <nav className="breadcrumbs">
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
-                  <li><Link to="/projects">{t('productDetails.productBreadcrumb')}</Link></li>
+                  <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
                   <li className="current">{t('productDetails.evr.title')}</li>
                 </ol>
               </nav>
@@ -266,7 +266,7 @@ const ProjectDetails = () => {
           <div className="contact-icon">
             <i className="bi bi-envelope"></i>
           </div>
-          <p className="contact-text">Contact</p>
+          <p className="contact-text">{t('productDetails.contactUs')}</p>
         </Link>
       </div>
     </div>

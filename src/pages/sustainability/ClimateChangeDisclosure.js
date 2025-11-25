@@ -190,60 +190,76 @@ const ClimateChangeDisclosure = () => {
                 <h2>Climate-related Risks and Opportunities</h2>
                 <p>Our assessment of climate impacts on our business</p>
               </div>
-              <div className="row gy-4" data-aos="fade-up" data-aos-delay="100">
-                <div className="col-md-6">
-                  <h4 className="mb-3">Climate-related Risks</h4>
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h5 className="card-title">Transition Risks</h5>
-                      <ul className="card-text">
-                        <li>Policy and legal changes related to climate</li>
-                        <li>Technology shifts to low-carbon solutions</li>
-                        <li>Market preferences for sustainable products</li>
-                        <li>Reputation impacts from climate performance</li>
-                      </ul>
+              
+              {/* Climate-related Risks Section */}
+              <div className="climate-section mb-5" data-aos="fade-up" data-aos-delay="100">
+                <h3 className="climate-category-title mb-4">Climate-related Risks</h3>
+                <div className="row g-4">
+                  <div className="col-lg-6 col-md-12">
+                    <div className="climate-card h-100">
+                      <div className="climate-card-header">
+                        <h4 className="climate-card-title">Transition Risks</h4>
+                      </div>
+                      <div className="climate-card-body">
+                        <ul className="climate-card-list">
+                          <li>Policy and legal changes related to climate</li>
+                          <li>Technology shifts to low-carbon solutions</li>
+                          <li>Market preferences for sustainable products</li>
+                          <li>Reputation impacts from climate performance</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 col-md-12">
+                    <div className="climate-card h-100">
+                      <div className="climate-card-header">
+                        <h4 className="climate-card-title">Physical Risks</h4>
+                      </div>
+                      <div className="climate-card-body">
+                        <ul className="climate-card-list">
+                          <li>Acute climate events (floods, storms)</li>
+                          <li>Chronic climate patterns (temperature rise)</li>
+                          <li>Supply chain disruptions from climate impacts</li>
+                          <li>Resource availability changes</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-6">
-                  <h4 className="mb-3">&nbsp;</h4>
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h5 className="card-title">Physical Risks</h5>
-                      <ul className="card-text">
-                        <li>Acute climate events (floods, storms)</li>
-                        <li>Chronic climate patterns (temperature rise)</li>
-                        <li>Supply chain disruptions from climate impacts</li>
-                        <li>Resource availability changes</li>
-                      </ul>
+              </div>
+              
+              {/* Climate-related Opportunities Section */}
+              <div className="climate-section" data-aos="fade-up" data-aos-delay="200">
+                <h3 className="climate-category-title mb-4">Climate-related Opportunities</h3>
+                <div className="row g-4">
+                  <div className="col-lg-6 col-md-12">
+                    <div className="climate-card h-100">
+                      <div className="climate-card-header">
+                        <h4 className="climate-card-title">Products and Services</h4>
+                      </div>
+                      <div className="climate-card-body">
+                        <ul className="climate-card-list">
+                          <li>Development of energy-efficient sealing solutions</li>
+                          <li>Innovation in low-carbon technologies</li>
+                          <li>Products that support climate adaptation</li>
+                          <li>Services for climate resilience</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="col-md-6 mt-4">
-                  <h4 className="mb-3">Climate-related Opportunities</h4>
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h5 className="card-title">Products and Services</h5>
-                      <ul className="card-text">
-                        <li>Development of energy-efficient sealing solutions</li>
-                        <li>Innovation in low-carbon technologies</li>
-                        <li>Products that support climate adaptation</li>
-                        <li>Services for climate resilience</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 mt-4">
-                  <h4 className="mb-3">&nbsp;</h4>
-                  <div className="card h-100">
-                    <div className="card-body">
-                      <h5 className="card-title">Operations and Markets</h5>
-                      <ul className="card-text">
-                        <li>Energy efficiency improvements in operations</li>
-                        <li>Renewable energy adoption</li>
-                        <li>Access to new markets with climate solutions</li>
-                        <li>Enhanced brand value through climate leadership</li>
-                      </ul>
+                  <div className="col-lg-6 col-md-12">
+                    <div className="climate-card h-100">
+                      <div className="climate-card-header">
+                        <h4 className="climate-card-title">Operations and Markets</h4>
+                      </div>
+                      <div className="climate-card-body">
+                        <ul className="climate-card-list">
+                          <li>Energy efficiency improvements in operations</li>
+                          <li>Renewable energy adoption</li>
+                          <li>Access to new markets with climate solutions</li>
+                          <li>Enhanced brand value through climate leadership</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>

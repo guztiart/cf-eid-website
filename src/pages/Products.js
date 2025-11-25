@@ -28,7 +28,7 @@ const Products = () => {
       nameKey: "products.eh795",
       descKey: "products.eh795Desc",
       category: "mechanical-seals",
-      image: "/assets/img/product/WP_compact_mechanical_seal.jpg",
+      image: "/assets/img/product/mech-seal-4.png",
       detailsLink: "/products/eh795-details"
     },
     {
@@ -44,7 +44,7 @@ const Products = () => {
       nameKey: "products.reedValve",
       descKey: "products.reedValveDesc",
       category: "valves",
-      image: "/assets/img/product/reed_valve_double.jpg",
+      image: "/assets/img/product/reed-valve-1.png",
       detailsLink: "/products/reedValve-details"
     },
     {
@@ -52,7 +52,7 @@ const Products = () => {
       nameKey: "products.airCutValve",
       descKey: "products.airCutValveDesc",
       category: "valves",
-      image: "/assets/img/product/AirCutValve.jpg",
+      image: "/assets/img/product/acv-5.png",
       detailsLink: "/products/airCutValve-details"
     },
     {
@@ -60,7 +60,7 @@ const Products = () => {
       nameKey: "products.floatingSeal",
       descKey: "products.floatingSealDesc",
       category: "floating-seal",
-      image: "/assets/img/product/floating_seal.jpg",
+      image: "/assets/img/product/fs-1.png",
       detailsLink: "/products/floatingSeal-details"
     },
     {
@@ -76,7 +76,7 @@ const Products = () => {
       nameKey: "products.bladderAccumulator",
       descKey: "products.bladderAccumulatorDesc",
       category: "accumulators",
-      image: "/assets/img/product/bladder_type_accumulators.jpeg",
+      image: "/assets/img/product/bladder-type-accumulator-1.png",
       detailsLink: "/products/bladder-details"
     },
     {
@@ -92,7 +92,7 @@ const Products = () => {
       nameKey: "products.evk2rt",
       descKey: "products.evk2rtDesc",
       category: "water-lubricated-stern-tube-seal",
-      image: "/assets/img/product/EVK2RT.jpg",
+      image: "/assets/img/product/evk2rt-2.png",
       detailsLink: "/products/evk2rt-details"
     },
     {
@@ -100,7 +100,7 @@ const Products = () => {
       nameKey: "products.mas",
       descKey: "products.masDesc",
       category: "water-lubricated-stern-tube-seal",
-      image: "/assets/img/product/marine ace.png",
+      image: "/assets/img/product/mas-1.png",
       detailsLink: "/products/mas-details"
     },
     {
@@ -124,7 +124,7 @@ const Products = () => {
       nameKey: "products.evu",
       descKey: "products.evuDesc",
       category: "water-lubricated-stern-tube-bearing",
-      image: "/assets/img/product/EVU.png",
+      image: "/assets/img/product/evu-1.png",
       detailsLink: "/products/evu-details"
     },
     {
