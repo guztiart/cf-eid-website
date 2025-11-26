@@ -46,7 +46,7 @@ const About = () => {
             <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <h2 className="inner-title">PT Eagle Industry Indonesia</h2>
               <div className="our-story">
-                <h4>Established Since 1996</h4>
+                <h4>Established Since 1990</h4>
                 <h3>Our History</h3>
                 <p>PT Eagle Industry Indonesia is part of Eagle Industry Co., Ltd., a global company based in Japan
                   known as a leader in manufacturing automotive and industrial components. Established in Indonesia in 1996,

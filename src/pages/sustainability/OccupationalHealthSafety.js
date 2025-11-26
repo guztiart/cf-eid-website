@@ -97,13 +97,38 @@ const OccupationalHealthSafety = () => {
                 <div className="icon-box mt-4">
                   <i className="bi bi-book"></i>
                   <h4>Activity Policy</h4>
-                  <ol>
-                    <li>Properly identify hazards related to business activities, assess risks, and control hazards by considering the hierarchy of controls to reduce risks with the participation and cooperation of all employees.</li>
-                    <li>Establish occupational health and safety targets and pursue better performance through continuous improvement.</li>
-                    <li>Comply with applicable laws and regulations as well as other requirements.</li>
-                    <li>Value active discussions in the workplace, recognizing that good communication is an integral part of occupational health and safety.</li>
-                    <li>Provide necessary education and training to ensure occupational health and safety while increasing employee awareness of the importance of health and safety.</li>
-                  </ol>
+                  <div className="activity-policy-list">
+                    <div className="policy-item">
+                      <div className="policy-number">1</div>
+                      <div className="policy-content">
+                        <p>Properly identify hazards related to business activities, assess risks, and control hazards by considering the hierarchy of controls to reduce risks with the participation and cooperation of all employees.</p>
+                      </div>
+                    </div>
+                    <div className="policy-item">
+                      <div className="policy-number">2</div>
+                      <div className="policy-content">
+                        <p>Establish occupational health and safety targets and pursue better performance through continuous improvement.</p>
+                      </div>
+                    </div>
+                    <div className="policy-item">
+                      <div className="policy-number">3</div>
+                      <div className="policy-content">
+                        <p>Comply with applicable laws and regulations as well as other requirements.</p>
+                      </div>
+                    </div>
+                    <div className="policy-item">
+                      <div className="policy-number">4</div>
+                      <div className="policy-content">
+                        <p>Value active discussions in the workplace, recognizing that good communication is an integral part of occupational health and safety.</p>
+                      </div>
+                    </div>
+                    <div className="policy-item">
+                      <div className="policy-number">5</div>
+                      <div className="policy-content">
+                        <p>Provide necessary education and training to ensure occupational health and safety while increasing employee awareness of the importance of health and safety.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="testimonial-item mt-4">

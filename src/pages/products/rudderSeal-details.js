@@ -102,12 +102,6 @@ const ProjectDetails = () => {
                 <p>
                   {t('productDetails.rudderSeal.description1')}
                 </p>
-                <p>
-                  {t('productDetails.rudderSeal.description2')}
-                </p>
-                <p>
-                  {t('productDetails.rudderSeal.description3')}
-                </p>
               </div>
             </div>
             

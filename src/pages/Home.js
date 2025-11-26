@@ -470,7 +470,7 @@ const Home = () => {
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
-                  <img src="/assets/img/product/floating_seal.jpg" alt="Floating Seal" className="img-fluid" />
+                  <img src="/assets/img/product/fs-1.png" alt="Floating Seal" className="img-fluid" />
                 </div>
               </div>
             </div>
@@ -488,7 +488,7 @@ const Home = () => {
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
-                  <img src="/assets/img/product/WP_compact_mechanical_seal.jpg" alt="Mechanical Seal" className="img-fluid" />
+                  <img src="/assets/img/product/mech-seal-4.png" alt="Mechanical Seal" className="img-fluid" />
                 </div>
               </div>
             </div>

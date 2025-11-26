@@ -24,6 +24,14 @@ const Products = () => {
   // Product data structure with categories
   const allProducts = [
     {
+      id: 5,
+      nameKey: "products.floatingSeal",
+      descKey: "products.floatingSealDesc",
+      category: "floating-seal",
+      image: "/assets/img/product/fs-1.png",
+      detailsLink: "/products/floatingSeal-details"
+    },
+    {
       id: 1,
       nameKey: "products.eh795",
       descKey: "products.eh795Desc",
@@ -54,14 +62,6 @@ const Products = () => {
       category: "valves",
       image: "/assets/img/product/acv-5.png",
       detailsLink: "/products/airCutValve-details"
-    },
-    {
-      id: 5,
-      nameKey: "products.floatingSeal",
-      descKey: "products.floatingSealDesc",
-      category: "floating-seal",
-      image: "/assets/img/product/fs-1.png",
-      detailsLink: "/products/floatingSeal-details"
     },
     {
       id: 6,
@@ -108,7 +108,7 @@ const Products = () => {
       nameKey: "products.rudderSeal",
       descKey: "products.rudderSealDesc",
       category: "water-lubricated-stern-tube-seal",
-      image: "/assets/img/product/Rudder_seal.PNG",
+      image: "/assets/img/product/rudder-1.png",
       detailsLink: "/products/rudderSeal-details"
     },
     {

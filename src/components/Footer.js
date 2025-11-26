@@ -16,7 +16,7 @@ const Footer = () => {
               <p>EJIP Industrial Park, Plot 8G, Sukaresmi</p>
               <p>Cikarang Sel., Kabupaten Bekasi, Jawa Barat 17550</p>
               <p className="mt-3"><strong>Phone:</strong> <span> (021) 8970178</span></p>
-              <p><strong>Email:</strong> <span>riyanda.senjaya@ekkeagle.com</span></p>
+              <p><strong>Email:</strong> <span>eid.sales@ekkeagle.com</span></p>
             </div>
             <div className="social-links d-flex mt-4 justify-content-center">
               <a href="https://www.facebook.com/EKKEagleIndustry/" target="_blank" rel="noopener noreferrer"><i className="bi bi-facebook"></i></a>

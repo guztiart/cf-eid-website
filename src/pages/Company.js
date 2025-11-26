@@ -45,7 +45,7 @@ const Company = () => {
         <div className="container">
           <div className="row position-relative">
             <div className="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/building/eid_building_front.jpg`} alt="About Eagle Industry Indonesia" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="About Eagle Industry Indonesia" />
             </div>
             <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
               <h2 className="inner-title">{t('company.title')}</h2>
@@ -81,7 +81,7 @@ const Company = () => {
               <div className="stats-item d-flex align-items-center w-100 h-100">
                 <i className="bi bi-emoji-smile color-blue flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="130" data-purecounter-duration="2" className="purecounter"></span>
                   <p>{t('company.globalCustomers')}</p>
                 </div>
               </div>
@@ -108,7 +108,7 @@ const Company = () => {
               <div className="stats-item d-flex align-items-center w-100 h-100">
                 <i className="bi bi-people color-pink flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="199" data-purecounter-duration="2" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="188" data-purecounter-duration="2" className="purecounter"></span>
                   <p>{t('company.dedicatedEmployees')}</p>
                 </div>
               </div>
@@ -206,7 +206,7 @@ const Company = () => {
           <div className="row justify-content-around gy-4">
             <div className="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
               <h3>Origin and Establishment</h3>
-              <p>PT Eagle Industry Indonesia was established in 1996 as a branch of Eagle Industry Co., Ltd., a Japanese company originating from the mechanical seal division of NOK Corporation. This division became independent in 1964 under the name Nippon Sealol Co., Ltd., and changed its name to Eagle Industry Co., Ltd. in 1978.</p>
+              <p>PT Eagle Industry Indonesia was established in 1990 as a branch of Eagle Industry Co., Ltd., a Japanese company originating from the mechanical seal division of NOK Corporation. This division became independent in 1964 under the name Nippon Sealol Co., Ltd., and changed its name to Eagle Industry Co., Ltd. in 1978.</p>
               <p>In Indonesia, we began operations at EJIP Industrial Park, Cikarang, focusing on the production of mechanical seals, rubber bellows, and precision components for the automotive, aerospace, and industrial equipment industries.</p>
             </div>
             <div className="features-image col-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -262,7 +262,7 @@ const Company = () => {
                   </tr>
                   <tr>
                     <th scope="row">{t('company.established')}</th>
-                    <td>1996</td>
+                    <td>1990</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.representative')}</th>
@@ -270,7 +270,7 @@ const Company = () => {
                   </tr>
                   <tr>
                     <th scope="row">{t('company.headquarters')}</th>
-                    <td>EJIP Industrial Park, Plot 8G, Sukaresmi, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17550<br/>Tel: (021) 8970178<br/>Email: riyanda.senjaya@ekkeagle.com</td>
+                    <td>EJIP Industrial Park, Plot 8G, Sukaresmi, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17550<br/>Tel: (021) 8970178<br/>Email: eid.sales@ekkeagle.com</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.paidInCapital')}</th>

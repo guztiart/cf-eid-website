@@ -84,12 +84,6 @@ const ProjectDetails = () => {
               <div className="swiper-slide">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/Enginer.png`} alt="Service Engineer 1" />
               </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Enginer.png`} alt="Service Engineer 2" />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/productEnginer.png`} alt="Service Engineer 3" />
-              </div>
             </div>
             <div className="swiper-pagination"></div>
             <div className="swiper-button-prev"></div>

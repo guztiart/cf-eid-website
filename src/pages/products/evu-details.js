@@ -81,10 +81,7 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU.png`} alt={t('productDetails.evuValveStemSeal.title')} />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evu copy.png`} alt={`${t('productDetails.evuValveStemSeal.title')} Detail`} />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU-1.png`} alt={t('productDetails.evuValveStemSeal.title')} />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -98,12 +95,6 @@ const ProjectDetails = () => {
                 <h2>{t('productDetails.evuValveStemSeal.title')}</h2>
                 <p>
                   {t('productDetails.evuValveStemSeal.description1')}
-                </p>
-                <p>
-                  {t('productDetails.evuValveStemSeal.description2')}
-                </p>
-                <p>
-                  {t('productDetails.evuValveStemSeal.description3')}
                 </p>
               </div>
             </div>

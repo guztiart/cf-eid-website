@@ -81,19 +81,13 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} alt="Marine Ace Seal Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-3.png`} alt="Marine Ace Seal Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-2.png`} alt="Marine Ace Seal Image 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-4.png`} alt="Marine Ace Seal Image 2" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-3.png`} alt="Marine Ace Seal Image 3" />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-4.png`} alt="Marine Ace Seal Image 4" />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-5.png`} alt="Marine Ace Seal Image 5" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-5.png`} alt="Marine Ace Seal Image 3" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -107,12 +101,6 @@ const ProjectDetails = () => {
                 <h2>{t('productDetails.mas.title')}</h2>
                 <p>
                   {t('productDetails.mas.description1')}
-                </p>
-                <p>
-                  {t('productDetails.mas.description2')}
-                </p>
-                <p>
-                  {t('productDetails.mas.description3')}
                 </p>
               </div>
             </div>

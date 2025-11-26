@@ -81,13 +81,13 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR AFT - Flange.png`} alt="Product Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR-1.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR_Flange.png`} alt="Product Image 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR-2.png`} alt="Product Image 2" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR FWD - Flange.png`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR-3.png`} alt="Product Image 3" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
