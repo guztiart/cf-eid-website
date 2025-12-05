@@ -38,7 +38,7 @@ const ResearchDevelopment = () => {
             </div>
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
               <div className="service-content text-center">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/services.jpg`} alt="Research & Development" className="img-fluid services-img mx-auto d-block" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="Research & Development" className="img-fluid services-img mx-auto d-block" />
                 <h3 className="text-center">Innovative Research & Development</h3>
                 <p className="text-center">
                   At PT Eagle Industry Indonesia, our Research & Development team drives innovation that positions us at the forefront of sealing technology. We invest significantly in R&D to develop advanced solutions that address evolving industry challenges, improve performance, and create new possibilities for our customers across various sectors.

@@ -38,7 +38,7 @@ const GlobalSupplyChain = () => {
             </div>
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
               <div className="service-content text-center">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/services.jpg`} alt="Global Supply Chain" className="img-fluid services-img mx-auto d-block" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="Global Supply Chain" className="img-fluid services-img mx-auto d-block" />
                 <h3 className="text-center">Efficient Global Supply Chain</h3>
                 <p className="text-center">
                   PT Eagle Industry Indonesia maintains an efficient and reliable global supply chain network to ensure timely delivery of our products to customers worldwide. Our strategic distribution system combines local manufacturing capabilities with global logistics expertise to provide responsive service while maintaining cost efficiency.

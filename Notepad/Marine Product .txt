@@ -1,0 +1,14 @@
+1. Product EVK2RV -> Bagian deskripsi ini disimpan diatas gambar evk.jpg seperti di website kemel !!!
+untuk deskripsi dibuat rata kanan dan kiri. 
+
+Tambahin div feature
+Masukin catalogue dan Manual pdf
+
+"A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance."
+
+2. EVK2RT -> Deskripsi disesuaikan dengan yang di excel, tambahkan features, tambahkan Specification sesuai dengan yang di kemel, tambahkan catalogue, Instruction manual
+3. Marine Ace Seal (MAS) -> Sesuaikan deskripsi nya dengan yang ada di kemel, tambahin gambar, tambahin features, Design Outline ( Specification ), catalogue.
+4. Rudder Seal -> (Mba Demis cari dulu) tambahkan catalogue dan manual instruction
+5. Water Lubricated Stern Tube Bearing - EVR - > Foto pertama tolong dibuat center, yang warna hijau namanya (flange type), yang warna kuning (straight type), tambahkan features, types dari si product, catalogue, manual instruction
+6. Water Lubricated Stern Tube Bearing - EVU -> ubah deskripsi dan penamaan di detail product, tambah catalogue dan manual instruction
+7. Service Engineer -> Diperbaiki deskripsinya, ditambahkan type service engineer nya ( bonding job, installation or assembling job, supervision job, inspection job)

@@ -417,7 +417,8 @@ const OccupationalHealthSafety = () => {
                           <p className="img-caption text-center mt-2">Gym</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/aerobic.jpg`} className="img-fluid rounded activity-img" alt="Aerobic" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/yoga.jpeg
+                          `} className="img-fluid rounded activity-img" alt="Aerobic" />
                           <p className="img-caption text-center mt-2">Aerobic</p>
                         </div>
                         <div className="col-md-4 col-6">
@@ -429,11 +430,12 @@ const OccupationalHealthSafety = () => {
                           <p className="img-caption text-center mt-2">Table Tennis</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/volleyball.jpg`} className="img-fluid rounded activity-img" alt="Volleyball" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/volleyball.jpg
+                          `} className="img-fluid rounded activity-img" alt="Volleyball" />
                           <p className="img-caption text-center mt-2">Volleyball</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/soccer.jpg`} className="img-fluid rounded activity-img" alt="Soccer" />
+                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/mini-soccer.jpg`} className="img-fluid rounded activity-img" alt="Soccer" />
                           <p className="img-caption text-center mt-2">Soccer</p>
                         </div>
                       </div>

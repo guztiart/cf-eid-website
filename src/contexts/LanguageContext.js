@@ -428,10 +428,8 @@ export const translations = {
       evk2rv: {
         title: "Water Lubricated Stern Tube Seal - EVK",
         breadcrumb: "Water Lubricated Stern Tube Seal - EVK",
-        description1: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.",
-        description2: "The EVK is designed specifically for marine applications where water lubrication is preferred over traditional oil lubrication systems. This innovative seal solution provides superior performance in harsh marine environments while being environmentally friendly.",
-        description3: "Our water lubricated seals are manufactured with precision engineering and high-quality materials to ensure reliable operation in marine conditions. The simple design reduces maintenance requirements while extending service life.",
-        categoryValue: "Marine, Water Lubricated Seals",
+        description1: "KEMEL manufactures the EVK type water seal. The EVK type seal has many benefits for owners and operators of vessels with water lubricated shafting. The EVK type seal is the easiest of the seals on the market for installation and operation. The seal does not wear the propeller shaft sleeve.",
+        description2: "The design of the KEMEL EVK type seal is very simple. Since it is a face type seal consisting of the seal ring and the mating ring, it flexibly copes with complicated vibration and shaft deflection and shows excellent sealing performance. All seal assemblies are supplied with an active seal and a spare seal which is installed on the shaft ready for installation.",
         typeValue: "Water Lubricated Stern Tube Seal",
         modelValue: "EVK2RV",
         materialValue: "Specialized Marine Grade Components",

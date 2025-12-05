@@ -38,7 +38,7 @@ const QualityAssurance = () => {
             </div>
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
               <div className="service-content text-center">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/services.jpg`} alt="Quality Assurance" className="img-fluid services-img mx-auto d-block" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="Quality Assurance" className="img-fluid services-img mx-auto d-block" />
                 <h3 className="text-center">Rigorous Quality Assurance System</h3>
                 <p className="text-center">
                   At PT Eagle Industry Indonesia, quality is the foundation of everything we do. Our comprehensive quality assurance system ensures that every product leaving our facility meets the highest international standards and customer specifications. We are committed to delivering excellence through systematic quality control processes and continuous improvement initiatives.

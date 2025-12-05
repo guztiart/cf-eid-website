@@ -38,7 +38,7 @@ const TechnicalSupport = () => {
             </div>
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
               <div className="service-content text-center">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/services.jpg`} alt="Technical Support" className="img-fluid services-img mx-auto d-block" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="Technical Support" className="img-fluid services-img mx-auto d-block" />
                 <h3 className="text-center">Expert Technical Support Services</h3>
                 <p className="text-center">
                   Our technical support team at PT Eagle Industry Indonesia provides comprehensive assistance to ensure optimal performance of our products throughout their lifecycle. With deep expertise in mechanical seals and precision components, our specialists are committed to resolving technical challenges and maximizing equipment reliability for our customers.

@@ -108,7 +108,7 @@ const Company = () => {
               <div className="stats-item d-flex align-items-center w-100 h-100">
                 <i className="bi bi-people color-pink flex-shrink-0"></i>
                 <div>
-                  <span data-purecounter-start="0" data-purecounter-end="188" data-purecounter-duration="2" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="196" data-purecounter-duration="2" className="purecounter"></span>
                   <p>{t('company.dedicatedEmployees')}</p>
                 </div>
               </div>
@@ -266,7 +266,7 @@ const Company = () => {
                   </tr>
                   <tr>
                     <th scope="row">{t('company.representative')}</th>
-                    <td>Mr. Tsuru: President Director</td>
+                    <td>Mr. Mitshuhiro Kishida: President Director</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.headquarters')}</th>
@@ -274,20 +274,21 @@ const Company = () => {
                   </tr>
                   <tr>
                     <th scope="row">{t('company.paidInCapital')}</th>
-                    <td>IDR 45,000,000,000</td>
+                    <td>K USD 17.050</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.numberOfEmployees')}</th>
-                    <td>300 (As of the end of December 2024)</td>
+                    <td>196 Person ( Update on Nov 2025 ) 2 Person ( Expatriate )</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.businessOutline')}</th>
-                    <td>Manufacturing and marketing of mechanical seals, rubber bellows, and precision components for automotive, aerospace, and industrial equipment</td>
+                    <td>Assembly of Air Induction System for Motorcycle and Manufacturing
+O Ring, Floating Seal for Construction Machinery Industry & supply Accumulator</td>
                   </tr>
-                  <tr>
+                  {/* <tr>
                     <th scope="row">{t('company.publicAuditingFirm')}</th>
                     <td>PRICEWATERHOUSECOOPERS Indonesia</td>
-                  </tr>
+                  </tr> */}
                 </tbody>
               </table>
             </div>

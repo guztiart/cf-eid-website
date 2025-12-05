@@ -38,7 +38,7 @@ const AfterSalesService = () => {
             </div>
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="200">
               <div className="service-content text-center">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/services.jpg`} alt="After-Sales Service" className="img-fluid services-img mx-auto d-block" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="After-Sales Service" className="img-fluid services-img mx-auto d-block" />
                 <h3 className="text-center">Comprehensive After-Sales Service</h3>
                 <p className="text-center">
                   At PT Eagle Industry Indonesia, our commitment to customer satisfaction extends far beyond the initial purchase. Our comprehensive after-sales service program ensures that you receive continuous support throughout the entire lifecycle of our products, maximizing their performance and extending their service life.
