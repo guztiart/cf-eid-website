@@ -61,7 +61,7 @@ const Company = () => {
                 <p>{t('company.historyDesc2')}</p>
                 <div className="watch-video d-flex align-items-center position-relative">
                   <i className="bi bi-play-circle"></i>
-                  <a href="https://www.youtube.com/watch?v=4335-VJuJeA" className="glightbox stretched-link">{t('company.watchVideo')}</a>
+                  <a href="https://youtu.be/Ep1aIVjRWLU?si=UTIcLpgOteLg_hhe" className="glightbox stretched-link">{t('company.watchVideo')}</a>
                 </div>
               </div>
             </div>

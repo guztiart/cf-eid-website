@@ -81,13 +81,16 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR-1.png`} alt="Product Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-1.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR-2.png`} alt="Product Image 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-2.png`} alt="Product Image 2" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR-3.png`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-straight-1.png`} alt="Product Image 3" />
+              </div>
+              <div className="swiper-slide">
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-straight-2.png`} alt="Product Image 3" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -95,37 +98,53 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.evr.title')}</h2>
                 <p>
-                  <strong>{t('productDetails.evr.description1')}</strong>
+                  Excellent Durability and Vibration Absorption.
                 </p>
-                <p>
-                  {t('productDetails.evr.description2')}
-                </p>
-                <p>
-                  {t('productDetails.evr.description3')}
+                <p style={{ textAlign: 'justify' }}>
+                  No peeling off by combination of reinforced plastics outer shell and rubber. Outstanding durability and stable performance. Effective absorption of shaft vibration. Prevention of electric corrosion on the shaft sleeve.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.evr.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.model')}</strong> <span>{t('productDetails.evr.modelValue')}</span></li>
-                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.evr.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.type')}</strong> <span>{t('productDetails.evr.typeValue')}</span></li>
-                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.evr.temperatureRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.maxPressure')}</strong> <span>{t('productDetails.evr.maxPressureValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.evr.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+          
+          {/* Product Featured Image */}
+          <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
+            <p className="featured-image-description">Excellent Durability and Vibration Absorption.</p>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-straight.png`} alt="EVR Product Feature" className="featured-product-image" />
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features and benefits of the EVR</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4 style={{ textAlign: 'left' }}>1. Combination of advantages of reinforced plastic with those of elastomer</h4>
+                  <p style={{ textAlign: 'left' }}>Utilizes the best properties of both reinforced plastic and elastomer materials for optimal performance.</p>
+                </div>
+                <div className="feature-item">
+                  <h4 style={{ textAlign: 'left' }}>2. Outstanding durability and stable performance</h4>
+                  <p style={{ textAlign: 'left' }}>Engineered to provide long-lasting service with consistent performance under various marine conditions.</p>
+                </div>
+                <div className="feature-item">
+                  <h4 style={{ textAlign: 'left' }}>3. Effective absorption of shaft vibration</h4>
+                  <p style={{ textAlign: 'left' }}>Effectively absorbs and dampens shaft vibrations, reducing stress on the bearing system.</p>
+                </div>
+                <div className="feature-item">
+                  <h4 style={{ textAlign: 'left' }}>4. Prevention of Electrolytic Corrosion on the shaft sleeve</h4>
+                  <p style={{ textAlign: 'left' }}>Special design prevents electrolytic corrosion, extending the life of the shaft sleeve.</p>
                 </div>
               </div>
             </div>
@@ -133,41 +152,64 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Product Specifications */}
+      {/* Product Types */}
       <section className="product-specifications section">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.productFeatures')}</h2>
-                <p>{t('productDetails.exploreSimilarProducts')}</p>
+                <h2>Types</h2>
+                <p>Available types of EVR bearings for different applications</p>
               </div>
-              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
-                <table className="table table-bordered">
-                  <tbody>
-                    <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.benefits')}</th>
-                      <td>{t('productDetails.evr.description1')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.applications')}</th>
-                      <td>{t('productDetails.evr.applicationsValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.type')}</th>
-                      <td>{t('productDetails.evr.typeValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.material')}</th>
-                      <td>{t('productDetails.evr.materialValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.temperatureRange')}</th>
-                      <td>{t('productDetails.evr.temperatureRangeValue')}</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="note-text">{t('productDetails.noteText')}</p>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4 style={{ textAlign: 'left' }}>1. Straight Type Bearing</h4>
+                  <p style={{ textAlign: 'left' }}>The outer shell is made of Cotton cloth Reinforced Plastic (CRP) which is impregnated by thermosetting resin. It is suitable to be installed on ships with relatively small diameters.</p>
+                </div>
+                <div className="feature-item">
+                  <h4 style={{ textAlign: 'left' }}>2. Flange Type Bearing</h4>
+                  <p style={{ textAlign: 'left' }}>The outer shell is made of Glass cloth Reinforced Plastic (GRP), and is suitable for relatively larger diameter.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Documents */}
+      <section className="product-downloads section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Documents</h2>
+                <p>Access product catalogs and manuals for detailed information</p>
+              </div>
+              <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Product Catalog</h4>
+                    <p>Complete catalog with technical specifications and details</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - EVR.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Manual Instruction</h4>
+                    <p>Installation and operation manual for EVR</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVR.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -195,41 +237,41 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Water Lubricated Stern Tube Bearing category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/products/lipSeal-details" className="card-link">
+                <Link to="/products/evk2rv-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-1.png`} className="card-image" alt="EVK2RV" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'untuk kompresor A/C<br />Tipe A Mechanical seal' : 'for A/C compressor<br />Type A Mechanical seal'}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.evk2rv')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/products/eh795-details" className="card-link">
+                <Link to="/products/evk2rt-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-2.png`} className="card-image" alt="EVK2RT" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'untuk Water Pump<br />EH795/EH790' : 'for Water Pump<br />EH795/EH790'}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.evk2rt')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/products/rudderSeal-details" className="card-link">
+                <Link to="/products/mas-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="card-image" alt="Rudder Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} className="card-image" alt="Marine Ace Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'untuk Aplikasi Maritim<br />Segel Kemudi' : 'for Marine Applications<br />Rudder Seal'}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.mas')}</span>
                   </div>
                 </Link>
               </div>

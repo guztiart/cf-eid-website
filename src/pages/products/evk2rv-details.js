@@ -95,8 +95,8 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.evk2rv.title')}</h2>
                 <p>
@@ -107,23 +107,41 @@ const ProjectDetails = () => {
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.evk2rv.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.sealedFluid')}</strong> <span>{language === 'id' ? 'Air laut' : 'Seawater'}</span></li>
-                  <li><strong>{t('productDetails.operatingTemperature')}</strong> <span>{t('productDetails.evk2rv.temperatureRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.maximumCircumferentialVelocity')}</strong> <span>{language === 'id' ? '8 m/s (kira-kira. 3.000 rpm)' : '8 m/s (approx. 3,000 rpm)'}</span></li>
-                  <li><strong>{t('productDetails.pressure')}</strong> <span>{language === 'id' ? '0 hingga 0.3 MPaG' : '0 to 0.3 MPaG'}</span></li>
-                  <li><strong>{t('productDetails.shaftDiameter')}</strong> <span>{language === 'id' ? '200 hingga 800 mm' : '200 to 800 mm'}</span></li>
-                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.evk2rv.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.evk2rv.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+          
+          {/* Product Featured Image */}
+          <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
+            <p className="featured-image-description">A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance.</p>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV4.jpg`} alt="EVK2RV Product Feature" className="featured-product-image" />
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features and benefits of the EVK2RV Water Lubricated Stern Tube Seal</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>1. Excellent Sealing Performance with Shaft Vibration Resistance</h4>
+                  <p>Since it is an end face type seal consisting of the seal ring and the mating ring, it flexibly copes with complicated vibration and shaft deflection and shows excellent sealing performance.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>2. No wear of shaft sleeve</h4>
+                  <p>The seal ring rotates together with the shaft sleeve and therefore, there is not wear of the shaft sleeve. "Eagle Paint" is provided on the surface of the shaft sleeve to prevent corrosion.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>3. Easy Replacement of Parts</h4>
+                  <p>The seal ring and the inflatable ring can be easily bonded over the shaft by the vulcanizer. By working the inflatable ring, inspection and replacement of the seals ring on the sea can be easily done.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>4. Maintenance Saving</h4>
+                  <p>The sealing faces of the seal ring and the mating ring are lubricated by sea water coming through the notches of the seal ring, and therefore daily maintenance will not be required.</p>
                 </div>
               </div>
             </div>
@@ -131,48 +149,40 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Product Specifications */}
-      <section className="product-specifications section">
+      {/* Product Documents */}
+      <section className="product-downloads section">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.productSpecification')}</h2>
-                <p>{t('productDetails.specificationInfo')}</p>
+                <h2>Documents</h2>
+                <p>Access product catalogs and manuals for detailed information</p>
               </div>
-              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
-                <table className="table table-bordered">
-                  <tbody>
-                    <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.sealedFluid')}</th>
-                      <td>{language === 'id' ? 'Air laut' : 'Seawater'}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.operatingTemperature')}</th>
-                      <td>{t('productDetails.evk2rv.temperatureRangeValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.maximumCircumferentialVelocity')}</th>
-                      <td>{language === 'id' ? '8 m/s (kira-kira. 3.000 rpm)' : '8 m/s (approx. 3,000 rpm)'}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.pressure')}</th>
-                      <td>{language === 'id' ? '0 hingga 0.3 MPaG' : '0 to 0.3 MPaG'}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.shaftDiameter')}</th>
-                      <td>{language === 'id' ? '200 hingga 800 mm' : '200 to 800 mm'}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.type')}</th>
-                      <td>
-                        <p>{t('productDetails.evk2rv.modelValue')}: {t('productDetails.evk2rv.typeValue')}</p>
-                        <p>{language === 'id' ? 'Ukuran kustom tersedia sesuai permintaan' : 'Custom sizes available upon request'}</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="note-text">{t('productDetails.noteText')}</p>
+              <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Product Catalog</h4>
+                    <p>Complete catalog with technical specifications and details</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - EVK2RV.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Manual Instruction</h4>
+                    <p>Installation and operation manual for EVK2RV & EVK2RT</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVK2RV & EVK2RT.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -200,41 +210,41 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/evk2rt-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-2.png`} className="card-image" alt="EVK2RT" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'untuk kompresor A/C<br />Tipe A Mechanical seal' : 'for A/C compressor<br />Type A Mechanical seal'}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.evk2rt')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/mas-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} className="card-image" alt="Marine Ace Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'untuk Water Pump<br />EH795/EH790' : 'for Water Pump<br />EH795/EH790'}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.mas')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/project-details" className="card-link">
+                <Link to="/products/rudderSeal-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/rudder-1.png`} className="card-image" alt="Rudder Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'untuk Kompresor A/C Perpindahan Variabel<br />Katup Kontrol' : 'for Variable Displacement A/C Compressor<br />Control Valve'}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.rudderSeal')}</span>
                   </div>
                 </Link>
               </div>

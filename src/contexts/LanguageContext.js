@@ -199,11 +199,6 @@ export const translations = {
       environmentalFeature2: "Global warming mitigation",
       environmentalFeature3: "Industrial waste reduction",
       
-      climateTitle: "Climate Change Disclosure",
-      climateDesc: "TCFD-aligned climate-related financial disclosure addressing risks and opportunities of climate change.",
-      climateFeature1: "Governance framework",
-      climateFeature2: "Climate strategy",
-      climateFeature3: "Risk management",
       
       healthTitle: "Occupational Health & Safety",
       healthDesc: "Comprehensive OHS management system ensuring workplace safety and employee well-being.",
@@ -211,8 +206,8 @@ export const translations = {
       healthFeature2: "Health promotion programs",
       healthFeature3: "Safety training and education",
       
-      socialTitle: "Social Media Contribution",
-      socialDesc: "Leveraging social platforms to promote sustainability awareness and stakeholder engagement.",
+      socialTitle: "Social Contribution Initiatives",
+      socialDesc: "Implementing comprehensive social programs that support community development, education, and environmental stewardship.",
       socialFeature1: "Sustainability awareness campaigns",
       socialFeature2: "ESG performance transparency",
       socialFeature3: "Community engagement",
@@ -998,11 +993,6 @@ export const translations = {
       environmentalFeature2: "Mitigasi pemanasan global",
       environmentalFeature3: "Pengurangan limbah industri",
       
-      climateTitle: "Pengungkapan Perubahan Iklim",
-      climateDesc: "Pengungkapan keuangan terkait iklim yang selaras dengan TCFD yang mengatasi risiko dan peluang perubahan iklim.",
-      climateFeature1: "Kerangka tata kelola",
-      climateFeature2: "Strategi iklim",
-      climateFeature3: "Manajemen risiko",
       
       healthTitle: "Kesehatan & Keselamatan Kerja",
       healthDesc: "Sistem manajemen K3 yang komprehensif memastikan keselamatan tempat kerja dan kesejahteraan karyawan.",
@@ -1010,8 +1000,8 @@ export const translations = {
       healthFeature2: "Program promosi kesehatan",
       healthFeature3: "Pelatihan dan pendidikan keselamatan",
       
-      socialTitle: "Kontribusi Media Sosial",
-      socialDesc: "Memanfaatkan platform sosial untuk mempromosikan kesadaran keberlanjutan dan keterlibatan pemangku kepentingan.",
+      socialTitle: "Inisiatif Kontribusi Sosial",
+      socialDesc: "Melaksanakan program sosial yang komprehensif yang mendukung pembangunan masyarakat, pendidikan, dan pengelolaan lingkungan.",
       socialFeature1: "Kampanye kesadaran keberlanjutan",
       socialFeature2: "Transparansi kinerja ESG",
       socialFeature3: "Keterlibatan komunitas",

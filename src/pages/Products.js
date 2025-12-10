@@ -116,7 +116,7 @@ const Products = () => {
       nameKey: "products.evr",
       descKey: "products.evrDesc",
       category: "water-lubricated-stern-tube-bearing",
-      image: "/assets/img/product/EVR.png",
+      image: "/assets/img/product/evr-flange-1.png",
       detailsLink: "/products/evr-details"
     },
     {

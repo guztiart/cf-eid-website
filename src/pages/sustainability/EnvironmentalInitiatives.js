@@ -115,9 +115,8 @@ const EnvironmentalInitiatives = () => {
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/sustainability">Sustainability</Link></li>
                   <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">Concept of Sustainability</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/climate-change-disclosure">Climate Change Disclosure</Link></li>
                   <li className="nav-item"><Link to="/sustainability/occupational-health-safety">Occupational Health & Safety</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/social-media-contribution">Social Media Contribution</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/social-contribution-initiatives">Social Contribution Initiatives</Link></li>
                 </ul>
               </div>
             </div>
@@ -337,10 +336,10 @@ const EnvironmentalInitiatives = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/climate-change-disclosure" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-2.jpg`} className="card-image" alt="Climate Change Disclosure" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="card-image" alt="Social Contribution Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Climate Change Disclosure</span>
+                    <span>Social Contribution Initiatives</span>
                   </div>
                 </Link>
               </div>

@@ -86,7 +86,7 @@ const Home = () => {
         <div className="p-hero-top">
           <div className="p-hero-top__mv">
             <div className="p-hero-top__video">
-              <iframe src="https://www.youtube.com/embed/LK56SEZupRQ?autoplay=1&mute=1&loop=1&playlist=LK56SEZupRQ&controls=0&showinfo=0&autohide=1&modestbranding=1&vq=hd1080&rel=0&iv_load_policy=3&cc_load_policy=0&disablekb=1"
+              <iframe src="https://www.youtube.com/embed/Ep1aIVjRWLU?autoplay=1&mute=1&loop=1&playlist=Ep1aIVjRWLU&controls=0&showinfo=0&autohide=1&modestbranding=1&vq=hd1080&rel=0&iv_load_policy=3&cc_load_policy=0&disablekb=1"
               frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
               allowFullScreen 

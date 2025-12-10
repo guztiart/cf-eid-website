@@ -66,8 +66,8 @@ const ProjectDetails = () => {
               <h2 className="product-title" data-aos="fade-up">{t('productDetails.evuValveStemSeal.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/products?tag=automobile">{t('products.automobile')}</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=valve-stem-seal">{t('productDetails.evuValveStemSeal.title')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=marine">{t('products.marine')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=water-lubricated-stern-tube-seal">{t('products.waterLubricatedSternTubeSeal')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -89,30 +89,58 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.evuValveStemSeal.title')}</h2>
                 <p>
-                  {t('productDetails.evuValveStemSeal.description1')}
+                  Poly-Urethane bearing "EVU" is develode for water lubricated stern tube system based on the technology cultivated in our water lubricated bearing experience.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.evuValveStemSeal.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.model')}</strong> <span>{t('productDetails.evuValveStemSeal.modelValue')}</span></li>
-                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.evuValveStemSeal.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.evuValveStemSeal.temperatureRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.pressure')}</strong> <span>{t('productDetails.evuValveStemSeal.pressureRatingValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.evuValveStemSeal.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+          
+          {/* Product Featured Image */}
+          {/* <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
+            <p className="featured-image-description">Poly-Urethane bearing "EVU" is develode for water lubricated stern tube system based on the technology cultivated in our water lubricated bearing experience.</p>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU-1.png`} alt="EVU Product Feature" className="featured-product-image" />
+          </div> */}
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features and benefits of the EVU Water Lubricated Bearing</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>1. Low Friction</h4>
+                  <p>By flattening the lower part, the water film forming ability is improved and the friction coefficient in normal use can be lower than that of rubber bearing and the like. (1/10 of rubber bearing in normal use)</p>
+                </div>
+                <div className="feature-item">
+                  <h4>2. Low Wear</h4>
+                  <p>Uses Poly-Urethane material with excellent wear resistance. Confirmed to have wear resistance of 10 years or more in our evaluation test.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>3. Reduction of single-part hit</h4>
+                  <p>By using flexible Poly-Urethane material, the concentrated load in the AFT end can be avoided.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>4. Bearing Length</h4>
+                  <p>The bearing length can be halved from rubber bearing, since the pressure resistance is improved.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>5. Quick Delivery</h4>
+                  <p>Since it has a single structure of Poly-Urethane, if the material is in stock, only processing is required for production, so it is possible to respond to short delivery time.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>6. Install Method</h4>
+                  <p>Using the characteristics of Poly-Urethane, install to stern tube with cold fit.</p>
                 </div>
               </div>
             </div>
@@ -120,46 +148,40 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Product Specifications */}
-      <section className="product-specifications section">
+      {/* Product Documents */}
+      <section className="product-downloads section">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.productSpecification')}</h2>
-                <p>{t('productDetails.specificationInfo')}</p>
+                <h2>Documents</h2>
+                <p>Access product catalogs and manuals for detailed information</p>
               </div>
-              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
-                <table className="table table-bordered">
-                  <tbody>
-                    <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.material')}</th>
-                      <td>{t('productDetails.evuValveStemSeal.materialValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.operatingTemperature')}</th>
-                      <td>{t('productDetails.evuValveStemSeal.temperatureRangeValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.pressure')}</th>
-                      <td>{t('productDetails.evuValveStemSeal.pressureRatingValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.applications')}</th>
-                      <td>{t('productDetails.evuValveStemSeal.applicationsValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.productFeatures')}</th>
-                      <td>
-                        <p>{t('productDetails.evuValveStemSeal.features.excellentOilResistance')}</p>
-                        <p>{t('productDetails.evuValveStemSeal.features.superiorHeatResistance')}</p>
-                        <p>{t('productDetails.evuValveStemSeal.features.preciseDimensionalControl')}</p>
-                        <p>{t('productDetails.evuValveStemSeal.features.enhancedDurability')}</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="note-text">{t('productDetails.evuValveStemSeal.noteText')}</p>
+              <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Product Catalog</h4>
+                    <p>Complete catalog with technical specifications and details</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - EVU.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Manual Instruction</h4>
+                    <p>Installation and operation manual for EVU</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVR.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -187,17 +209,17 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/products/evr-details" className="card-link">
+                <Link to="/products/evk2rv-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVR.png`} className="card-image" alt={`${t('products.mechanicalSeals')} EVR Series`} />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-1.png`} className="card-image" alt="EVK2RV" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('products.mechanicalSeals')}<br />EVR Series</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />EVK2RV</span>
                   </div>
                 </Link>
               </div>
@@ -206,22 +228,22 @@ const ProjectDetails = () => {
               <div className="product-card h-100">
                 <Link to="/products/evk2rt-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK.jpg`} className="card-image" alt={`${t('products.mechanicalSeals')} EVK Series`} />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-2.png`} className="card-image" alt="EVK2RT" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('products.mechanicalSeals')}<br />EVK Series</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />EVK2RT</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/products/lipSeal-details" className="card-link">
+                <Link to="/products/mas-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt={`${t('products.lipSeal')} ${t('products.lipSealAc')}`} />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} className="card-image" alt="Marine Ace Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('products.lipSeal')}<br />{t('products.lipSealAc')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.mas')}</span>
                   </div>
                 </Link>
               </div>

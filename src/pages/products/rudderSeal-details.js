@@ -95,32 +95,44 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.rudderSeal.title')}</h2>
                 <p>
-                  {t('productDetails.rudderSeal.description1')}
+                  Rudder seal manufacture with high-performance, self-lubricating lip seals designed to be mounted above the rudder bearing to prevent the ingress of sea water into the hull. Manufactured from a special rubber, provide long wear life with no need for periodic adjustments, operate with less drag and reduced shaft/liner wear.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.rudderSeal.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.rudderSeal.category')}</strong> <span>{t('productDetails.rudderSeal.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.rudderSeal.sealedFluid')}</strong> <span>{t('productDetails.rudderSeal.sealedFluidValue')}</span></li>
-                  <li><strong>{t('productDetails.rudderSeal.operatingTemperature')}</strong> <span>{t('productDetails.rudderSeal.operatingTemperatureValue')}</span></li>
-                  <li><strong>{t('productDetails.rudderSeal.maximumCircumferentialVelocity')}</strong> <span>{t('productDetails.rudderSeal.maximumCircumferentialVelocityValue')}</span></li>
-                  <li><strong>{t('productDetails.rudderSeal.fluidPressureRange')}</strong> <span>{t('productDetails.rudderSeal.fluidPressureRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.rudderSeal.shaftDiameter')}</strong> <span>{t('productDetails.rudderSeal.shaftDiameterValue')}</span></li>
-                  <li><strong>{t('productDetails.rudderSeal.material')}</strong> <span>{t('productDetails.rudderSeal.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.rudderSeal.applications')}</strong> <span>{t('productDetails.rudderSeal.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.rudderSeal.inquireAboutThisProduct')}</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features and benefits of the Rudder Seal</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>1. High-Performance Self-Lubricating Design</h4>
+                  <p>Manufactured from special rubber compounds that provide excellent self-lubricating properties, reducing friction and extending service life.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>2. Superior Water Ingress Protection</h4>
+                  <p>Designed to be mounted above the rudder bearing to effectively prevent the ingress of sea water into the hull, protecting critical components.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>3. Long Wear Life</h4>
+                  <p>The special rubber formulation ensures extended wear life with no need for periodic adjustments, reducing maintenance requirements.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>4. Reduced Drag and Shaft Wear</h4>
+                  <p>Operates with less drag and significantly reduces shaft/liner wear, improving overall efficiency and extending component life.</p>
                 </div>
               </div>
             </div>
@@ -128,50 +140,40 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Product Specifications */}
-      <section className="product-specifications section">
+      {/* Product Documents */}
+      <section className="product-downloads section">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.productSpecification')}</h2>
-                <p>{t('productDetails.specificationInfo')}</p>
+                <h2>Documents</h2>
+                <p>Access product catalogs and manuals for detailed information</p>
               </div>
-              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
-                <table className="table table-bordered">
-                  <tbody>
-                    <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.rudderSeal.sealedFluid')}</th>
-                      <td>{t('productDetails.rudderSeal.sealedFluidValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.rudderSeal.operatingTemperature')}</th>
-                      <td>{t('productDetails.rudderSeal.operatingTemperatureValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.rudderSeal.maximumCircumferentialVelocity')}</th>
-                      <td>{t('productDetails.rudderSeal.maximumCircumferentialVelocityValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.rudderSeal.fluidPressureRange')}</th>
-                      <td>{t('productDetails.rudderSeal.fluidPressureRangeValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.rudderSeal.shaftDiameter')}</th>
-                      <td>{t('productDetails.rudderSeal.shaftDiameterValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.rudderSeal.typesAvailable')}</th>
-                      <td>
-                        <p>{t('productDetails.rudderSeal.cxType')}</p>
-                        <p>{t('productDetails.rudderSeal.dxType')}</p>
-                        <p>{t('productDetails.rudderSeal.axType')}</p>
-                        <p>{t('productDetails.rudderSeal.evaType')}</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="note-text">{t('productDetails.rudderSeal.noteText')}</p>
+              <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Product Catalog</h4>
+                    <p>Complete catalog with technical specifications and details</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - Rudder Seal.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Manual Instruction</h4>
+                    <p>Installation and operation manual for Rudder Seal</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - Rudder Seal.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -199,41 +201,41 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/products/lipSeal-details" className="card-link">
+                <Link to="/products/evk2rv-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-1.png`} className="card-image" alt="EVK2RV" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.rudderSeal.forAcCompressor')}<br />{t('productDetails.rudderSeal.typeAMechanicalSeal')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.evk2rv')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/products/eh795-details" className="card-link">
+                <Link to="/products/evk2rt-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-2.png`} className="card-image" alt="EVK2RT" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.rudderSeal.forWaterPump')}<br />{t('productDetails.rudderSeal.eh795EH790')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.evk2rt')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/products/airCutValve-details" className="card-link">
+                <Link to="/products/mas-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} className="card-image" alt="Marine Ace Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.rudderSeal.forVariableDisplacementAcCompressor')}<br />{t('productDetails.rudderSeal.controlValve')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.mas')}</span>
                   </div>
                 </Link>
               </div>

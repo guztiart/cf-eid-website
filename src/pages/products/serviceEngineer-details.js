@@ -76,7 +76,7 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Product Details Section - Original Layout */}
+      {/* Product Details Section - Updated Layout */}
       <section id="project-details" className="project-details section">
         <div className="container" data-aos="fade-up">
           <div className="portfolio-details-slider swiper init-swiper">
@@ -90,36 +90,56 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.serviceEngineer.title')}</h2>
                 <p>
-                  {t('productDetails.serviceEngineer.description1')}
+                  Professional engineering services for your ship's sealing systems.
                 </p>
                 <p>
-                  {t('productDetails.serviceEngineer.description2')}
+                  We provide highly skilled and experienced service engineers to handle all aspects of marine sealing — from bonding and assembling to inspection and on-site supervision.
                 </p>
                 <p>
-                  {t('productDetails.serviceEngineer.description3')}
+                  With a deep understanding of maritime environments and adherence to the highest industry standards, we ensure each seal is installed with precision and delivers optimal performance to prevent leakage, enhance efficiency, and extend equipment spare parts.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.serviceEngineer.serviceInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.serviceType')}</strong> <span>{t('productDetails.serviceEngineer.serviceTypeValue')}</span></li>
-                  <li><strong>{t('productDetails.serviceArea')}</strong> <span>{t('productDetails.serviceEngineer.serviceAreaValue')}</span></li>
-                  <li><strong>{t('productDetails.responseTime')}</strong> <span>{t('productDetails.serviceEngineer.responseTimeValue')}</span></li>
-                  <li><strong>{t('productDetails.serviceAvailability')}</strong> <span>{t('productDetails.serviceEngineer.serviceAvailabilityValue')}</span></li>
-                  <li><strong>{t('productDetails.specialization')}</strong> <span>{t('productDetails.serviceEngineer.specializationValue')}</span></li>
-                  <li><strong>{t('productDetails.serviceCenters')}</strong> <span>{t('productDetails.serviceEngineer.serviceCentersValue')}</span></li>
-                </ul>
-                               
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.serviceEngineer.contactServiceEngineer')}</Link>
+          </div>
+          
+          {/* Product Featured Image */}
+          <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
+            <p className="featured-image-description">Expert service engineers providing professional installation and maintenance for marine sealing systems worldwide.</p>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/product/Enginer.png`} alt="Service Engineer Feature" className="featured-product-image" />
+          </div>
+        </div>
+      </section>
+
+      {/* Service Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features and benefits of our Service Engineer solutions</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>1. Professional Installation Services</h4>
+                  <p>Our highly skilled service engineers specialize in the precise installation of marine sealing systems, ensuring optimal performance and longevity of your equipment.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>2. Expert Bonding and Assembly</h4>
+                  <p>With extensive experience in marine sealing technology, our engineers handle complex bonding and assembly processes with meticulous attention to detail.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>3. Comprehensive Inspection Services</h4>
+                  <p>Thorough inspection of sealing systems to identify potential issues before they become problems, ensuring reliable operation and preventing costly downtime.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>4. On-site Supervision</h4>
+                  <p>Our service engineers provide expert on-site supervision for critical sealing operations, ensuring compliance with industry standards and manufacturer specifications.</p>
                 </div>
               </div>
             </div>
@@ -127,57 +147,40 @@ const ProjectDetails = () => {
         </div>
       </section>
 
-      {/* Service Network */}
-      <section className="product-specifications section">
+      {/* Service Information */}
+      <section className="product-downloads section">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.serviceEngineer.globalServiceNetwork')}</h2>
-                <p>{t('productDetails.serviceEngineer.ourServiceEngineersAvailableWorldwide')}</p>
+                <h2>Service Information</h2>
+                <p>Details about our service engineer offerings</p>
               </div>
-              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
-                <table className="table table-bordered">
-                  <tbody>
-                    <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.serviceEngineer.asia')}</th>
-                      <td>
-                        <p>{t('productDetails.serviceEngineer.asiaLocations')}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.serviceEngineer.europe')}</th>
-                      <td>
-                        <p>{t('productDetails.serviceEngineer.europeLocations')}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.serviceEngineer.northAmerica')}</th>
-                      <td>
-                        <p>{t('productDetails.serviceEngineer.northAmericaLocations')}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.serviceEngineer.southAmerica')}</th>
-                      <td>
-                        <p>{t('productDetails.serviceEngineer.southAmericaLocations')}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.serviceEngineer.oceania')}</th>
-                      <td>
-                        <p>{t('productDetails.serviceEngineer.oceaniaLocations')}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.serviceEngineer.middleEast')}</th>
-                      <td>
-                        <p>{t('productDetails.serviceEngineer.middleEastLocations')}</p>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className="note-text">{t('productDetails.serviceEngineer.noteText')}</p>
+              <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-geo-alt"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>{t('productDetails.serviceEngineer.globalServiceNetwork')}</h4>
+                    <p>{t('productDetails.serviceEngineer.ourServiceEngineersAvailableWorldwide')}</p>
+                  </div>
+                  <Link to="/contact" className="btn-download">
+                    <i className="bi bi-envelope"></i> Contact Us
+                  </Link>
+                </div>
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-clock"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>{t('productDetails.responseTime')}</h4>
+                    <p>{t('productDetails.serviceEngineer.responseTimeValue')}</p>
+                  </div>
+                  <Link to="/contact" className="btn-download">
+                    <i className="bi bi-envelope"></i> Request Service
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

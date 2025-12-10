@@ -52,7 +52,7 @@ const ClimateChangeDisclosure = () => {
                   <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">Concept of Sustainability</Link></li>
                   <li className="nav-item"><Link to="/sustainability/environmental-initiatives">Environmental Initiatives</Link></li>
                   <li className="nav-item"><Link to="/sustainability/occupational-health-safety">Occupational Health & Safety</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/social-media-contribution">Social Media Contribution</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/social-contribution-initiatives">Social Contribution Initiatives</Link></li>
                 </ul>
               </div>
             </div>

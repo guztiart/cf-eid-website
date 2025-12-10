@@ -95,36 +95,49 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.evk2rt.title')}</h2>
                 <p>
-                  {t('productDetails.evk2rt.spareRingActivation')}
-                </p>
-                <p>
-                  {t('productDetails.evk2rt.featuresDescription1')}
-                </p>
-                <p>
-                  {t('productDetails.evk2rt.featuresDescription2')}
+                  Spare ring is easily activated without disassembling.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.evk2rt.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.evk2rt.category')}</strong> <span>{t('productDetails.evk2rt.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.evk2rt.industry')}</strong> <span>{t('productDetails.evk2rt.industryValue')}</span></li>
-                  <li><strong>{t('productDetails.evk2rt.application')}</strong> <span>{t('productDetails.evk2rt.applicationValue')}</span></li>
-                  <li><strong>{t('productDetails.evk2rt.keyFeature')}</strong> <span>{t('productDetails.evk2rt.keyFeatureValue')}</span></li>
-                  <li><strong>{t('productDetails.evk2rt.material')}</strong> <span>{t('productDetails.evk2rt.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.evk2rt.benefits')}</strong> <span>{t('productDetails.evk2rt.benefitsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+          
+          {/* Product Featured Image */}
+          <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
+            <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-4.jpg`} alt="EVK2RT Product Feature" className="featured-product-image" />
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features and benefits of the EVK2RT Water Lubricated Stern Tube Seal</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>1. Improved wear resistance</h4>
+                  <p>The active #1 seal ring is always lubricated by self-controlled clean fresh water. This results in the significant reduction in wear of the mating ring, the seal housing and the seal ring.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>2. Built in spare seal ring</h4>
+                  <p>The spare #2 seal ring is incorporated in the seal housing as a spare. The #2 seal stands by in an idle condition under normal operation and is cooled, lubricated & protected by fresh water.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>3. Improved operability</h4>
+                  <p>The active seal ring is easily changed from #1 to #2 spare seal by operation of valves . The #2 spare ring is activated without disassembling the seal unit should #1 seal ring shows increasing leakage.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>4. Easy upgrade form existing EVK</h4>
+                  <p>By replacing the seal housing, it may be possible to convert an existing EVK seal to a Tandem type.</p>
                 </div>
               </div>
             </div>
@@ -138,44 +151,68 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.productSpecification')}</h2>
-                <p>{t('productDetails.specificationInfo')}</p>
+                <h2>Specification</h2>
+                <p>Technical specifications of the EVK2RT Water Lubricated Stern Tube Seal</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.application')}</th>
-                      <td>{t('productDetails.evk2rt.typeValue')}</td>
+                      <th style={{ width: '30%' }}>Shaft diameter range</th>
+                      <td>φ101 ～ φ500 (mm)</td>
                     </tr>
                     <tr>
-                      <th>{t('productDetails.evk2rt.keyFeature')}</th>
-                      <td>{t('productDetails.evk2rt.spareRingActivation')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.evk2rt.industry')}</th>
-                      <td>{t('productDetails.evk2rt.industryValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.evk2rt.material')}</th>
-                      <td>{t('productDetails.evk2rt.materialValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.evk2rt.benefits')}</th>
-                      <td>
-                        <p>{t('productDetails.evk2rt.benefitsValue')}</p>
-                        <p>{t('productDetails.evk2rt.keyFeatureValue')}</p>
-                        <p>{t('productDetails.longServiceLife')}</p>
-                      </td>
+                      <th>PV (Pressure-Velocity) Value</th>
+                      <td>Max. 0.6 (MPa・m/s)<br />(Water pressure in casing ： Max. 0.15 MPa)</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">{t('productDetails.noteText')}</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Product Documents */}
+      <section className="product-downloads section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Documents</h2>
+                <p>Access product catalogs and manuals for detailed information</p>
+              </div>
+              <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Product Catalog</h4>
+                    <p>Complete catalog with technical specifications and details</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue EVK2RT.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
+                <div className="download-item">
+                  <div className="download-icon">
+                    <i className="bi bi-file-pdf"></i>
+                  </div>
+                  <div className="download-info">
+                    <h4>Manual Instruction</h4>
+                    <p>Installation and operation manual for EVK2RV & EVK2RT</p>
+                  </div>
+                  <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVK2RV & EVK2RT.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
+                    <i className="bi bi-download"></i> Download PDF
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Contact Section - Elegant and Modern */}
       <section className="contact-section section">
@@ -198,17 +235,17 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/products/rudderSeal-details" className="card-link">
+                <Link to="/products/evk2rv-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.PNG`} className="card-image" alt="Rudder Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-1.png`} className="card-image" alt="EVK2RV" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('home.marine')}<br />{t('products.rudderSeal')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.evk2rv')}</span>
                   </div>
                 </Link>
               </div>
@@ -217,22 +254,22 @@ const ProjectDetails = () => {
               <div className="product-card h-100">
                 <Link to="/products/mas-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/Marine Ace Seal (MAS).jpg`} className="card-image" alt="Marine Ace Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} className="card-image" alt="Marine Ace Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('home.marine')}<br />{t('products.mas')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.mas')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/products/floatingSeal-details" className="card-link">
+                <Link to="/products/rudderSeal-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/floating_seal.jpg`} className="card-image" alt="Floating Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/rudder-1.png`} className="card-image" alt="Rudder Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('home.marine')}<br />{t('products.floatingSeal')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.rudderSeal')}</span>
                   </div>
                 </Link>
               </div>

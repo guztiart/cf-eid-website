@@ -24,9 +24,8 @@ import ResearchDevelopment from './pages/services/ResearchDevelopment';
 import GlobalSupplyChain from './pages/services/GlobalSupplyChain';
 import ConceptOfSustainability from './pages/sustainability/ConceptOfSustainability';
 import EnvironmentalInitiatives from './pages/sustainability/EnvironmentalInitiatives';
-import ClimateChangeDisclosure from './pages/sustainability/ClimateChangeDisclosure';
 import OccupationalHealthSafety from './pages/sustainability/OccupationalHealthSafety';
-import SocialMediaContribution from './pages/sustainability/SocialMediaContribution';
+import SocialContributionInitiatives from './pages/sustainability/SocialContributionInitiatives';
 import EH795Details from './pages/products/eh795-details';
 import AirCutValveDetails from './pages/products/airCutValve-details';
 import LipSealDetails from './pages/products/lipSeal-details';
@@ -93,9 +92,8 @@ function App() {
             <Route path="/sustainability" element={<Sustainability />} />
             <Route path="/sustainability/concept-of-sustainability" element={<ConceptOfSustainability />} />
             <Route path="/sustainability/environmental-initiatives" element={<EnvironmentalInitiatives />} />
-            <Route path="/sustainability/climate-change-disclosure" element={<ClimateChangeDisclosure />} />
             <Route path="/sustainability/occupational-health-safety" element={<OccupationalHealthSafety />} />
-            <Route path="/sustainability/social-media-contribution" element={<SocialMediaContribution />} />
+            <Route path="/sustainability/social-contribution-initiatives" element={<SocialContributionInitiatives />} />
             <Route path="/project-details" element={<ProjectDetails />} />
             <Route path="/blog-details" element={<BlogDetails />} />
             <Route path="/service-details" element={<ServiceDetails />} />

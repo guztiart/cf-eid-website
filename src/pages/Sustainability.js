@@ -79,7 +79,7 @@ const Sustainability = () => {
         </div>
         <div className="container" data-aos="fade-up" data-aos-delay="100">
           <div className="row gy-4">
-            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="esg-card h-100">
                 <div className="icon">
                   <i className="bi bi-tree"></i>
@@ -96,24 +96,7 @@ const Sustainability = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div className="esg-card h-100">
-                <div className="icon">
-                  <i className="bi bi-thermometer-half"></i>
-                </div>
-                <h3>{t('sustainability.climateTitle')}</h3>
-                <p>{t('sustainability.climateDesc')}</p>
-                <ul>
-                  <li><i className="bi bi-check"></i><span>{t('sustainability.climateFeature1')}</span></li>
-                  <li><i className="bi bi-check"></i><span>{t('sustainability.climateFeature2')}</span></li>
-                  <li><i className="bi bi-check"></i><span>{t('sustainability.climateFeature3')}</span></li>
-                </ul>
-                <div className="mt-3">
-                  <Link to="/sustainability/climate-change-disclosure" className="btn btn-outline-primary btn-sm">{t('sustainability.learnMore')}</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="esg-card h-100">
                 <div className="icon">
                   <i className="bi bi-heart-pulse"></i>
@@ -130,7 +113,7 @@ const Sustainability = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="esg-card h-100">
                 <div className="icon">
                   <i className="bi bi-share"></i>
@@ -143,7 +126,7 @@ const Sustainability = () => {
                   <li><i className="bi bi-check"></i><span>{t('sustainability.socialFeature3')}</span></li>
                 </ul>
                 <div className="mt-3">
-                  <Link to="/sustainability/social-media-contribution" className="btn btn-outline-primary btn-sm">{t('sustainability.learnMore')}</Link>
+                  <Link to="/sustainability/social-contribution-initiatives" className="btn btn-outline-primary btn-sm">{t('sustainability.learnMore')}</Link>
                 </div>
               </div>
             </div>

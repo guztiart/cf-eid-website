@@ -1,10 +1,63 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../../hooks/useExternalLibs';
+import ImageModal from '../../components/ImageModal';
 
 const OccupationalHealthSafety = () => {
   // Initialize external libraries using custom hooks
   useAOS();
+  
+  // State for image modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImages, setCurrentImages] = useState([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Health promotion images array - organized by activity
+  const healthPromotionImages = {
+    gym: [
+      `${process.env.PUBLIC_URL}/assets/img/activities/gym-1.jpg`,
+      `${process.env.PUBLIC_URL}/assets/img/activities/gym-2.jpg`,
+      `${process.env.PUBLIC_URL}/assets/img/activities/gym-3.jpg`,
+      // Add more gym images here if available
+    ],
+    aerobic: [
+      `${process.env.PUBLIC_URL}/assets/img/activities/yoga-1.jpeg`,
+      `${process.env.PUBLIC_URL}/assets/img/activities/yoga-2.jpeg`,
+      // Add more aerobic images here if available
+    ],
+    badminton: [
+      `${process.env.PUBLIC_URL}/assets/img/activities/badminton.jpg`,
+      `${process.env.PUBLIC_URL}/assets/img/activities/badminton1.jpg`,
+      // Add more badminton images here if available
+    ],
+    tableTennis: [
+      `${process.env.PUBLIC_URL}/assets/img/activities/table-tennis-1.jpg`,
+      // Add more table tennis images here if available
+    ],
+    volleyball: [
+      `${process.env.PUBLIC_URL}/assets/img/activities/volleyball-1.jpg`,
+      `${process.env.PUBLIC_URL}/assets/img/activities/volleyball-2.jpg`,
+      `${process.env.PUBLIC_URL}/assets/img/activities/volleyball-3.jpg`,
+      // Add more volleyball images here if available
+    ],
+    soccer: [
+      `${process.env.PUBLIC_URL}/assets/img/activities/mini-soccer-1.jpg`,
+      `${process.env.PUBLIC_URL}/assets/img/activities/mini-soccer-2.jpg`,
+      // Add more soccer images here if available
+    ]
+  };
+  
+  // Function to open image modal
+  const openImageModal = (images, index = 0) => {
+    setCurrentImages(images);
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
+  
+  // Function to close image modal
+  const closeImageModal = () => {
+    setIsModalOpen(false);
+  };
 
   // Load custom CSS
   useEffect(() => {
@@ -51,8 +104,7 @@ const OccupationalHealthSafety = () => {
                   <li className="nav-item"><Link to="/sustainability">Sustainability</Link></li>
                   <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">Concept of Sustainability</Link></li>
                   <li className="nav-item"><Link to="/sustainability/environmental-initiatives">Environmental Initiatives</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/climate-change-disclosure">Climate Change Disclosure</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/social-media-contribution">Social Media Contribution</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/social-contribution-initiatives">Social Contribution Initiatives</Link></li>
                 </ul>
               </div>
             </div>
@@ -228,6 +280,28 @@ const OccupationalHealthSafety = () => {
               <div className="section-title" data-aos="fade-up">
                 <h2>Safety Activities</h2>
                 <p>Our commitment to safety through various programs and initiatives</p>
+              </div>
+              
+              {/* Safety Activities Overview Image */}
+              <div className="row mb-4" data-aos="fade-up" data-aos-delay="50">
+                <div className="col-12">
+                  <div className="activity-images">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/img/activities/training.jpg`}
+                      className="img-fluid rounded activity-img"
+                      alt="Safety Training Overview"
+                      style={{
+                        maxHeight: '400px',
+                        width: '400px',
+                        height: '400px',
+                        objectFit: 'cover',
+                        display: 'block',
+                        margin: '0 auto'
+                      }}
+                    />
+                    <p className="img-caption text-center mt-2">Safety Training Overview</p>
+                  </div>
+                </div>
               </div>
               
               {/* Training Activity */}
@@ -413,30 +487,82 @@ const OccupationalHealthSafety = () => {
                     <div className="activity-images">
                       <div className="row g-3">
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/gym.jpg`} className="img-fluid rounded activity-img" alt="Gym" />
-                          <p className="img-caption text-center mt-2">Gym</p>
+                          <div
+                            className="image-container clickable-image"
+                            onClick={() => openImageModal(healthPromotionImages.gym, 0)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/activities/gym-2.jpg`} className="img-fluid rounded activity-img" alt="Gym" />
+                            <div className="image-overlay-icon">
+                              <i className="bi bi-zoom-in"></i>
+                            </div>
+                          </div>
+                          <p className="img-caption text-center mt-2">Gym {healthPromotionImages.gym.length > 1 ? `(${healthPromotionImages.gym.length} photos)` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/yoga.jpeg
-                          `} className="img-fluid rounded activity-img" alt="Aerobic" />
-                          <p className="img-caption text-center mt-2">Aerobic</p>
+                          <div
+                            className="image-container clickable-image"
+                            onClick={() => openImageModal(healthPromotionImages.aerobic, 0)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/activities/yoga-1.jpeg`} className="img-fluid rounded activity-img" alt="Aerobic" />
+                            <div className="image-overlay-icon">
+                              <i className="bi bi-zoom-in"></i>
+                            </div>
+                          </div>
+                          <p className="img-caption text-center mt-2">Aerobic {healthPromotionImages.aerobic.length > 1 ? `(${healthPromotionImages.aerobic.length} photos)` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/badminton.jpg`} className="img-fluid rounded activity-img" alt="Badminton" />
-                          <p className="img-caption text-center mt-2">Badminton</p>
+                          <div
+                            className="image-container clickable-image"
+                            onClick={() => openImageModal(healthPromotionImages.badminton, 0)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/activities/badminton.jpg`} className="img-fluid rounded activity-img" alt="Badminton" />
+                            <div className="image-overlay-icon">
+                              <i className="bi bi-zoom-in"></i>
+                            </div>
+                          </div>
+                          <p className="img-caption text-center mt-2">Badminton {healthPromotionImages.badminton.length > 1 ? `(${healthPromotionImages.badminton.length} photos)` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/table-tennis.jpg`} className="img-fluid rounded activity-img" alt="Table Tennis" />
-                          <p className="img-caption text-center mt-2">Table Tennis</p>
+                          <div
+                            className="image-container clickable-image"
+                            onClick={() => openImageModal(healthPromotionImages.tableTennis, 0)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/activities/table-tennis-1.jpg`} className="img-fluid rounded activity-img" alt="Table Tennis" />
+                            <div className="image-overlay-icon">
+                              <i className="bi bi-zoom-in"></i>
+                            </div>
+                          </div>
+                          <p className="img-caption text-center mt-2">Table Tennis {healthPromotionImages.tableTennis.length > 1 ? `(${healthPromotionImages.tableTennis.length} photos)` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/volleyball.jpg
-                          `} className="img-fluid rounded activity-img" alt="Volleyball" />
-                          <p className="img-caption text-center mt-2">Volleyball</p>
+                          <div
+                            className="image-container clickable-image"
+                            onClick={() => openImageModal(healthPromotionImages.volleyball, 0)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/activities/volleyball-1.jpg`} className="img-fluid rounded activity-img" alt="Volleyball" />
+                            <div className="image-overlay-icon">
+                              <i className="bi bi-zoom-in"></i>
+                            </div>
+                          </div>
+                          <p className="img-caption text-center mt-2">Volleyball {healthPromotionImages.volleyball.length > 1 ? `(${healthPromotionImages.volleyball.length} photos)` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/activities/mini-soccer.jpg`} className="img-fluid rounded activity-img" alt="Soccer" />
-                          <p className="img-caption text-center mt-2">Soccer</p>
+                          <div
+                            className="image-container clickable-image"
+                            onClick={() => openImageModal(healthPromotionImages.soccer, 0)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            <img src={`${process.env.PUBLIC_URL}/assets/img/activities/mini-soccer-1.jpg`} className="img-fluid rounded activity-img" alt="Soccer" />
+                            <div className="image-overlay-icon">
+                              <i className="bi bi-zoom-in"></i>
+                            </div>
+                          </div>
+                          <p className="img-caption text-center mt-2">Soccer {healthPromotionImages.soccer.length > 1 ? `(${healthPromotionImages.soccer.length} photos)` : ''}</p>
                         </div>
                       </div>
                     </div>
@@ -482,12 +608,12 @@ const OccupationalHealthSafety = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/sustainability/social-media-contribution" className="card-link">
+                <Link to="/sustainability/social-contribution-initiatives" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="card-image" alt="Social Media Contribution" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="card-image" alt="Social Contribution Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Social Media Contribution</span>
+                    <span>Social Contribution Initiatives</span>
                   </div>
                 </Link>
               </div>
@@ -512,6 +638,14 @@ const OccupationalHealthSafety = () => {
           </div>
         </div>
       </section>
+
+      {/* Image Modal */}
+      <ImageModal
+        images={currentImages}
+        isOpen={isModalOpen}
+        onClose={closeImageModal}
+        initialIndex={currentImageIndex}
+      />
     </div>
   );
 };
