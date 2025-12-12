@@ -100,7 +100,7 @@
 .featured-product-image {
   max-width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 500px;
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -700,7 +700,7 @@
   }
   
   .featured-product-image {
-    max-height: 250px;
+    max-height: 300px;
   }
   
   .features-list {

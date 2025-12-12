@@ -81,17 +81,15 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-1.png`} alt="Product Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-straight.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-2.png`} alt="Product Image 2" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-1.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-straight-1.png`} alt="Product Image 3" />
               </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-straight-2.png`} alt="Product Image 3" />
-              </div>
+              
             </div>
             <div className="swiper-pagination"></div>
             <div className="swiper-button-prev"></div>
@@ -102,9 +100,6 @@ const ProjectDetails = () => {
             <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.evr.title')}</h2>
-                <p>
-                  Excellent Durability and Vibration Absorption.
-                </p>
                 <p style={{ textAlign: 'justify' }}>
                   No peeling off by combination of reinforced plastics outer shell and rubber. Outstanding durability and stable performance. Effective absorption of shaft vibration. Prevention of electric corrosion on the shaft sleeve.
                 </p>
@@ -170,6 +165,52 @@ const ProjectDetails = () => {
                   <h4 style={{ textAlign: 'left' }}>2. Flange Type Bearing</h4>
                   <p style={{ textAlign: 'left' }}>The outer shell is made of Glass cloth Reinforced Plastic (GRP), and is suitable for relatively larger diameter.</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Specifications */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Specifications</h2>
+                <p>Technical specifications of the EVR Water Lubricated Stern Tube Bearing</p>
+              </div>
+              <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
+                <table className="table table-bordered">
+                  <tbody>
+                    <tr>
+                      <th style={{ width: '30%' }}>Size Range (Shaft Dia.)</th>
+                      <td>φ50 ～ φ500 (mm)</td>
+                    </tr>
+                    <tr>
+                      <th>Shaft speed</th>
+                      <td>Generally Max.6 [m/sec]<br />(possible to use higher speed)</td>
+                    </tr>
+                    <tr>
+                      <th>Bearing load (Average)</th>
+                      <td>Max.0.25 MPa</td>
+                    </tr>
+                    <tr>
+                      <th>Quantity of cooling water (Reference)</th>
+                      <td>
+                        Ds＜φ35 [cm]<br />
+                        (5～5.5) Ds²×10⁻³ [m³/h]<br /><br />
+                        Ds≧φ35 [cm]<br />
+                        (6～7) Ds²×10⁻³ [m³/h]<br /><br />
+                        Ds : Shaft Diameter [cm]
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>Temperature of cooling water</th>
+                      <td>Max.45 [℃]</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

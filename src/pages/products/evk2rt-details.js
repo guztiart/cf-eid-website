@@ -86,9 +86,6 @@ const ProjectDetails = () => {
               <div className="swiper-slide">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-2.png`} alt="EVK2RT Detail View" />
               </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/evk2rt-3.png`} alt="EVK Series Detail" />
-              </div>
             </div>
             <div className="swiper-pagination"></div>
             <div className="swiper-button-prev"></div>
@@ -99,7 +96,7 @@ const ProjectDetails = () => {
             <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.evk2rt.title')}</h2>
-                <p>
+                <p style={{ textAlign: 'center' }}>
                   Spare ring is easily activated without disassembling.
                 </p>
               </div>

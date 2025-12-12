@@ -52,7 +52,7 @@ const ProjectDetails = () => {
             <ol>
               <li><Link to="/">{t('productDetails.home')}</Link></li>
               <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
-              <li className="current">{t('productDetails.evuValveStemSeal.title')}</li>
+              <li className="current">{t('productDetails.evu.title')}</li>
             </ol>
           </nav>
         </div>
@@ -63,11 +63,11 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">{t('productDetails.evuValveStemSeal.title')}</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('productDetails.evu.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/products?tag=marine">{t('products.marine')}</Link></li>
-                  <li className="nav-item"><Link to="/products?tag=water-lubricated-stern-tube-seal">{t('products.waterLubricatedSternTubeSeal')}</Link></li>
+                  <li className="nav-item"><Link to="/products?tag=water-lubricated-stern-tube-bearing">{t('products.waterLubricatedSternTubeBearing')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -81,7 +81,7 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU-1.png`} alt={t('productDetails.evuValveStemSeal.title')} />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVU-1.png`} alt={t('productDetails.evu.title')} />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -92,9 +92,9 @@ const ProjectDetails = () => {
           <div className="row justify-content-center gy-4 mt-4">
             <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>{t('productDetails.evuValveStemSeal.title')}</h2>
+                <h2>{t('productDetails.evu.title')}</h2>
                 <p>
-                  Poly-Urethane bearing "EVU" is develode for water lubricated stern tube system based on the technology cultivated in our water lubricated bearing experience.
+                  Poly-Urethane bearing "EVU" is developed for water lubricated stern tube system based on the technology cultivated in our water lubricated bearing experience.
                 </p>
               </div>
             </div>
@@ -115,7 +115,7 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
                 <h2>Features</h2>
-                <p>Key features and benefits of the EVU Water Lubricated Bearing</p>
+                <p>Key features of the Poly-Urethane bearing (EVU)</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
@@ -209,7 +209,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
+            <p>Other products in the Water Lubricated Stern Tube Bearing category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -266,7 +266,7 @@ const ProjectDetails = () => {
                 <ol>
                   <li><Link to="/">{t('productDetails.home')}</Link></li>
                   <li><Link to="/products">{t('productDetails.productBreadcrumb')}</Link></li>
-                  <li className="current">{t('productDetails.evuValveStemSeal.title')}</li>
+                  <li className="current">{t('productDetails.evu.title')}</li>
                 </ol>
               </nav>
             </div>

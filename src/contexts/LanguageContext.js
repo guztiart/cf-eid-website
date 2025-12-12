@@ -301,13 +301,13 @@ export const translations = {
       bladderAccumulator: "Bladder Type Accumulator",
       bladderAccumulatorDesc: "These standard bladder accumulators are manufactured based on years of experience and proven performance.",
       evk2rv: "Water Lubricated Stern Tube Seal - EVK",
-      evk2rvDesc: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.",
+      evk2rvDesc: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance.",
       evk2rt: "Water Lubricated Stern Tube Seal - EVK2RT",
-      evk2rtDesc: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation.",
+      evk2rtDesc: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. The EVK type seal is the easiest of the seals on the market for installation and operation. Spare ring is easily activated without disassembling.",
       mas: "Marine Ace Seal (MAS)",
       masDesc: "Water-lubricated stern seal for small vessels with direct drive systems. Features end-face seal structure for excellent sealing performance.",
-      rudderSeal: "Rudder Seal",
-      rudderSealDesc: "Rudder seals with lip seals designed to prevent lubricant leakage and seawater ingress. Approved by classification societies with multiple types available.",
+      rudderSeal: "Rudder Seal (RSC)",
+      rudderSealDesc: "Rudder seal manufacture with high-performance, self-lubricating lip seals designed to be mounted above the rudder bearing to prevent the ingress of sea water into the hull. Manufactured from a special rubber, provide long wear life with no need for periodic adjustments, operate with less drag and reduced shaft/liner wear.",
       evr: "Water Lubricated Stern Tube Bearing - EVR",
       evrDesc: "Excellent Durability and Vibration Absorption. Designed specifically for marine applications with water lubricated shafting systems.",
       evu: "Water Lubricated Stern Tube Bearing - EVU",
@@ -493,10 +493,10 @@ export const translations = {
         applicationsValue: "Marine Vessels, Water Lubricated Propulsion Systems"
       },
       
-      // EVU Valve Stem Seal
+      // EVU - Water Lubricated Stern Tube Bearing
       evuValveStemSeal: {
-        title: "EVU Valve Stem Seal",
-        breadcrumb: "EVU Valve Stem Seal",
+        title: "Water Lubricated Stern Tube Bearing - EVU",
+        breadcrumb: "Water Lubricated Stern Tube Bearing - EVU",
         description1: "EVU valve stem seals are designed to provide excellent sealing performance for engine valve applications. These seals prevent oil from entering the combustion chamber through the valve guide while allowing proper lubrication of the valve stem.",
         description2: "Manufactured with high-quality materials and precision engineering, EVU valve stem seals offer superior durability and reliability. The seals are designed to withstand extreme temperature variations and harsh operating conditions in modern engines. Eagle Industry's advanced manufacturing processes ensure consistent quality and performance across all EVU products.",
         description3: "The EVU series features a compact design that allows for easy installation and replacement. These seals are compatible with a wide range of engine applications and provide optimal sealing efficiency throughout their service life.",
@@ -692,8 +692,8 @@ export const translations = {
       
       // Rudder Seal
       rudderSeal: {
-        title: "Rudder Seal",
-        breadcrumb: "Rudder Seal",
+        title: "Rudder Seal (RSC)",
+        breadcrumb: "Rudder Seal (RSC)",
         description1: "Rudder seal manufacture with high-performance, self-lubricating lip seals designed to be mounted above the rudder bearing to prevent the ingress of sea water into the hull. Manufactured from a special rubber, provide long wear life with no need for periodic adjustments, operate with less drag and reduced shaft or liner wear.",
         productInformation: "Product Information",
         category: "Category",
@@ -1095,9 +1095,9 @@ export const translations = {
       bladderAccumulator: "Akuumulator Tipe Bladder",
       bladderAccumulatorDesc: "Akuumulator bladder standar ini diproduksi berdasarkan pengalaman bertahun-tahun dan kinerja yang terbukti.",
       evk2rv: "Water Lubricated Stern Tube Seal - EVK2RV",
-      evk2rvDesc: "Segel pelumas air yang kompak, berkinerja tinggi yang memiliki resistensi getaran dan kinerja penyegelan yang sangat baik. Segel tipe EVK adalah yang termudah dari segel di pasar untuk instalasi dan operasi.",
+      evk2rvDesc: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance.",
       evk2rt: "Water Lubricated Stern Tube Seal - EVK2RT",
-      evk2rtDesc: "Segel pelumas air yang kompak, berkinerja tinggi yang memiliki resistensi getaran dan kinerja penyegelan yang sangat baik. Segel tipe EVK adalah yang termudah dari segel di pasar untuk instalasi dan operasi.",
+      evk2rtDesc: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance. Spare ring is easily activated without disassembling.",
       mas: "Marine Ace Seal (MAS)",
       masDesc: "Segel stern pelumas air untuk kapal kecil dengan sistem penggerak langsung. Fitur struktur segel end-face untuk kinerja penyegelan yang sangat baik.",
       rudderSeal: "Rudder Seal",
@@ -1289,10 +1289,10 @@ export const translations = {
         applicationsValue: "Kapal Maritim, Sistem Propulsi Pelumas Air"
       },
       
-      // EVU Valve Stem Seal
+      // EVU - Water Lubricated Stern Tube Bearing
       evuValveStemSeal: {
-        title: "EVU Valve Stem Seal",
-        breadcrumb: "EVU Valve Stem Seal",
+        title: "Water Lubricated Stern Tube Bearing - EVU",
+        breadcrumb: "Water Lubricated Stern Tube Bearing - EVU",
         description1: "EVU valve stem seals dirancang untuk memberikan kinerja penyegelan yang sangat baik untuk aplikasi katup mesin. Segel ini mencegah oli masuk ke ruang bakar melalui panduan katup sambil memungkinkan pelumasan yang tepat dari batang katup.",
         description2: "Diproduksi dengan material berkualitas tinggi dan rekayasa presisi, EVU valve stem seals menawarkan daya tahan dan keandalan yang superior. Segel dirancang untuk menahan variasi suhu ekstrem dan kondisi operasi yang keras dalam mesin modern. Proses manufaktur canggih Eagle Industry memastikan kualitas dan kinerja yang konsisten di semua produk EVU.",
         description3: "Seri EVU menampilkan desain kompak yang memungkinkan instalasi dan penggantian yang mudah. Segel ini kompatibel dengan berbagai aplikasi mesin dan memberikan efisiensi penyegelan optimal selama masa pakainya.",

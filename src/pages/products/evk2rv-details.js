@@ -81,13 +81,13 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-1.png`} alt="Product Image 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-3.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-2.png`} alt="Product Image 2" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-3.png`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-1.png`} alt="Product Image 3" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -124,7 +124,7 @@ const ProjectDetails = () => {
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
                 <h2>Features</h2>
-                <p>Key features and benefits of the EVK2RV Water Lubricated Stern Tube Seal</p>
+                <p>Key features of the EVK2RV Water Lubricated Stern Tube Seal</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">

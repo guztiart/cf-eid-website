@@ -84,10 +84,7 @@ const ProjectDetails = () => {
                 <img src={`${process.env.PUBLIC_URL}/assets/img/product/rudder-1.png`} alt="Product Image 1" />
               </div>
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/rudder-2.png`} alt="Product Image 2" />
-              </div>
-              <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Rudder_seal.png`} alt="Product Image 3" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/rudder-3.png`} alt="Product Image 2" />
               </div>
             </div>
             <div className="swiper-pagination"></div>

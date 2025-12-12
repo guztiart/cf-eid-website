@@ -82,7 +82,12 @@ const ProjectDetails = () => {
           <div className="portfolio-details-slider swiper init-swiper">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Enginer.png`} alt="Service Engineer 1" />
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Engineer-1.png`} alt="Service Engineer 1" />
+              </div><div className="swiper-slide">
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Engineer-2.png`} alt="Service Engineer 2" />
+              </div>
+              <div className="swiper-slide">
+                <img src={`${process.env.PUBLIC_URL}/assets/img/product/Engineer-3.jpeg`} alt="Service Engineer 3" />
               </div>
             </div>
             <div className="swiper-pagination"></div>
@@ -110,7 +115,7 @@ const ProjectDetails = () => {
           {/* Product Featured Image */}
           <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
             <p className="featured-image-description">Expert service engineers providing professional installation and maintenance for marine sealing systems worldwide.</p>
-            <img src={`${process.env.PUBLIC_URL}/assets/img/product/Enginer.png`} alt="Service Engineer Feature" className="featured-product-image" />
+            <img src={`${process.env.PUBLIC_URL}/assets/img/product/Engineer-2.png`} alt="Service Engineer Feature" className="featured-product-image" />
           </div>
         </div>
       </section>
@@ -208,41 +213,41 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Marine industry products</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/products/lipSeal-details" className="card-link">
+                <Link to="/products/evk2rv-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV-1.png`} className="card-image" alt="EVK2RV" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.serviceEngineer.forAcCompressor')}<br />{t('productDetails.serviceEngineer.typeAMechanicalSeal')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.evk2rv')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/products/eh795-details" className="card-link">
+                <Link to="/products/mas-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-1.png`} className="card-image" alt="Marine Ace Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.serviceEngineer.forWaterPump')}<br />{t('productDetails.serviceEngineer.eh795EH790')}</span>
+                    <span>{t('products.waterLubricatedSternTubeSeal')}<br />{t('products.mas')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/products/airCutValve-details" className="card-link">
+                <Link to="/products/evr-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-1.png`} className="card-image" alt="EVR" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.serviceEngineer.forVariableDisplacementAcCompressor')}<br />{t('productDetails.serviceEngineer.controlValve')}</span>
+                    <span>{t('products.waterLubricatedSternTubeBearing')}<br />{t('products.evr')}</span>
                   </div>
                 </Link>
               </div>
