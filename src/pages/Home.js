@@ -158,6 +158,18 @@ const Home = () => {
                     to="/products"
                     onClick={(e) => {
                       e.preventDefault();
+                      handleCategoryClick('floating-seal');
+                    }}
+                  >
+                    {t('home.floatingSeal')}
+                  </Link>
+                </li>
+                <li className="p-top-list__item">
+                  <Link
+                    className="p-top-list__link"
+                    to="/products"
+                    onClick={(e) => {
+                      e.preventDefault();
                       handleCategoryClick('mechanical-seals');
                     }}
                   >
@@ -186,18 +198,6 @@ const Home = () => {
                     }}
                   >
                     {t('home.valves')}
-                  </Link>
-                </li>
-                <li className="p-top-list__item">
-                  <Link
-                    className="p-top-list__link"
-                    to="/products"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleCategoryClick('floating-seal');
-                    }}
-                  >
-                    {t('home.floatingSeal')}
                   </Link>
                 </li>
                 <li className="p-top-list__item">

@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../../hooks/useExternalLibs';
+import { useLanguage } from '../../contexts/LanguageContext';
 import ImageSlider from '../../components/ImageSlider';
 
 const SocialContributionInitiatives = () => {
   // Initialize external libraries using custom hooks
   useAOS();
+  const { t } = useLanguage();
 
   // Load custom CSS
   useEffect(() => {
@@ -30,12 +32,12 @@ const SocialContributionInitiatives = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Sustainability</h1>
+          <h1>{t('sustainability.title')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/sustainability">Sustainability</Link></li>
-              <li className="current">Social Contribution Initiatives</li>
+              <li><Link to="/">{t('socialContributionInitiatives.breadcrumbHome')}</Link></li>
+              <li><Link to="/sustainability">{t('socialContributionInitiatives.breadcrumbSustainability')}</Link></li>
+              <li className="current">{t('socialContributionInitiatives.breadcrumbCurrent')}</li>
             </ol>
           </nav>
         </div>
@@ -46,13 +48,13 @@ const SocialContributionInitiatives = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Social Contribution Initiatives</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('socialContributionInitiatives.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/sustainability">Sustainability</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">Concept of Sustainability</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/environmental-initiatives">Environmental Initiatives</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/occupational-health-safety">Occupational Health & Safety</Link></li>
+                  <li className="nav-item"><Link to="/sustainability">{t('socialContributionInitiatives.sustainability')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">{t('socialContributionInitiatives.conceptOfSustainability')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/environmental-initiatives">{t('socialContributionInitiatives.environmentalInitiatives')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/occupational-health-safety">{t('socialContributionInitiatives.occupationalHealthSafety')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -66,11 +68,10 @@ const SocialContributionInitiatives = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h2 className="content-title">Social Contribution at PT Eagle Industri Indonesia</h2>
+                <h2 className="content-title">{t('socialContributionInitiatives.socialContributionTitle')}</h2>
                 <div className="content-body">
                   <p>
-                    At PT Eagle Industri Indonesia, we are committed to making a positive impact on society through our Corporate Social Responsibility (CSR) initiatives.
-                    Our social contribution programs focus on supporting the community, helping those in need, and fostering sustainable development in the areas surrounding our operations.
+                    {t('socialContributionInitiatives.socialContributionDesc')}
                   </p>
                 </div>
               </div>
@@ -85,8 +86,8 @@ const SocialContributionInitiatives = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>CSR Activities</h2>
-                <p>Our commitment to social responsibility and community support</p>
+                <h2>{t('socialContributionInitiatives.csrActivitiesTitle')}</h2>
+                <p>{t('socialContributionInitiatives.csrActivitiesSubtitle')}</p>
               </div>
             </div>
           </div>
@@ -104,26 +105,26 @@ const SocialContributionInitiatives = () => {
                 <div className="csr-activity-body">
                   <div className="row align-items-center">
                     <div className="col-lg-7">
-                      <h3 className="csr-activity-title">Kegiatan Qurban - Idul Adha</h3>
+                      <h3 className="csr-activity-title">{t('socialContributionInitiatives.qurbanTitle')}</h3>
                       <p className="csr-activity-description">
-                        Perusahaan menjalankan program Qurban tahunan pada Hari Raya Idul Adha. Distribusi daging Qurban diberikan kepada yatim/piatu/dhuafa di sekitar perusahaan.
+                        {t('socialContributionInitiatives.qurbanDesc')}
                       </p>
                       <div className="csr-activity-highlights">
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Program Qurban tahunan dilaksanakan setiap Hari Raya Idul Adha</span>
+                          <span>{t('socialContributionInitiatives.qurbanHighlight1')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Distribusi daging Qurban kepada masyarakat kurang mampu</span>
+                          <span>{t('socialContributionInitiatives.qurbanHighlight2')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Fokus pada yatim, piatu, dan dhuafa di sekitar lokasi perusahaan</span>
+                          <span>{t('socialContributionInitiatives.qurbanHighlight3')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Melibatkan karyawan dalam pelaksanaan program</span>
+                          <span>{t('socialContributionInitiatives.qurbanHighlight4')}</span>
                         </div>
                       </div>
                     </div>
@@ -134,7 +135,7 @@ const SocialContributionInitiatives = () => {
                           `${process.env.PUBLIC_URL}/assets/img/activities/qurban-2.jpg`,
                           `${process.env.PUBLIC_URL}/assets/img/activities/qurban-3.jpeg`
                         ]}
-                        caption="Kegiatan Qurban Idul Adha"
+                        caption={t('socialContributionInitiatives.qurbanCaption')}
                       />
                     </div>
                   </div>
@@ -154,26 +155,26 @@ const SocialContributionInitiatives = () => {
                 <div className="csr-activity-body">
                   <div className="row align-items-center">
                     <div className="col-lg-7">
-                      <h3 className="csr-activity-title">Berbagi Kebahagiaan Ramadhan untuk Anak Yatim & Piatu</h3>
+                      <h3 className="csr-activity-title">{t('socialContributionInitiatives.ramadhanTitle')}</h3>
                       <p className="csr-activity-description">
-                        Perusahaan secara rutin mengadakan kegiatan santunan Ramadhan dengan mengundang anak yatim piatu untuk berbagi kebahagiaan di bulan suci.
+                        {t('socialContributionInitiatives.ramadhanDesc')}
                       </p>
                       <div className="csr-activity-highlights">
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Program santunan rutin setiap bulan Ramadhan</span>
+                          <span>{t('socialContributionInitiatives.ramadhanHighlight1')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Mengundang anak yatim piatu untuk berbuka puasa bersama</span>
+                          <span>{t('socialContributionInitiatives.ramadhanHighlight2')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Memberikan bantuan berupa santunan dan perlengkapan sekolah</span>
+                          <span>{t('socialContributionInitiatives.ramadhanHighlight3')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Menciptakan momen berbagi kebahagiaan di bulan suci Ramadhan</span>
+                          <span>{t('socialContributionInitiatives.ramadhanHighlight4')}</span>
                         </div>
                       </div>
                     </div>
@@ -184,7 +185,7 @@ const SocialContributionInitiatives = () => {
                           `${process.env.PUBLIC_URL}/assets/img/activities/santunan-2.jpg`,
                           `${process.env.PUBLIC_URL}/assets/img/activities/santunan-3.jpg`
                         ]}
-                        caption="Santunan Ramadhan Anak Yatim & Piatu"
+                        caption={t('socialContributionInitiatives.ramadhanCaption')}
                       />
                     </div>
                   </div>
@@ -204,26 +205,26 @@ const SocialContributionInitiatives = () => {
                 <div className="csr-activity-body">
                   <div className="row align-items-center">
                     <div className="col-lg-7">
-                      <h3 className="csr-activity-title">Dukungan Perusahaan bagi Korban Banjir</h3>
+                      <h3 className="csr-activity-title">{t('socialContributionInitiatives.floodVictimTitle')}</h3>
                       <p className="csr-activity-description">
-                        Perusahaan menyalurkan bantuan bagi masyarakat sekitar yang terdampak banjir sebagai wujud kepedulian terhadap lingkungan sekitar.
+                        {t('socialContributionInitiatives.floodVictimDesc')}
                       </p>
                       <div className="csr-activity-highlights">
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Respons cepat terhadap bencana banjir di sekitar perusahaan</span>
+                          <span>{t('socialContributionInitiatives.floodVictimHighlight1')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Penyaluran bantuan berupa sembako dan kebutuhan pokok</span>
+                          <span>{t('socialContributionInitiatives.floodVictimHighlight2')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Bantuan langsung kepada korban banjir yang terdampak</span>
+                          <span>{t('socialContributionInitiatives.floodVictimHighlight3')}</span>
                         </div>
                         <div className="highlight-item">
                           <i className="bi bi-check-circle"></i>
-                          <span>Bentuk kepedulian sosial terhadap masyarakat sekitar</span>
+                          <span>{t('socialContributionInitiatives.floodVictimHighlight4')}</span>
                         </div>
                       </div>
                     </div>
@@ -233,7 +234,7 @@ const SocialContributionInitiatives = () => {
                           `${process.env.PUBLIC_URL}/assets/img/activities/banjir-1.jpg`,
                           `${process.env.PUBLIC_URL}/assets/img/activities/banjir-2.jpg`
                         ]}
-                        caption="Bantuan Korban Banjir"
+                        caption={t('socialContributionInitiatives.floodVictimCaption')}
                       />
                     </div>
                   </div>
@@ -248,8 +249,8 @@ const SocialContributionInitiatives = () => {
       <section id="related-topics" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Sustainability Topics</h2>
-            <p>Explore more about our sustainability initiatives</p>
+            <h2>{t('socialContributionInitiatives.relatedTopicsTitle')}</h2>
+            <p>{t('socialContributionInitiatives.relatedTopicsSubtitle')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -259,7 +260,7 @@ const SocialContributionInitiatives = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Concept of Sustainability" />
                   </div>
                   <div className="card-caption">
-                    <span>Concept of Sustainability</span>
+                    <span>{t('socialContributionInitiatives.conceptOfSustainabilityCard')}</span>
                   </div>
                 </Link>
               </div>
@@ -271,7 +272,7 @@ const SocialContributionInitiatives = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Environmental Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Environmental Initiatives</span>
+                    <span>{t('socialContributionInitiatives.environmentalInitiativesCard')}</span>
                   </div>
                 </Link>
               </div>
@@ -283,7 +284,7 @@ const SocialContributionInitiatives = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Occupational Health & Safety" />
                   </div>
                   <div className="card-caption">
-                    <span>Occupational Health & Safety</span>
+                    <span>{t('socialContributionInitiatives.occupationalHealthSafetyCard')}</span>
                   </div>
                 </Link>
               </div>
@@ -299,9 +300,9 @@ const SocialContributionInitiatives = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/sustainability">Sustainability</Link></li>
-                  <li className="current">Social Contribution Initiatives</li>
+                  <li><Link to="/">{t('socialContributionInitiatives.breadcrumbHome')}</Link></li>
+                  <li><Link to="/sustainability">{t('socialContributionInitiatives.breadcrumbSustainability')}</Link></li>
+                  <li className="current">{t('socialContributionInitiatives.breadcrumbCurrent')}</li>
                 </ol>
               </nav>
             </div>

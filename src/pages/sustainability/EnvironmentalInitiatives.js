@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../../hooks/useExternalLibs';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const EnvironmentalInitiatives = () => {
+  const { t } = useLanguage();
   // Initialize external libraries using custom hooks
   useAOS();
   
@@ -93,13 +95,13 @@ const EnvironmentalInitiatives = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Sustainability</h1>
+          <h1>{t('sustainability.title')}</h1>
           <nav className="breadcrumbs">
             <ol>
               
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/sustainability">Sustainability</Link></li>
-              <li className="current">Environmental Initiatives</li>
+              <li><Link to="/">{t('header.home')}</Link></li>
+              <li><Link to="/sustainability">{t('sustainability.title')}</Link></li>
+              <li className="current">{t('environmentalInitiatives.title')}</li>
             </ol>
           </nav>
         </div>
@@ -110,13 +112,13 @@ const EnvironmentalInitiatives = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Environmental Initiatives</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('environmentalInitiatives.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/sustainability">Sustainability</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">Concept of Sustainability</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/occupational-health-safety">Occupational Health & Safety</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/social-contribution-initiatives">Social Contribution Initiatives</Link></li>
+                  <li className="nav-item"><Link to="/sustainability">{t('sustainability.title')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">{t('environmentalInitiatives.conceptOfSustainability')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/occupational-health-safety">{t('environmentalInitiatives.occupationalHealthSafety')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/social-contribution-initiatives">{t('environmentalInitiatives.socialContributionInitiatives')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -130,13 +132,13 @@ const EnvironmentalInitiatives = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h2 className="content-title">Environmental Initiatives at PT. Eagle Industry Indonesia</h2>
+                <h2 className="content-title">{t('environmentalInitiatives.environmentalInitiativesTitle')}</h2>
                 <div className="content-body">
                   <p>
-                    PT. Eagle Industry Indonesia operates in the manufacturing of seals for automotive components with main processes of Casting and O-ring that function as lubricant retainers with the external environment such as water, mud, or dust in the under carrier area of construction machinery, heavy equipment, or agricultural machines.
+                    {t('environmentalInitiatives.environmentalInitiativesDesc1')}
                   </p>
                   <p>
-                    With precision technology and high quality, our products help improve machine reliability while supporting environmental impact reduction, as they play a role in preventing pollution from oil or fluid leakage to the ground.
+                    {t('environmentalInitiatives.environmentalInitiativesDesc2')}
                   </p>
                 </div>
               </div>
@@ -146,11 +148,10 @@ const EnvironmentalInitiatives = () => {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h3 className="content-subtitle">Environmental Management System</h3>
+                <h3 className="content-subtitle">{t('environmentalInitiatives.environmentalManagementSystemTitle')}</h3>
                 <div className="content-body">
                   <p>
-                    As part of the EKK Group, PT. Eagle Industry Indonesia consistently conducts environmental preservation activities.
-                    The company has been certified ISO 14001:2015 as evidence of implementing an internationally standardized environmental management system.
+                    {t('environmentalInitiatives.environmentalManagementSystemDesc')}
                   </p>
                 </div>
               </div>
@@ -160,10 +161,10 @@ const EnvironmentalInitiatives = () => {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h3 className="content-subtitle">Environmental Policy</h3>
+                <h3 className="content-subtitle">{t('environmentalInitiatives.environmentalPolicyTitle')}</h3>
                 <div className="content-body">
                   <p>
-                    PT. Eagle Industry Indonesia recognizes and cares for the environment. Committed to protecting the environment and preventing pollution as well as global warming, by saving energy and using resources, as well as utilizing renewable energy.
+                    {t('environmentalInitiatives.environmentalPolicyDesc')}
                   </p>
                 </div>
               </div>
@@ -173,7 +174,7 @@ const EnvironmentalInitiatives = () => {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h3 className="content-subtitle">Environmental Activities</h3>
+                <h3 className="content-subtitle">{t('environmentalInitiatives.environmentalActivitiesTitle')}</h3>
                 <div className="content-body">
                   <div className="initiatives-grid">
                     <div className="initiative-item">
@@ -181,8 +182,8 @@ const EnvironmentalInitiatives = () => {
                         <i className="bi bi-sun"></i>
                       </div>
                       <div className="initiative-content">
-                        <h4>Solar Panel Generation</h4>
-                        <p>PT. Eagle Industry Indonesia began utilizing solar power generation since early 2025, as part of efforts to reduce CO2 emissions.</p>
+                        <h4>{t('environmentalInitiatives.solarPanelGenerationTitle')}</h4>
+                        <p>{t('environmentalInitiatives.solarPanelGenerationDesc')}</p>
                       </div>
                     </div>
                   </div>
@@ -194,10 +195,10 @@ const EnvironmentalInitiatives = () => {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h3 className="content-subtitle">Environmental Awards and Certifications</h3>
+                <h3 className="content-subtitle">{t('environmentalInitiatives.environmentalAwardsTitle')}</h3>
                 <div className="content-body">
                   <p>
-                    PT. Eagle Industry Indonesia implements ISO 14001:2015 Environmental Management System. Then received the PROPER Blue rating from the Ministry of Environment and Forestry of the Republic of Indonesia, as recognition for compliance with environmental regulations in Indonesia.
+                    {t('environmentalInitiatives.environmentalAwardsDesc')}
                   </p>
                 </div>
               </div>
@@ -212,42 +213,42 @@ const EnvironmentalInitiatives = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Environmental & Safety Certifications</h2>
-                <p>Our commitment to environmental management and occupational health & safety standards</p>
+                <h2>{t('environmentalInitiatives.environmentalSafetyCertificationsTitle')}</h2>
+                <p>{t('environmentalInitiatives.environmentalSafetyCertificationsDesc')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th style={{ width: '30%' }}>Certification</th>
-                      <th>Standard</th>
-                      <th>Description</th>
+                      <th style={{ width: '30%' }}>{t('environmentalInitiatives.certificationTable.certification')}</th>
+                      <th>{t('environmentalInitiatives.certificationTable.standard')}</th>
+                      <th>{t('environmentalInitiatives.certificationTable.description')}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Quality Management System</td>
+                      <td>{t('environmentalInitiatives.certificationTable.qualityManagementSystem')}</td>
                       <td>ISO 9001:2015</td>
-                      <td>International standard for quality management systems that demonstrates our ability to consistently provide products and services that meet customer and regulatory requirements while enhancing customer satisfaction</td>
+                      <td>{t('environmentalInitiatives.certificationTable.qualityManagementSystemDesc')}</td>
                     </tr>
                     <tr>
-                      <td>Environmental Management System</td>
+                      <td>{t('environmentalInitiatives.certificationTable.environmentalManagementSystem')}</td>
                       <td>ISO 14001:2015</td>
-                      <td>International standard for environmental management systems that helps organizations minimize their environmental impact while complying with regulations</td>
+                      <td>{t('environmentalInitiatives.certificationTable.environmentalManagementSystemDesc')}</td>
                     </tr>
                     <tr>
-                      <td>Occupational Health & Safety Management</td>
+                      <td>{t('environmentalInitiatives.certificationTable.occupationalHealthSafety')}</td>
                       <td>ISO 45001:2018</td>
-                      <td>International standard for occupational health and safety management systems that provides a framework for improving employee safety, reducing workplace risks, and creating better working conditions</td>
+                      <td>{t('environmentalInitiatives.certificationTable.occupationalHealthSafetyDesc')}</td>
                     </tr>
                     <tr>
-                      <td>Environmental Compliance</td>
+                      <td>{t('environmentalInitiatives.certificationTable.environmentalCompliance')}</td>
                       <td>PROPER Blue</td>
-                      <td>Recognition from the Ministry of Environment and Forestry of the Republic of Indonesia for compliance with environmental regulations in industrial operations</td>
+                      <td>{t('environmentalInitiatives.certificationTable.environmentalComplianceDesc')}</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: These certifications demonstrate our commitment to environmental preservation, occupational health & safety, and sustainable practices.</p>
+                <p className="note-text">{t('environmentalInitiatives.certificationTable.noteText')}</p>
               </div>
             </div>
           </div>
@@ -260,8 +261,8 @@ const EnvironmentalInitiatives = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Certification Evidence</h2>
-                <p>View our environmental certifications and compliance documents</p>
+                <h2>{t('environmentalInitiatives.certificationEvidenceTitle')}</h2>
+                <p>{t('environmentalInitiatives.certificationEvidenceDesc')}</p>
               </div>
               <div className="certificates-grid" data-aos="fade-up" data-aos-delay="100">
                 {certificates.map((cert) => (
@@ -273,15 +274,14 @@ const EnvironmentalInitiatives = () => {
                       <h3>{cert.name}</h3>
                       <p>{cert.description}</p>
                       <div className="certificate-details">
-                        <p><strong>Issuer:</strong> {cert.issuer}</p>
-                        <p><strong>Issue Date:</strong> {new Date(cert.issueDate).toLocaleDateString()}</p>
-                        <p><strong>Expiry Date:</strong> {new Date(cert.expiryDate).toLocaleDateString()}</p>
+                        <p><strong>{t('environmentalInitiatives.issuer')}:</strong> {cert.issuer}</p>
+                        <p><strong>{t('environmentalInitiatives.issueDate')}:</strong> {new Date(cert.issueDate).toLocaleDateString()}</p>
                       </div>
                       <button
                         className="btn-view-certificate"
                         onClick={() => openPdfViewer(cert)}
                       >
-                        <i className="bi bi-file-earmark-pdf"></i> View Certificate
+                        <i className="bi bi-file-earmark-pdf"></i> {t('environmentalInitiatives.viewCertificate')}
                       </button>
                     </div>
                   </div>
@@ -321,8 +321,8 @@ const EnvironmentalInitiatives = () => {
       <section id="related-topics" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Sustainability Topics</h2>
-            <p>Explore more about our sustainability initiatives</p>
+            <h2>{t('environmentalInitiatives.relatedTopicsTitle')}</h2>
+            <p>{t('environmentalInitiatives.relatedTopicsDesc')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -332,7 +332,7 @@ const EnvironmentalInitiatives = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Concept of Sustainability" />
                   </div>
                   <div className="card-caption">
-                    <span>Concept of Sustainability</span>
+                    <span>{t('environmentalInitiatives.conceptOfSustainabilityCard')}</span>
                   </div>
                 </Link>
               </div>
@@ -344,7 +344,7 @@ const EnvironmentalInitiatives = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Social Contribution Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Social Contribution Initiatives</span>
+                    <span>{t('environmentalInitiatives.socialContributionInitiativesCard')}</span>
                   </div>
                 </Link>
               </div>
@@ -356,7 +356,7 @@ const EnvironmentalInitiatives = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Occupational Health & Safety" />
                   </div>
                   <div className="card-caption">
-                    <span>Occupational Health & Safety</span>
+                    <span>{t('environmentalInitiatives.occupationalHealthSafetyCard')}</span>
                   </div>
                 </Link>
               </div>
@@ -372,9 +372,9 @@ const EnvironmentalInitiatives = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/sustainability">Sustainability</Link></li>
-                  <li className="current">Environmental Initiatives</li>
+                  <li><Link to="/">{t('header.home')}</Link></li>
+                  <li><Link to="/sustainability">{t('sustainability.title')}</Link></li>
+                  <li className="current">{t('environmentalInitiatives.title')}</li>
                 </ol>
               </nav>
             </div>

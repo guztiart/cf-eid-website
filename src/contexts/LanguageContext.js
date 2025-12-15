@@ -219,6 +219,132 @@ export const translations = {
       contactUs: "Contact Us"
     },
     
+    // Social Contribution Initiatives Page
+    socialContributionInitiatives: {
+      pageTitle: "Social Contribution Initiatives",
+      breadcrumbHome: "Home",
+      breadcrumbSustainability: "Sustainability",
+      breadcrumbCurrent: "Social Contribution Initiatives",
+      title: "Social Contribution Initiatives",
+      sustainability: "Sustainability",
+      conceptOfSustainability: "Concept of Sustainability",
+      environmentalInitiatives: "Environmental Initiatives",
+      occupationalHealthSafety: "Occupational Health & Safety",
+      
+      // Social Contribution Details Section
+      socialContributionTitle: "Social Contribution at PT Eagle Industry Indonesia",
+      socialContributionDesc: "At PT Eagle Industry Indonesia, we are committed to making a positive impact on society through our Corporate Social Responsibility (CSR) initiatives. Our social contribution programs focus on supporting the community, helping those in need, and fostering sustainable development in the areas surrounding our operations.",
+      
+      // CSR Activities Section
+      csrActivitiesTitle: "CSR Activities",
+      csrActivitiesSubtitle: "Our commitment to social responsibility and community support",
+      
+      // Qurban Activity
+      qurbanTitle: "Qurban Activity - Eid al-Adha",
+      qurbanDesc: "The company runs an annual Qurban program on Eid al-Adha. Qurban meat distribution is given to orphans/poor/needy around the company.",
+      qurbanHighlight1: "Annual Qurban program held every Eid al-Adha",
+      qurbanHighlight2: "Distribution of Qurban meat to the underprivileged community",
+      qurbanHighlight3: "Focus on orphans, poor, and needy around the company location",
+      qurbanHighlight4: "Involving employees in program implementation",
+      qurbanCaption: "Eid al-Adha Qurban Activity",
+      
+      // Ramadhan Charity Activity
+      ramadhanTitle: "Ramadhan Charity for Orphans & Needy",
+      ramadhanDesc: "The company regularly holds Ramadhan charity activities by inviting orphans to share happiness in the holy month.",
+      ramadhanHighlight1: "Regular charity program every Ramadhan",
+      ramadhanHighlight2: "Inviting orphans to break fast together",
+      ramadhanHighlight3: "Providing assistance in the form of charity and school supplies",
+      ramadhanHighlight4: "Creating moments of sharing happiness in the holy month of Ramadhan",
+      ramadhanCaption: "Ramadhan Charity for Orphans & Needy",
+      
+      // Flood Victim Support Activity
+      floodVictimTitle: "Company Support for Flood Victims",
+      floodVictimDesc: "The company provides assistance to the surrounding community affected by floods as a form of concern for the surrounding environment.",
+      floodVictimHighlight1: "Rapid response to flood disasters around the company",
+      floodVictimHighlight2: "Distribution of assistance in the form of basic necessities and food supplies",
+      floodVictimHighlight3: "Direct assistance to affected flood victims",
+      floodVictimHighlight4: "Form of social concern for the surrounding community",
+      floodVictimCaption: "Flood Victim Assistance",
+      
+      // Related Topics Section
+      relatedTopicsTitle: "Related Sustainability Topics",
+      relatedTopicsSubtitle: "Explore more about our sustainability initiatives",
+      conceptOfSustainabilityCard: "Concept of Sustainability",
+      environmentalInitiativesCard: "Environmental Initiatives",
+      occupationalHealthSafetyCard: "Occupational Health & Safety"
+    },
+    
+    // Environmental Initiatives Page
+    environmentalInitiatives: {
+      pageTitle: "Environmental Initiatives",
+      breadcrumbHome: "Home",
+      breadcrumbSustainability: "Sustainability",
+      breadcrumbCurrent: "Environmental Initiatives",
+      title: "Environmental Initiatives",
+      sustainability: "Sustainability",
+      conceptOfSustainability: "Concept of Sustainability",
+      environmentalInitiatives: "Environmental Initiatives",
+      occupationalHealthSafety: "Occupational Health & Safety",
+      socialContributionInitiatives: "Social Contribution Initiatives",
+      
+      // Environmental Initiatives Details Section
+      environmentalInitiativesTitle: "Environmental Initiatives at PT. Eagle Industry Indonesia",
+      environmentalInitiativesDesc1: "PT. Eagle Industry Indonesia operates in the manufacturing of seals for automotive components with main processes of Casting and O-ring that function as lubricant retainers with the external environment such as water, mud, or dust in the under carrier area of construction machinery, heavy equipment, or agricultural machines.",
+      environmentalInitiativesDesc2: "With precision technology and high quality, our products help improve machine reliability while supporting environmental impact reduction, as they play a role in preventing pollution from oil or fluid leakage to the ground.",
+      
+      // Environmental Management System Section
+      environmentalManagementSystemTitle: "Environmental Management System",
+      environmentalManagementSystemDesc: "As part of the EKK Group, PT. Eagle Industry Indonesia consistently conducts environmental preservation activities. The company has been certified ISO 14001:2015 as evidence of implementing an internationally standardized environmental management system.",
+      
+      // Environmental Policy Section
+      environmentalPolicyTitle: "Environmental Policy",
+      environmentalPolicyDesc: "PT. Eagle Industry Indonesia recognizes and cares for the environment. Committed to protecting the environment and preventing pollution as well as global warming, by saving energy and using resources, as well as utilizing renewable energy.",
+      
+      // Environmental Activities Section
+      environmentalActivitiesTitle: "Environmental Activities",
+      solarPanelGenerationTitle: "Solar Panel Generation",
+      solarPanelGenerationDesc: "PT. Eagle Industry Indonesia began utilizing solar power generation since early 2025, as part of efforts to reduce CO2 emissions.",
+      
+      // Environmental Awards and Certifications Section
+      environmentalAwardsTitle: "Environmental Awards and Certifications",
+      environmentalAwardsDesc: "PT. Eagle Industry Indonesia implements ISO 14001:2015 Environmental Management System. Then received the PROPER Blue rating from the Ministry of Environment and Forestry of the Republic of Indonesia, as recognition for compliance with environmental regulations in Indonesia.",
+      
+      // Environmental & Safety Certifications Section
+      environmentalSafetyCertificationsTitle: "Environmental & Safety Certifications",
+      environmentalSafetyCertificationsDesc: "Our commitment to environmental management and occupational health & safety standards",
+      
+      // Certification Table
+      certificationTable: {
+        certification: "Certification",
+        standard: "Standard",
+        description: "Description",
+        qualityManagementSystem: "Quality Management System",
+        qualityManagementSystemDesc: "International standard for quality management systems that demonstrates our ability to consistently provide products and services that meet customer and regulatory requirements while enhancing customer satisfaction",
+        environmentalManagementSystem: "Environmental Management System",
+        environmentalManagementSystemDesc: "International standard for environmental management systems that helps organizations minimize their environmental impact while complying with regulations",
+        occupationalHealthSafety: "Occupational Health & Safety Management",
+        occupationalHealthSafetyDesc: "International standard for occupational health and safety management systems that provides a framework for improving employee safety, reducing workplace risks, and creating better working conditions",
+        environmentalCompliance: "Environmental Compliance",
+        environmentalComplianceDesc: "Recognition from the Ministry of Environment and Forestry of the Republic of Indonesia for compliance with environmental regulations in industrial operations",
+        noteText: "Note: These certifications demonstrate our commitment to environmental preservation, occupational health & safety, and sustainable practices."
+      },
+      
+      // Certification Evidence Section
+      certificationEvidenceTitle: "Certification Evidence",
+      certificationEvidenceDesc: "View our environmental certifications and compliance documents",
+      issuer: "Issuer",
+      issueDate: "Issue Date",
+      expiryDate: "Expiry Date",
+      viewCertificate: "View Certificate",
+      
+      // Related Topics Section
+      relatedTopicsTitle: "Related Sustainability Topics",
+      relatedTopicsDesc: "Explore more about our sustainability initiatives",
+      conceptOfSustainabilityCard: "Concept of Sustainability",
+      socialContributionInitiativesCard: "Social Contribution Initiatives",
+      occupationalHealthSafetyCard: "Occupational Health & Safety"
+    },
+    
     // Contact Page
     contact: {
       pageTitle: "Inquiry Form",
@@ -1011,6 +1137,132 @@ export const translations = {
       ctaTitle: "Bergabunglah dalam Perjalanan Keberlanjutan Kami",
       ctaDesc: "Kami berkomitmen untuk menciptakan nilai berkelanjutan bagi semua pemangku kepentingan kami. Bersama, kita dapat membangun masa depan yang lebih berkelanjutan melalui inovasi, tanggung jawab, dan kolaborasi.",
       contactUs: "Hubungi Kami"
+    },
+    
+    // Social Contribution Initiatives Page
+    socialContributionInitiatives: {
+      pageTitle: "Inisiatif Kontribusi Sosial",
+      breadcrumbHome: "Beranda",
+      breadcrumbSustainability: "Keberlanjutan",
+      breadcrumbCurrent: "Inisiatif Kontribusi Sosial",
+      title: "Inisiatif Kontribusi Sosial",
+      sustainability: "Keberlanjutan",
+      conceptOfSustainability: "Konsep Keberlanjutan",
+      environmentalInitiatives: "Inisiatif Lingkungan",
+      occupationalHealthSafety: "Kesehatan & Keselamatan Kerja",
+      
+      // Social Contribution Details Section
+      socialContributionTitle: "Kontribusi Sosial di PT Eagle Industri Indonesia",
+      socialContributionDesc: "Di PT Eagle Industry Indonesia, kami berkomitmen untuk memberikan dampak positif pada masyarakat melalui inisiatif Tanggung Jawab Sosial Perusahaan (CSR) kami. Program kontribusi sosial kami berfokus pada mendukung masyarakat, membantu mereka yang membutuhkan, dan mendorong pembangunan berkelanjutan di area sekitar operasi kami.",
+      
+      // CSR Activities Section
+      csrActivitiesTitle: "Kegiatan CSR",
+      csrActivitiesSubtitle: "Komitmen kami terhadap tanggung jawab sosial dan dukungan masyarakat",
+      
+      // Qurban Activity
+      qurbanTitle: "Kegiatan Qurban - Idul Adha",
+      qurbanDesc: "Perusahaan menjalankan program Qurban tahunan pada Hari Raya Idul Adha. Distribusi daging Qurban diberikan kepada yatim/piatu/dhuafa di sekitar perusahaan.",
+      qurbanHighlight1: "Program Qurban tahunan dilaksanakan setiap Hari Raya Idul Adha",
+      qurbanHighlight2: "Distribusi daging Qurban kepada masyarakat kurang mampu",
+      qurbanHighlight3: "Fokus pada yatim, piatu, dan dhuafa di sekitar lokasi perusahaan",
+      qurbanHighlight4: "Melibatkan karyawan dalam pelaksanaan program",
+      qurbanCaption: "Kegiatan Qurban Idul Adha",
+      
+      // Ramadhan Charity Activity
+      ramadhanTitle: "Berbagi Kebahagiaan Ramadhan untuk Anak Yatim & Piatu",
+      ramadhanDesc: "Perusahaan secara rutin mengadakan kegiatan santunan Ramadhan dengan mengundang anak yatim piatu untuk berbagi kebahagiaan di bulan suci.",
+      ramadhanHighlight1: "Program santunan rutin setiap bulan Ramadhan",
+      ramadhanHighlight2: "Mengundang anak yatim piatu untuk berbuka puasa bersama",
+      ramadhanHighlight3: "Memberikan bantuan berupa santunan dan perlengkapan sekolah",
+      ramadhanHighlight4: "Menciptakan momen berbagi kebahagiaan di bulan suci Ramadhan",
+      ramadhanCaption: "Santunan Ramadhan Anak Yatim & Piatu",
+      
+      // Flood Victim Support Activity
+      floodVictimTitle: "Dukungan Perusahaan bagi Korban Banjir",
+      floodVictimDesc: "Perusahaan menyalurkan bantuan bagi masyarakat sekitar yang terdampak banjir sebagai wujud kepedulian terhadap lingkungan sekitar.",
+      floodVictimHighlight1: "Respons cepat terhadap bencana banjir di sekitar perusahaan",
+      floodVictimHighlight2: "Penyaluran bantuan berupa sembako dan kebutuhan pokok",
+      floodVictimHighlight3: "Bantuan langsung kepada korban banjir yang terdampak",
+      floodVictimHighlight4: "Bentuk kepedulian sosial terhadap masyarakat sekitar",
+      floodVictimCaption: "Bantuan Korban Banjir",
+      
+      // Related Topics Section
+      relatedTopicsTitle: "Topik Keberlanjutan Terkait",
+      relatedTopicsSubtitle: "Jelajahi lebih lanjut tentang inisiatif keberlanjutan kami",
+      conceptOfSustainabilityCard: "Konsep Keberlanjutan",
+      environmentalInitiativesCard: "Inisiatif Lingkungan",
+      occupationalHealthSafetyCard: "Kesehatan & Keselamatan Kerja"
+    },
+    
+    // Environmental Initiatives Page
+    environmentalInitiatives: {
+      pageTitle: "Inisiatif Lingkungan",
+      breadcrumbHome: "Beranda",
+      breadcrumbSustainability: "Keberlanjutan",
+      breadcrumbCurrent: "Inisiatif Lingkungan",
+      title: "Inisiatif Lingkungan",
+      sustainability: "Keberlanjutan",
+      conceptOfSustainability: "Konsep Keberlanjutan",
+      environmentalInitiatives: "Inisiatif Lingkungan",
+      occupationalHealthSafety: "Kesehatan & Keselamatan Kerja",
+      socialContributionInitiatives: "Inisiatif Kontribusi Sosial",
+      
+      // Environmental Initiatives Details Section
+      environmentalInitiativesTitle: "Inisiatif Lingkungan di PT. Eagle Industry Indonesia",
+      environmentalInitiativesDesc1: "PT. Eagle Industry Indonesia beroperasi dalam manufaktur seal untuk komponen otomotif dengan proses utama Casting dan O-ring yang berfungsi sebagai penahan pelumas dengan lingkungan eksternal seperti air, lumpur, atau debu di area under carrier mesin konstruksi, alat berat, atau mesin pertanian.",
+      environmentalInitiativesDesc2: "Dengan teknologi presisi dan kualitas tinggi, produk kami membantu meningkatkan keandalan mesin sambil mendukung pengurangan dampak lingkungan, karena mereka berperan dalam mencegah polusi dari kebocoran oli atau fluida ke tanah.",
+      
+      // Environmental Management System Section
+      environmentalManagementSystemTitle: "Sistem Manajemen Lingkungan",
+      environmentalManagementSystemDesc: "Sebagai bagian dari Grup EKK, PT. Eagle Industry Indonesia secara konsisten melakukan kegiatan pelestarian lingkungan. Perusahaan telah tersertifikasi ISO 14001:2015 sebagai bukti implementasi sistem manajemen lingkungan yang distandarisasi secara internasional.",
+      
+      // Environmental Policy Section
+      environmentalPolicyTitle: "Kebijakan Lingkungan",
+      environmentalPolicyDesc: "PT. Eagle Industry Indonesia mengakui dan peduli terhadap lingkungan. Berkomitmen untuk melindungi lingkungan dan mencegah polusi serta pemanasan global, dengan menghemat energi dan menggunakan sumber daya, serta memanfaatkan energi terbarukan.",
+      
+      // Environmental Activities Section
+      environmentalActivitiesTitle: "Kegiatan Lingkungan",
+      solarPanelGenerationTitle: "Generasi Panel Surya",
+      solarPanelGenerationDesc: "PT. Eagle Industry Indonesia mulai memanfaatkan pembangkit listrik tenaga surya sejak awal 2025, sebagai bagian dari upaya mengurangi emisi CO2.",
+      
+      // Environmental Awards and Certifications Section
+      environmentalAwardsTitle: "Penghargaan dan Sertifikasi Lingkungan",
+      environmentalAwardsDesc: "PT. Eagle Industry Indonesia mengimplementasikan Sistem Manajemen Lingkungan ISO 14001:2015. Kemudian menerima peringkat PROPER Biru dari Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, sebagai pengakuan untuk kepatuhan terhadap peraturan lingkungan di Indonesia.",
+      
+      // Environmental & Safety Certifications Section
+      environmentalSafetyCertificationsTitle: "Sertifikasi Lingkungan & Keselamatan",
+      environmentalSafetyCertificationsDesc: "Komitmen kami terhadap manajemen lingkungan dan standar kesehatan & keselamatan kerja",
+      
+      // Certification Table
+      certificationTable: {
+        certification: "Sertifikasi",
+        standard: "Standar",
+        description: "Deskripsi",
+        qualityManagementSystem: "Sistem Manajemen Mutu",
+        qualityManagementSystemDesc: "Standar internasional untuk sistem manajemen mutu yang menunjukkan kemampuan kami untuk secara konsisten menyediakan produk dan layanan yang memenuhi persyaratan pelanggan dan peraturan sambil meningkatkan kepuasan pelanggan",
+        environmentalManagementSystem: "Sistem Manajemen Lingkungan",
+        environmentalManagementSystemDesc: "Standar internasional untuk sistem manajemen lingkungan yang membantu organisasi meminimalkan dampak lingkungan mereka sambil mematuhi peraturan",
+        occupationalHealthSafety: "Manajemen Kesehatan & Keselamatan Kerja",
+        occupationalHealthSafetyDesc: "Standar internasional untuk sistem manajemen kesehatan dan keselamatan kerja yang menyediakan kerangka kerja untuk meningkatkan keselamatan karyawan, mengurangi risiko tempat kerja, dan menciptakan kondisi kerja yang lebih baik",
+        environmentalCompliance: "Kepatuhan Lingkungan",
+        environmentalComplianceDesc: "Pengakuan dari Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia untuk kepatuhan terhadap peraturan lingkungan dalam operasi industri",
+        noteText: "Catatan: Sertifikasi ini menunjukkan komitmen kami terhadap pelestarian lingkungan, kesehatan & keselamatan kerja, dan praktik berkelanjutan."
+      },
+      
+      // Certification Evidence Section
+      certificationEvidenceTitle: "Bukti Sertifikasi",
+      certificationEvidenceDesc: "Lihat sertifikasi lingkungan dan dokumen kepatuhan kami",
+      issuer: "Penerbit",
+      issueDate: "Tanggal Terbit",
+      expiryDate: "Tanggal Kadaluarsa",
+      viewCertificate: "Lihat Sertifikat",
+      
+      // Related Topics Section
+      relatedTopicsTitle: "Topik Keberlanjutan Terkait",
+      relatedTopicsDesc: "Jelajahi lebih lanjut tentang inisiatif keberlanjutan kami",
+      conceptOfSustainabilityCard: "Konsep Keberlanjutan",
+      socialContributionInitiativesCard: "Inisiatif Kontribusi Sosial",
+      occupationalHealthSafetyCard: "Kesehatan & Keselamatan Kerja"
     },
     
     // Contact Page
