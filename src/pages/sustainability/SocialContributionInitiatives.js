@@ -256,7 +256,7 @@ const SocialContributionInitiatives = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/concept-of-sustainability" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-1.jpg`} className="card-image" alt="Concept of Sustainability" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Concept of Sustainability" />
                   </div>
                   <div className="card-caption">
                     <span>Concept of Sustainability</span>
@@ -268,7 +268,7 @@ const SocialContributionInitiatives = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/environmental-initiatives" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-2.jpg`} className="card-image" alt="Environmental Initiatives" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Environmental Initiatives" />
                   </div>
                   <div className="card-caption">
                     <span>Environmental Initiatives</span>
@@ -280,7 +280,7 @@ const SocialContributionInitiatives = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/occupational-health-safety" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="card-image" alt="Occupational Health & Safety" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Occupational Health & Safety" />
                   </div>
                   <div className="card-caption">
                     <span>Occupational Health & Safety</span>

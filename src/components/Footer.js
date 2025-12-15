@@ -53,6 +53,10 @@ const Footer = () => {
             <h4 className="text-center mb-3">{t('footer.ourCertifications')}</h4>
             <div className="certifications-list d-flex justify-content-center flex-wrap">
               <div className="certification-item mx-3 mb-2">
+                <i className="bi bi-star-fill text-warning me-2"></i>
+                <span>ISO 9001:2015</span>
+              </div>
+              <div className="certification-item mx-3 mb-2">
                 <i className="bi bi-award-fill text-primary me-2"></i>
                 <span>ISO 14001:2015</span>
               </div>
@@ -72,7 +76,7 @@ const Footer = () => {
       <div className="container copyright text-center mt-4">
         <p>© <span>2024</span> <strong className="px-1 sitename">PT. Eagle Industry Indonesia</strong> <span>{t('footer.allRightsReserved')}</span></p>
         <div className="credits">
-          {t('footer.subsidiaryOf')} <a href="https://www.eagle-e.co.jp/english/" target="_blank" rel="noopener noreferrer">Eagle Industry Co., Ltd.</a> |
+          {t('footer.subsidiaryOf')} <a href="https://www.ekkeagle.com/en/" target="_blank" rel="noopener noreferrer">Eagle Industry Co., Ltd.</a> |
           {t('footer.designedBy')} <a href="https://www.instagram.com/riyy2410/" target="_blank" rel="noopener noreferrer">Riyanda Aditiya Senjaya</a>
         </div>
       </div>

@@ -236,7 +236,7 @@ const BladderDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AirCutValve.jpg`} className="card-image" alt="Air Cut Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Otomotif<br />Air Cut Valve' : 'Automobile<br />Air Cut Valve'}</span>
+                    <span>{t('products.automobile')}<br />{t('productDetails.airCutValve.title')}</span>
                   </div>
                 </Link>
               </div>
@@ -248,7 +248,7 @@ const BladderDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed_valve_double.jpg`} className="card-image" alt="Reed Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Otomotif<br />Reed Valve' : 'Automobile<br />Reed Valve'}</span>
+                    <span>{t('products.automobile')}<br />{t('productDetails.reedValve.title')}</span>
                   </div>
                 </Link>
               </div>
@@ -260,7 +260,7 @@ const BladderDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} className="card-image" alt="SUPERIOR O-Ring" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Solusi Penyegelan<br />SUPERIOR O-Ring' : 'Sealing Solutions<br />SUPERIOR O-Ring'}</span>
+                    <span>{language === 'id' ? 'Solusi Penyegelan' : 'Sealing Solutions'}<br />{t('productDetails.oRing.title')}</span>
                   </div>
                 </Link>
               </div>

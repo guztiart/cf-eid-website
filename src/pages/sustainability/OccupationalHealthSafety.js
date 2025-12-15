@@ -182,19 +182,6 @@ const OccupationalHealthSafety = () => {
                     </div>
                   </div>
                 </div>
-                
-                <div className="testimonial-item mt-4">
-                  <p>
-                    <i className="bi bi-quote quote-icon-left"></i>
-                    Safety is not only fundamental for management that respects human dignity, but also the personal desire and mission of all Group employees.
-                    <i className="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <div>
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/management/mrTsuru.webp`} className="testimonial-img" alt="" />
-                    <h3>EKK Group Safety Policy</h3>
-                    <h4>Eagle Industry Indonesia</h4>
-                  </div>
-                </div>
               </div>
             </div>
             
@@ -586,7 +573,7 @@ const OccupationalHealthSafety = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/concept-of-sustainability" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-1.jpg`} className="card-image" alt="Concept of Sustainability" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Concept of Sustainability" />
                   </div>
                   <div className="card-caption">
                     <span>Concept of Sustainability</span>
@@ -598,7 +585,7 @@ const OccupationalHealthSafety = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/environmental-initiatives" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-2.jpg`} className="card-image" alt="Environmental Initiatives" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Environmental Initiatives" />
                   </div>
                   <div className="card-caption">
                     <span>Environmental Initiatives</span>
@@ -610,7 +597,7 @@ const OccupationalHealthSafety = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/social-contribution-initiatives" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="card-image" alt="Social Contribution Initiatives" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Social Contribution Initiatives" />
                   </div>
                   <div className="card-caption">
                     <span>Social Contribution Initiatives</span>

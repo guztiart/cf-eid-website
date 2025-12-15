@@ -122,7 +122,7 @@ const Company = () => {
         <div className="container">
           <div className="row justify-content-around gy-4">
             <div className="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/management/mrTsuru.jpg`} alt="Management" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/management/mr-tetsuji-tsuru.png`} alt="Management" />
             </div>
             <div className="col-lg-5 d-flex flex-column justify-content-center management-message" data-aos="fade-up" data-aos-delay="200">
               <h3 className='text-start'>Management Message</h3>
@@ -149,15 +149,10 @@ const Company = () => {
           <div className="row justify-content-around gy-4">
             <div className="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1 management-message" data-aos="fade-up" data-aos-delay="100">
               <h3 className="text-start">{t('company.managingDirectorMessage')}</h3>
-              <p>{t('company.managingDirectorDesc1')}
-              
-              {t('company.managingDirectorDesc2')}
-              
-              {t('company.managingDirectorDesc3')}
-              
-              {t('company.managingDirectorDesc4')}
-              
-              {t('company.managingDirectorDesc5')}</p>
+              <p>We were founded in 1990 under the name PT NSO Indonesia, a subsidiary of Eagle Industry Co. Ltd., Japan, which specializes in automotive component manufacturing. In 1998, we changed our name to PT Eagle Industry Indonesia. We are currently located in East Jakarta Industrial Park (EJIP), Cikarang, West Java.</p>
+              <p>We manufacture floating seals for undercarriage components and provide other supporting products for automotive equipment.
+With our technology, we will continuously strive to innovate and provide the best for our customers. Our products are the result of our dedication, research, and commitment to meeting your needs. We believe that quality is our priority, and every step we take is dedicated to providing you with the best possible experience.</p>
+              <p>Thank you for your trust and support.</p>
               <div className="row">
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-easel flex-shrink-0"></i>
@@ -293,7 +288,7 @@ O Ring, Floating Seal for Construction Machinery Industry & supply Accumulator</
               </table>
             </div>
             <div className="col-lg-6 features-image" data-aos="fade-up" data-aos-delay="200">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/eid1.jpg`} alt="Company Overview" />
+              <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="Company Overview" />
             </div>
           </div>
         </div>

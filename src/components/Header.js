@@ -36,7 +36,7 @@ const Header = () => {
       <div className="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
         <Link to="/" className={`logo d-flex align-items-center ${isScrolled ? 'logo-scrolled' : ''}`}>
           <img className="logo-img" src={`${process.env.PUBLIC_URL}/assets/img/EKK-LOGO.jpg`} alt="Eagle Industry Indonesia" />
-          <h1 className={`sitename ${isScrolled ? 'sitename-scrolled' : ''}`}>Eagle Industry Indonesia</h1>
+          <h1 className={`sitename ${isScrolled ? 'sitename-scrolled' : ''}`}>PT. Eagle Industry Indonesia</h1>
           <span className={`dot ${isScrolled ? 'dot-scrolled' : ''}`}>.</span>
         </Link>
 

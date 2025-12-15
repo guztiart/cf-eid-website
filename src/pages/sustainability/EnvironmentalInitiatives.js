@@ -226,6 +226,11 @@ const EnvironmentalInitiatives = () => {
                   </thead>
                   <tbody>
                     <tr>
+                      <td>Quality Management System</td>
+                      <td>ISO 9001:2015</td>
+                      <td>International standard for quality management systems that demonstrates our ability to consistently provide products and services that meet customer and regulatory requirements while enhancing customer satisfaction</td>
+                    </tr>
+                    <tr>
                       <td>Environmental Management System</td>
                       <td>ISO 14001:2015</td>
                       <td>International standard for environmental management systems that helps organizations minimize their environmental impact while complying with regulations</td>
@@ -324,7 +329,7 @@ const EnvironmentalInitiatives = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/concept-of-sustainability" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-1.jpg`} className="card-image" alt="Concept of Sustainability" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Concept of Sustainability" />
                   </div>
                   <div className="card-caption">
                     <span>Concept of Sustainability</span>
@@ -336,7 +341,7 @@ const EnvironmentalInitiatives = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/climate-change-disclosure" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="card-image" alt="Social Contribution Initiatives" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Social Contribution Initiatives" />
                   </div>
                   <div className="card-caption">
                     <span>Social Contribution Initiatives</span>
@@ -348,7 +353,7 @@ const EnvironmentalInitiatives = () => {
               <div className="product-card h-100">
                 <Link to="/sustainability/occupational-health-safety" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/features-3.jpg`} className="card-image" alt="Occupational Health & Safety" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Occupational Health & Safety" />
                   </div>
                   <div className="card-caption">
                     <span>Occupational Health & Safety</span>

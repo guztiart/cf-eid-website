@@ -64,14 +64,6 @@ const Products = () => {
       detailsLink: "/products/airCutValve-details"
     },
     {
-      id: 6,
-      nameKey: "products.superiorORing",
-      descKey: "products.superiorORingDesc",
-      category: "floating-seal",
-      image: "/assets/img/product/oring-2.png",
-      detailsLink: "/products/oRing-details"
-    },
-    {
       id: 7,
       nameKey: "products.bladderAccumulator",
       descKey: "products.bladderAccumulatorDesc",
@@ -132,7 +124,7 @@ const Products = () => {
       nameKey: "products.serviceEngineer",
       descKey: "products.serviceEngineerDesc",
       category: "service-engineer",
-      image: "/assets/img/product/Enginer.png",
+      image: "/assets/img/product/Engineer-1.png",
       detailsLink: "/products/serviceEngineer-details"
     }
   ];

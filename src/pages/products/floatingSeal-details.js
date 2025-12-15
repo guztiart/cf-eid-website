@@ -232,57 +232,57 @@ const ProjectDetails = () => {
       </section>
 
       {/* Related Products */}
-            <section id="related-products" className="related-products section">
-              <div className="container">
-                <div className="section-title" data-aos="fade-up">
-                  <h2>{t('productDetails.relatedProducts')}</h2>
-                  <p>{t('productDetails.exploreSimilarProducts')}</p>
-                </div>
-                <div className="row gy-4">
-                  <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div className="product-card h-100">
-                      <Link to="/products/lipSeal-details" className="card-link">
-                        <div className="card-image-container">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
-                        </div>
-                        <div className="card-caption">
-                          <span>{language === 'id' ? 'untuk kompresor A/C<br />Tipe A Mechanical seal' : 'for A/C compressor<br />Type A Mechanical seal'}</span>
-                        </div>
-                      </Link>
-                    </div>
+      <section id="related-products" className="related-products section">
+        <div className="container">
+          <div className="section-title" data-aos="fade-up">
+            <h2>{t('productDetails.relatedProducts')}</h2>
+            <p>{t('productDetails.exploreSimilarProducts')}</p>
+          </div>
+          <div className="row gy-4">
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div className="product-card h-100">
+                <Link to="/products/lipSeal-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
-                  <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div className="product-card h-100">
-                      <Link to="/products/eh795-details" className="card-link">
-                        <div className="card-image-container">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
-                        </div>
-                        <div className="card-caption">
-                          <span>{language === 'id' ? 'untuk Water Pump<br />EH795/EH790' : 'for Water Pump<br />EH795/EH790'}</span>
-                        </div>
-                      </Link>
-                    </div>
+                  <div className="card-caption">
+                    <span>{t('productDetails.lipSeal.forAcCompressor')}<br />{t('productDetails.lipSeal.typeAMechanicalSeal')}</span>
                   </div>
-                  <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div className="product-card h-100">
-                      <Link to="/products/airCutValve-details" className="card-link">
-                        <div className="card-image-container">
-                          <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
-                        </div>
-                        <div className="card-caption">
-                          <span>{language === 'id' ? 'untuk Kompresor A/C Perpindahan Variabel<br />Katup Kontrol' : 'for Variable Displacement A/C Compressor<br />Control Valve'}</span>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="row mt-4">
-                  <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
-                    <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
-                  </div>
-                </div>
+                </Link>
               </div>
-            </section>
+            </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div className="product-card h-100">
+                <Link to="/products/eh795-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                  </div>
+                  <div className="card-caption">
+                    <span>{t('productDetails.lipSeal.forWaterPump')}<br />{t('productDetails.lipSeal.eh795EH790')}</span>
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div className="product-card h-100">
+                <Link to="/products/airCutValve-details" className="card-link">
+                  <div className="card-image-container">
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
+                  </div>
+                  <div className="card-caption">
+                    <span>{t('productDetails.lipSeal.forVariableDisplacementAcCompressor')}<br />{t('productDetails.lipSeal.controlValve')}</span>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+              <Link to="/products" className="btn btn-primary">{t('productDetails.toProductsTop')}</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Bottom Breadcrumb */}
       <section className="bottom-breadcrumb section">

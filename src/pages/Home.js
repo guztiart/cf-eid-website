@@ -524,7 +524,7 @@ const Home = () => {
                   </ul>
                 </div>
                 <div className="col-lg-6 order-1 order-lg-2 text-center">
-                  <img src="/assets/img/product/Rudder_seal.PNG" alt="Rudder Seal" className="img-fluid" />
+                  <img src="/assets/img/product/rudder-1.png" alt="Rudder Seal" className="img-fluid" />
                 </div>
               </div>
             </div>
