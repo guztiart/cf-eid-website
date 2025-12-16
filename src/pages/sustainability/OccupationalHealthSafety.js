@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../../hooks/useExternalLibs';
 import ImageModal from '../../components/ImageModal';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const OccupationalHealthSafety = () => {
   // Initialize external libraries using custom hooks
   useAOS();
+  
+  // Get translation function
+  const { t } = useLanguage();
   
   // State for image modal
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -82,12 +86,12 @@ const OccupationalHealthSafety = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Sustainability</h1>
+          <h1>{t('occupationalHealthSafety.pageTitle')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/sustainability">Sustainability</Link></li>
-              <li className="current">Occupational Health and Safety Initiatives</li>
+              <li><Link to="/">{t('occupationalHealthSafety.breadcrumbHome')}</Link></li>
+              <li><Link to="/sustainability">{t('occupationalHealthSafety.breadcrumbSustainability')}</Link></li>
+              <li className="current">{t('occupationalHealthSafety.breadcrumbCurrent')}</li>
             </ol>
           </nav>
         </div>
@@ -98,13 +102,13 @@ const OccupationalHealthSafety = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Occupational Health and Safety Initiatives</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('occupationalHealthSafety.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
-                  <li className="nav-item"><Link to="/sustainability">Sustainability</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">Concept of Sustainability</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/environmental-initiatives">Environmental Initiatives</Link></li>
-                  <li className="nav-item"><Link to="/sustainability/social-contribution-initiatives">Social Contribution Initiatives</Link></li>
+                  <li className="nav-item"><Link to="/sustainability">{t('occupationalHealthSafety.navSustainability')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/concept-of-sustainability">{t('occupationalHealthSafety.navConceptOfSustainability')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/environmental-initiatives">{t('occupationalHealthSafety.navEnvironmentalInitiatives')}</Link></li>
+                  <li className="nav-item"><Link to="/sustainability/social-contribution-initiatives">{t('occupationalHealthSafety.navSocialContributionInitiatives')}</Link></li>
                 </ul>
               </div>
             </div>
@@ -118,66 +122,62 @@ const OccupationalHealthSafety = () => {
           <div className="row justify-content-between gy-4">
             <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
-                <h2>Occupational Health and Safety at Eagle Industry Indonesia</h2>
+                <h2>{t('occupationalHealthSafety.mainTitle')}</h2>
                 <p>
-                  The EKK Group always strives to build a work environment that supports the physical and mental well-being of employees.
-                  The principle of Safety underlies that safety is not only a pillar of the company, but also of individuals within the Group.
+                  {t('occupationalHealthSafety.mainDescription')}
                 </p>
                 
-                <h3 className="mt-4">Our Health and Safety Management</h3>
+                <h3 className="mt-4">{t('occupationalHealthSafety.healthSafetyManagementTitle')}</h3>
                 <p>
-                  Occupational safety is our top priority. The EKK Group manages OHS through a structured organization led directly by top management.
-                  By implementing the international standard ISO 45001:2018 (Occupational Health and Safety), we ensure that all operational activities
-                  run safely, healthily, and sustainably.
+                  {t('occupationalHealthSafety.healthSafetyManagementDesc')}
                 </p>
                 
-                <h3 className="mt-4">EKK Occupational Health and Safety Policies</h3>
+                <h3 className="mt-4">{t('occupationalHealthSafety.ohsPoliciesTitle')}</h3>
                 
                 <div className="icon-box mt-4">
                   <i className="bi bi-shield-check"></i>
-                  <h4>Basic Group Safety Principle</h4>
-                  <p>Safety is not only fundamental for management that respects human dignity, but also the personal desire and mission of all Group employees.</p>
+                  <h4>{t('occupationalHealthSafety.basicSafetyPrincipleTitle')}</h4>
+                  <p>{t('occupationalHealthSafety.basicSafetyPrincipleDesc')}</p>
                 </div>
                 
                 <div className="icon-box mt-4">
                   <i className="bi bi-heart-pulse"></i>
-                  <h4>Basic Concept</h4>
-                  <p>Based on the Group's Basic Safety Principle, the EKK Group develops human resources who are healthy physically and mentally.
-                  At the same time, improving the OHS management system and involving relevant parties to create a comfortable, safe, and motivating work environment.</p>
+                  <h4>{t('occupationalHealthSafety.basicConceptTitle')}</h4>
+                  <p>{t('occupationalHealthSafety.basicConceptDesc')}</p>
                 </div>
                 
                 <div className="icon-box mt-4">
                   <i className="bi bi-book"></i>
-                  <h4>Activity Policy</h4>
+                  <h4>{t('occupationalHealthSafety.activityPolicyTitle')}</h4>
                   <div className="activity-policy-list">
                     <div className="policy-item">
                       <div className="policy-number">1</div>
                       <div className="policy-content">
-                        <p>Properly identify hazards related to business activities, assess risks, and control hazards by considering the hierarchy of controls to reduce risks with the participation and cooperation of all employees.</p>
+                        <p>{t('occupationalHealthSafety.activityPolicy1')}</p>
                       </div>
                     </div>
                     <div className="policy-item">
                       <div className="policy-number">2</div>
                       <div className="policy-content">
-                        <p>Establish occupational health and safety targets and pursue better performance through continuous improvement.</p>
+                        <p>{t('occupationalHealthSafety.activityPolicy2')}</p>
                       </div>
                     </div>
                     <div className="policy-item">
                       <div className="policy-number">3</div>
                       <div className="policy-content">
-                        <p>Comply with applicable laws and regulations as well as other requirements.</p>
+                        <p>{t('occupationalHealthSafety.activityPolicy3')}</p>
                       </div>
                     </div>
                     <div className="policy-item">
                       <div className="policy-number">4</div>
                       <div className="policy-content">
-                        <p>Value active discussions in the workplace, recognizing that good communication is an integral part of occupational health and safety.</p>
+                        <p>{t('occupationalHealthSafety.activityPolicy4')}</p>
                       </div>
                     </div>
                     <div className="policy-item">
                       <div className="policy-number">5</div>
                       <div className="policy-content">
-                        <p>Provide necessary education and training to ensure occupational health and safety while increasing employee awareness of the importance of health and safety.</p>
+                        <p>{t('occupationalHealthSafety.activityPolicy5')}</p>
                       </div>
                     </div>
                   </div>
@@ -187,18 +187,18 @@ const OccupationalHealthSafety = () => {
             
             <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <div className="portfolio-info">
-                <h3>OHS Performance</h3>
+                <h3>{t('occupationalHealthSafety.ohsPerformanceTitle')}</h3>
                 <ul>
-                  <li><strong>Safety Certification</strong> <span>ISO 45001:2018</span></li>
-                  <li><strong>LTI Rate</strong> <span>Zero (Target)</span></li>
-                  <li><strong>Safety Training</strong> <span>100% Coverage</span></li>
-                  <li><strong>Health Check-ups</strong> <span>Annual for All</span></li>
-                  <li><strong>Safety Inspections</strong> <span>Monthly</span></li>
-                  <li><strong>Emergency Drills</strong> <span>Quarterly</span></li>
+                  <li><strong>{t('occupationalHealthSafety.safetyCertification')}</strong> <span>ISO 45001:2018</span></li>
+                  <li><strong>{t('occupationalHealthSafety.ltiRate')}</strong> <span>Zero (Target)</span></li>
+                  <li><strong>{t('occupationalHealthSafety.safetyTraining')}</strong> <span>100% Coverage</span></li>
+                  <li><strong>{t('occupationalHealthSafety.healthCheckups')}</strong> <span>Annual for All</span></li>
+                  <li><strong>{t('occupationalHealthSafety.safetyInspections')}</strong> <span>Monthly</span></li>
+                  <li><strong>{t('occupationalHealthSafety.emergencyDrills')}</strong> <span>Quarterly</span></li>
                 </ul>
                 
                 <div className="pt-3">
-                  <Link to="/sustainability" className="btn-visit">Back to Sustainability</Link>
+                  <Link to="/sustainability" className="btn-visit">{t('occupationalHealthSafety.backToSustainability')}</Link>
                 </div>
               </div>
             </div>
@@ -212,47 +212,47 @@ const OccupationalHealthSafety = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>OHS Performance and Targets</h2>
-                <p>Our commitment to measurable safety improvements</p>
+                <h2>{t('occupationalHealthSafety.performanceTitle')}</h2>
+                <p>{t('occupationalHealthSafety.performanceSubtitle')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th style={{ width: '30%' }}>Performance Indicator</th>
-                      <th>Target</th>
-                      <th>Current Performance</th>
+                      <th style={{ width: '30%' }}>{t('occupationalHealthSafety.performanceIndicator')}</th>
+                      <th>{t('occupationalHealthSafety.target')}</th>
+                      <th>{t('occupationalHealthSafety.currentPerformance')}</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Lost Time Injury (LTI) Rate</td>
+                      <td>{t('occupationalHealthSafety.ltiRateLabel')}</td>
                       <td>Zero</td>
                       <td>Zero for 3 consecutive years</td>
                     </tr>
                     <tr>
-                      <td>Total Recordable Injury Rate</td>
+                      <td>{t('occupationalHealthSafety.totalRecordableInjuryRate')}</td>
                       <td>Below 0.5</td>
                       <td>0.2 achieved in 2023</td>
                     </tr>
                     <tr>
-                      <td>Safety Training Completion</td>
+                      <td>{t('occupationalHealthSafety.safetyTrainingCompletion')}</td>
                       <td>100% of employees</td>
                       <td>100% completion rate</td>
                     </tr>
                     <tr>
-                      <td>Hazard Identification</td>
+                      <td>{t('occupationalHealthSafety.hazardIdentification')}</td>
                       <td>100% assessment coverage</td>
                       <td>98% coverage to date</td>
                     </tr>
                     <tr>
-                      <td>Emergency Response Time</td>
+                      <td>{t('occupationalHealthSafety.emergencyResponseTime')}</td>
                       <td>Less than 5 minutes</td>
                       <td>3.5 minutes average</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">Note: Performance indicators are monitored monthly and reviewed annually for continuous improvement.</p>
+                <p className="note-text">{t('occupationalHealthSafety.performanceNote')}</p>
               </div>
             </div>
           </div>
@@ -265,8 +265,8 @@ const OccupationalHealthSafety = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Safety Activities</h2>
-                <p>Our commitment to safety through various programs and initiatives</p>
+                <h2>{t('occupationalHealthSafety.safetyActivitiesTitle')}</h2>
+                <p>{t('occupationalHealthSafety.safetyActivitiesSubtitle')}</p>
               </div>
               
               {/* Safety Activities Overview Image */}
@@ -286,7 +286,7 @@ const OccupationalHealthSafety = () => {
                         margin: '0 auto'
                       }}
                     />
-                    <p className="img-caption text-center mt-2">Safety Training Overview</p>
+                    <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.safetyTrainingOverview')}</p>
                   </div>
                 </div>
               </div>
@@ -296,15 +296,15 @@ const OccupationalHealthSafety = () => {
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="activity-content">
-                      <h3 className="activity-title"><i className="bi bi-mortarboard text-primary me-2"></i>Training</h3>
+                      <h3 className="activity-title"><i className="bi bi-mortarboard text-primary me-2"></i>{t('occupationalHealthSafety.trainingTitle')}</h3>
                       <p className="activity-description">
-                        Training with topics on B3 Information System and Environmental Aspect Identification in the Workplace is routinely conducted every year to maintain understanding and increase employee awareness. These training sessions are designed to ensure all employees are equipped with the necessary knowledge to identify and handle hazardous materials safely.
+                        {t('occupationalHealthSafety.trainingDesc')}
                       </p>
                       <ul className="activity-highlights">
-                        <li>Annual B3 (Hazardous Materials) Information System training</li>
-                        <li>Environmental Aspect Identification in Workplace sessions</li>
-                        <li>Continuous education to maintain safety awareness</li>
-                        <li>Practical demonstrations and hands-on exercises</li>
+                        <li>{t('occupationalHealthSafety.trainingHighlight1')}</li>
+                        <li>{t('occupationalHealthSafety.trainingHighlight2')}</li>
+                        <li>{t('occupationalHealthSafety.trainingHighlight3')}</li>
+                        <li>{t('occupationalHealthSafety.trainingHighlight4')}</li>
                       </ul>
                     </div>
                   </div>
@@ -313,11 +313,11 @@ const OccupationalHealthSafety = () => {
                       <div className="row g-3">
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img/activities/b3-1.jpg`} className="img-fluid rounded activity-img" alt="B3 Training" />
-                          <p className="img-caption text-center mt-2">B3 Training Session</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.b3TrainingSession')}</p>
                         </div>
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img//activities/b3-2.jpg`} className="img-fluid rounded activity-img" alt="Hazard Identification Training" />
-                          <p className="img-caption text-center mt-2">Hazard Identification Workshop</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.hazardIdentificationWorkshop')}</p>
                         </div>
                       </div>
                     </div>
@@ -330,15 +330,15 @@ const OccupationalHealthSafety = () => {
                 <div className="row align-items-center">
                   <div className="col-lg-6 order-lg-2">
                     <div className="activity-content">
-                      <h3 className="activity-title"><i className="bi bi-shield-exclamation text-warning me-2"></i>Safety Patrol</h3>
+                      <h3 className="activity-title"><i className="bi bi-shield-exclamation text-warning me-2"></i>{t('occupationalHealthSafety.safetyPatrolTitle')}</h3>
                       <p className="activity-description">
-                        As an effort to create a safe work environment, the company conducts monthly Safety Patrols involving the HSE team, Sachou (President Director), and Managers from all departments. This activity focuses on identifying hazardous conditions and ensuring proper implementation of 5S methodology in the work area.
+                        {t('occupationalHealthSafety.safetyPatrolDesc')}
                       </p>
                       <ul className="activity-highlights">
-                        <li>Monthly safety patrols with cross-departmental participation</li>
-                        <li>Focus on hazardous condition identification</li>
-                        <li>5S implementation monitoring and evaluation</li>
-                        <li>Regular follow-up meetings to review improvements</li>
+                        <li>{t('occupationalHealthSafety.safetyPatrolHighlight1')}</li>
+                        <li>{t('occupationalHealthSafety.safetyPatrolHighlight2')}</li>
+                        <li>{t('occupationalHealthSafety.safetyPatrolHighlight3')}</li>
+                        <li>{t('occupationalHealthSafety.safetyPatrolHighlight4')}</li>
                       </ul>
                     </div>
                   </div>
@@ -347,11 +347,11 @@ const OccupationalHealthSafety = () => {
                       <div className="row g-3">
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safety-patrol-3.jpg`} className="img-fluid rounded activity-img" alt="Safety Patrol" />
-                          <p className="img-caption text-center mt-2">Monthly Safety Patrol</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.monthlySafetyPatrol')}</p>
                         </div>
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safety-patrol-2.jpg`} className="img-fluid rounded activity-img" alt="5S Implementation" />
-                          <p className="img-caption text-center mt-2">5S Implementation Check</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.fiveSImplementationCheck')}</p>
                         </div>
                       </div>
                     </div>
@@ -364,15 +364,15 @@ const OccupationalHealthSafety = () => {
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="activity-content">
-                      <h3 className="activity-title"><i className="bi bi-exclamation-triangle text-danger me-2"></i>Emergency Plan</h3>
+                      <h3 className="activity-title"><i className="bi bi-exclamation-triangle text-danger me-2"></i>{t('occupationalHealthSafety.emergencyPlanTitle')}</h3>
                       <p className="activity-description">
-                        In facing emergency situations, the company has established structured handling steps. One potential emergency situation anticipated is fire. The company has comprehensive prevention plans, training programs, awareness campaigns, and routine inspections to ensure preparedness for any emergency situation.
+                        {t('occupationalHealthSafety.emergencyPlanDesc')}
                       </p>
                       <ul className="activity-highlights">
-                        <li>APAR (Light Fire Extinguisher) training and practice</li>
-                        <li>Regular evacuation simulations and drills</li>
-                        <li>Emergency response team formation and training</li>
-                        <li>Post-emergency recovery and evaluation procedures</li>
+                        <li>{t('occupationalHealthSafety.emergencyPlanHighlight1')}</li>
+                        <li>{t('occupationalHealthSafety.emergencyPlanHighlight2')}</li>
+                        <li>{t('occupationalHealthSafety.emergencyPlanHighlight3')}</li>
+                        <li>{t('occupationalHealthSafety.emergencyPlanHighlight4')}</li>
                       </ul>
                     </div>
                   </div>
@@ -381,11 +381,11 @@ const OccupationalHealthSafety = () => {
                       <div className="row g-3">
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img/activities/apar-2.jpg`} className="img-fluid rounded activity-img" alt="APAR Training" />
-                          <p className="img-caption text-center mt-2">APAR Training Session</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.aparTrainingSession')}</p>
                         </div>
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img/activities/erp-1.jpg`} className="img-fluid rounded activity-img" alt="Evacuation Simulation" />
-                          <p className="img-caption text-center mt-2">Evacuation Drill</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.evacuationDrill')}</p>
                         </div>
                       </div>
                     </div>
@@ -403,23 +403,23 @@ const OccupationalHealthSafety = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Traffic Safety Initiatives</h2>
-                <p>Ensuring safe commuting and transportation for all employees</p>
+                <h2>{t('occupationalHealthSafety.trafficSafetyTitle')}</h2>
+                <p>{t('occupationalHealthSafety.trafficSafetySubtitle')}</p>
               </div>
               
               <div className="activity-item" data-aos="fade-up" data-aos-delay="100">
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="activity-content">
-                      <h3 className="activity-title"><i className="bi bi-bicycle text-success me-2"></i>Safety Riding Program</h3>
+                      <h3 className="activity-title"><i className="bi bi-bicycle text-success me-2"></i>{t('occupationalHealthSafety.safetyRidingTitle')}</h3>
                       <p className="activity-description">
-                        Every year, we organize external training with the theme of Safety Riding, working with professionals, as an effort to increase awareness and safe driving skills for employees. Additionally, with monthly safety riding check activities, we hope to cultivate a culture of safe and responsible driving.
+                        {t('occupationalHealthSafety.safetyRidingDesc')}
                       </p>
                       <ul className="activity-highlights">
-                        <li>Annual external Safety Riding training with professionals</li>
-                        <li>Monthly safety riding checks and vehicle inspections</li>
-                        <li>Building a culture of safe and responsible driving</li>
-                        <li>Increasing employee awareness of traffic safety</li>
+                        <li>{t('occupationalHealthSafety.safetyRidingHighlight1')}</li>
+                        <li>{t('occupationalHealthSafety.safetyRidingHighlight2')}</li>
+                        <li>{t('occupationalHealthSafety.safetyRidingHighlight3')}</li>
+                        <li>{t('occupationalHealthSafety.safetyRidingHighlight4')}</li>
                       </ul>
                     </div>
                   </div>
@@ -428,11 +428,11 @@ const OccupationalHealthSafety = () => {
                       <div className="row g-3">
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safetyRiding-2.jpg`} className="img-fluid rounded activity-img" alt="Safety Riding Training" />
-                          <p className="img-caption text-center mt-2">Safety Riding Training</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.safetyRidingTraining')}</p>
                         </div>
                         <div className="col-6">
                           <img src={`${process.env.PUBLIC_URL}/assets/img/activities/safetyRiding-1.jpg`} className="img-fluid rounded activity-img" alt="Vehicle Inspection" />
-                          <p className="img-caption text-center mt-2">Monthly Vehicle Check</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.monthlyVehicleCheck')}</p>
                         </div>
                       </div>
                     </div>
@@ -450,23 +450,23 @@ const OccupationalHealthSafety = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Health Promotion</h2>
-                <p>Supporting employee well-being through various health and wellness programs</p>
+                <h2>{t('occupationalHealthSafety.healthPromotionTitle')}</h2>
+                <p>{t('occupationalHealthSafety.healthPromotionSubtitle')}</p>
               </div>
               
               <div className="activity-item" data-aos="fade-up" data-aos-delay="100">
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="activity-content">
-                      <h3 className="activity-title"><i className="bi bi-heart-pulse text-info me-2"></i>Employee Wellness Programs</h3>
+                      <h3 className="activity-title"><i className="bi bi-heart-pulse text-info me-2"></i>{t('occupationalHealthSafety.employeeWellnessTitle')}</h3>
                       <p className="activity-description">
-                        We realize the importance of health and hygiene of our employees. If employees are healthy and free from disease, they will be happy at work and work efficiently. The company provides various sports activity options to support physical fitness and mental well-being.
+                        {t('occupationalHealthSafety.employeeWellnessDesc')}
                       </p>
                       <ul className="activity-highlights">
-                        <li>Well-equipped gym facility for employee use</li>
-                        <li>Regular aerobic exercise sessions</li>
-                        <li>Badminton, table tennis, and volleyball clubs</li>
-                        <li>Soccer team and running club for sports enthusiasts</li>
+                        <li>{t('occupationalHealthSafety.wellnessHighlight1')}</li>
+                        <li>{t('occupationalHealthSafety.wellnessHighlight2')}</li>
+                        <li>{t('occupationalHealthSafety.wellnessHighlight3')}</li>
+                        <li>{t('occupationalHealthSafety.wellnessHighlight4')}</li>
                       </ul>
                     </div>
                   </div>
@@ -484,7 +484,7 @@ const OccupationalHealthSafety = () => {
                               <i className="bi bi-zoom-in"></i>
                             </div>
                           </div>
-                          <p className="img-caption text-center mt-2">Gym {healthPromotionImages.gym.length > 1 ? `(${healthPromotionImages.gym.length} photos)` : ''}</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.gym')} {healthPromotionImages.gym.length > 1 ? `(${healthPromotionImages.gym.length} ${t('occupationalHealthSafety.photos')})` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
                           <div
@@ -497,7 +497,7 @@ const OccupationalHealthSafety = () => {
                               <i className="bi bi-zoom-in"></i>
                             </div>
                           </div>
-                          <p className="img-caption text-center mt-2">Aerobic {healthPromotionImages.aerobic.length > 1 ? `(${healthPromotionImages.aerobic.length} photos)` : ''}</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.aerobic')} {healthPromotionImages.aerobic.length > 1 ? `(${healthPromotionImages.aerobic.length} ${t('occupationalHealthSafety.photos')})` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
                           <div
@@ -510,7 +510,7 @@ const OccupationalHealthSafety = () => {
                               <i className="bi bi-zoom-in"></i>
                             </div>
                           </div>
-                          <p className="img-caption text-center mt-2">Badminton {healthPromotionImages.badminton.length > 1 ? `(${healthPromotionImages.badminton.length} photos)` : ''}</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.badminton')} {healthPromotionImages.badminton.length > 1 ? `(${healthPromotionImages.badminton.length} ${t('occupationalHealthSafety.photos')})` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
                           <div
@@ -523,7 +523,7 @@ const OccupationalHealthSafety = () => {
                               <i className="bi bi-zoom-in"></i>
                             </div>
                           </div>
-                          <p className="img-caption text-center mt-2">Table Tennis {healthPromotionImages.tableTennis.length > 1 ? `(${healthPromotionImages.tableTennis.length} photos)` : ''}</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.tableTennis')} {healthPromotionImages.tableTennis.length > 1 ? `(${healthPromotionImages.tableTennis.length} ${t('occupationalHealthSafety.photos')})` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
                           <div
@@ -536,7 +536,7 @@ const OccupationalHealthSafety = () => {
                               <i className="bi bi-zoom-in"></i>
                             </div>
                           </div>
-                          <p className="img-caption text-center mt-2">Volleyball {healthPromotionImages.volleyball.length > 1 ? `(${healthPromotionImages.volleyball.length} photos)` : ''}</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.volleyball')} {healthPromotionImages.volleyball.length > 1 ? `(${healthPromotionImages.volleyball.length} ${t('occupationalHealthSafety.photos')})` : ''}</p>
                         </div>
                         <div className="col-md-4 col-6">
                           <div
@@ -549,7 +549,7 @@ const OccupationalHealthSafety = () => {
                               <i className="bi bi-zoom-in"></i>
                             </div>
                           </div>
-                          <p className="img-caption text-center mt-2">Soccer {healthPromotionImages.soccer.length > 1 ? `(${healthPromotionImages.soccer.length} photos)` : ''}</p>
+                          <p className="img-caption text-center mt-2">{t('occupationalHealthSafety.soccer')} {healthPromotionImages.soccer.length > 1 ? `(${healthPromotionImages.soccer.length} ${t('occupationalHealthSafety.photos')})` : ''}</p>
                         </div>
                       </div>
                     </div>
@@ -565,8 +565,8 @@ const OccupationalHealthSafety = () => {
       <section id="related-topics" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Sustainability Topics</h2>
-            <p>Explore more about our sustainability initiatives</p>
+            <h2>{t('occupationalHealthSafety.relatedTopicsTitle')}</h2>
+            <p>{t('occupationalHealthSafety.relatedTopicsSubtitle')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -576,7 +576,7 @@ const OccupationalHealthSafety = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Concept of Sustainability" />
                   </div>
                   <div className="card-caption">
-                    <span>Concept of Sustainability</span>
+                    <span>{t('occupationalHealthSafety.conceptOfSustainability')}</span>
                   </div>
                 </Link>
               </div>
@@ -588,7 +588,7 @@ const OccupationalHealthSafety = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Environmental Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Environmental Initiatives</span>
+                    <span>{t('occupationalHealthSafety.environmentalInitiatives')}</span>
                   </div>
                 </Link>
               </div>
@@ -600,7 +600,7 @@ const OccupationalHealthSafety = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Social Contribution Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Social Contribution Initiatives</span>
+                    <span>{t('occupationalHealthSafety.socialContributionInitiatives')}</span>
                   </div>
                 </Link>
               </div>
@@ -616,9 +616,9 @@ const OccupationalHealthSafety = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/sustainability">Sustainability</Link></li>
-                  <li className="current">Occupational Health and Safety Initiatives</li>
+                  <li><Link to="/">{t('occupationalHealthSafety.breadcrumbHome')}</Link></li>
+                  <li><Link to="/sustainability">{t('occupationalHealthSafety.breadcrumbSustainability')}</Link></li>
+                  <li className="current">{t('occupationalHealthSafety.breadcrumbCurrent')}</li>
                 </ol>
               </nav>
             </div>

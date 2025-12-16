@@ -125,19 +125,14 @@ const Company = () => {
               <img src={`${process.env.PUBLIC_URL}/assets/img/management/mr-tetsuji-tsuru.png`} alt="Management" />
             </div>
             <div className="col-lg-5 d-flex flex-column justify-content-center management-message" data-aos="fade-up" data-aos-delay="200">
-              <h3 className='text-start'>Management Message</h3>
-              <p>Our company was originally formed as the mechanical seal division of NOK Corporation
-              The division became independent and incorporated under the name of Nippon Sealol Co., Ltd. in 1964, the year of the Tokyo Olympic Games, and the company name was changed to the current Eagle Industry Co., Ltd. (EKK) in 1978.
-
-              Ever since embarking on this long journey, for a half century EKK has grown as a sealing solution provider. We have established ourselves as a comprehensive parts manufacturer in pursuit of mobility on the land, seas and in the skies, as well as a mechanical seal manufacturer offering EagleBurgmann brand products in alliance with Burgmann Industries, a German mechanical seal maker.
-
-              EKK's products are used in a vast spectrum of mobility systems on the land, seas and in the skies. They include automobiles, motorcycles, construction machinery, and other so-called land-based "moving vehicles," tankers, container ships, bulk carriers and other ocean-going ships, as well as ferries, coastal ships, and fishing boats, rockets, jet and propeller aircraft, and helicopters.
-              EagleBurgmann products are also used in pumps, compressors, blowers, and agitators mounted in production facilities at oil refineries, and in the petrochemical, steel, pulp and paper, food, pharmaceutical, electric power, and many other industries.
-
-              No matter where they are used, one common objective of all our products is to prevent liquids, gases and other fluids from leaking from rotating machines during operation, and for this reason we can proudly say that together with our customers we have contributed to environmental protection and energy conservation. We have also developed an integrated production system that covers the entire process from the development of materials right through to production.
-              This system is built around our superior seal, power transmission, valve and hydraulic technologies, as well as our special processing and welding techniques that support them. With it, we are meeting customer requirements, which are becoming increasingly demanding as rotating machines operate at higher speeds, temperature, and pressure.
-
-              We will continue to hone our technological prowess to meet the increasingly specialized and complex needs of our customers.</p>
+              <h3 className='text-start'>{t('company.managementMessageTitle')}</h3>
+              <p>{t('company.managementMessageText1')}</p>
+              <p>{t('company.managementMessageText2')}</p>
+              <p>{t('company.managementMessageText3')}</p>
+              <p>{t('company.managementMessageText4')}</p>
+              <p>{t('company.managementMessageText5')}</p>
+              <p>{t('company.managementMessageText6')}</p>
+              <p>{t('company.managementMessageText7')}</p>
             </div>
           </div>
         </div>
@@ -149,10 +144,9 @@ const Company = () => {
           <div className="row justify-content-around gy-4">
             <div className="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1 management-message" data-aos="fade-up" data-aos-delay="100">
               <h3 className="text-start">{t('company.managingDirectorMessage')}</h3>
-              <p>We were founded in 1990 under the name PT NSO Indonesia, a subsidiary of Eagle Industry Co. Ltd., Japan, which specializes in automotive component manufacturing. In 1998, we changed our name to PT Eagle Industry Indonesia. We are currently located in East Jakarta Industrial Park (EJIP), Cikarang, West Java.</p>
-              <p>We manufacture floating seals for undercarriage components and provide other supporting products for automotive equipment.
-With our technology, we will continuously strive to innovate and provide the best for our customers. Our products are the result of our dedication, research, and commitment to meeting your needs. We believe that quality is our priority, and every step we take is dedicated to providing you with the best possible experience.</p>
-              <p>Thank you for your trust and support.</p>
+              <p>{t('company.managingDirectorText1')}</p>
+              <p>{t('company.managingDirectorText2')}</p>
+              <p>{t('company.managingDirectorText3')}</p>
               <div className="row">
                 <div className="col-lg-6 icon-box d-flex">
                   <i className="bi bi-easel flex-shrink-0"></i>
@@ -200,9 +194,9 @@ With our technology, we will continuously strive to innovate and provide the bes
         <div className="container">
           <div className="row justify-content-around gy-4">
             <div className="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="100">
-              <h3>Origin and Establishment</h3>
-              <p>PT Eagle Industry Indonesia was established in 1990 as a branch of Eagle Industry Co., Ltd., a Japanese company originating from the mechanical seal division of NOK Corporation. This division became independent in 1964 under the name Nippon Sealol Co., Ltd., and changed its name to Eagle Industry Co., Ltd. in 1978.</p>
-              <p>In Indonesia, we began operations at EJIP Industrial Park, Cikarang, focusing on the production of mechanical seals, rubber bellows, and precision components for the automotive, aerospace, and industrial equipment industries.</p>
+              <h3>{t('company.originEstablishmentTitle')}</h3>
+              <p>{t('company.originEstablishmentText1')}</p>
+              <p>{t('company.originEstablishmentText2')}</p>
             </div>
             <div className="features-image col-lg-5" data-aos="fade-up" data-aos-delay="200">
               <img src={`${process.env.PUBLIC_URL}/assets/img/eidOld.webp`} alt="Origin and Establishment" />
@@ -253,32 +247,31 @@ With our technology, we will continuously strive to innovate and provide the bes
                 <tbody>
                   <tr>
                     <th scope="row">{t('company.name')}</th>
-                    <td>{t('company.title')}</td>
+                    <td>{t('company.companyOverviewName')}</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.established')}</th>
-                    <td>1990</td>
+                    <td>{t('company.companyOverviewEstablished')}</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.representative')}</th>
-                    <td>Mr. Mitshuhiro Kishida: President Director</td>
+                    <td>{t('company.companyOverviewRepresentative')}</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.headquarters')}</th>
-                    <td>EJIP Industrial Park, Plot 8G, Sukaresmi, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17550<br/>Tel: (021) 8970178<br/>Email: eid.sales@ekkeagle.com</td>
+                    <td>{t('company.companyOverviewHeadquarters')}</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.paidInCapital')}</th>
-                    <td>K USD 17.050</td>
+                    <td>{t('company.companyOverviewPaidInCapital')}</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.numberOfEmployees')}</th>
-                    <td>196 Person ( Update on Nov 2025 ) 2 Person ( Expatriate )</td>
+                    <td>{t('company.companyOverviewNumberOfEmployees')}</td>
                   </tr>
                   <tr>
                     <th scope="row">{t('company.businessOutline')}</th>
-                    <td>Assembly of Air Induction System for Motorcycle and Manufacturing
-O Ring, Floating Seal for Construction Machinery Industry & supply Accumulator</td>
+                    <td>{t('company.companyOverviewBusinessOutline')}</td>
                   </tr>
                   {/* <tr>
                     <th scope="row">{t('company.publicAuditingFirm')}</th>

@@ -1,10 +1,14 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useAOS } from '../../hooks/useExternalLibs';
+import { useLanguage } from '../../contexts/LanguageContext';
 
 const ConceptOfSustainability = () => {
   // Initialize external libraries using custom hooks
   useAOS();
+  
+  // Get translation function and current language
+  const { t } = useLanguage();
 
   // Load custom CSS
   useEffect(() => {
@@ -29,12 +33,12 @@ const ConceptOfSustainability = () => {
       {/* Page Title */}
       <div className="page-title dark-background" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/img/Photo-Building/eid1.JPG)` }}>
         <div className="container position-relative">
-          <h1>Sustainability</h1>
+          <h1>{t('conceptOfSustainability.pageTitle')}</h1>
           <nav className="breadcrumbs">
             <ol>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/sustainability">Sustainability</Link></li>
-              <li className="current">Concept of Sustainability</li>
+              <li><Link to="/">{t('conceptOfSustainability.breadcrumbHome')}</Link></li>
+              <li><Link to="/sustainability">{t('conceptOfSustainability.breadcrumbSustainability')}</Link></li>
+              <li className="current">{t('conceptOfSustainability.breadcrumbCurrent')}</li>
             </ol>
           </nav>
         </div>
@@ -45,7 +49,7 @@ const ConceptOfSustainability = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="product-title" data-aos="fade-up">Our Concepts of Sustainability</h2>
+              <h2 className="product-title" data-aos="fade-up">{t('conceptOfSustainability.title')}</h2>
               <div className="product-navigation" data-aos="fade-up" data-aos-delay="100">
                 <ul className="nav-list">
                   <li className="nav-item"><Link to="/sustainability">Sustainability</Link></li>
@@ -65,16 +69,10 @@ const ConceptOfSustainability = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h2 className="content-title">Eagle Industry's Sustainability Concept</h2>
+                <h2 className="content-title">{t('conceptOfSustainability.conceptTitle')}</h2>
                 <div className="content-body">
-                  <p>
-                    At Eagle Industry Indonesia, we believe that companies belong to not only their shareholders but also their employees and society.
-                    This philosophy has long permeated every aspect of the EKK Group's management since our establishment in 1996.
-                  </p>
-                  <p>
-                    As part of Eagle Industry Co., Ltd., a global leader in sealing solutions, we contribute to environmental protection through our core business.
-                    Our mechanical seals prevent gases, oil, and other fluids from leaking machinery, directly helping to preserve the environment and prevent pollution.
-                  </p>
+                  <p>{t('conceptOfSustainability.conceptDesc1')}</p>
+                  <p>{t('conceptOfSustainability.conceptDesc2')}</p>
                 </div>
               </div>
             </div>
@@ -83,12 +81,9 @@ const ConceptOfSustainability = () => {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h3 className="content-subtitle">Our Sustainability Vision</h3>
+                <h3 className="content-subtitle">{t('conceptOfSustainability.visionTitle')}</h3>
                 <div className="content-body">
-                  <p>
-                    We aim to create sustainable value for all stakeholders by integrating environmental, social, and governance (ESG) considerations into our business strategy.
-                    Our vision is to be a trusted partner that contributes to society through innovative sealing solutions while maintaining harmony with the global environment.
-                  </p>
+                  <p>{t('conceptOfSustainability.visionDesc')}</p>
                 </div>
               </div>
             </div>
@@ -97,7 +92,7 @@ const ConceptOfSustainability = () => {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h3 className="content-subtitle">Core Sustainability Principles</h3>
+                <h3 className="content-subtitle">{t('conceptOfSustainability.principlesTitle')}</h3>
                 <div className="content-body">
                   <div className="principles-grid">
                     <div className="principle-item">
@@ -105,8 +100,8 @@ const ConceptOfSustainability = () => {
                         <i className="bi bi-check-circle"></i>
                       </div>
                       <div className="principle-text">
-                        <h4>Environmental Protection</h4>
-                        <p>Through leak prevention technology</p>
+                        <h4>{t('conceptOfSustainability.principle1Title')}</h4>
+                        <p>{t('conceptOfSustainability.principle1Desc')}</p>
                       </div>
                     </div>
                     <div className="principle-item">
@@ -114,8 +109,8 @@ const ConceptOfSustainability = () => {
                         <i className="bi bi-check-circle"></i>
                       </div>
                       <div className="principle-text">
-                        <h4>Building Trust</h4>
-                        <p>Through dialogue with all stakeholders</p>
+                        <h4>{t('conceptOfSustainability.principle2Title')}</h4>
+                        <p>{t('conceptOfSustainability.principle2Desc')}</p>
                       </div>
                     </div>
                     <div className="principle-item">
@@ -123,8 +118,8 @@ const ConceptOfSustainability = () => {
                         <i className="bi bi-check-circle"></i>
                       </div>
                       <div className="principle-text">
-                        <h4>Fair Profits</h4>
-                        <p>That support perpetual growth</p>
+                        <h4>{t('conceptOfSustainability.principle3Title')}</h4>
+                        <p>{t('conceptOfSustainability.principle3Desc')}</p>
                       </div>
                     </div>
                     <div className="principle-item">
@@ -132,8 +127,8 @@ const ConceptOfSustainability = () => {
                         <i className="bi bi-check-circle"></i>
                       </div>
                       <div className="principle-text">
-                        <h4>Product Development</h4>
-                        <p>That resolves environmental regulatory issues</p>
+                        <h4>{t('conceptOfSustainability.principle4Title')}</h4>
+                        <p>{t('conceptOfSustainability.principle4Desc')}</p>
                       </div>
                     </div>
                     <div className="principle-item">
@@ -141,8 +136,8 @@ const ConceptOfSustainability = () => {
                         <i className="bi bi-check-circle"></i>
                       </div>
                       <div className="principle-text">
-                        <h4>Human Rights</h4>
-                        <p>And occupational health and safety</p>
+                        <h4>{t('conceptOfSustainability.principle5Title')}</h4>
+                        <p>{t('conceptOfSustainability.principle5Desc')}</p>
                       </div>
                     </div>
                     <div className="principle-item">
@@ -150,8 +145,8 @@ const ConceptOfSustainability = () => {
                         <i className="bi bi-check-circle"></i>
                       </div>
                       <div className="principle-text">
-                        <h4>Community Contribution</h4>
-                        <p>And biodiversity conservation</p>
+                        <h4>{t('conceptOfSustainability.principle6Title')}</h4>
+                        <p>{t('conceptOfSustainability.principle6Desc')}</p>
                       </div>
                     </div>
                   </div>
@@ -163,12 +158,9 @@ const ConceptOfSustainability = () => {
           <div className="row mt-5">
             <div className="col-lg-12">
               <div className="content-wrapper">
-                <h3 className="content-subtitle">Long-Term Sustainability Goals</h3>
+                <h3 className="content-subtitle">{t('conceptOfSustainability.goalsTitle')}</h3>
                 <div className="content-body">
-                  <p>
-                    We have established long-term goals aligned with global sustainability frameworks, including the UN Sustainable Development Goals (SDGs) and the Paris Agreement.
-                    Our commitment extends beyond compliance to proactive leadership in sustainable business practices.
-                  </p>
+                  <p>{t('conceptOfSustainability.goalsDesc')}</p>
                 </div>
               </div>
             </div>
@@ -179,10 +171,8 @@ const ConceptOfSustainability = () => {
               <div className="content-wrapper">
                 <div className="quote-section">
                   <blockquote className="sustainability-quote">
-                    <p>
-                      "Sustainability is not just a responsibility but an opportunity to innovate and create lasting value for our stakeholders and society."
-                    </p>
-                    <cite>— Management, Eagle Industry Indonesia</cite>
+                    <p>"{t('conceptOfSustainability.quoteText')}"</p>
+                    <cite>— {t('conceptOfSustainability.quoteAuthor')}</cite>
                   </blockquote>
                 </div>
               </div>
@@ -197,8 +187,8 @@ const ConceptOfSustainability = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Our Sustainability Pillars</h2>
-                <p>The core elements of our sustainability framework</p>
+                <h2>{t('conceptOfSustainability.pillarsTitle')}</h2>
+                <p>{t('conceptOfSustainability.pillarsSubtitle')}</p>
               </div>
               <div className="pillars-container" data-aos="fade-up" data-aos-delay="100">
                 <div className="pillar-item">
@@ -206,8 +196,8 @@ const ConceptOfSustainability = () => {
                     <i className="bi bi-tree"></i>
                   </div>
                   <div className="pillar-content">
-                    <h3>Environmental</h3>
-                    <p>Minimizing environmental impact through innovative products and processes that prevent pollution and conserve resources.</p>
+                    <h3>{t('conceptOfSustainability.pillar1Title')}</h3>
+                    <p>{t('conceptOfSustainability.pillar1Desc')}</p>
                   </div>
                 </div>
                 <div className="pillar-item">
@@ -215,8 +205,8 @@ const ConceptOfSustainability = () => {
                     <i className="bi bi-people"></i>
                   </div>
                   <div className="pillar-content">
-                    <h3>Social</h3>
-                    <p>Creating value for society through responsible business practices, employee development, and community engagement.</p>
+                    <h3>{t('conceptOfSustainability.pillar2Title')}</h3>
+                    <p>{t('conceptOfSustainability.pillar2Desc')}</p>
                   </div>
                 </div>
                 <div className="pillar-item">
@@ -224,8 +214,8 @@ const ConceptOfSustainability = () => {
                     <i className="bi bi-shield-check"></i>
                   </div>
                   <div className="pillar-content">
-                    <h3>Governance</h3>
-                    <p>Maintaining high standards of corporate governance to ensure transparency, accountability, and ethical business conduct.</p>
+                    <h3>{t('conceptOfSustainability.pillar3Title')}</h3>
+                    <p>{t('conceptOfSustainability.pillar3Desc')}</p>
                   </div>
                 </div>
               </div>
@@ -238,8 +228,8 @@ const ConceptOfSustainability = () => {
       <section id="related-topics" className="related-products section">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <h2>Related Sustainability Topics</h2>
-            <p>Explore more about our sustainability initiatives</p>
+            <h2>{t('conceptOfSustainability.relatedTitle')}</h2>
+            <p>{t('conceptOfSustainability.relatedSubtitle')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -249,7 +239,7 @@ const ConceptOfSustainability = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Environmental Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Environmental Initiatives</span>
+                    <span>{t('conceptOfSustainability.related1Title')}</span>
                   </div>
                 </Link>
               </div>
@@ -261,7 +251,7 @@ const ConceptOfSustainability = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Social Contribution Initiatives" />
                   </div>
                   <div className="card-caption">
-                    <span>Social Contribution Initiatives</span>
+                    <span>{t('conceptOfSustainability.related2Title')}</span>
                   </div>
                 </Link>
               </div>
@@ -273,7 +263,7 @@ const ConceptOfSustainability = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/ekk.png`} className="card-image" alt="Occupational Health & Safety" />
                   </div>
                   <div className="card-caption">
-                    <span>Occupational Health & Safety</span>
+                    <span>{t('conceptOfSustainability.related3Title')}</span>
                   </div>
                 </Link>
               </div>
@@ -289,9 +279,9 @@ const ConceptOfSustainability = () => {
             <div className="col-12">
               <nav className="breadcrumbs">
                 <ol>
-                  <li><Link to="/">Home</Link></li>
-                  <li><Link to="/sustainability">Sustainability</Link></li>
-                  <li className="current">Concept of Sustainability</li>
+                  <li><Link to="/">{t('conceptOfSustainability.breadcrumbHome')}</Link></li>
+                  <li><Link to="/sustainability">{t('conceptOfSustainability.breadcrumbSustainability')}</Link></li>
+                  <li className="current">{t('conceptOfSustainability.breadcrumbCurrent')}</li>
                 </ol>
               </nav>
             </div>
