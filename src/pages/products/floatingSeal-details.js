@@ -101,41 +101,54 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.floatingSeal.title')}</h2>
                 <p>
-                  {t('productDetails.floatingSeal.description1')}
+                  Seals for undercarriages of construction machinery (track rollers, final drives, axles and idlers)
                 </p>
                 <p>
-                  {t('productDetails.floatingSeal.description2')}
+                  Simple structure consisting of an O-ring and a seal ring made of special cast iron
                 </p>
                 <p>
-                  {t('productDetails.floatingSeal.description3')}
+                  Optimum seals for undercarriages of bulldozers and hydraulic excavators frequently exposed to sand, dirt and other foreign matter
                 </p>
                 <p>
-                  {t('productDetails.floatingSeal.description4')}
+                  ES764 offers ease of designing and manufacturing housings.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.floatingSeal.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.sealedFluid')}</strong> <span>{t('productDetails.floatingSeal.sealedFluidValue')}</span></li>
-                  <li><strong>{t('productDetails.temperature')}</strong> <span>{t('productDetails.floatingSeal.temperatureValue')}</span></li>
-                  <li><strong>{t('productDetails.maximumCircumferentialVelocity')}</strong> <span>{t('productDetails.floatingSeal.maximumCircumferentialVelocityValue')}</span></li>
-                  <li><strong>{t('productDetails.pressure')}</strong> <span>{t('productDetails.floatingSeal.pressureValue')}</span></li>
-                  <li><strong>{t('productDetails.shaftDiameter')}</strong> <span>{t('productDetails.floatingSeal.shaftDiameterValue')}</span></li>
-                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.floatingSeal.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.floatingSeal.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+          
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features of the Floating Seal</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>Simple Structure</h4>
+                  <p>Floating seals are simple products, consisting of two components: a seal ring made of special cast iron and a rubber component (O-ring/gasket). In use, two identical seals make a pair.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Flexible Design</h4>
+                  <p>The seal ring, which is a sliding component, is not in contact with the shaft since it is sustained by the rubber component, and therefore follows the radial and thrusting motions of the shaft closely.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Durable Materials</h4>
+                  <p>Since they were developed for slurry applications, seal rings are made of an extremely hard, wear-resistant and corrosion-resistant material. The rubber component presses the seal ring's sliding surfaces and also serves as a seal.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Wide Range of Applications</h4>
+                  <p>Main uses of floating seals include crawler rollers, travel drives and idlers of construction and agricultural machinery, and also for conveyors, mixers and various digging machines. In other words, they are used widely in relatively low-speed applications exposed to foreign matter.</p>
                 </div>
               </div>
             </div>
@@ -156,7 +169,11 @@ const ProjectDetails = () => {
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.sealedFluid')}</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.category')}</th>
+                      <td>{t('productDetails.floatingSeal.categoryValue')}</td>
+                    </tr>
+                    <tr>
+                      <th>{t('productDetails.sealedFluid')}</th>
                       <td>
                         {(() => {
                           const sealedFluidText = t('productDetails.floatingSeal.sealedFluidValue');
@@ -204,7 +221,7 @@ const ProjectDetails = () => {
                     </tr>
                     <tr>
                       <th>{t('productDetails.shaftDiameter')}</th>
-                      <td>{t('productDetails.floatingSeal.shaftDiameterValue')}</td>
+                      <td>φ38～φ154mm</td>
                     </tr>
                   </tbody>
                 </table>
@@ -214,6 +231,7 @@ const ProjectDetails = () => {
           </div>
         </div>
       </section>
+
 
       {/* Contact Section - Elegant and Modern */}
       <section className="contact-section section">
@@ -236,7 +254,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Machinery category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -246,7 +264,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.lipSeal.forAcCompressor')}<br />{t('productDetails.lipSeal.typeAMechanicalSeal')}</span>
+                    <span>{language === 'id' ? 'Mesin' : 'Machinery'}<br />{t('productDetails.lipSeal.typeAMechanicalSeal')}</span>
                   </div>
                 </Link>
               </div>
@@ -258,7 +276,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.lipSeal.forWaterPump')}<br />{t('productDetails.lipSeal.eh795EH790')}</span>
+                    <span>{language === 'id' ? 'Mesin' : 'Machinery'}<br />{t('productDetails.lipSeal.eh795EH790')}</span>
                   </div>
                 </Link>
               </div>
@@ -270,7 +288,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.lipSeal.forVariableDisplacementAcCompressor')}<br />{t('productDetails.lipSeal.controlValve')}</span>
+                    <span>{language === 'id' ? 'Mesin' : 'Machinery'}<br />{t('productDetails.lipSeal.controlValve')}</span>
                   </div>
                 </Link>
               </div>

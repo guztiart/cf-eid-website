@@ -101,36 +101,37 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.airCutValve.title')}</h2>
                 <p>
-                  {t('productDetails.airCutValve.description1')}
-                </p>
-                <p>
-                  {t('productDetails.airCutValve.description2')}
-                </p>
-                <p>
-                  {t('productDetails.airCutValve.description3')}
+                  Mounted on four-stroke motorcycle engines.
+                  Designed for exhaust gas emission regulation (secondary air supply).
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.airCutValve.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.application')}</strong> <span>{t('productDetails.airCutValve.applicationValue')}</span></li>
-                  <li><strong>{t('productDetails.function')}</strong> <span>{t('productDetails.airCutValve.functionValue')}</span></li>
-                  <li><strong>{t('productDetails.operatingTemperature')}</strong> <span>{t('productDetails.airCutValve.operatingTemperatureValue')}</span></li>
-                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.airCutValve.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.airCutValve.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features of the Air Cut Valve</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>Lightweight and Compact</h4>
+                  <p>This lightweight and compact valve can be retrofitted to existing vehicles.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Composite Versions</h4>
+                  <p>We meet your needs for composite versions, such as Reed Valve combined with Cut Valve.</p>
                 </div>
               </div>
             </div>
@@ -151,28 +152,12 @@ const ProjectDetails = () => {
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.application')}</th>
-                      <td>{t('productDetails.airCutValve.applicationValue')}</td>
+                      <th style={{ width: '30%' }}>Temperature</th>
+                      <td>-20～120℃</td>
                     </tr>
                     <tr>
-                      <th>{t('productDetails.function')}</th>
-                      <td>{t('productDetails.airCutValve.functionValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.operatingTemperature')}</th>
-                      <td>{t('productDetails.airCutValve.operatingTemperatureValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.material')}</th>
-                      <td>{t('productDetails.airCutValve.materialValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.benefits')}</th>
-                      <td>
-                        <p>{t('productDetails.improvedFuelEconomy')}</p>
-                        <p>{t('productDetails.reducedEmissions')}</p>
-                        <p>{t('productDetails.enhancedACSystemEfficiency')}</p>
-                      </td>
+                      <th>Vibration durability</th>
+                      <td>10 G at room temperature for 10^7 cycles</td>
                     </tr>
                   </tbody>
                 </table>
@@ -204,7 +189,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Automobile category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -214,31 +199,31 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('products.lipSealAc')}<br />{language === 'id' ? 'Tipe A Mechanical seal' : 'Type A Mechanical seal'}</span>
+                    <span>{t('products.automobile')}<br />{t('products.lipSealAc')}</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="product-card h-100">
-                <Link to="/products/eh795-details" className="card-link">
+                <Link to="/products/reedValve-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed-valve-1.png`} className="card-image" alt="Reed Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.eh795.title')}<br />EH795/EH790</span>
+                    <span>{t('products.automobile')}<br />Reed Valve</span>
                   </div>
                 </Link>
               </div>
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/products/lipSeal-details" className="card-link">
+                <Link to="/products/floatingSeal-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/lipseal-1.png`} className="card-image" alt="Lip Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/fs-1.png`} className="card-image" alt="Floating Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('products.lipSealAc')}<br />{t('productDetails.lipSeal.title')}</span>
+                    <span>{t('products.machinery')}<br />Floating Seal</span>
                   </div>
                 </Link>
               </div>

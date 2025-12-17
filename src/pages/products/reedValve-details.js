@@ -92,37 +92,39 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.reedValve.productTitle')}</h2>
                 <p>
-                  {t('productDetails.reedValve.description1')}
+                  Designed to be used in four-stroke motorcycle engines for emission control (secondary air supply).
                 </p>
                 <p>
-                  {t('productDetails.reedValve.description2')}
-                </p>
-                <p>
-                  {t('productDetails.reedValve.description3')}
+                  Substantially reduces carbon monoxide (CO) and hydrocarbon (HC) emissions to mitigate air pollution.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.reedValve.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.application')}</strong> <span>{t('productDetails.reedValve.applicationValue')}</span></li>
-                  <li><strong>{t('productDetails.function')}</strong> <span>{t('productDetails.reedValve.functionValue')}</span></li>
-                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.reedValve.temperatureRangeValue')}</span></li>
-                  <li><strong>Vibration Durability</strong> <span>{t('productDetails.reedValve.vibrationDurabilityValue')}</span></li>
-                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.reedValve.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.reedValve.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features of the Reed Valves for Water Pump</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>Compact and Lightweight Design</h4>
+                  <p>These compact and lightweight Reed Valve installed in a limited space ensure large flows.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Highly Responsive</h4>
+                  <p>Highly responsive valves for high-speed mode.</p>
                 </div>
               </div>
             </div>
@@ -136,7 +138,7 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.reedValve.productSpecification')}</h2>
+                <h2>{t('productDetails.productSpecification')}</h2>
                 <p>{t('productDetails.reedValve.specificationInfo')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
@@ -199,7 +201,7 @@ const ProjectDetails = () => {
               <div className="product-card h-100">
                 <Link to="/products/eh795-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mech-seal-4.png`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
                     <span>{t('productDetails.reedValve.forWaterPump')}<br />{t('productDetails.reedValve.eh795EH790')}</span>

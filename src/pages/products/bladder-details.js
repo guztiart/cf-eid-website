@@ -92,49 +92,58 @@ const BladderDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.bladderAccumulator.title')}</h2>
                 <p>
-                  {t('productDetails.bladderAccumulator.description1')}
-                </p>
-                <p>
-                  {t('productDetails.bladderAccumulator.description2')}
-                </p>
-                <p>
-                  {t('productDetails.bladderAccumulator.description3')}
+                  These standard bladder accumulators are manufactured based on years of experience and proven performance.
+                  Bladders are replaceable and available in various sizes up to large-volume ones.
+                  Their extensive applications include general industrial machineries, construction machineries, power plants and chemical plants.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.bladderAccumulator.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.type')}</strong> <span>{t('productDetails.bladderAccumulator.typeValue')}</span></li>
-                  <li><strong>{t('productDetails.material')}</strong> <span>{t('productDetails.bladderAccumulator.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.temperatureRange')}</strong> <span>{t('productDetails.bladderAccumulator.temperatureRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.maxPressure')}</strong> <span>{t('productDetails.bladderAccumulator.maxPressureValue')}</span></li>
-                  <li><strong>{t('productDetails.volumeRange')}</strong> <span>{t('productDetails.bladderAccumulator.volumeRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.bladderAccumulator.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <h3>{t('productDetails.productFeatures')}</h3>
-                  <ul>
-                    <li><i className="bi bi-check"></i> <span>{t('productDetails.highEnergyStorageCapacity')}</span></li>
-                    <li><i className="bi bi-check"></i> <span>{t('productDetails.excellentResponseTime')}</span></li>
-                    <li><i className="bi bi-check"></i> <span>{t('productDetails.lowGasPermeability')}</span></li>
-                    <li><i className="bi bi-check"></i> <span>{t('productDetails.easyMaintenance')}</span></li>
-                    <li><i className="bi bi-check"></i> <span>{t('productDetails.longServiceLife')}</span></li>
-                    <li><i className="bi bi-check"></i> <span>{t('productDetails.wideTemperatureRange')}</span></li>
-                  </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features of the Bladder Type Accumulator</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>Large Gas Volume</h4>
+                  <p>The maximum available gas volume is 160 L.</p>
                 </div>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+                <div className="feature-item">
+                  <h4>Superior Bladder Material</h4>
+                  <p>Bladders made of rubber offer excellent tension fatigue resistance and very low gas permeability.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>High Flow Rate</h4>
+                  <p>The Ultrahigh Flow (UH) series is adapted to a maximum discharge flow rate of 4,800 L/min.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Compliance with International Standards</h4>
+                  <p>Can be arranged to conform to the High Pressure Gas Safety Low (Japan), ASME U Stamp (American Society of Mechanical Engineers), CE Marking (European Pressure Equipment Directive) and Regulation for Boiler and Pressure Vessel Manufacture Licensing (China).</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Various Components Available</h4>
+                  <p>Various liquid-end joints (bushings and flanges), accumulator main valves, gas control valves, and charging assemblies are available.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>After-Sales Support</h4>
+                  <p>We provide maintenance and support services for our customers for peace of mind after purchasing our products.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Important Note</h4>
+                  <p>* Some models are exempt from the requirements of laws and regulations or not designed by us to meet those requirements.</p>
                 </div>
               </div>
             </div>
@@ -148,57 +157,55 @@ const BladderDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>{t('productDetails.productSpecification')}</h2>
-                <p>{t('productDetails.specificationInfo')}</p>
+                <h2>Product specification example</h2>
+                <p>Technical specifications of the Bladder Type Accumulator</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
+                <div className="type-descriptions" style={{ marginBottom: '20px', textAlign: 'left' }}>
+                  <p><strong>AL:</strong> With this type, the bladder is replaceable only from the fluid side (the accumulator needs to be removed).</p>
+                  <p><strong>AT:</strong> This type enables the bladder to be replaced either from the gas or liquid end (with the accumulator installed).</p>
+                </div>
                 <table className="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style={{ width: '30%' }}>Type</th>
+                      <th>Max. Working Pressure (MPa)</th>
+                      <th>Nominal Gas Volume (L)</th>
+                    </tr>
+                  </thead>
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>{t('productDetails.category')}</th>
-                      <td>{t('productDetails.bladderAccumulator.categoryValue')}</td>
+                      <td>AL</td>
+                      <td>14.7</td>
+                      <td>1 2.4 4 5</td>
                     </tr>
                     <tr>
-                      <th>{t('productDetails.type')}</th>
-                      <td>{t('productDetails.bladderAccumulator.typeValue')}</td>
+                      <td></td>
+                      <td>29.4</td>
+                      <td>1 2.4 4 5</td>
                     </tr>
                     <tr>
-                      <th>{t('productDetails.material')}</th>
-                      <td>{t('productDetails.bladderAccumulator.materialValue')}</td>
+                      <td>AT</td>
+                      <td>16</td>
+                      <td>10 20 30 50</td>
                     </tr>
                     <tr>
-                      <th>{t('productDetails.temperatureRange')}</th>
-                      <td>{t('productDetails.bladderAccumulator.temperatureRangeValue')}</td>
+                      <td></td>
+                      <td>20.6</td>
+                      <td>30 40 50 60 80 120 150 160</td>
                     </tr>
                     <tr>
-                      <th>{t('productDetails.maxPressure')}</th>
-                      <td>{t('productDetails.bladderAccumulator.maxPressureValue')}</td>
+                      <td></td>
+                      <td>22.6</td>
+                      <td>10 20 30 50</td>
                     </tr>
                     <tr>
-                      <th>{t('productDetails.volumeRange')}</th>
-                      <td>{t('productDetails.bladderAccumulator.volumeRangeValue')}</td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.applications')}</th>
-                      <td>
-                        <p>{t('productDetails.energyStorageInHydraulicSystems')}</p>
-                        <p>{t('productDetails.shockAbsorption')}</p>
-                        <p>{t('productDetails.pulsationDampening')}</p>
-                        <p>{t('productDetails.emergencyPowerSupply')}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>{t('productDetails.benefits')}</th>
-                      <td>
-                        <p>{t('productDetails.highEnergyStorageCapacity')}</p>
-                        <p>{t('productDetails.excellentResponseTime')}</p>
-                        <p>{t('productDetails.lowGasPermeability')}</p>
-                        <p>{t('productDetails.easyMaintenance')}</p>
-                      </td>
+                      <td></td>
+                      <td>34.3</td>
+                      <td>10 20 30</td>
                     </tr>
                   </tbody>
                 </table>
-                <p className="note-text">{t('productDetails.noteText')}</p>
               </div>
             </div>
           </div>
@@ -255,12 +262,12 @@ const BladderDetails = () => {
             </div>
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="product-card h-100">
-                <Link to="/products/oRing-details" className="card-link">
+                <Link to="/products/floatingSeal-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/oring-2.png`} className="card-image" alt="SUPERIOR O-Ring" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/fs-1.png`} className="card-image" alt="Floating Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Solusi Penyegelan' : 'Sealing Solutions'}<br />{t('productDetails.oRing.title')}</span>
+                    <span>{language === 'id' ? 'Mesin' : 'Machinery'}<br />{t('productDetails.floatingSeal.title')}</span>
                   </div>
                 </Link>
               </div>

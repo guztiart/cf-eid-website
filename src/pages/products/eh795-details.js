@@ -104,35 +104,50 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.eh795.title')}</h2>
                 <p>
-                  {t('productDetails.eh795.description1')}
+                  Capable for high-speed rotation.
                 </p>
                 <p>
-                  {t('productDetails.eh795.description2')}
+                  Mass-production by fully automated assembling lines and supplied to water pump makers worldwide.
+                </p>
+                <p>
+                  By its unitized design, EH795 supports easy installation into customer application.
                 </p>
               </div>
             </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.category')}</strong> <span>{t('productDetails.eh795.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.model')}</strong> <span>{t('productDetails.eh795.modelValue')}</span></li>
-                  <li><strong>{t('productDetails.sealedFluid')}</strong> <span>{t('productDetails.eh795.sealedFluidValue')}</span></li>
-                  <li><strong>{t('productDetails.temperature')}</strong> <span>{t('productDetails.eh795.temperatureValue')}</span></li>
-                  <li><strong>{t('productDetails.maximumCircumferentialVelocity')}</strong> <span>{t('productDetails.eh795.maximumCircumferentialVelocityValue')}</span></li>
-                  <li><strong>{t('productDetails.pressure')}</strong> <span>{t('productDetails.eh795.pressureValue')}</span></li>
-                  <li><strong>{t('productDetails.shaftDiameter')}</strong> <span>{t('productDetails.eh795.shaftDiameterValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.eh795.applicationsValue')}</span></li>
-                </ul>
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.inquireAboutProduct')}</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Features */}
+      <section className="product-specifications section">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="section-title" data-aos="fade-up">
+                <h2>Features</h2>
+                <p>Key features of the EH795/EH790 for Water Pump</p>
+              </div>
+              <div className="features-list" data-aos="fade-up" data-aos-delay="100">
+                <div className="feature-item">
+                  <h4>High-Speed Rotation</h4>
+                  <p>These seals are suitable for high-speed rotation due to its simple and compact construction.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Superior Materials</h4>
+                  <p>The materials of the seal face are Eagle Industry's proprietary carbon components and SiC which provides high resistance to heat, wear and corrosion.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Global Manufacturing</h4>
+                  <p>These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. These seals are also suitable for industrial pumps.</p>
+                </div>
+                <div className="feature-item">
+                  <h4>Unitized Design</h4>
+                  <p>EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.</p>
                 </div>
               </div>
             </div>

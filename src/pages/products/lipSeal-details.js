@@ -95,54 +95,25 @@ const ProjectDetails = () => {
             <div className="swiper-button-next"></div>
           </div>
           
-          <div className="row justify-content-between gy-4 mt-4">
-            <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div className="row justify-content-center gy-4 mt-4">
+            <div className="col-lg-10" data-aos="fade-up" data-aos-delay="100">
               <div className="portfolio-description">
                 <h2>{t('productDetails.lipSeal.productTitle')}</h2>
                 <p>
-                  {t('productDetails.lipSeal.descriptionParagraph1')}
+                  Rotating shaft seals exclusively designed for car air-conditioning compressors
                 </p>
                 <p>
-                  {t('productDetails.lipSeal.descriptionParagraph2')}
+                  Eagle Industry's original design featuring compactness and high reliability
                 </p>
                 <p>
-                  {t('productDetails.lipSeal.descriptionParagraph3')}
+                  Helps eliminate CFC leakage causing global warming
                 </p>
-              </div>
-            </div>
-            
-            <div className="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-              <div className="portfolio-info">
-                <h3>{t('productDetails.lipSeal.productInformation')}</h3>
-                <ul>
-                  <li><strong>{t('productDetails.lipSeal.category')}</strong> <span>{t('productDetails.lipSeal.categoryValue')}</span></li>
-                  <li><strong>{t('productDetails.lipSeal.sealedFluid')}</strong> <span>{t('productDetails.lipSeal.sealedFluidValue')}</span></li>
-                  <li><strong>{t('productDetails.lipSeal.operatingTemperature')}</strong> <span>{t('productDetails.lipSeal.operatingTemperatureValue')}</span></li>
-                  <li><strong>{t('productDetails.lipSeal.maximumCircumferentialVelocity')}</strong> <span>{t('productDetails.lipSeal.maximumCircumferentialVelocityValue')}</span></li>
-                  <li><strong>{t('productDetails.lipSeal.fluidPressureRange')}</strong> <span>{t('productDetails.lipSeal.fluidPressureRangeValue')}</span></li>
-                  <li><strong>{t('productDetails.lipSeal.shaftDiameter')}</strong> <span>{t('productDetails.lipSeal.shaftDiameterValue')}</span></li>
-                  <li><strong>{t('productDetails.lipSeal.material')}</strong> <span>{t('productDetails.lipSeal.materialValue')}</span></li>
-                  <li><strong>{t('productDetails.applications')}</strong> <span>{t('productDetails.lipSeal.applicationsValue')}</span></li>
-                </ul>
-                
-                {/* <div className="pt-3">
-                  <h3>Product Features</h3>
-                  <ul>
-                    <li><i className="bi bi-check"></i> <span>Rotating shaft seals exclusively designed for car air-conditioning compressors</span></li>
-                    <li><i className="bi bi-check"></i> <span>Eagle Industry's original design featuring compactness and high reliability</span></li>
-                    <li><i className="bi bi-check"></i> <span>Helps eliminate CFC leakage causing global warming</span></li>
-                    <li><i className="bi bi-check"></i> <span>Made of specialized rubber compound suitable for sealing CFCs and refrigerator oil</span></li>
-                    <li><i className="bi bi-check"></i> <span>Mass-production by fully automated assembling lines ensuring consistent quality</span></li>
-                    <li><i className="bi bi-check"></i> <span>Supplied to compressor makers worldwide with proven track record</span></li>
-                    <li><i className="bi bi-check"></i> <span>Exceptional durability under extreme temperature and pressure conditions</span></li>
-                    <li><i className="bi bi-check"></i> <span>Low friction design for improved compressor efficiency</span></li>
-                    <li><i className="bi bi-check"></i> <span>Compatible with both R134a and R1234yf refrigerants</span></li>
-                  </ul>
-                </div> */}
-                
-                <div className="pt-3">
-                  <Link to="/contact" className="btn-visit">{t('productDetails.lipSeal.inquireAboutThisProduct')}</Link>
-                </div>
+                <p>
+                  Made of rubber suitable for sealing CFCs and refrigerator oil
+                </p>
+                <p>
+                  Mass-production by full automated assembling lines and supplied to compressor makers worldwide
+                </p>
               </div>
             </div>
           </div>
@@ -213,17 +184,17 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>{t('productDetails.exploreSimilarProducts')}</p>
+            <p>Other products in the Automobile category</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="product-card h-100">
-                <Link to="/products/lipSeal-details" className="card-link">
+                <Link to="/products/reedValve-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/AC_compressor_lip_seal.jpg`} className="card-image" alt="Compressor Lip Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed-valve-1.png`} className="card-image" alt="Reed Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.lipSeal.forAcCompressor')}<br />{t('productDetails.lipSeal.typeAMechanicalSeal')}</span>
+                    <span>{language === 'id' ? 'Mobil' : 'Automobile'}<br />Reed Valve</span>
                   </div>
                 </Link>
               </div>
@@ -232,10 +203,10 @@ const ProjectDetails = () => {
               <div className="product-card h-100">
                 <Link to="/products/eh795-details" className="card-link">
                   <div className="card-image-container">
-                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/WP_compact_mechanical_seal.jpg`} className="card-image" alt="WP Compact Mechanical Seal" />
+                    <img src={`${process.env.PUBLIC_URL}/assets/img/product/mech-seal-4.png`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.lipSeal.forWaterPump')}<br />{t('productDetails.lipSeal.eh795EH790')}</span>
+                    <span>{language === 'id' ? 'Mobil' : 'Automobile'}<br />{t('productDetails.lipSeal.eh795EH790')}</span>
                   </div>
                 </Link>
               </div>
@@ -247,7 +218,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('productDetails.lipSeal.forVariableDisplacementAcCompressor')}<br />{t('productDetails.lipSeal.controlValve')}</span>
+                    <span>{language === 'id' ? 'Mobil' : 'Automobile'}<br />{t('productDetails.lipSeal.controlValve')}</span>
                   </div>
                 </Link>
               </div>
