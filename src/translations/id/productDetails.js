@@ -16,7 +16,11 @@ export default {
   noteText: "Catatan: Angka di atas menunjukkan kondisi terbaik dalam kasus individual dan mungkin berbeda sesuai dengan ukuran katup dan aplikasi. Hubungi kami sebelum digunakan.",
   productInformation: "Informasi Produk",
   productFeatures: "Fitur Produk",
+  featuresDescription: "Fitur utama dari {product}",
   category: "Kategori",
+  otherProductsInCategory: "Produk lainnya dalam kategori {category}",
+  otherProductsInWaterLubricatedCategory: "Produk lainnya dalam kategori Water Lubricated Stern Tube Bearing",
+  machinery: "Mesin",
   application: "Aplikasi",
   function: "Fungsi",
   operatingTemperature: "Suhu Operasional",
@@ -58,7 +62,7 @@ export default {
   airCutValve: {
     title: "Air Cut Valve",
     breadcrumb: "Air Cut Valve",
-    description1: "Katup kontrol untuk kompresor A/C perpindahan variabel. Katup ini mengontrol sudut swash plate kompresor untuk menyesuaikan perpindahan kompresor sesuai dengan beban A/C.",
+    description1: "Dipasang pada mesin sepeda motor empat tak. Dirancang untuk regulasi emisi gas buang (pasokan udara sekunder).",
     description2: "Air Cut Valve direkayasa dengan presisi untuk memberikan kinerja optimal dalam sistem AC otomotif. Dengan material canggih dan desain inovatif, katup ini memastikan efisiensi maksimal dalam mengontrol perpindahan kompresor sesuai dengan beban A/C, menghasilkan efisiensi bahan bakar yang lebih baik dan emisi yang berkurang.",
     description3: "Air Cut Valve kami menjalani proses kontrol kualitas yang ketat untuk memenuhi standar internasional untuk komponen otomotif. Material khusus yang digunakan dalam manufaktur menawarkan resistensi yang sangat baik terhadap berbagai refrigeran dan minyak kompresor, memastikan masa pakai yang lama bahkan dalam kondisi operasi ekstrem.",
     categoryValue: "Otomotif, Kompresor AC Mobil",
@@ -66,16 +70,29 @@ export default {
     functionValue: "Mengontrol sudut swash plate untuk menyesuaikan perpindahan kompresor",
     operatingTemperatureValue: "-40 hingga 150°C",
     materialValue: "Baja tahan karat kelas tinggi dan komponen khusus",
-    applicationsValue: "Kompresor AC otomotif untuk kendaraan penumpang dan komersial"
+    applicationsValue: "Kompresor AC otomotif untuk kendaraan penumpang dan komersial",
+    // Additional keys for airCutValve-details.js
+    features: "Fitur",
+    featuresSubtitle: "Fitur utama dari Air Cut Valve",
+    lightweightAndCompact: "Ringan dan Kompak",
+    lightweightAndCompactDescription: "Katup yang ringan dan kompak ini dapat dipasang kembali pada kendaraan yang ada.",
+    compositeVersions: "Versi Komposit",
+    compositeVersionsDescription: "Kami memenuhi kebutuhan Anda untuk versi komposit, seperti Reed Valve yang digabungkan dengan Cut Valve.",
+    otherProductsInAutomobileCategory: "Produk lainnya dalam kategori Otomotif",
+    reedValve: "Reed Valve",
+    temperature: "Suhu",
+    temperatureValue: "-20～120℃",
+    vibrationDurability: "Daya tahan getaran",
+    vibrationDurabilityValue: "10 G pada suhu ruangan untuk 10^7 siklus"
   },
   
   // Bladder Type Accumulator
   bladderAccumulator: {
     title: "Bladder Type Accumulator",
     breadcrumb: "Bladder Type Accumulator",
-    description1: "Akuumulator bladder standar ini diproduksi berdasarkan pengalaman bertahun-tahun dan kinerja yang terbukti. Mereka dirancang untuk menyimpan energi di bawah tekanan dalam bentuk gas terkompresi, menyediakan daya hidraulik saat dibutuhkan dalam berbagai aplikasi industri.",
-    description2: "Akuumulator bladder terdiri dari bejana tekanan kekuatan tinggi yang berisi bladder elastis yang memisahkan fluida hidraulik dari gas pra-isi. Saat fluida hidraulik memasuki akuumulator, bladder mengompresi gas, menyimpan energi. Saat sistem memerlukan daya tambahan, gas terkompresi memuai, mendorong fluida kembali ke sistem.",
-    description3: "Akuumulator tipe bladder Eagle Industry Indonesia menampilkan konstruksi superior dengan material berkualitas tinggi memastikan daya tahan dan keandalan dalam lingkungan industri yang menuntut. Akuumulator ini cocok untuk aplikasi yang memerlukan penyimpanan energi, penyerapan kejut, redam pulsasi, dan pasokan daya darurat.",
+    description1: "Akuumulator bladder standar ini diproduksi berdasarkan pengalaman bertahun-tahun dan kinerja yang terbukti. Bladder dapat diganti dan tersedia dalam berbagai ukuran hingga yang berkapasitas besar.",
+    description2: "Aplikasi mereka yang luas meliputi mesin industri umum, mesin konstruksi, pembangkit listrik dan pabrik kimia.",
+    description3: "",
     categoryValue: "Industri, Komponen Hidraulik",
     typeValue: "Bladder Type Accumulator",
     materialValue: "Cangkang Baja Kelas Tinggi, Bladder Nitrile",
@@ -84,13 +101,70 @@ export default {
     volumeRangeValue: "0,5 hingga 50 liter",
     applicationsValue: "Sistem Hidraulik"
   },
+
+  // Bladder Accumulator Features
+    bladderFeatures: {
+      largeGasVolume: "Volume Gas Besar",
+      largeGasVolumeDescription: "Volume gas maksimum yang tersedia adalah 160 L.",
+      superiorBladderMaterial: "Material Bladder Superior",
+      superiorBladderMaterialDescription: "Bladder yang terbuat dari karet menawarkan resistensi kelelahan tegangan yang sangat baik dan permeabilitas gas yang sangat rendah.",
+      highFlowRate: "Laju Aliran Tinggi",
+      highFlowRateDescription: "Seri Ultrahigh Flow (UH) disesuaikan untuk laju aliran debit maksimum 4.800 L/menit.",
+      complianceWithInternationalStandards: "Kepatuhan dengan Standar Internasional",
+      complianceWithInternationalStandardsDescription: "Dapat diatur untuk mematuhi High Pressure Gas Safety Low (Jepang), ASME U Stamp (American Society of Mechanical Engineers), CE Marking (European Pressure Equipment Directive) dan Regulation for Boiler and Pressure Vessel Manufacture Licensing (China).",
+      variousComponentsAvailable: "Berbagai Komponen Tersedia",
+      variousComponentsAvailableDescription: "Berbagai sambungan cairan (bushing dan flensa), katup utama accumulator, katup kontrol gas, dan perakitan pengisian tersedia.",
+      afterSalesSupport: "Dukungan Purnajual",
+      afterSalesSupportDescription: "Kami menyediakan layanan pemeliharaan dan dukungan untuk pelanggan kami untuk ketenangan pikiran setelah membeli produk kami.",
+      importantNote: "Catatan Penting",
+      importantNoteDescription: "* Beberapa model dikecualikan dari persyaratan hukum dan peraturan atau tidak dirancang oleh kami untuk memenuhi persyaratan tersebut."
+    },
+    
+    // Bladder Type Descriptions
+    bladderTypeDescriptions: {
+      al: "Dengan tipe ini, bladder hanya dapat diganti dari sisi cairan (accumulator perlu dilepas).",
+      at: "Tipe ini memungkinkan bladder diganti dari sisi gas atau cairan (dengan accumulator terpasang)."
+    },
+    
+    // Bladder Specification Table
+    bladderSpecificationTable: {
+      type: "Tipe",
+      maxWorkingPressure: "Tekanan Kerja Maks (MPa)",
+      nominalGasVolume: "Volume Gas Nominal (L)"
+    },
+
+    // Bladder Accumulator specific translations
+    bladderFeatures: {
+      largeGasVolume: "Volume Gas Besar",
+      largeGasVolumeDescription: "Volume gas maksimum yang tersedia adalah 160 L.",
+      superiorBladderMaterial: "Material Bladder Superior",
+      superiorBladderMaterialDescription: "Bladder yang terbuat dari karet menawarkan resistensi kelelahan tegangan yang sangat baik dan permeabilitas gas yang sangat rendah.",
+      highFlowRate: "Laju Aliran Tinggi",
+      highFlowRateDescription: "Seri Ultrahigh Flow (UH) disesuaikan untuk laju aliran debit maksimum 4.800 L/menit.",
+      complianceWithInternationalStandards: "Kepatuhan dengan Standar Internasional",
+      complianceWithInternationalStandardsDescription: "Dapat diatur untuk mematuhi High Pressure Gas Safety Low (Jepang), ASME U Stamp (American Society of Mechanical Engineers), CE Marking (European Pressure Equipment Directive) dan Regulation for Boiler and Pressure Vessel Manufacture Licensing (China).",
+      variousComponentsAvailable: "Berbagai Komponen Tersedia",
+      variousComponentsAvailableDescription: "Berbagai sambungan cairan (bushing dan flensa), katup utama accumulator, katup kontrol gas, dan perakitan pengisian tersedia.",
+      afterSalesSupport: "Dukungan Purnajual",
+      afterSalesSupportDescription: "Kami menyediakan layanan pemeliharaan dan dukungan untuk pelanggan kami untuk ketenangan pikiran setelah membeli produk kami.",
+      importantNote: "Catatan Penting",
+      importantNoteDescription: "* Beberapa model dikecualikan dari persyaratan hukum dan peraturan atau tidak dirancang oleh kami untuk memenuhi persyaratan tersebut."
+    },
+    bladderTypeDescriptions: {
+      al: "Dengan tipe ini, bladder hanya dapat diganti dari sisi cairan (accumulator perlu dilepas).",
+      at: "Tipe ini memungkinkan bladder diganti dari sisi gas atau cairan (dengan accumulator terpasang)."
+    },
+    bladderSpecificationTable: {
+      type: "Tipe",
+      maxWorkingPressure: "Tekanan Kerja Maks (MPa)",
+      nominalGasVolume: "Volume Gas Nominal (L)"
+    },
   
   // EH795/EH790 for Water Pump
   eh795: {
     title: "EH795/EH790 untuk Water Pump",
     breadcrumb: "EH795/EH790 untuk Water Pump",
     description1: "Mampu untuk rotasi kecepatan tinggi. Produksi massal dengan jalur perakitan otomatis penuh dan disuplai ke produsen water pump di seluruh dunia. Dengan desain unitized-nya, EH795 mendukung instalasi yang mudah ke aplikasi pelanggan.",
-    description2: "Segel ini cocok untuk rotasi kecepatan tinggi karena konstruksinya yang sederhana dan kompak. Material wajah segel terdiri dari komponen karbon dan SiC milik Eagle Industry yang memberikan resistensi tinggi terhadap panas, aus, dan korosi. Segel ini diproduksi oleh jalur perakitan otomatis penuh di situs produksi global kami, dan memiliki pangsa pasar tinggi di seluruh dunia khususnya dalam kategori segel untuk water pump otomotif. Segel ini juga cocok untuk pompa industri. EH795: Komponen berputar dan stasioner disatukan dengan lengan bermeterai, memberikan kemudahan instalasi serta keandalan tinggi dengan melindungi permukaan geser.",
     categoryValue: "Mechanical Seal, Water Pump",
     modelValue: "EH795/EH790",
     sealedFluidValue: "Air, Pendingin, dll.",
@@ -98,7 +172,18 @@ export default {
     maximumCircumferentialVelocityValue: "12 m/s",
     pressureValue: "-67 kPa hingga 0,3 MPaG",
     shaftDiameterValue: "Hingga 30 mm",
-    applicationsValue: "Water pump untuk aplikasi otomotif dan industri"
+    applicationsValue: "Water pump untuk aplikasi otomotif dan industri",
+    // Features section
+    featuresTitle: "Fitur",
+    featuresSubtitle: "Fitur utama dari EH795/EH790 untuk Water Pump",
+    highSpeedRotation: "Rotasi Kecepatan Tinggi",
+    highSpeedRotationDescription: "Segel ini cocok untuk rotasi kecepatan tinggi karena konstruksinya yang sederhana dan kompak.",
+    superiorMaterials: "Material Superior",
+    superiorMaterialsDescription: "Material wajah segel terdiri dari komponen karbon dan SiC milik Eagle Industry yang memberikan resistensi tinggi terhadap panas, aus, dan korosi.",
+    globalManufacturing: "Manufaktur Global",
+    globalManufacturingDescription: "Segel ini diproduksi oleh jalur perakitan otomatis penuh di situs produksi global kami, dan memiliki pangsa pasar tinggi di seluruh dunia khususnya dalam kategori segel untuk water pump otomotif. Segel ini juga cocok untuk pompa industri.",
+    unitizedDesign: "Desain Terpadu",
+    unitizedDesignDescription: "EH795: Komponen berputar dan stasioner disatukan dengan lengan bermeterai, memberikan kemudahan instalasi serta keandalan tinggi dengan melindungi permukaan geser."
   },
   
   // EVK2RV - Water Lubricated Stern Tube Seal
@@ -114,6 +199,19 @@ export default {
     maxPressureValue: "Hingga 1,0 MPa",
     applicationsValue: "Kapal Maritim, Kapal, Perahu"
   },
+
+  // EVK2RV specific translations
+    evk2rvFeatures: {
+      excellentSealingPerformance: "1. Kinerja Penyegelan yang Sangat Baik dengan Resistensi Getaran Poros",
+      excellentSealingPerformanceDescription: "Karena ini adalah segel tipe ujung wajah yang terdiri dari cincin segel dan cincin pasangan, secara fleksibel mengatasi getaran yang rumit dan defleksi poros dan menunjukkan kinerja penyegelan yang sangat baik.",
+      noWearOfShaftSleeve: "2. Tidak ada aus pada lengan poros",
+      noWearOfShaftSleeveDescription: "Cincin segel berputar bersama dengan lengan poros dan oleh karena itu, tidak ada aus pada lengan poros. \"Eagle Paint\" disediakan pada permukaan lengan poros untuk mencegah korosi.",
+      easyReplacementOfParts: "3. Penggantian Suku Cadang yang Mudah",
+      easyReplacementOfPartsDescription: "Cincin segel dan cincin kembung dapat dengan mudah diikat di atas poros oleh vulkanizer. Dengan mengerjakan cincin kembung, inspeksi dan penggantian cincin segel di laut dapat dengan mudah dilakukan.",
+      maintenanceSaving: "4. Penghematan Pemeliharaan",
+      maintenanceSavingDescription: "Wajah penyegelan cincin segel dan cincin pasangan dilumasi oleh air laut yang datang melalui notch cincin segel, dan oleh karena itu pemeliharaan harian tidak akan diperlukan."
+    },
+    evk2rvFeaturedDescription: "Segel berpelumas air yang kompak dan berkinerja tinggi yang memiliki resistensi getaran dan kinerja penyegelan yang sangat baik.",
   
   // EVK2RT - Water Lubricated Stern Tube Seal
   evk2rt: {
@@ -144,6 +242,23 @@ export default {
     maxPressureValue: "Hingga 1,2 MPa",
     applicationsValue: "Kapal Maritim Komersial, Kapal Industri"
   },
+
+  // EVK2RT specific translations
+    evk2rtFeaturedDescription: "Cincin cadangan mudah diaktifkan tanpa membongkar.",
+    evk2rtFeatures: {
+      improvedWearResistance: "1. Resistensi aus yang ditingkatkan",
+      improvedWearResistanceDescription: "Cincin segel aktif #1 selalu dilumasi oleh air tawar bersih yang dikontrol sendiri. Ini menghasilkan pengurangan yang signifikan dalam aus cincin pasangan, perumahan segel, dan cincin segel.",
+      builtInSpareSealRing: "2. Cincin segel cadangan terpasang",
+      builtInSpareSealRingDescription: "Cincin segel cadangan #2 terpasang dalam perumahan segel sebagai cadangan. Segel #2 siaga dalam kondisi menganggur di bawah operasi normal dan didinginkan, dilumasi & dilindungi oleh air tawar.",
+      improvedOperability: "3. Operabilitas yang ditingkatkan",
+      improvedOperabilityDescription: "Cincin segel aktif mudah diubah dari #1 ke segel cadangan #2 dengan operasi katup. Segel cadangan #2 diaktifkan tanpa membongkar unit segel seharusnya cincin segel #1 menunjukkan kebocoran yang meningkat.",
+      easyUpgradeFromExistingEVK: "4. Peningkatan mudah dari EVK yang ada",
+      easyUpgradeFromExistingEVKDescription: "Dengan mengganti perumahan segel, mungkin untuk mengkonversi segel EVK yang ada ke tipe Tandem."
+    },
+    evk2rtSpecificationTable: {
+      shaftDiameterRange: "Rentang diameter poros",
+      pvValue: "Nilai PV (Tekanan-Velocity)"
+    },
   
   // EVR - Water Lubricated Stern Tube Bearing
   evr: {
@@ -158,7 +273,39 @@ export default {
     materialValue: "Material Bantalan Berpelumas Air Khusus",
     temperatureRangeValue: "-5°C hingga 70°C",
     maxPressureValue: "Hingga 2,0 MPa",
-    applicationsValue: "-"
+    applicationsValue: "-",
+    // EVR specific translations
+    featuredDescription: "Daya Tahan dan Penyerapan Getaran yang Sangat Baik.",
+    features: "Fitur",
+    featuresSubtitle: "Fitur utama dan manfaat dari EVR",
+    combinationOfAdvantages: "1. Kombinasi keunggulan plastik yang diperkuat dengan elastomer",
+    combinationOfAdvantagesDescription: "Memanfaatkan sifat terbaik dari material plastik yang diperkuat dan elastomer untuk kinerja optimal.",
+    outstandingDurability: "2. Daya tahan yang luar biasa dan kinerja yang stabil",
+    outstandingDurabilityDescription: "Direkayasa untuk memberikan layanan tahan lama dengan kinerja konsisten di bawah berbagai kondisi laut.",
+    effectiveAbsorption: "3. Penyerapan getaran poros yang efektif",
+    effectiveAbsorptionDescription: "Menyerap dan meredam getaran poros secara efektif, mengurangi stres pada sistem bantalan.",
+    preventionOfCorrosion: "4. Pencegahan Korosi Elektrolitik pada lengan poros",
+    preventionOfCorrosionDescription: "Desain khusus mencegah korosi elektrolitik, memperpanjang umur lengan poros.",
+    types: "Tipe",
+    typesSubtitle: "Tipe bantalan EVR yang tersedia untuk berbagai aplikasi",
+    straightTypeBearing: "1. Bantalan Tipe Lurus",
+    straightTypeBearingDescription: "Cangkang luar terbuat dari Plastik Berlapis Kain Katun (CRP) yang diresapi dengan resin termosetting. Cocok untuk dipasang pada kapal dengan diameter relatif kecil.",
+    flangeTypeBearing: "2. Bantalan Tipe Flensa",
+    flangeTypeBearingDescription: "Cangkang luar terbuat dari Plastik Berlapis Kain Kaca (GRP), dan cocok untuk diameter yang relatif lebih besar.",
+    specifications: "Spesifikasi",
+    specificationsSubtitle: "Spesifikasi teknis dari Bantalan Stern Tube Berpelumas Air EVR",
+    sizeRange: "Rentang Ukuran (Dia. Poros)",
+    shaftSpeed: "Kecepatan poros",
+    bearingLoad: "Beban bantalan (Rata-rata)",
+    quantityOfCoolingWater: "Jumlah air pendingin (Referensi)",
+    temperatureOfCoolingWater: "Suhu air pendingin",
+    documents: "Dokumen",
+    documentsSubtitle: "Akses katalog produk dan manual untuk informasi detail",
+    productCatalog: "Katalog Produk",
+    productCatalogDescription: "Katalog lengkap dengan spesifikasi teknis dan detail",
+    manualInstruction: "Petunjuk Manual",
+    manualInstructionDescription: "Manual instalasi dan operasi untuk EVR",
+    downloadPDF: "Unduh PDF"
   },
   
   // EVU - Water Lubricated Stern Tube Bearing
@@ -172,7 +319,30 @@ export default {
     materialValue: "Senyawa Poli-Urethane",
     temperatureRangeValue: "-10°C hingga 60°C",
     maxPressureValue: "Hingga 1,5 MPa",
-    applicationsValue: "Kapal Maritim, Sistem Propulsi Berpelumas Air"
+    applicationsValue: "Kapal Maritim, Sistem Propulsi Berpelumas Air",
+    // Features section
+    featuresTitle: "Fitur",
+    featuresSubtitle: "Fitur utama dari Bantalan Poli-Urethane (EVU)",
+    lowFriction: "1. Gesekan Rendah",
+    lowFrictionDescription: "Dengan meratakan bagian bawah, kemampuan pembentukan film air ditingkatkan dan koefisien gesekan dalam penggunaan normal dapat lebih rendah dari bantalan karet dan sejenisnya. (1/10 dari bantalan karet dalam penggunaan normal)",
+    lowWear: "2. Aus Rendah",
+    lowWearDescription: "Menggunakan material Poli-Urethane dengan resistensi aus yang sangat baik. Dikonfirmasi memiliki resistensi aus 10 tahun atau lebih dalam tes evaluasi kami.",
+    reductionOfSinglePartHit: "3. Pengurangan single-part hit",
+    reductionOfSinglePartHitDescription: "Dengan menggunakan material Poli-Urethane yang fleksibel, beban terkonsentrasi di ujung AFT dapat dihindari.",
+    bearingLength: "4. Panjang Bantalan",
+    bearingLengthDescription: "Panjang bantalan dapat dibagi dua dari bantalan karet, karena resistensi tekanan ditingkatkan.",
+    quickDelivery: "5. Pengiriman Cepat",
+    quickDeliveryDescription: "Karena memiliki struktur tunggal Poli-Urethane, jika material tersedia, hanya pemrosesan yang diperlukan untuk produksi, sehingga memungkinkan untuk merespons waktu pengiriman singkat.",
+    installMethod: "6. Metode Instalasi",
+    installMethodDescription: "Menggunakan karakteristik Poli-Urethane, instalasi ke stern tube dengan cold fit.",
+    // Documents section
+    documentsTitle: "Dokumen",
+    documentsSubtitle: "Akses katalog produk dan manual untuk informasi detail",
+    productCatalog: "Katalog Produk",
+    productCatalogDescription: "Katalog lengkap dengan spesifikasi teknis dan detail",
+    manualInstruction: "Petunjuk Manual",
+    manualInstructionDescription: "Manual instalasi dan operasi untuk EVU",
+    downloadPDF: "Unduh PDF"
   },
   
   // EVU - Water Lubricated Stern Tube Bearing
@@ -202,9 +372,6 @@ export default {
     title: "Floating Seal ES100 & ES764",
     breadcrumb: "Floating Seal ES100 & ES764",
     description1: "Segel untuk undercarriage mesin konstruksi (rol trek, penggerak akhir, as dan idler). Struktur sederhana yang terdiri dari O-ring dan cincin segel yang terbuat dari besi cor khusus. Segel optimal untuk undercarriage bulldozer dan ekskavator hidraulik yang sering terkena pasir, kotoran dan benda asing lainnya. ES764 menawarkan kemudahan dalam merancang dan memproduksi perumahan.",
-    description2: "Segel mengambang adalah produk sederhana, yang terdiri dari dua komponen: cincin segel yang terbuat dari besi cor khusus dan komponen karet (O-ring/gasket). Dalam penggunaan, dua segel identik membentuk sepasang. Cincin segel, yang merupakan komponen geser, tidak kontak dengan poros karena ditopang oleh komponen karet, dan oleh karena itu mengikuti gerakan radial dan dorong poros dengan dekat.",
-    description3: "Karena mereka dikembangkan untuk aplikasi slurry, cincin segel terbuat dari material yang sangat keras, tahan aus dan tahan korosi. Komponen karet menekan permukaan geser cincin segel dan juga berfungsi sebagai segel. Oleh karena itu, dibuat dari material yang sangat tahan terhadap suhu rendah dan panas dengan sedikit set kompresi untuk masa pakai yang lebih lama.",
-    description4: "Penggunaan utama segel mengambang termasuk rol crawler, penggerak perjalanan dan idler mesin konstruksi dan pertanian, dan juga untuk konveyor, mixer, dan berbagai mesin penggali. Dengan kata lain, mereka digunakan secara luas dalam aplikasi kecepatan relatif rendah yang terkena benda asing.",
     categoryValue: "Mesin, Undercarriage",
     sealedFluidValue: "Di dalam: pelumas, Di luar: pasir, kotoran dan lumpur",
     temperatureValue: "NBR: -40 hingga 100ºC, H-NBR: -30 hingga 130ºC, FKM: -10 hingga 200ºC",
@@ -213,16 +380,27 @@ export default {
     shaftDiameterValue: "φ38～φ429mm",
     materialValue: "Cincin segel besi cor khusus, O-ring/gasket karet",
     applicationsValue: "Rol trek, penggerak akhir, as, idler, konveyor, mixer, mesin penggali",
-    noteText: "Catatan: Angka di atas menunjukkan kondisi terbaik dalam kasus individual dan mungkin berbeda sesuai dengan ukuran segel. Hubungi kami sebelum digunakan."
+    noteText: "Catatan: Angka di atas menunjukkan kondisi terbaik dalam kasus individual dan mungkin berbeda sesuai dengan ukuran segel. Hubungi kami sebelum digunakan.",
+    // Feature translations
+    simpleStructure: "Struktur Sederhana",
+    simpleStructureDescription: "Segel mengambang adalah produk sederhana, yang terdiri dari dua komponen: cincin segel yang terbuat dari besi cor khusus dan komponen karet (O-ring/gasket). Dalam penggunaan, dua segel identik membentuk sepasang.",
+    flexibleDesign: "Desain Fleksibel",
+    flexibleDesignDescription: "Cincin segel, yang merupakan komponen geser, tidak kontak dengan poros karena ditopang oleh komponen karet, dan oleh karena itu mengikuti gerakan radial dan dorong poros dengan dekat.",
+    durableMaterials: "Material Tahan Lama",
+    durableMaterialsDescription: "Karena mereka dikembangkan untuk aplikasi slurry, cincin segel terbuat dari material yang sangat keras, tahan aus dan tahan korosi. Komponen karet menekan permukaan geser cincin segel dan juga berfungsi sebagai segel.",
+    wideRangeOfApplications: "Rentang Aplikasi yang Luas",
+    wideRangeOfApplicationsDescription: "Penggunaan utama segel mengambang termasuk rol crawler, penggerak perjalanan dan idler mesin konstruksi dan pertanian, dan juga untuk konveyor, mixer, dan berbagai mesin penggali. Dengan kata lain, mereka digunakan secara luas dalam aplikasi kecepatan relatif rendah yang terkena benda asing."
   },
   
   // Lip Seal
   lipSeal: {
     title: "Lip Seal Untuk Kompresor A/C",
     breadcrumb: "Lip Seal Untuk Kompresor A/C",
-    description1: "Segelan poros berputar yang dirancang khusus untuk kompresor AC mobil. Desain asli Eagle Industry yang menampilkan kompaksi dan keandalan tinggi. Membantu menghilangkan kebocoran CFC yang menyebabkan pemanasan global.",
-    description2: "Segel bibir kami untuk kompresor AC direkayasa dengan presisi untuk memberikan kinerja penyegelan optimal dalam sistem AC otomotif. Desain inovatif memastikan keandalan sambil membantu mencegah kebocoran refrigeran.",
-    description3: "Diproduksi dengan material dan proses canggih, segel bibir kami menawarkan resistensi yang sangat baik terhadap berbagai refrigeran dan kondisi operasi. Desain kompak memungkinkan instalasi mudah dalam berbagai konfigurasi kompresor.",
+    description1: "Segelan poros berputar yang dirancang khusus untuk kompresor AC mobil",
+    description2: "Desain asli Eagle Industry yang menampilkan kompaksi dan keandalan tinggi",
+    description3: "Membantu menghilangkan kebocoran CFC yang menyebabkan pemanasan global",
+    description4: "Terbuat dari karet yang cocok untuk menyegel CFC dan oli kulkas",
+    description5: "Produksi massal dengan jalur perakitan otomatis penuh dan disuplai ke produsen kompresor di seluruh dunia",
     categoryValue: "Otomotif, Sistem A/C",
     typeValue: "Lip Seal",
     materialValue: "Senyawa Elastomer Khusus",
@@ -284,6 +462,27 @@ export default {
     variesByApplication: "Bervariasi sesuai aplikasi",
     noteText: "Catatan: Angka di atas menunjukkan kondisi terbaik dalam kasus individual dan mungkin berbeda sesuai dengan ukuran segel. Hubungi kami sebelum digunakan."
   },
+
+  // MAS specific translations
+    masFeaturedDescription: "Segel berpelumas air yang kompak dan berkinerja tinggi yang memiliki resistensi getaran dan kinerja penyegelan yang sangat baik.",
+    masFeatures: {
+      excellentVibrationResistance: "1. Resistensi getaran dan kinerja penyegelan yang sangat baik",
+      excellentVibrationResistanceDescription: "Karena struktur segel ujung wajah yang terdiri dari cincin segel karet dan cincin pasangan baja tahan karat, ia mampu mengikuti getaran poros yang kompleks dan perpindahan sehingga menunjukkan kinerja penyegelan yang sangat baik.",
+      excellentFollowabilityInAxialDirection: "2. Kemampuan mengikuti yang sangat baik dalam arah aksial",
+      excellentFollowabilityInAxialDirectionDescription: "Karena penyegelan dicapai oleh cincin segel yang berputar pada kecepatan yang sama dengan poros dan struktur wajahnya yang membuat kontak dengan cincin pasangan stasioner sebagai penghenti, ia mampu menyerap semua gerakan aksial.",
+      simpleAndRobustRubberHousingDesign: "3. Desain perumahan karet yang sederhana dan kuat",
+      simpleAndRobustRubberHousingDesignDescription: "Diameter dalam perumahan dirancang ke standar tinggi yang sama seperti bantalan karet sehingga dapat menahan kontak dengan poros diturunkan. Karena area penyegelan tidak terpapar secara eksternal seperti kasus dengan segel mekanis, ia mampu menahan 'mekanikal shock' ke tingkat yang tinggi.",
+      easyToInstall: "4. Mudah dipasang",
+      easyToInstallDescription: "Ruang instalasi kompak dengan struktur yang hanya memerlukan selang air pendingin untuk disuplai. Struktur diperbaiki ke stern tube dengan cara dua hose bands membuatnya sederhana untuk dipasang.",
+      excellentSlurryResistance: "5. Resistensi slurry yang sangat baik",
+      excellentSlurryResistanceDescription: "Segel dapat diharapkan memiliki masa pakai yang lama bahkan dalam kondisi air kotor dengan tingkat sedimen tinggi seperti yang ditemukan di air dangkal dan sungai."
+    },
+    masSpecificationTable: {
+      shaftRange: "Rentang Poros",
+      allowablePvValue: "Nilai PV yang Diizinkan",
+      requiredAmountOfCoolingWater: "Jumlah air pendingin yang diperlukan",
+      temperatureOfCoolingWater: "Suhu air pendingin"
+    },
   
   // O-Ring
   oRing: {
@@ -346,9 +545,11 @@ export default {
   reedValve: {
     title: "Reed Valve",
     breadcrumb: "Reed Valve",
-    description1: "Dirancang untuk digunakan dalam mesin sepeda motor empat tak untuk kontrol emisi (pasokan udara sekunder). Secara substansial mengurangi emisi karbon monoksida (CO) dan hidrokarbon (HC) untuk mengurangi polusi udara.",
-    description2: "Reed Valve yang kompak dan ringan ini dipasang di ruang terbatas memastikan aliran besar. Katup yang sangat responsif untuk mode kecepatan tinggi.",
-    description3: "Reed valve kami direkayasa dengan presisi untuk memberikan kinerja optimal dalam mesin sepeda motor. Dengan material canggih dan desain inovatif, katup ini memastikan daya tahan dan efisiensi maksimal dalam mengontrol emisi sambil mempertahankan operasi mesin yang halus.",
+    description1: "Dirancang untuk digunakan dalam mesin sepeda motor empat tak untuk kontrol emisi (pasokan udara sekunder).",
+    description2: "Secara substansial mengurangi emisi karbon monoksida (CO) dan hidrokarbon (HC) untuk mengurangi polusi udara.",
+    description3: "Reed Valve yang kompak dan ringan ini dipasang di ruang terbatas memastikan aliran besar.",
+    description4: "Katup yang sangat responsif untuk mode kecepatan tinggi.",
+    description5: "Reed valve kami direkayasa dengan presisi untuk memberikan kinerja optimal dalam mesin sepeda motor. Dengan material canggih dan desain inovatif, katup ini memastikan daya tahan dan efisiensi maksimal dalam mengontrol emisi sambil mempertahankan operasi mesin yang halus.",
     productTitle: "Reed Valve",
     categoryValue: "Otomotif, Mesin Sepeda Motor",
     applicationValue: "Mesin sepeda motor empat tak",
@@ -362,6 +563,13 @@ export default {
     temperature: "Suhu",
     vibrationDurability: "Daya tahan getaran",
     noteText: "Catatan: Angka di atas menunjukkan beberapa contoh. Hubungi kami ketika Anda mempertimbangkan untuk melakukan pembelian.",
+    // Features section
+    features: "Fitur",
+    featuresSubtitle: "Fitur utama dari Reed Valves untuk Water Pump",
+    compactLightweightDesign: "Desain Kompak dan Ringan",
+    compactLightweightDesignDescription: "Reed Valve yang kompak dan ringan ini dipasang di ruang terbatas memastikan aliran besar.",
+    highlyResponsive: "Sangat Responsif",
+    highlyResponsiveDescription: "Katup yang sangat responsif untuk mode kecepatan tinggi.",
     // Related products
     forAcCompressor: "untuk kompresor A/C",
     typeAMechanicalSeal: "Mechanical seal Tipe A",
@@ -377,6 +585,33 @@ export default {
     title: "Rudder Seal (RSC)",
     breadcrumb: "Rudder Seal (RSC)",
     description1: "Produksi segel kemudi dengan segelan bibir self-lubricating berkinerja tinggi yang dirancang untuk dipasang di atas bantalan kemudi untuk mencegah masuknya air laut ke lambung. Diproduksi dari karet khusus, memberikan masa pakai aus yang lama tanpa perlu penyesuaian berkala, beroperasi dengan lebih sedikit hambatan dan mengurangi aus poros atau liner.",
+    advantagesDescription: "Keunggulan utama dan manfaat dari Rudder Seal",
+    advantage1: {
+      title: "1. Desain Self-Lubricating Berkinerja Tinggi",
+      description: "Diproduksi dari senyawa karet khusus yang memberikan sifat self-lubricating yang sangat baik, mengurangi gesekan dan memperpanjang masa pakai."
+    },
+    advantage2: {
+      title: "2. Perlindungan Superior Terhadap Masuknya Air",
+      description: "Dirancang untuk dipasang di atas bantalan kemudi untuk secara efektif mencegah masuknya air laut ke lambung, melindungi komponen kritis."
+    },
+    advantage3: {
+      title: "3. Masa Pakai Aus yang Lama",
+      description: "Formulasi karet khusus memastikan masa pakai aus yang diperpanjang tanpa perlu penyesuaian berkala, mengurangi kebutuhan perawatan."
+    },
+    advantage4: {
+      title: "4. Mengurangi Hambatan dan Aus Poros",
+      description: "Beroperasi dengan lebih sedikit hambatan dan secara signifikan mengurangi aus poros/liner, meningkatkan efisiensi keseluruhan dan memperpanjang umur komponen."
+    },
+    advantage5: {
+      title: "5. Mudah dipasang",
+      description: "Proses instalasi yang sederhana yang menghemat waktu dan mengurangi biaya tenaga kerja."
+    },
+    advantage6: {
+      title: "6. Tidak memerlukan perawatan",
+      description: "Desain tanpa perawatan yang menghilangkan kebutuhan akan layanan berkala."
+    },
+    manualDescription: "Manual instalasi dan operasi untuk Rudder Seal",
+    relatedProductsDescription: "Produk lainnya dalam kategori Water Lubricated Stern Tube Seal",
     productInformation: "Informasi Produk",
     category: "Kategori",
     sealedFluid: "Fluida yang disegel",
@@ -410,6 +645,19 @@ export default {
     controlValve: "Katup Kontrol",
     contact: "Kontak"
   },
+
+  // Common section titles
+    features: "Fitur",
+    advantages: "Keunggulan",
+    featuresDescription: "Fitur utama dari {product}",
+    specification: "Spesifikasi",
+    specificationDescription: "Spesifikasi teknis dari {product}",
+    documents: "Dokumen",
+    documentsDescription: "Akses katalog produk dan manual untuk informasi detail",
+    productCatalog: "Katalog Produk",
+    productCatalogDescription: "Katalog lengkap dengan spesifikasi teknis dan detail",
+    manualInstruction: "Petunjuk Manual",
+    downloadPDF: "Unduh PDF",
   
   // Service Engineer
   serviceEngineer: {
@@ -438,6 +686,26 @@ export default {
     noteText: "Catatan: Service engineer kami tersedia 24/7 untuk dukungan darurat. Hubungi kami untuk bantuan segera.",
     contactServiceEngineerSection: "Hubungi Service Engineer",
     pleaseContactUsViaOurEmailForm: "Silakan hubungi kami melalui formulir email kami untuk dukungan teknis",
+    // Hardcoded strings that need translation
+    professionalEngineeringServices: "Layanan teknik profesional untuk sistem penyegelan kapal Anda.",
+    weProvideHighlySkilled: "Kami menyediakan service engineer yang sangat terampil dan berpengalaman untuk menangani semua aspek penyegelan maritim — dari perekatan dan perakitan hingga inspeksi dan supervisi di lokasi.",
+    withDeepUnderstanding: "Dengan pemahaman mendalam tentang lingkungan maritim dan kepatuhan pada standar industri tertinggi, kami memastikan setiap segel dipasang dengan presisi dan memberikan kinerja optimal untuk mencegah kebocoran, meningkatkan efisiensi, dan memperpanjang suku cadang peralatan.",
+    expertServiceEngineers: "Service engineer ahli menyediakan instalasi dan pemeliharaan profesional untuk sistem penyegelan maritim di seluruh dunia.",
+    features: "Fitur",
+    keyFeaturesAndBenefits: "Fitur utama dan manfaat dari solusi Service Engineer kami",
+    professionalInstallationServices: "1. Layanan Instalasi Profesional",
+    professionalInstallationDescription: "Service engineer yang sangat terampil kami berspesialisasi dalam instalasi sistem penyegelan maritim yang presisi, memastikan kinerja optimal dan umur panjang peralatan Anda.",
+    expertBondingAndAssembly: "2. Perekatan dan Perakitan Ahli",
+    expertBondingDescription: "Dengan pengalaman luas dalam teknologi penyegelan maritim, insinyur kami menangani proses perekatan dan perakitan yang kompleks dengan perhatian detail yang teliti.",
+    comprehensiveInspectionServices: "3. Layanan Inspeksi Komprehensif",
+    comprehensiveInspectionDescription: "Inspeksi menyeluruh sistem penyegelan untuk mengidentifikasi potensi masalah sebelum menjadi masalah, memastikan operasi yang andal dan mencegah downtime yang mahal.",
+    onSiteSupervision: "4. Supervisi di Lokasi",
+    onSiteSupervisionDescription: "Service engineer kami menyediakan supervisi ahli di lokasi untuk operasi penyegelan kritis, memastikan kepatuhan dengan standar industri dan spesifikasi produsen.",
+    serviceInformationDetails: "Informasi Layanan",
+    detailsAboutOurService: "Detail tentang penawaran service engineer kami",
+    contactUs: "Hubungi Kami",
+    requestService: "Permintaan Layanan",
+    marineIndustryProducts: "Produk industri maritim",
     // Region translations
     asia: "Asia",
     asiaLocations: "Jepang (Tokyo, Kobe, Hiroshima)<br>Cina, Singapura, Taiwan, Korea Selatan<br>Indonesia, Filipina, Thailand, India",
@@ -458,6 +726,14 @@ export default {
     eh795EH790: "EH795/EH790",
     forVariableDisplacementAcCompressor: "untuk Kompresor A/C Perpindahan Variabel",
     controlValve: "Katup Kontrol",
-    contact: "Kontak"
+    contact: "Kontak",
+    
+    
+    
+    // Common descriptions
+    otherProductsInCategory: "Produk lainnya dalam kategori {category}",
+    industrial: "Industri",
+    hydraulicComponents: "Komponen Hidraulik",
+    machinery: "Mesin",
   }
 };

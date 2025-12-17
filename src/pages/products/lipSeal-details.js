@@ -100,19 +100,19 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.lipSeal.productTitle')}</h2>
                 <p>
-                  Rotating shaft seals exclusively designed for car air-conditioning compressors
+                  {t('productDetails.lipSeal.description1')}
                 </p>
                 <p>
-                  Eagle Industry's original design featuring compactness and high reliability
+                  {t('productDetails.lipSeal.description2')}
                 </p>
                 <p>
-                  Helps eliminate CFC leakage causing global warming
+                  {t('productDetails.lipSeal.description3')}
                 </p>
                 <p>
-                  Made of rubber suitable for sealing CFCs and refrigerator oil
+                  {t('productDetails.lipSeal.description4')}
                 </p>
                 <p>
-                  Mass-production by full automated assembling lines and supplied to compressor makers worldwide
+                  {t('productDetails.lipSeal.description5')}
                 </p>
               </div>
             </div>
@@ -184,7 +184,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Automobile category</p>
+            <p>{t('productDetails.otherProductsInCategory', { category: t('products.automobile') })}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -194,7 +194,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed-valve-1.png`} className="card-image" alt="Reed Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Mobil' : 'Automobile'}<br />Reed Valve</span>
+                    <span>{t('products.automobile')}<br />{t('productDetails.reedValve.title')}</span>
                   </div>
                 </Link>
               </div>
@@ -206,7 +206,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/mech-seal-4.png`} className="card-image" alt="WP Compact Mechanical Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Mobil' : 'Automobile'}<br />{t('productDetails.lipSeal.eh795EH790')}</span>
+                    <span>{t('products.automobile')}<br />{t('productDetails.lipSeal.eh795EH790')}</span>
                   </div>
                 </Link>
               </div>
@@ -218,7 +218,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/acv-1.png`} className="card-image" alt="Control Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Mobil' : 'Automobile'}<br />{t('productDetails.lipSeal.controlValve')}</span>
+                    <span>{t('products.automobile')}<br />{t('productDetails.lipSeal.controlValve')}</span>
                   </div>
                 </Link>
               </div>

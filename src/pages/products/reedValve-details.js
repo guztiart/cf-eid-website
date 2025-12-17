@@ -97,10 +97,10 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.reedValve.productTitle')}</h2>
                 <p>
-                  Designed to be used in four-stroke motorcycle engines for emission control (secondary air supply).
+                  {t('productDetails.reedValve.description1')}
                 </p>
                 <p>
-                  Substantially reduces carbon monoxide (CO) and hydrocarbon (HC) emissions to mitigate air pollution.
+                  {t('productDetails.reedValve.description2')}
                 </p>
               </div>
             </div>
@@ -114,17 +114,17 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features of the Reed Valves for Water Pump</p>
+                <h2>{t('productDetails.reedValve.features')}</h2>
+                <p>{t('productDetails.reedValve.featuresSubtitle')}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>Compact and Lightweight Design</h4>
-                  <p>These compact and lightweight Reed Valve installed in a limited space ensure large flows.</p>
+                  <h4>{t('productDetails.reedValve.compactLightweightDesign')}</h4>
+                  <p>{t('productDetails.reedValve.compactLightweightDesignDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Highly Responsive</h4>
-                  <p>Highly responsive valves for high-speed mode.</p>
+                  <h4>{t('productDetails.reedValve.highlyResponsive')}</h4>
+                  <p>{t('productDetails.reedValve.highlyResponsiveDescription')}</p>
                 </div>
               </div>
             </div>

@@ -100,7 +100,7 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.mas.title')}</h2>
                 <p>
-                  We are the leading manufacturer of stern tube shaft sealing devices worldwide with our products installed on over 30,000 ship of 100 gross tonnages or more. The Marine Ace Seal (MAS) is our newly developed waterlubricated stern seal for small vessels with direct drive systems.
+                  {t('productDetails.mas.description1')}
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ const ProjectDetails = () => {
           
           {/* Product Featured Image */}
           <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
-            <p className="featured-image-description">A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance.</p>
+            <p className="featured-image-description">{t('productDetails.masFeaturedDescription')}</p>
             <img src={`${process.env.PUBLIC_URL}/assets/img/product/mas-6.jpg`} alt="Marine Ace Seal Product Feature" className="featured-product-image" />
           </div>
         </div>
@@ -120,29 +120,29 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features and benefits of the Marine Ace Seal (MAS) Water Lubricated Stern Tube Seal</p>
+                <h2>{t('productDetails.features')}</h2>
+                <p>{t('productDetails.featuresDescription', { product: t('productDetails.mas.title') })}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>1. Excellent vibration resistance and sealing performance</h4>
-                  <p>Due to an end-face seal structure consisting of a rubber sealing ring and a stainless steel mating ring, it is able to follow complex shaft vibration and displacements thereby demonstrating an excellent sealing performance.</p>
+                  <h4>{t('productDetails.masFeatures.excellentVibrationResistance')}</h4>
+                  <p>{t('productDetails.masFeatures.excellentVibrationResistanceDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>2. Excellent followability in the axial direction</h4>
-                  <p>As sealing is achieved by the seal ring rotating at the same speed as the shaft and its face structure making contact against the stationary mating ring as a stopper, it is able to absorb all axial movement.</p>
+                  <h4>{t('productDetails.masFeatures.excellentFollowabilityInAxialDirection')}</h4>
+                  <p>{t('productDetails.masFeatures.excellentFollowabilityInAxialDirectionDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>3. Simple and robust rubber housing design</h4>
-                  <p>The inner diameter of the housing is designed to the same high standard as a rubber bearing so it can withstand contact with the shaft is lowered. As the sealing area is not exposed externally as is the case with a mechanical seal, it is able to withstand 'mechanical shock' to a high degree.</p>
+                  <h4>{t('productDetails.masFeatures.simpleAndRobustRubberHousingDesign')}</h4>
+                  <p>{t('productDetails.masFeatures.simpleAndRobustRubberHousingDesignDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>4. Easy to install</h4>
-                  <p>The installation space is compact with the structure requiring only the cooling water hose to be supplied. The structure is fixed to the stern tube by means of two hose bands making it simple to install.</p>
+                  <h4>{t('productDetails.masFeatures.easyToInstall')}</h4>
+                  <p>{t('productDetails.masFeatures.easyToInstallDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>5. Excellent slurry resistance</h4>
-                  <p>The seal can be expected to have a long life even under dirty water conditions with a high degree of sediment as found in shallow water and rivers.</p>
+                  <h4>{t('productDetails.masFeatures.excellentSlurryResistance')}</h4>
+                  <p>{t('productDetails.masFeatures.excellentSlurryResistanceDescription')}</p>
                 </div>
               </div>
             </div>
@@ -156,26 +156,26 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Specification</h2>
-                <p>Technical specifications of the Marine Ace Seal (MAS)</p>
+                <h2>{t('productDetails.specification')}</h2>
+                <p>{t('productDetails.specificationDescription', { product: t('productDetails.mas.title') })}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Shaft Range</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.masSpecificationTable.shaftRange')}</th>
                       <td>φ45~φ85 (5mm increment), 2"~3" (0,5"increment)</td>
                     </tr>
                     <tr>
-                      <th>Allowable PV Value</th>
-                      <td>0.3 MPa・m/sec P (Pressure in sealing device) : Max. 0.1 MPa<br />V (Shaft rotation speed)</td>
+                      <th>{t('productDetails.masSpecificationTable.allowablePvValue')}</th>
+                      <td>0.3 MPa・m/sec {t('productDetails.mas.pressure')} : Max. 0.1 MPa<br />{t('productDetails.mas.shaftRotationSpeed')}</td>
                     </tr>
                     <tr>
-                      <th>Required amount of cooling water</th>
+                      <th>{t('productDetails.masSpecificationTable.requiredAmountOfCoolingWater')}</th>
                       <td>Min. 3 Litter/min</td>
                     </tr>
                     <tr>
-                      <th>Temperature of cooling water</th>
+                      <th>{t('productDetails.masSpecificationTable.temperatureOfCoolingWater')}</th>
                       <td>0~40℃</td>
                     </tr>
                   </tbody>
@@ -192,8 +192,8 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Documents</h2>
-                <p>Access product catalogs and manuals for detailed information</p>
+                <h2>{t('productDetails.documents')}</h2>
+                <p>{t('productDetails.documentsDescription')}</p>
               </div>
               <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
                 <div className="download-item">
@@ -201,11 +201,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Product Catalog</h4>
-                    <p>Complete catalog with technical specifications and details</p>
+                    <h4>{t('productDetails.productCatalog')}</h4>
+                    <p>{t('productDetails.productCatalogDescription')}</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - Marine Ace Seal (MAS).pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
                 <div className="download-item">
@@ -213,11 +213,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Manual Instruction</h4>
-                    <p>Installation and operation manual for Marine Ace Seal</p>
+                    <h4>{t('productDetails.manualInstruction')}</h4>
+                    <p>{t('productDetails.manualInstruction')} {t('productDetails.manualInstruction')} for Marine Ace Seal</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - Marine Ace Seal.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
               </div>
@@ -247,7 +247,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
+            <p>{t('productDetails.otherProductsInCategory', { category: t('products.waterLubricatedSternTubeSeal') })}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">

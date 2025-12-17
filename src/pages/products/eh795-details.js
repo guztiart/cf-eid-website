@@ -109,13 +109,7 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.eh795.title')}</h2>
                 <p>
-                  Capable for high-speed rotation.
-                </p>
-                <p>
-                  Mass-production by fully automated assembling lines and supplied to water pump makers worldwide.
-                </p>
-                <p>
-                  By its unitized design, EH795 supports easy installation into customer application.
+                  {t('productDetails.eh795.description1')}
                 </p>
               </div>
             </div>
@@ -129,25 +123,25 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features of the EH795/EH790 for Water Pump</p>
+                <h2>{t('productDetails.eh795.featuresTitle')}</h2>
+                <p>{t('productDetails.eh795.featuresSubtitle')}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>High-Speed Rotation</h4>
-                  <p>These seals are suitable for high-speed rotation due to its simple and compact construction.</p>
+                  <h4>{t('productDetails.eh795.highSpeedRotation')}</h4>
+                  <p>{t('productDetails.eh795.highSpeedRotationDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Superior Materials</h4>
-                  <p>The materials of the seal face are Eagle Industry's proprietary carbon components and SiC which provides high resistance to heat, wear and corrosion.</p>
+                  <h4>{t('productDetails.eh795.superiorMaterials')}</h4>
+                  <p>{t('productDetails.eh795.superiorMaterialsDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Global Manufacturing</h4>
-                  <p>These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. These seals are also suitable for industrial pumps.</p>
+                  <h4>{t('productDetails.eh795.globalManufacturing')}</h4>
+                  <p>{t('productDetails.eh795.globalManufacturingDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Unitized Design</h4>
-                  <p>EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.</p>
+                  <h4>{t('productDetails.eh795.unitizedDesign')}</h4>
+                  <p>{t('productDetails.eh795.unitizedDesignDescription')}</p>
                 </div>
               </div>
             </div>

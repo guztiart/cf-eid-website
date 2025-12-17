@@ -12,7 +12,7 @@ export const LanguageProvider = ({ children }) => {
     setLanguage(prevLanguage => prevLanguage === 'en' ? 'id' : 'en');
   };
 
-  const t = (key) => {
+  const t = (key, params = {}) => {
     // Split key by dots to access nested properties
     const keys = key.split('.');
     let value = translations[language];
@@ -24,6 +24,13 @@ export const LanguageProvider = ({ children }) => {
         // Return key if translation is not found
         return key;
       }
+    }
+    
+    // Handle parameter interpolation
+    if (typeof value === 'string' && Object.keys(params).length > 0) {
+      return value.replace(/\{(\w+)\}/g, (match, param) => {
+        return params[param] !== undefined ? params[param] : match;
+      });
     }
     
     return value || key;

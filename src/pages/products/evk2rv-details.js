@@ -111,7 +111,7 @@ const ProjectDetails = () => {
           
           {/* Product Featured Image */}
           <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
-            <p className="featured-image-description">A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance.</p>
+            <p className="featured-image-description">{t('productDetails.evk2rvFeaturedDescription')}</p>
             <img src={`${process.env.PUBLIC_URL}/assets/img/product/EVK2RV4.jpg`} alt="EVK2RV Product Feature" className="featured-product-image" />
           </div>
         </div>
@@ -123,25 +123,25 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features of the EVK2RV Water Lubricated Stern Tube Seal</p>
+                <h2>{t('productDetails.features')}</h2>
+                <p>{t('productDetails.featuresDescription', { product: t('productDetails.evk2rv.title') })}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>1. Excellent Sealing Performance with Shaft Vibration Resistance</h4>
-                  <p>Since it is an end face type seal consisting of the seal ring and the mating ring, it flexibly copes with complicated vibration and shaft deflection and shows excellent sealing performance.</p>
+                  <h4>{t('productDetails.evk2rvFeatures.excellentSealingPerformance')}</h4>
+                  <p>{t('productDetails.evk2rvFeatures.excellentSealingPerformanceDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>2. No wear of shaft sleeve</h4>
-                  <p>The seal ring rotates together with the shaft sleeve and therefore, there is not wear of the shaft sleeve. "Eagle Paint" is provided on the surface of the shaft sleeve to prevent corrosion.</p>
+                  <h4>{t('productDetails.evk2rvFeatures.noWearOfShaftSleeve')}</h4>
+                  <p>{t('productDetails.evk2rvFeatures.noWearOfShaftSleeveDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>3. Easy Replacement of Parts</h4>
-                  <p>The seal ring and the inflatable ring can be easily bonded over the shaft by the vulcanizer. By working the inflatable ring, inspection and replacement of the seals ring on the sea can be easily done.</p>
+                  <h4>{t('productDetails.evk2rvFeatures.easyReplacementOfParts')}</h4>
+                  <p>{t('productDetails.evk2rvFeatures.easyReplacementOfPartsDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>4. Maintenance Saving</h4>
-                  <p>The sealing faces of the seal ring and the mating ring are lubricated by sea water coming through the notches of the seal ring, and therefore daily maintenance will not be required.</p>
+                  <h4>{t('productDetails.evk2rvFeatures.maintenanceSaving')}</h4>
+                  <p>{t('productDetails.evk2rvFeatures.maintenanceSavingDescription')}</p>
                 </div>
               </div>
             </div>
@@ -155,8 +155,8 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Documents</h2>
-                <p>Access product catalogs and manuals for detailed information</p>
+                <h2>{t('productDetails.documents')}</h2>
+                <p>{t('productDetails.documentsDescription')}</p>
               </div>
               <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
                 <div className="download-item">
@@ -164,11 +164,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Product Catalog</h4>
-                    <p>Complete catalog with technical specifications and details</p>
+                    <h4>{t('productDetails.productCatalog')}</h4>
+                    <p>{t('productDetails.productCatalogDescription')}</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - EVK2RV.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
                 <div className="download-item">
@@ -176,11 +176,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Manual Instruction</h4>
-                    <p>Installation and operation manual for EVK2RV & EVK2RT</p>
+                    <h4>{t('productDetails.manualInstruction')}</h4>
+                    <p>{t('productDetails.manualInstruction')} {t('productDetails.manualInstruction')} for EVK2RV & EVK2RT</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVK2RV & EVK2RT.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
               </div>
@@ -210,7 +210,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
+            <p>{t('productDetails.otherProductsInCategory', { category: t('products.waterLubricatedSternTubeSeal') })}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">

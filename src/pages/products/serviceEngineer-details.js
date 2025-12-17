@@ -100,13 +100,13 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.serviceEngineer.title')}</h2>
                 <p>
-                  Professional engineering services for your ship's sealing systems.
+                  {t('productDetails.serviceEngineer.professionalEngineeringServices')}
                 </p>
                 <p>
-                  We provide highly skilled and experienced service engineers to handle all aspects of marine sealing — from bonding and assembling to inspection and on-site supervision.
+                  {t('productDetails.serviceEngineer.weProvideHighlySkilled')}
                 </p>
                 <p>
-                  With a deep understanding of maritime environments and adherence to the highest industry standards, we ensure each seal is installed with precision and delivers optimal performance to prevent leakage, enhance efficiency, and extend equipment spare parts.
+                  {t('productDetails.serviceEngineer.withDeepUnderstanding')}
                 </p>
               </div>
             </div>
@@ -114,7 +114,7 @@ const ProjectDetails = () => {
           
           {/* Product Featured Image */}
           <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
-            <p className="featured-image-description">Expert service engineers providing professional installation and maintenance for marine sealing systems worldwide.</p>
+            <p className="featured-image-description">{t('productDetails.serviceEngineer.expertServiceEngineers')}</p>
             <img src={`${process.env.PUBLIC_URL}/assets/img/product/Engineer-2.png`} alt="Service Engineer Feature" className="featured-product-image" />
           </div>
         </div>
@@ -126,25 +126,25 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features and benefits of our Service Engineer solutions</p>
+                <h2>{t('productDetails.serviceEngineer.features')}</h2>
+                <p>{t('productDetails.serviceEngineer.keyFeaturesAndBenefits')}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>1. Professional Installation Services</h4>
-                  <p>Our highly skilled service engineers specialize in the precise installation of marine sealing systems, ensuring optimal performance and longevity of your equipment.</p>
+                  <h4>{t('productDetails.serviceEngineer.professionalInstallationServices')}</h4>
+                  <p>{t('productDetails.serviceEngineer.professionalInstallationDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>2. Expert Bonding and Assembly</h4>
-                  <p>With extensive experience in marine sealing technology, our engineers handle complex bonding and assembly processes with meticulous attention to detail.</p>
+                  <h4>{t('productDetails.serviceEngineer.expertBondingAndAssembly')}</h4>
+                  <p>{t('productDetails.serviceEngineer.expertBondingDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>3. Comprehensive Inspection Services</h4>
-                  <p>Thorough inspection of sealing systems to identify potential issues before they become problems, ensuring reliable operation and preventing costly downtime.</p>
+                  <h4>{t('productDetails.serviceEngineer.comprehensiveInspectionServices')}</h4>
+                  <p>{t('productDetails.serviceEngineer.comprehensiveInspectionDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>4. On-site Supervision</h4>
-                  <p>Our service engineers provide expert on-site supervision for critical sealing operations, ensuring compliance with industry standards and manufacturer specifications.</p>
+                  <h4>{t('productDetails.serviceEngineer.onSiteSupervision')}</h4>
+                  <p>{t('productDetails.serviceEngineer.onSiteSupervisionDescription')}</p>
                 </div>
               </div>
             </div>
@@ -158,8 +158,8 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Service Information</h2>
-                <p>Details about our service engineer offerings</p>
+                <h2>{t('productDetails.serviceEngineer.serviceInformationDetails')}</h2>
+                <p>{t('productDetails.serviceEngineer.detailsAboutOurService')}</p>
               </div>
               <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
                 <div className="download-item">
@@ -171,7 +171,7 @@ const ProjectDetails = () => {
                     <p>{t('productDetails.serviceEngineer.ourServiceEngineersAvailableWorldwide')}</p>
                   </div>
                   <Link to="/contact" className="btn-download">
-                    <i className="bi bi-envelope"></i> Contact Us
+                    <i className="bi bi-envelope"></i> {t('productDetails.serviceEngineer.contactUs')}
                   </Link>
                 </div>
                 <div className="download-item">
@@ -183,7 +183,7 @@ const ProjectDetails = () => {
                     <p>{t('productDetails.serviceEngineer.responseTimeValue')}</p>
                   </div>
                   <Link to="/contact" className="btn-download">
-                    <i className="bi bi-envelope"></i> Request Service
+                    <i className="bi bi-envelope"></i> {t('productDetails.serviceEngineer.requestService')}
                   </Link>
                 </div>
               </div>
@@ -213,7 +213,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Marine industry products</p>
+            <p>{t('productDetails.serviceEngineer.marineIndustryProducts')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">

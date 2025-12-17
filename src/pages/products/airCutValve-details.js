@@ -106,8 +106,7 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.airCutValve.title')}</h2>
                 <p>
-                  Mounted on four-stroke motorcycle engines.
-                  Designed for exhaust gas emission regulation (secondary air supply).
+                  {t('productDetails.airCutValve.description1')}
                 </p>
               </div>
             </div>
@@ -121,17 +120,17 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features of the Air Cut Valve</p>
+                <h2>{t('productDetails.airCutValve.features')}</h2>
+                <p>{t('productDetails.airCutValve.featuresSubtitle')}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>Lightweight and Compact</h4>
-                  <p>This lightweight and compact valve can be retrofitted to existing vehicles.</p>
+                  <h4>{t('productDetails.airCutValve.lightweightAndCompact')}</h4>
+                  <p>{t('productDetails.airCutValve.lightweightAndCompactDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Composite Versions</h4>
-                  <p>We meet your needs for composite versions, such as Reed Valve combined with Cut Valve.</p>
+                  <h4>{t('productDetails.airCutValve.compositeVersions')}</h4>
+                  <p>{t('productDetails.airCutValve.compositeVersionsDescription')}</p>
                 </div>
               </div>
             </div>
@@ -152,12 +151,12 @@ const ProjectDetails = () => {
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Temperature</th>
-                      <td>-20～120℃</td>
+                      <th style={{ width: '30%' }}>{t('productDetails.airCutValve.temperature')}</th>
+                      <td>{t('productDetails.airCutValve.temperatureValue')}</td>
                     </tr>
                     <tr>
-                      <th>Vibration durability</th>
-                      <td>10 G at room temperature for 10^7 cycles</td>
+                      <th>{t('productDetails.airCutValve.vibrationDurability')}</th>
+                      <td>{t('productDetails.airCutValve.vibrationDurabilityValue')}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -189,7 +188,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Automobile category</p>
+            <p>{t('productDetails.airCutValve.otherProductsInAutomobileCategory')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -211,7 +210,7 @@ const ProjectDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/reed-valve-1.png`} className="card-image" alt="Reed Valve" />
                   </div>
                   <div className="card-caption">
-                    <span>{t('products.automobile')}<br />Reed Valve</span>
+                    <span>{t('products.automobile')}<br />{t('productDetails.airCutValve.reedValve')}</span>
                   </div>
                 </Link>
               </div>

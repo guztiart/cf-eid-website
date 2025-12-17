@@ -97,7 +97,7 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.evk2rt.title')}</h2>
                 <p style={{ textAlign: 'center' }}>
-                  Spare ring is easily activated without disassembling.
+                  {t('productDetails.evk2rtFeaturedDescription')}
                 </p>
               </div>
             </div>
@@ -155,11 +155,11 @@ const ProjectDetails = () => {
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Shaft diameter range</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.evk2rtSpecificationTable.shaftDiameterRange')}</th>
                       <td>φ101 ～ φ500 (mm)</td>
                     </tr>
                     <tr>
-                      <th>PV (Pressure-Velocity) Value</th>
+                      <th>{t('productDetails.evk2rtSpecificationTable.pvValue')}</th>
                       <td>Max. 0.6 (MPa・m/s)<br />(Water pressure in casing ： Max. 0.15 MPa)</td>
                     </tr>
                   </tbody>
@@ -176,8 +176,8 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Documents</h2>
-                <p>Access product catalogs and manuals for detailed information</p>
+                <h2>{t('productDetails.documents')}</h2>
+                <p>{t('productDetails.documentsDescription')}</p>
               </div>
               <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
                 <div className="download-item">
@@ -185,11 +185,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Product Catalog</h4>
-                    <p>Complete catalog with technical specifications and details</p>
+                    <h4>{t('productDetails.productCatalog')}</h4>
+                    <p>{t('productDetails.productCatalogDescription')}</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue EVK2RT.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
                 <div className="download-item">
@@ -197,11 +197,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Manual Instruction</h4>
-                    <p>Installation and operation manual for EVK2RV & EVK2RT</p>
+                    <h4>{t('productDetails.manualInstruction')}</h4>
+                    <p>{t('productDetails.manualInstruction')} {t('productDetails.manualInstruction')} for EVK2RV & EVK2RT</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVK2RV & EVK2RT.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
               </div>
@@ -232,7 +232,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
+            <p>{t('productDetails.otherProductsInCategory', { category: t('products.waterLubricatedSternTubeSeal') })}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">

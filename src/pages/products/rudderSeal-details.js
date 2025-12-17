@@ -97,7 +97,7 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.rudderSeal.title')}</h2>
                 <p>
-                  Rudder seal manufacture with high-performance, self-lubricating lip seals designed to be mounted above the rudder bearing to prevent the ingress of sea water into the hull. Manufactured from a special rubber, provide long wear life with no need for periodic adjustments, operate with less drag and reduced shaft/liner wear.
+                  {t('productDetails.rudderSeal.description1')}
                 </p>
               </div>
             </div>
@@ -111,25 +111,33 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features and benefits of the Rudder Seal</p>
+                <h2>{t('productDetails.advantages')}</h2>
+                <p>{t('productDetails.rudderSeal.advantagesDescription')}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>1. High-Performance Self-Lubricating Design</h4>
-                  <p>Manufactured from special rubber compounds that provide excellent self-lubricating properties, reducing friction and extending service life.</p>
+                  <h4>{t('productDetails.rudderSeal.advantage1.title')}</h4>
+                  <p>{t('productDetails.rudderSeal.advantage1.description')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>2. Superior Water Ingress Protection</h4>
-                  <p>Designed to be mounted above the rudder bearing to effectively prevent the ingress of sea water into the hull, protecting critical components.</p>
+                  <h4>{t('productDetails.rudderSeal.advantage2.title')}</h4>
+                  <p>{t('productDetails.rudderSeal.advantage2.description')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>3. Long Wear Life</h4>
-                  <p>The special rubber formulation ensures extended wear life with no need for periodic adjustments, reducing maintenance requirements.</p>
+                  <h4>{t('productDetails.rudderSeal.advantage3.title')}</h4>
+                  <p>{t('productDetails.rudderSeal.advantage3.description')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>4. Reduced Drag and Shaft Wear</h4>
-                  <p>Operates with less drag and significantly reduces shaft/liner wear, improving overall efficiency and extending component life.</p>
+                  <h4>{t('productDetails.rudderSeal.advantage4.title')}</h4>
+                  <p>{t('productDetails.rudderSeal.advantage4.description')}</p>
+                </div>
+                <div className="feature-item">
+                  <h4>{t('productDetails.rudderSeal.advantage5.title')}</h4>
+                  <p>{t('productDetails.rudderSeal.advantage5.description')}</p>
+                </div>
+                <div className="feature-item">
+                  <h4>{t('productDetails.rudderSeal.advantage6.title')}</h4>
+                  <p>{t('productDetails.rudderSeal.advantage6.description')}</p>
                 </div>
               </div>
             </div>
@@ -143,8 +151,8 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Documents</h2>
-                <p>Access product catalogs and manuals for detailed information</p>
+                <h2>{t('productDetails.documents')}</h2>
+                <p>{t('productDetails.documentsDescription')}</p>
               </div>
               <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
                 <div className="download-item">
@@ -152,11 +160,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Product Catalog</h4>
-                    <p>Complete catalog with technical specifications and details</p>
+                    <h4>{t('productDetails.productCatalog')}</h4>
+                    <p>{t('productDetails.productCatalogDescription')}</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - Rudder Seal.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
                 <div className="download-item">
@@ -164,11 +172,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Manual Instruction</h4>
-                    <p>Installation and operation manual for Rudder Seal</p>
+                    <h4>{t('productDetails.manualInstruction')}</h4>
+                    <p>{t('productDetails.rudderSeal.manualDescription')}</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - Rudder Seal.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
                   </a>
                 </div>
               </div>
@@ -198,7 +206,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Water Lubricated Stern Tube Seal category</p>
+            <p>{t('productDetails.rudderSeal.relatedProductsDescription')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">

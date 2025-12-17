@@ -16,7 +16,11 @@ export default {
   noteText: "Note: The above figures indicate the best conditions in individual cases and may differ according to the valve size and application. Contact us before use.",
   productInformation: "Product Information",
   productFeatures: "Product Features",
+  featuresDescription: "Key features of the {product}",
   category: "Category",
+  otherProductsInCategory: "Other products in the {category} category",
+  otherProductsInWaterLubricatedCategory: "Other products in the Water Lubricated Stern Tube Bearing category",
+  machinery: "Machinery",
   application: "Application",
   function: "Function",
   operatingTemperature: "Operating Temperature",
@@ -58,7 +62,7 @@ export default {
   airCutValve: {
     title: "Air Cut Valve",
     breadcrumb: "Air Cut Valve",
-    description1: "Control valve for variable displacement A/C compressors. This valve controls the swash plate angle of the compressor to adjust the compressor displacement according to the A/C load.",
+    description1: "Mounted on four-stroke motorcycle engines. Designed for exhaust gas emission regulation (secondary air supply).",
     description2: "The Air Cut Valve is engineered with precision to provide optimal performance in automotive air conditioning systems. With advanced materials and innovative design, this valve ensures maximum efficiency in controlling the compressor displacement according to the A/C load, resulting in improved fuel economy and reduced emissions.",
     description3: "Our Air Cut Valves undergo rigorous quality control processes to meet international standards for automotive components. The specialized materials used in manufacturing offer excellent resistance to various refrigerants and compressor oils, ensuring long service life even under extreme operating conditions.",
     categoryValue: "Automobile, Car Air-Conditioning Compressor",
@@ -66,16 +70,29 @@ export default {
     functionValue: "Controls swash plate angle to adjust compressor displacement",
     operatingTemperatureValue: "-40 to 150°C",
     materialValue: "High-grade stainless steel and specialized components",
-    applicationsValue: "Automotive AC compressors for passenger and commercial vehicles"
+    applicationsValue: "Automotive AC compressors for passenger and commercial vehicles",
+    // Additional keys for airCutValve-details.js
+    features: "Features",
+    featuresSubtitle: "Key features of the Air Cut Valve",
+    lightweightAndCompact: "Lightweight and Compact",
+    lightweightAndCompactDescription: "This lightweight and compact valve can be retrofitted to existing vehicles.",
+    compositeVersions: "Composite Versions",
+    compositeVersionsDescription: "We meet your needs for composite versions, such as Reed Valve combined with Cut Valve.",
+    otherProductsInAutomobileCategory: "Other products in the Automobile category",
+    reedValve: "Reed Valve",
+    temperature: "Temperature",
+    temperatureValue: "-20～120℃",
+    vibrationDurability: "Vibration durability",
+    vibrationDurabilityValue: "10 G at room temperature for 10^7 cycles"
   },
   
   // Bladder Type Accumulator
   bladderAccumulator: {
     title: "Bladder Type Accumulator",
     breadcrumb: "Bladder Type Accumulator",
-    description1: "These standard bladder accumulators are manufactured based on years of experience and proven performance. They are designed to store energy under pressure in the form of compressed gas, providing hydraulic power when needed in various industrial applications.",
-    description2: "The bladder accumulator consists of a high-strength pressure vessel containing an elastic bladder that separates the hydraulic fluid from the gas pre-charge. When hydraulic fluid enters the accumulator, the bladder compresses the gas, storing energy. When the system requires additional power, the compressed gas expands, pushing the fluid back into the system.",
-    description3: "Eagle Industry Indonesia's bladder type accumulators feature superior construction with high-quality materials ensuring durability and reliability in demanding industrial environments. These accumulators are suitable for applications requiring energy storage, shock absorption, pulsation dampening, and emergency power supply.",
+    description1: "These standard bladder accumulators are manufactured based on years of experience and proven performance. Bladders are replaceable and available in various sizes up to large-volume ones.",
+    description2: "Their extensive applications include general industrial machineries, construction machineries, power plants and chemical plants.",
+    description3: "",
     categoryValue: "Industrial, Hydraulic Components",
     typeValue: "Bladder Type Accumulator",
     materialValue: "High-grade Steel Shell, Nitrile Bladder",
@@ -84,21 +101,88 @@ export default {
     volumeRangeValue: "0.5 to 50 liters",
     applicationsValue: "Hydraulic Systems"
   },
+
+  // Bladder Accumulator Features
+    bladderFeatures: {
+      largeGasVolume: "Large Gas Volume",
+      largeGasVolumeDescription: "The maximum available gas volume is 160 L.",
+      superiorBladderMaterial: "Superior Bladder Material",
+      superiorBladderMaterialDescription: "Bladders made of rubber offer excellent tension fatigue resistance and very low gas permeability.",
+      highFlowRate: "High Flow Rate",
+      highFlowRateDescription: "The Ultrahigh Flow (UH) series is adapted to a maximum discharge flow rate of 4,800 L/min.",
+      complianceWithInternationalStandards: "Compliance with International Standards",
+      complianceWithInternationalStandardsDescription: "Can be arranged to conform to the High Pressure Gas Safety Low (Japan), ASME U Stamp (American Society of Mechanical Engineers), CE Marking (European Pressure Equipment Directive) and Regulation for Boiler and Pressure Vessel Manufacture Licensing (China).",
+      variousComponentsAvailable: "Various Components Available",
+      variousComponentsAvailableDescription: "Various liquid-end joints (bushings and flanges), accumulator main valves, gas control valves, and charging assemblies are available.",
+      afterSalesSupport: "After-Sales Support",
+      afterSalesSupportDescription: "We provide maintenance and support services for our customers for peace of mind after purchasing our products.",
+      importantNote: "Important Note",
+      importantNoteDescription: "* Some models are exempt from the requirements of laws and regulations or not designed by us to meet those requirements."
+    },
+    
+    // Bladder Type Descriptions
+    bladderTypeDescriptions: {
+      al: "With this type, the bladder is replaceable only from the fluid side (the accumulator needs to be removed).",
+      at: "This type enables the bladder to be replaced either from the gas or liquid end (with the accumulator installed)."
+    },
+    
+    // Bladder Specification Table
+    bladderSpecificationTable: {
+      type: "Type",
+      maxWorkingPressure: "Max. Working Pressure (MPa)",
+      nominalGasVolume: "Nominal Gas Volume (L)"
+    },
+
+    // Bladder Accumulator specific translations
+    bladderFeatures: {
+      largeGasVolume: "Large Gas Volume",
+      largeGasVolumeDescription: "The maximum available gas volume is 160 L.",
+      superiorBladderMaterial: "Superior Bladder Material",
+      superiorBladderMaterialDescription: "Bladders made of rubber offer excellent tension fatigue resistance and very low gas permeability.",
+      highFlowRate: "High Flow Rate",
+      highFlowRateDescription: "The Ultrahigh Flow (UH) series is adapted to a maximum discharge flow rate of 4,800 L/min.",
+      complianceWithInternationalStandards: "Compliance with International Standards",
+      complianceWithInternationalStandardsDescription: "Can be arranged to conform to the High Pressure Gas Safety Low (Japan), ASME U Stamp (American Society of Mechanical Engineers), CE Marking (European Pressure Equipment Directive) and Regulation for Boiler and Pressure Vessel Manufacture Licensing (China).",
+      variousComponentsAvailable: "Various Components Available",
+      variousComponentsAvailableDescription: "Various liquid-end joints (bushings and flanges), accumulator main valves, gas control valves, and charging assemblies are available.",
+      afterSalesSupport: "After-Sales Support",
+      afterSalesSupportDescription: "We provide maintenance and support services for our customers for peace of mind after purchasing our products.",
+      importantNote: "Important Note",
+      importantNoteDescription: "* Some models are exempt from the requirements of laws and regulations or not designed by us to meet those requirements."
+    },
+    bladderTypeDescriptions: {
+      al: "With this type, the bladder is replaceable only from the fluid side (the accumulator needs to be removed).",
+      at: "This type enables the bladder to be replaced either from the gas or liquid end (with the accumulator installed)."
+    },
+    bladderSpecificationTable: {
+      type: "Type",
+      maxWorkingPressure: "Max. Working Pressure (MPa)",
+      nominalGasVolume: "Nominal Gas Volume (L)"
+    },
   
   // EH795/EH790 for Water Pump
   eh795: {
     title: "EH795/EH790 for Water Pump",
     breadcrumb: "EH795/EH790 for Water Pump",
     description1: "Capable for high-speed rotation. Mass-production by fully automated assembling lines and supplied to water pump makers worldwide. By its unitized design, EH795 supports easy installation into customer application.",
-    description2: "These seals are suitable for high-speed rotation due to its simple and compact construction. The materials of the seal face are Eagle Industry's proprietary carbon components and SiC which provides high resistance to heat, wear and corrosion. These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. These seals are also suitable for industrial pumps. EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces.",
-    categoryValue: "Mechanical Seals, Water Pump",
     modelValue: "EH795/EH790",
     sealedFluidValue: "Water, Coolant, etc.",
     temperatureValue: "-20°C to 110°C (120°C max.)",
     maximumCircumferentialVelocityValue: "12 m/s",
     pressureValue: "-67 kPa to 0.3 MPaG",
     shaftDiameterValue: "Up to 30 mm",
-    applicationsValue: "Water pumps for automotive and industrial applications"
+    applicationsValue: "Water pumps for automotive and industrial applications",
+    // Features section
+    featuresTitle: "Features",
+    featuresSubtitle: "Key features of the EH795/EH790 for Water Pump",
+    highSpeedRotation: "High-Speed Rotation",
+    highSpeedRotationDescription: "These seals are suitable for high-speed rotation due to its simple and compact construction.",
+    superiorMaterials: "Superior Materials",
+    superiorMaterialsDescription: "The materials of the seal face are Eagle Industry's proprietary carbon components and SiC which provides high resistance to heat, wear and corrosion.",
+    globalManufacturing: "Global Manufacturing",
+    globalManufacturingDescription: "These seals are manufactured by full automated assembling lines at our global production sites, and has high market share in worldwide specifically in the category of seals for automotive water pumps. These seals are also suitable for industrial pumps.",
+    unitizedDesign: "Unitized Design",
+    unitizedDesignDescription: "EH795: The rotating and stationary components are unitized with the stamped sleeve, providing ease of installation as well as high reliability by protecting sliding surfaces."
   },
   
   // EVK2RV - Water Lubricated Stern Tube Seal
@@ -114,6 +198,36 @@ export default {
     maxPressureValue: "Up to 1.0 MPa",
     applicationsValue: "Marine Vessels, Ships, Boats"
   },
+
+  // EVK2RV specific translations
+    evk2rvFeatures: {
+      excellentSealingPerformance: "1. Excellent Sealing Performance with Shaft Vibration Resistance",
+      excellentSealingPerformanceDescription: "Since it is an end face type seal consisting of the seal ring and the mating ring, it flexibly copes with complicated vibration and shaft deflection and shows excellent sealing performance.",
+      noWearOfShaftSleeve: "2. No wear of shaft sleeve",
+      noWearOfShaftSleeveDescription: "The seal ring rotates together with the shaft sleeve and therefore, there is not wear of the shaft sleeve. \"Eagle Paint\" is provided on the surface of the shaft sleeve to prevent corrosion.",
+      easyReplacementOfParts: "3. Easy Replacement of Parts",
+      easyReplacementOfPartsDescription: "The seal ring and the inflatable ring can be easily bonded over the shaft by the vulcanizer. By working the inflatable ring, inspection and replacement of the seals ring on the sea can be easily done.",
+      maintenanceSaving: "4. Maintenance Saving",
+      maintenanceSavingDescription: "The sealing faces of the seal ring and the mating ring are lubricated by sea water coming through the notches of the seal ring, and therefore daily maintenance will not be required."
+    },
+    evk2rvFeaturedDescription: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance.",
+    
+    // EVK2RT specific translations
+    evk2rtFeaturedDescription: "Spare ring is easily activated without disassembling.",
+    evk2rtFeatures: {
+      improvedWearResistance: "1. Improved wear resistance",
+      improvedWearResistanceDescription: "The active #1 seal ring is always lubricated by self-controlled clean fresh water. This results in significant reduction in wear of mating ring, seal housing and seal ring.",
+      builtInSpareSealRing: "2. Built in spare seal ring",
+      builtInSpareSealRingDescription: "The spare #2 seal ring is incorporated in seal housing as a spare. The #2 seal stands by in an idle condition under normal operation and is cooled, lubricated & protected by fresh water.",
+      improvedOperability: "3. Improved operability",
+      improvedOperabilityDescription: "The active seal ring is easily changed from #1 to #2 spare seal by operation of valves . The #2 spare ring is activated without disassembling seal unit should #1 seal ring shows increasing leakage.",
+      easyUpgradeFromExistingEVK: "4. Easy upgrade form existing EVK",
+      easyUpgradeFromExistingEVKDescription: "By replacing seal housing, it may be possible to convert an existing EVK seal to a Tandem type."
+    },
+    evk2rtSpecificationTable: {
+      shaftDiameterRange: "Shaft diameter range",
+      pvValue: "PV (Pressure-Velocity) Value"
+    },
   
   // EVK2RT - Water Lubricated Stern Tube Seal
   evk2rt: {
@@ -158,7 +272,39 @@ export default {
     materialValue: "Specialized Water-Lubricated Bearing Material",
     temperatureRangeValue: "-5°C to 70°C",
     maxPressureValue: "Up to 2.0 MPa",
-    applicationsValue: "-"
+    applicationsValue: "-",
+    // EVR specific translations
+    featuredDescription: "Excellent Durability and Vibration Absorption.",
+    features: "Features",
+    featuresSubtitle: "Key features and benefits of the EVR",
+    combinationOfAdvantages: "1. Combination of advantages of reinforced plastic with those of elastomer",
+    combinationOfAdvantagesDescription: "Utilizes the best properties of both reinforced plastic and elastomer materials for optimal performance.",
+    outstandingDurability: "2. Outstanding durability and stable performance",
+    outstandingDurabilityDescription: "Engineered to provide long-lasting service with consistent performance under various marine conditions.",
+    effectiveAbsorption: "3. Effective absorption of shaft vibration",
+    effectiveAbsorptionDescription: "Effectively absorbs and dampens shaft vibrations, reducing stress on the bearing system.",
+    preventionOfCorrosion: "4. Prevention of Electrolytic Corrosion on the shaft sleeve",
+    preventionOfCorrosionDescription: "Special design prevents electrolytic corrosion, extending the life of the shaft sleeve.",
+    types: "Types",
+    typesSubtitle: "Available types of EVR bearings for different applications",
+    straightTypeBearing: "1. Straight Type Bearing",
+    straightTypeBearingDescription: "The outer shell is made of Cotton cloth Reinforced Plastic (CRP) which is impregnated by thermosetting resin. It is suitable to be installed on ships with relatively small diameters.",
+    flangeTypeBearing: "2. Flange Type Bearing",
+    flangeTypeBearingDescription: "The outer shell is made of Glass cloth Reinforced Plastic (GRP), and is suitable for relatively larger diameter.",
+    specifications: "Specifications",
+    specificationsSubtitle: "Technical specifications of the EVR Water Lubricated Stern Tube Bearing",
+    sizeRange: "Size Range (Shaft Dia.)",
+    shaftSpeed: "Shaft speed",
+    bearingLoad: "Bearing load (Average)",
+    quantityOfCoolingWater: "Quantity of cooling water (Reference)",
+    temperatureOfCoolingWater: "Temperature of cooling water",
+    documents: "Documents",
+    documentsSubtitle: "Access product catalogs and manuals for detailed information",
+    productCatalog: "Product Catalog",
+    productCatalogDescription: "Complete catalog with technical specifications and details",
+    manualInstruction: "Manual Instruction",
+    manualInstructionDescription: "Installation and operation manual for EVR",
+    downloadPDF: "Download PDF"
   },
   
   // EVU - Water Lubricated Stern Tube Bearing
@@ -172,7 +318,30 @@ export default {
     materialValue: "Poly-Urethane Compound",
     temperatureRangeValue: "-10°C to 60°C",
     maxPressureValue: "Up to 1.5 MPa",
-    applicationsValue: "Marine Vessels, Water Lubricated Propulsion Systems"
+    applicationsValue: "Marine Vessels, Water Lubricated Propulsion Systems",
+    // Features section
+    featuresTitle: "Features",
+    featuresSubtitle: "Key features of the Poly-Urethane bearing (EVU)",
+    lowFriction: "1. Low Friction",
+    lowFrictionDescription: "By flattening the lower part, the water film forming ability is improved and the friction coefficient in normal use can be lower than that of rubber bearing and the like. (1/10 of rubber bearing in normal use)",
+    lowWear: "2. Low Wear",
+    lowWearDescription: "Uses Poly-Urethane material with excellent wear resistance. Confirmed to have wear resistance of 10 years or more in our evaluation test.",
+    reductionOfSinglePartHit: "3. Reduction of single-part hit",
+    reductionOfSinglePartHitDescription: "By using flexible Poly-Urethane material, the concentrated load in the AFT end can be avoided.",
+    bearingLength: "4. Bearing Length",
+    bearingLengthDescription: "The bearing length can be halved from rubber bearing, since the pressure resistance is improved.",
+    quickDelivery: "5. Quick Delivery",
+    quickDeliveryDescription: "Since it has a single structure of Poly-Urethane, if the material is in stock, only processing is required for production, so it is possible to respond to short delivery time.",
+    installMethod: "6. Install Method",
+    installMethodDescription: "Using the characteristics of Poly-Urethane, install to stern tube with cold fit.",
+    // Documents section
+    documentsTitle: "Documents",
+    documentsSubtitle: "Access product catalogs and manuals for detailed information",
+    productCatalog: "Product Catalog",
+    productCatalogDescription: "Complete catalog with technical specifications and details",
+    manualInstruction: "Manual Instruction",
+    manualInstructionDescription: "Installation and operation manual for EVU",
+    downloadPDF: "Download PDF"
   },
   
   // EVU - Water Lubricated Stern Tube Bearing
@@ -202,9 +371,6 @@ export default {
     title: "Floating Seal ES100 & ES764",
     breadcrumb: "Floating Seal ES100 & ES764",
     description1: "Seals for undercarriages of construction machinery (track rollers, final drives, axles and idlers). Simple structure consisting of an O-ring and a seal ring made of special cast iron. Optimum seals for undercarriages of bulldozers and hydraulic excavators frequently exposed to sand, dirt and other foreign matter. ES764 offers ease of designing and manufacturing housings.",
-    description2: "Floating seals are simple products, consisting of two components: a seal ring made of special cast iron and a rubber component (O-ring/gasket). In use, two identical seals make a pair. The seal ring, which is a sliding component, is not in contact with shaft since it is sustained by rubber component, and therefore follows the radial and thrusting motions of shaft closely.",
-    description3: "Since they were developed for slurry applications, seal rings are made of an extremely hard, wear-resistant and corrosion-resistant material. The rubber component presses seal ring's sliding surfaces and also serves as a seal. Therefore, it is made of a material that is highly resistant to cold temperatures and heat with little compression set for a longer useful life.",
-    description4: "Main uses of floating seals include crawler rollers, travel drives and idlers of construction and agricultural machinery, and also for conveyors, mixers and various digging machines. In other words, they are used widely in relatively low-speed applications exposed to foreign matter.",
     categoryValue: "Machinery, Undercarriage",
     sealedFluidValue: "Inside: lubricant, Outside: sand, dirt and mud",
     temperatureValue: "NBR: -40 to 100ºC, H-NBR: -30 to 130ºC, FKM: -10 to 200ºC",
@@ -213,16 +379,27 @@ export default {
     shaftDiameterValue: "φ38～φ429mm",
     materialValue: "Special cast iron seal ring, rubber O-ring/gasket",
     applicationsValue: "Track rollers, final drives, axles, idlers, conveyors, mixers, digging machines",
-    noteText: "Note: The above figures indicate best conditions in individual cases and may differ according to seal size. Contact us before use."
+    noteText: "Note: The above figures indicate best conditions in individual cases and may differ according to seal size. Contact us before use.",
+    // Feature translations
+    simpleStructure: "Simple Structure",
+    simpleStructureDescription: "Floating seals are simple products, consisting of two components: a seal ring made of special cast iron and a rubber component (O-ring/gasket). In use, two identical seals make a pair.",
+    flexibleDesign: "Flexible Design",
+    flexibleDesignDescription: "The seal ring, which is a sliding component, is not in contact with shaft since it is sustained by the rubber component, and therefore follows the radial and thrusting motions of shaft closely.",
+    durableMaterials: "Durable Materials",
+    durableMaterialsDescription: "Since they were developed for slurry applications, seal rings are made of an extremely hard, wear-resistant and corrosion-resistant material. The rubber component presses the seal ring's sliding surfaces and also serves as a seal.",
+    wideRangeOfApplications: "Wide Range of Applications",
+    wideRangeOfApplicationsDescription: "Main uses of floating seals include crawler rollers, travel drives and idlers of construction and agricultural machinery, and also for conveyors, mixers and various digging machines. In other words, they are used widely in relatively low-speed applications exposed to foreign matter."
   },
   
   // Lip Seal
   lipSeal: {
     title: "Lip Seal For A/C Compressor",
     breadcrumb: "Lip Seal For A/C Compressor",
-    description1: "Rotating shaft seals exclusively designed for car air-conditioning compressors. Eagle Industry's original design featuring compactness and high reliability. Helps eliminate CFC leakage causing global warming.",
-    description2: "Our lip seals for A/C compressors are engineered with precision to provide optimal sealing performance in automotive air conditioning systems. The innovative design ensures reliability while helping prevent refrigerant leakage.",
-    description3: "Manufactured with advanced materials and processes, our lip seals offer excellent resistance to various refrigerants and operating conditions. The compact design allows for easy installation in various compressor configurations.",
+    description1: "Rotating shaft seals exclusively designed for car air-conditioning compressors",
+    description2: "Eagle Industry's original design featuring compactness and high reliability",
+    description3: "Helps eliminate CFC leakage causing global warming",
+    description4: "Made of rubber suitable for sealing CFCs and refrigerator oil",
+    description5: "Mass-production by full automated assembling lines and supplied to compressor makers worldwide",
     categoryValue: "Automotive, A/C Systems",
     typeValue: "Lip Seal",
     materialValue: "Specialized Elastomeric Compounds",
@@ -284,6 +461,27 @@ export default {
     variesByApplication: "Varies by application",
     noteText: "Note: The above figures indicate the best conditions in individual cases and may differ according to the seal size. Contact us before use."
   },
+
+  // MAS specific translations
+    masFeaturedDescription: "A compact, high performance water lubricated seal having excellent vibration resistance and sealing performance.",
+    masFeatures: {
+      excellentVibrationResistance: "1. Excellent vibration resistance and sealing performance",
+      excellentVibrationResistanceDescription: "Due to an end-face seal structure consisting of a rubber sealing ring and a stainless steel mating ring, it is able to follow complex shaft vibration and displacements thereby demonstrating an excellent sealing performance.",
+      excellentFollowabilityInAxialDirection: "2. Excellent followability in axial direction",
+      excellentFollowabilityInAxialDirectionDescription: "As sealing is achieved by seal ring rotating at the same speed as the shaft and its face structure making contact against stationary mating ring as a stopper, it is able to absorb all axial movement.",
+      simpleAndRobustRubberHousingDesign: "3. Simple and robust rubber housing design",
+      simpleAndRobustRubberHousingDesignDescription: "The inner diameter of housing is designed to same high standard as a rubber bearing so it can withstand contact with shaft is lowered. As sealing area is not exposed externally as is the case with a mechanical seal, it is able to withstand 'mechanical shock' to a high degree.",
+      easyToInstall: "4. Easy to install",
+      easyToInstallDescription: "The installation space is compact with the structure requiring only a cooling water hose to be supplied. The structure is fixed to stern tube by means of two hose bands making it simple to install.",
+      excellentSlurryResistance: "5. Excellent slurry resistance",
+      excellentSlurryResistanceDescription: "The seal can be expected to have a long life even under dirty water conditions with a high degree of sediment as found in shallow water and rivers."
+    },
+    masSpecificationTable: {
+      shaftRange: "Shaft Range",
+      allowablePvValue: "Allowable PV Value",
+      requiredAmountOfCoolingWater: "Required amount of cooling water",
+      temperatureOfCoolingWater: "Temperature of cooling water"
+    },
   
   // O-Ring
   oRing: {
@@ -346,9 +544,11 @@ export default {
   reedValve: {
     title: "Reed Valve",
     breadcrumb: "Reed Valve",
-    description1: "Designed to be used in four-stroke motorcycle engines for emission control (secondary air supply). Substantially reduces carbon monoxide (CO) and hydrocarbon (HC) emissions to mitigate air pollution.",
-    description2: "These compact and lightweight Reed Valve installed in a limited space ensure large flows. Highly responsive valves for high-speed mode.",
-    description3: "Our reed valves are engineered with precision to provide optimal performance in motorcycle engines. With advanced materials and innovative design, these valves ensure maximum durability and efficiency in controlling emissions while maintaining smooth engine operation.",
+    description1: "Designed to be used in four-stroke motorcycle engines for emission control (secondary air supply).",
+    description2: "Substantially reduces carbon monoxide (CO) and hydrocarbon (HC) emissions to mitigate air pollution.",
+    description3: "These compact and lightweight Reed Valve installed in a limited space ensure large flows.",
+    description4: "Highly responsive valves for high-speed mode.",
+    description5: "Our reed valves are engineered with precision to provide optimal performance in motorcycle engines. With advanced materials and innovative design, these valves ensure maximum durability and efficiency in controlling emissions while maintaining smooth engine operation.",
     productTitle: "Reed Valves",
     categoryValue: "Automobile, Motorcycle Engine",
     applicationValue: "Four-stroke motorcycle engines",
@@ -362,6 +562,13 @@ export default {
     temperature: "Temperature",
     vibrationDurability: "Vibration durability",
     noteText: "Note: The above figures show some examples. Contact us when you are considering making a purchase.",
+    // Features section
+    features: "Features",
+    featuresSubtitle: "Key features of the Reed Valves for Water Pump",
+    compactLightweightDesign: "Compact and Lightweight Design",
+    compactLightweightDesignDescription: "These compact and lightweight Reed Valve installed in a limited space ensure large flows.",
+    highlyResponsive: "Highly Responsive",
+    highlyResponsiveDescription: "Highly responsive valves for high-speed mode.",
     // Related products
     forAcCompressor: "for A/C compressor",
     typeAMechanicalSeal: "Type A Mechanical seal",
@@ -377,6 +584,33 @@ export default {
     title: "Rudder Seal (RSC)",
     breadcrumb: "Rudder Seal (RSC)",
     description1: "Rudder seal manufacture with high-performance, self-lubricating lip seals designed to be mounted above the rudder bearing to prevent the ingress of sea water into the hull. Manufactured from a special rubber, provide long wear life with no need for periodic adjustments, operate with less drag and reduced shaft or liner wear.",
+    advantagesDescription: "Key advantages and benefits of the Rudder Seal",
+    advantage1: {
+      title: "1. High-Performance Self-Lubricating Design",
+      description: "Manufactured from special rubber compounds that provide excellent self-lubricating properties, reducing friction and extending service life."
+    },
+    advantage2: {
+      title: "2. Superior Water Ingress Protection",
+      description: "Designed to be mounted above the rudder bearing to effectively prevent the ingress of sea water into the hull, protecting critical components."
+    },
+    advantage3: {
+      title: "3. Long Wear Life",
+      description: "The special rubber formulation ensures extended wear life with no need for periodic adjustments, reducing maintenance requirements."
+    },
+    advantage4: {
+      title: "4. Reduced Drag and Shaft Wear",
+      description: "Operates with less drag and significantly reduces shaft/liner wear, improving overall efficiency and extending component life."
+    },
+    advantage5: {
+      title: "5. Easy Installation",
+      description: "Simple installation process that saves time and reduces labor costs."
+    },
+    advantage6: {
+      title: "6. Maintenance-Free Design",
+      description: "Maintenance-free design that eliminates the need for periodic service."
+    },
+    manualDescription: "Installation and operation manual for Rudder Seal",
+    relatedProductsDescription: "Other products in the Water Lubricated Stern Tube Seal category",
     productInformation: "Product Information",
     category: "Category",
     sealedFluid: "Sealed fluid",
@@ -410,6 +644,19 @@ export default {
     controlValve: "Control Valve",
     contact: "Contact"
   },
+
+  // Common section titles
+    features: "Features",
+    advantages: "Advantages",
+    featuresDescription: "Key features of the {product}",
+    specification: "Specification",
+    specificationDescription: "Technical specifications of the {product}",
+    documents: "Documents",
+    documentsDescription: "Access product catalogs and manuals for detailed information",
+    productCatalog: "Product Catalog",
+    productCatalogDescription: "Complete catalog with technical specifications and details",
+    manualInstruction: "Manual Instruction",
+    downloadPDF: "Download PDF",
   
   // Service Engineer
   serviceEngineer: {
@@ -438,6 +685,26 @@ export default {
     noteText: "Note: Our service engineers are available 24/7 for emergency support. Contact us for immediate assistance.",
     contactServiceEngineerSection: "Contact Service Engineer",
     pleaseContactUsViaOurEmailForm: "Please contact us via our email form for technical support",
+    // Hardcoded strings that need translation
+    professionalEngineeringServices: "Professional engineering services for your ship's sealing systems.",
+    weProvideHighlySkilled: "We provide highly skilled and experienced service engineers to handle all aspects of marine sealing — from bonding and assembling to inspection and on-site supervision.",
+    withDeepUnderstanding: "With a deep understanding of maritime environments and adherence to the highest industry standards, we ensure each seal is installed with precision and delivers optimal performance to prevent leakage, enhance efficiency, and extend equipment spare parts.",
+    expertServiceEngineers: "Expert service engineers providing professional installation and maintenance for marine sealing systems worldwide.",
+    features: "Features",
+    keyFeaturesAndBenefits: "Key features and benefits of our Service Engineer solutions",
+    professionalInstallationServices: "1. Professional Installation Services",
+    professionalInstallationDescription: "Our highly skilled service engineers specialize in the precise installation of marine sealing systems, ensuring optimal performance and longevity of your equipment.",
+    expertBondingAndAssembly: "2. Expert Bonding and Assembly",
+    expertBondingDescription: "With extensive experience in marine sealing technology, our engineers handle complex bonding and assembly processes with meticulous attention to detail.",
+    comprehensiveInspectionServices: "3. Comprehensive Inspection Services",
+    comprehensiveInspectionDescription: "Thorough inspection of sealing systems to identify potential issues before they become problems, ensuring reliable operation and preventing costly downtime.",
+    onSiteSupervision: "4. On-site Supervision",
+    onSiteSupervisionDescription: "Our service engineers provide expert on-site supervision for critical sealing operations, ensuring compliance with industry standards and manufacturer specifications.",
+    serviceInformationDetails: "Service Information",
+    detailsAboutOurService: "Details about our service engineer offerings",
+    contactUs: "Contact Us",
+    requestService: "Request Service",
+    marineIndustryProducts: "Marine industry products",
     // Region translations
     asia: "Asia",
     asiaLocations: "Japan (Tokyo, Kobe, Hiroshima)<br>China, Singapore, Taiwan, South Korea<br>Indonesia, Philippines, Thailand, India",
@@ -458,6 +725,13 @@ export default {
     eh795EH790: "EH795/EH790",
     forVariableDisplacementAcCompressor: "for Variable Displacement A/C Compressor",
     controlValve: "Control Valve",
-    contact: "Contact"
+    contact: "Contact",
+    
+    
+    // Common descriptions
+    otherProductsInCategory: "Other products in the {category} category",
+    industrial: "Industrial",
+    hydraulicComponents: "Hydraulic Components",
+    machinery: "Machinery",
   }
 };

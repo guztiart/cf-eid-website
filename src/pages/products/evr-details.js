@@ -101,7 +101,7 @@ const ProjectDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.evr.title')}</h2>
                 <p style={{ textAlign: 'justify' }}>
-                  No peeling off by combination of reinforced plastics outer shell and rubber. Outstanding durability and stable performance. Effective absorption of shaft vibration. Prevention of electric corrosion on the shaft sleeve.
+                  {t('productDetails.evr.description2')}
                 </p>
               </div>
             </div>
@@ -109,7 +109,7 @@ const ProjectDetails = () => {
           
           {/* Product Featured Image */}
           <div className="product-featured-image" data-aos="fade-up" data-aos-delay="200">
-            <p className="featured-image-description">Excellent Durability and Vibration Absorption.</p>
+            <p className="featured-image-description">{t('productDetails.evr.featuredDescription')}</p>
             <img src={`${process.env.PUBLIC_URL}/assets/img/product/evr-flange-straight.png`} alt="EVR Product Feature" className="featured-product-image" />
           </div>
         </div>
@@ -121,25 +121,25 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features and benefits of the EVR</p>
+                <h2>{t('productDetails.evr.features')}</h2>
+                <p>{t('productDetails.evr.featuresSubtitle')}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4 style={{ textAlign: 'left' }}>1. Combination of advantages of reinforced plastic with those of elastomer</h4>
-                  <p style={{ textAlign: 'left' }}>Utilizes the best properties of both reinforced plastic and elastomer materials for optimal performance.</p>
+                  <h4 style={{ textAlign: 'left' }}>{t('productDetails.evr.combinationOfAdvantages')}</h4>
+                  <p style={{ textAlign: 'left' }}>{t('productDetails.evr.combinationOfAdvantagesDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4 style={{ textAlign: 'left' }}>2. Outstanding durability and stable performance</h4>
-                  <p style={{ textAlign: 'left' }}>Engineered to provide long-lasting service with consistent performance under various marine conditions.</p>
+                  <h4 style={{ textAlign: 'left' }}>{t('productDetails.evr.outstandingDurability')}</h4>
+                  <p style={{ textAlign: 'left' }}>{t('productDetails.evr.outstandingDurabilityDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4 style={{ textAlign: 'left' }}>3. Effective absorption of shaft vibration</h4>
-                  <p style={{ textAlign: 'left' }}>Effectively absorbs and dampens shaft vibrations, reducing stress on the bearing system.</p>
+                  <h4 style={{ textAlign: 'left' }}>{t('productDetails.evr.effectiveAbsorption')}</h4>
+                  <p style={{ textAlign: 'left' }}>{t('productDetails.evr.effectiveAbsorptionDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4 style={{ textAlign: 'left' }}>4. Prevention of Electrolytic Corrosion on the shaft sleeve</h4>
-                  <p style={{ textAlign: 'left' }}>Special design prevents electrolytic corrosion, extending the life of the shaft sleeve.</p>
+                  <h4 style={{ textAlign: 'left' }}>{t('productDetails.evr.preventionOfCorrosion')}</h4>
+                  <p style={{ textAlign: 'left' }}>{t('productDetails.evr.preventionOfCorrosionDescription')}</p>
                 </div>
               </div>
             </div>
@@ -153,17 +153,17 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Types</h2>
-                <p>Available types of EVR bearings for different applications</p>
+                <h2>{t('productDetails.evr.types')}</h2>
+                <p>{t('productDetails.evr.typesSubtitle')}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4 style={{ textAlign: 'left' }}>1. Straight Type Bearing</h4>
-                  <p style={{ textAlign: 'left' }}>The outer shell is made of Cotton cloth Reinforced Plastic (CRP) which is impregnated by thermosetting resin. It is suitable to be installed on ships with relatively small diameters.</p>
+                  <h4 style={{ textAlign: 'left' }}>{t('productDetails.evr.straightTypeBearing')}</h4>
+                  <p style={{ textAlign: 'left' }}>{t('productDetails.evr.straightTypeBearingDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4 style={{ textAlign: 'left' }}>2. Flange Type Bearing</h4>
-                  <p style={{ textAlign: 'left' }}>The outer shell is made of Glass cloth Reinforced Plastic (GRP), and is suitable for relatively larger diameter.</p>
+                  <h4 style={{ textAlign: 'left' }}>{t('productDetails.evr.flangeTypeBearing')}</h4>
+                  <p style={{ textAlign: 'left' }}>{t('productDetails.evr.flangeTypeBearingDescription')}</p>
                 </div>
               </div>
             </div>
@@ -177,26 +177,26 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Specifications</h2>
-                <p>Technical specifications of the EVR Water Lubricated Stern Tube Bearing</p>
+                <h2>{t('productDetails.evr.specifications')}</h2>
+                <p>{t('productDetails.evr.specificationsSubtitle')}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
                   <tbody>
                     <tr>
-                      <th style={{ width: '30%' }}>Size Range (Shaft Dia.)</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.evr.sizeRange')}</th>
                       <td>φ50 ～ φ500 (mm)</td>
                     </tr>
                     <tr>
-                      <th>Shaft speed</th>
+                      <th>{t('productDetails.evr.shaftSpeed')}</th>
                       <td>Generally Max.6 [m/sec]<br />(possible to use higher speed)</td>
                     </tr>
                     <tr>
-                      <th>Bearing load (Average)</th>
+                      <th>{t('productDetails.evr.bearingLoad')}</th>
                       <td>Max.0.25 MPa</td>
                     </tr>
                     <tr>
-                      <th>Quantity of cooling water (Reference)</th>
+                      <th>{t('productDetails.evr.quantityOfCoolingWater')}</th>
                       <td>
                         Ds＜φ35 [cm]<br />
                         (5～5.5) Ds²×10⁻³ [m³/h]<br /><br />
@@ -206,7 +206,7 @@ const ProjectDetails = () => {
                       </td>
                     </tr>
                     <tr>
-                      <th>Temperature of cooling water</th>
+                      <th>{t('productDetails.evr.temperatureOfCoolingWater')}</th>
                       <td>Max.45 [℃]</td>
                     </tr>
                   </tbody>
@@ -223,8 +223,8 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Documents</h2>
-                <p>Access product catalogs and manuals for detailed information</p>
+                <h2>{t('productDetails.evr.documents')}</h2>
+                <p>{t('productDetails.evr.documentsSubtitle')}</p>
               </div>
               <div className="downloads-container" data-aos="fade-up" data-aos-delay="100">
                 <div className="download-item">
@@ -232,11 +232,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Product Catalog</h4>
-                    <p>Complete catalog with technical specifications and details</p>
+                    <h4>{t('productDetails.evr.productCatalog')}</h4>
+                    <p>{t('productDetails.evr.productCatalogDescription')}</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Catalogue - EVR.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.evr.downloadPDF')}
                   </a>
                 </div>
                 <div className="download-item">
@@ -244,11 +244,11 @@ const ProjectDetails = () => {
                     <i className="bi bi-file-pdf"></i>
                   </div>
                   <div className="download-info">
-                    <h4>Manual Instruction</h4>
-                    <p>Installation and operation manual for EVR</p>
+                    <h4>{t('productDetails.evr.manualInstruction')}</h4>
+                    <p>{t('productDetails.evr.manualInstructionDescription')}</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVR.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
-                    <i className="bi bi-download"></i> Download PDF
+                    <i className="bi bi-download"></i> {t('productDetails.evr.downloadPDF')}
                   </a>
                 </div>
               </div>
@@ -278,7 +278,7 @@ const ProjectDetails = () => {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <h2>{t('productDetails.relatedProducts')}</h2>
-            <p>Other products in the Water Lubricated Stern Tube Bearing category</p>
+            <p>{t('productDetails.otherProductsInWaterLubricatedCategory')}</p>
           </div>
           <div className="row gy-4">
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">

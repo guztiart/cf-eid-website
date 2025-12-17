@@ -97,9 +97,10 @@ const BladderDetails = () => {
               <div className="portfolio-description">
                 <h2>{t('productDetails.bladderAccumulator.title')}</h2>
                 <p>
-                  These standard bladder accumulators are manufactured based on years of experience and proven performance.
-                  Bladders are replaceable and available in various sizes up to large-volume ones.
-                  Their extensive applications include general industrial machineries, construction machineries, power plants and chemical plants.
+                  {t('productDetails.bladderAccumulator.description1')}
+                </p>
+                <p>
+                  {t('productDetails.bladderAccumulator.description2')}
                 </p>
               </div>
             </div>
@@ -113,37 +114,37 @@ const BladderDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features of the Bladder Type Accumulator</p>
+                <h2>{t('productDetails.features')}</h2>
+                <p>{t('productDetails.featuresDescription', { product: t('productDetails.bladderAccumulator.title') })}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>Large Gas Volume</h4>
-                  <p>The maximum available gas volume is 160 L.</p>
+                  <h4>{t('productDetails.bladderFeatures.largeGasVolume')}</h4>
+                  <p>{t('productDetails.bladderFeatures.largeGasVolumeDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Superior Bladder Material</h4>
-                  <p>Bladders made of rubber offer excellent tension fatigue resistance and very low gas permeability.</p>
+                  <h4>{t('productDetails.bladderFeatures.superiorBladderMaterial')}</h4>
+                  <p>{t('productDetails.bladderFeatures.superiorBladderMaterialDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>High Flow Rate</h4>
-                  <p>The Ultrahigh Flow (UH) series is adapted to a maximum discharge flow rate of 4,800 L/min.</p>
+                  <h4>{t('productDetails.bladderFeatures.highFlowRate')}</h4>
+                  <p>{t('productDetails.bladderFeatures.highFlowRateDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Compliance with International Standards</h4>
-                  <p>Can be arranged to conform to the High Pressure Gas Safety Low (Japan), ASME U Stamp (American Society of Mechanical Engineers), CE Marking (European Pressure Equipment Directive) and Regulation for Boiler and Pressure Vessel Manufacture Licensing (China).</p>
+                  <h4>{t('productDetails.bladderFeatures.complianceWithInternationalStandards')}</h4>
+                  <p>{t('productDetails.bladderFeatures.complianceWithInternationalStandardsDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Various Components Available</h4>
-                  <p>Various liquid-end joints (bushings and flanges), accumulator main valves, gas control valves, and charging assemblies are available.</p>
+                  <h4>{t('productDetails.bladderFeatures.variousComponentsAvailable')}</h4>
+                  <p>{t('productDetails.bladderFeatures.variousComponentsAvailableDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>After-Sales Support</h4>
-                  <p>We provide maintenance and support services for our customers for peace of mind after purchasing our products.</p>
+                  <h4>{t('productDetails.bladderFeatures.afterSalesSupport')}</h4>
+                  <p>{t('productDetails.bladderFeatures.afterSalesSupportDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>Important Note</h4>
-                  <p>* Some models are exempt from the requirements of laws and regulations or not designed by us to meet those requirements.</p>
+                  <h4>{t('productDetails.bladderFeatures.importantNote')}</h4>
+                  <p>{t('productDetails.bladderFeatures.importantNoteDescription')}</p>
                 </div>
               </div>
             </div>
@@ -157,20 +158,20 @@ const BladderDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Product specification example</h2>
-                <p>Technical specifications of the Bladder Type Accumulator</p>
+                <h2>{t('productDetails.productSpecification')}</h2>
+                <p>{t('productDetails.specificationDescription', { product: t('productDetails.bladderAccumulator.title') })}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <div className="type-descriptions" style={{ marginBottom: '20px', textAlign: 'left' }}>
-                  <p><strong>AL:</strong> With this type, the bladder is replaceable only from the fluid side (the accumulator needs to be removed).</p>
-                  <p><strong>AT:</strong> This type enables the bladder to be replaced either from the gas or liquid end (with the accumulator installed).</p>
+                  <p><strong>AL:</strong> {t('productDetails.bladderTypeDescriptions.al')}</p>
+                  <p><strong>AT:</strong> {t('productDetails.bladderTypeDescriptions.at')}</p>
                 </div>
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th style={{ width: '30%' }}>Type</th>
-                      <th>Max. Working Pressure (MPa)</th>
-                      <th>Nominal Gas Volume (L)</th>
+                      <th style={{ width: '30%' }}>{t('productDetails.bladderSpecificationTable.type')}</th>
+                      <th>{t('productDetails.bladderSpecificationTable.maxWorkingPressure')}</th>
+                      <th>{t('productDetails.bladderSpecificationTable.nominalGasVolume')}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -267,7 +268,7 @@ const BladderDetails = () => {
                     <img src={`${process.env.PUBLIC_URL}/assets/img/product/fs-1.png`} className="card-image" alt="Floating Seal" />
                   </div>
                   <div className="card-caption">
-                    <span>{language === 'id' ? 'Mesin' : 'Machinery'}<br />{t('productDetails.floatingSeal.title')}</span>
+                    <span>{t('productDetails.machinery')}<br />{t('productDetails.floatingSeal.title')}</span>
                   </div>
                 </Link>
               </div>
