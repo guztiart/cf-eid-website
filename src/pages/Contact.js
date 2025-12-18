@@ -32,14 +32,12 @@ const Contact = () => {
   // Load reCAPTCHA script
   useEffect(() => {
     let scriptElement = null;
+    let checkInterval = null;
 
     const loadRecaptcha = () => {
       // Check if script is already loaded
       if (document.querySelector('script[src*="recaptcha/api.js"]')) {
-        setRecaptchaLoaded(true);
-        if (RECAPTCHA_VERSION === 'v2') {
-          renderRecaptchaV2();
-        }
+        waitForRecaptchaAndRender();
         return;
       }
 
@@ -48,7 +46,7 @@ const Contact = () => {
       
       if (RECAPTCHA_VERSION === 'v2') {
         // For reCAPTCHA v2 (visible checkbox)
-        script.src = `https://www.google.com/recaptcha/api.js?render=explicit`;
+        script.src = `https://www.google.com/recaptcha/api.js?render=explicit&onload=recaptchaOnloadCallback`;
       } else {
         // For reCAPTCHA v3 (invisible)
         script.src = `https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`;
@@ -59,20 +57,40 @@ const Contact = () => {
         setRecaptchaError('Failed to load reCAPTCHA. Please check your internet connection.');
       };
       script.onload = () => {
-        setRecaptchaLoaded(true);
-        setRecaptchaError('');
-        
-        // For v2, we need to render the widget explicitly
         if (RECAPTCHA_VERSION === 'v2') {
-          renderRecaptchaV2();
+          // Define global callback for v2
+          window.recaptchaOnloadCallback = () => {
+            setRecaptchaLoaded(true);
+            setRecaptchaError('');
+            renderRecaptchaV2();
+          };
+        } else {
+          setRecaptchaLoaded(true);
+          setRecaptchaError('');
         }
       };
       document.body.appendChild(script);
     };
 
+    const waitForRecaptchaAndRender = () => {
+      const checkRecaptcha = () => {
+        if (window.grecaptcha && window.grecaptcha.render) {
+          setRecaptchaLoaded(true);
+          setRecaptchaError('');
+          if (RECAPTCHA_VERSION === 'v2') {
+            renderRecaptchaV2();
+          }
+        } else {
+          // Keep checking every 100ms
+          checkInterval = setInterval(checkRecaptcha, 100);
+        }
+      };
+      checkRecaptcha();
+    };
+
     const renderRecaptchaV2 = () => {
-      // Check if widget is already rendered and if render function exists
-      if (window.grecaptcha && typeof window.grecaptcha.render === 'function' && document.getElementById('recaptcha-v2-container')) {
+      // Check if widget is already rendered
+      if (window.grecaptcha && window.grecaptcha.render && document.getElementById('recaptcha-v2-container')) {
         // Check if the container is empty (no widget rendered yet)
         const container = document.getElementById('recaptcha-v2-container');
         if (container.innerHTML === '') {
@@ -89,20 +107,10 @@ const Contact = () => {
             });
             setRecaptchaWidgetId(widgetId);
           } catch (error) {
-            console.error('Error rendering reCAPTCHA:', error);
-            setRecaptchaError('Failed to render reCAPTCHA. Please refresh page.');
+            console.error('Error rendering reCAPTCHA v2:', error);
+            setRecaptchaError('Failed to render reCAPTCHA. Please refresh the page.');
           }
         }
-      } else {
-        // If grecaptcha is not ready, try again after a delay
-        setTimeout(() => {
-          if (window.grecaptcha && typeof window.grecaptcha.render === 'function') {
-            renderRecaptchaV2();
-          } else {
-            console.error('reCAPTCHA not properly loaded');
-            setRecaptchaError('reCAPTCHA failed to load properly. Please refresh page.');
-          }
-        }, 1000);
       }
     };
 
@@ -116,6 +124,14 @@ const Contact = () => {
         } catch (e) {
           console.warn('Error removing reCAPTCHA script:', e);
         }
+      }
+      // Clear interval
+      if (checkInterval) {
+        clearInterval(checkInterval);
+      }
+      // Clean up global callback
+      if (window.recaptchaOnloadCallback) {
+        delete window.recaptchaOnloadCallback;
       }
     };
   }, [RECAPTCHA_SITE_KEY, RECAPTCHA_VERSION]);
