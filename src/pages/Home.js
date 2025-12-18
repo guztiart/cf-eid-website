@@ -103,7 +103,7 @@ const Home = () => {
             </div>
           </div>
           <div className="p-hero-top__button" >
-            <a className="p-hero-top__button-link glightbox" href="https://www.youtube.com/watch?v=LK56SEZupRQ" rel="noopener noreferrer">
+            <a className="p-hero-top__button-link glightbox" href="https://youtu.be/Ep1aIVjRWLU?si=UTIcLpgOteLg_hhe" rel="noopener noreferrer">
               <i className="bi bi-play-circle"></i>
               <span>{t('home.playFullMovie')}</span>
             </a>
