@@ -377,7 +377,7 @@ export default {
     temperatureValue: "NBR: -40 hingga 100ºC, H-NBR: -30 hingga 130ºC, FKM: -10 hingga 200ºC",
     maximumCircumferentialVelocityValue: "MAKS. 2m/detik",
     pressureValue: "MAKS. 0,2 MPaG",
-    shaftDiameterValue: "φ38～φ429mm",
+    shaftDiameterValue: "φ38～φ154mm",
     materialValue: "Cincin segel besi cor khusus, O-ring/gasket karet",
     applicationsValue: "Rol trek, penggerak akhir, as, idler, konveyor, mixer, mesin penggali",
     noteText: "Catatan: Angka di atas menunjukkan kondisi terbaik dalam kasus individual dan mungkin berbeda sesuai dengan ukuran segel. Hubungi kami sebelum digunakan.",

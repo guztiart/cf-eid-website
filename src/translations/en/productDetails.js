@@ -376,7 +376,7 @@ export default {
     temperatureValue: "NBR: -40 to 100ºC, H-NBR: -30 to 130ºC, FKM: -10 to 200ºC",
     maximumCircumferentialVelocityValue: "MAX. 2m/sec",
     pressureValue: "MAX. 0.2 MPaG",
-    shaftDiameterValue: "φ38～φ429mm",
+    shaftDiameterValue: "φ38～φ154mm",
     materialValue: "Special cast iron seal ring, rubber O-ring/gasket",
     applicationsValue: "Track rollers, final drives, axles, idlers, conveyors, mixers, digging machines",
     noteText: "Note: The above figures indicate best conditions in individual cases and may differ according to seal size. Contact us before use.",
