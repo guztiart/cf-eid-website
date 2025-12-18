@@ -12,6 +12,18 @@ const Company = () => {
   // Get translation function
   const { t } = useLanguage();
   
+  // Load custom CSS
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${process.env.PUBLIC_URL}/assets/css/company.css`;
+    document.head.appendChild(link);
+    
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
+
   // Additional initialization for PureCounter to ensure it works properly
   useEffect(() => {
     // Reinitialize PureCounter when component mounts
@@ -205,16 +217,49 @@ const Company = () => {
           <div className="row justify-content-around gy-4 mt-5">
             <div className="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
               <h3>{t('company.growthInnovation')}</h3>
-              <p>{t('company.growthDesc1')}</p>
-              <p>{t('company.growthDesc2')}</p>
-              <ul>
-                <li><i className="bi bi-check-circle"></i> <span>{t('company.factoryExpansion')}</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>{t('company.qualityStandards')}</span></li>
-                <li><i className="bi bi-check-circle"></i> <span>{t('company.envProtection')}</span></li>
-              </ul>
+              <p className="text-start mb-4">{t('company.growthDesc1')}</p>
+              <div className="history-timeline">
+                {t('company.historyPoints').map((point, index) => (
+                  <div key={index} className="history-item d-flex align-items-start mb-3">
+                    <div className="history-icon me-3">
+                      <i className="bi bi-check-circle-fill text-primary"></i>
+                    </div>
+                    <div className="history-text text-start">
+                      {point}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-              <img src={`${process.env.PUBLIC_URL}/assets/img/eid2.jpg`} alt="Growth and Innovation" />
+            <div className="col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+              <div className="history-timeline-visual">
+                <div className="timeline-step">
+                  <img src={`${process.env.PUBLIC_URL}/assets/img/building/old-office-1.png`} alt="Old Office 1" className="img-fluid rounded" />
+                  <div className="timeline-year">1990-1994</div>
+                </div>
+                <div className="timeline-connector">
+                  <div className="timeline-arrow">
+                    <div className="arrow-line"></div>
+                    <div className="arrow-head"></div>
+                  </div>
+                  <div className="timeline-label">Early Years</div>
+                </div>
+                <div className="timeline-step">
+                  <img src={`${process.env.PUBLIC_URL}/assets/img/building/old-office-2.webp`} alt="Old Office 2" className="img-fluid rounded" />
+                  <div className="timeline-year">1995-2006</div>
+                </div>
+                <div className="timeline-connector">
+                  <div className="timeline-arrow">
+                    <div className="arrow-line"></div>
+                    <div className="arrow-head"></div>
+                  </div>
+                  <div className="timeline-label">Growth Phase</div>
+                </div>
+                <div className="timeline-step">
+                  <img src={`${process.env.PUBLIC_URL}/assets/img/building/building-ekk.png`} alt="EKK Building" className="img-fluid rounded" />
+                  <div className="timeline-year">2007-Present</div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="row justify-content-around gy-4 mt-5">

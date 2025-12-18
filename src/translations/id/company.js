@@ -53,8 +53,17 @@ export default {
   originDesc2: "Di Indonesia, kami memulai operasi di EJIP Industrial Park, Cikarang, dengan fokus pada produksi mechanical seal, rubber bellows, dan komponen presisi untuk industri otomotif, dirgantara, dan peralatan industri.",
   
   growthInnovation: "Pertumbuhan dan Inovasi",
-  growthDesc1: "Sejak pendirian kami, kami telah tumbuh pesat dengan mengadopsi teknologi canggih dari Jepang. Pada tahun 2000-an, kami memperluas fasilitas produksi untuk memenuhi permintaan global, termasuk aliansi dengan Burgmann Industries untuk produk EagleBurgmann.",
-  growthDesc2: "Kami mengembangkan sistem produksi terintegrasi dari pengembangan material hingga produksi akhir, mendukung kebutuhan mesin berputar kecepatan tinggi, suhu tinggi, dan tekanan tinggi.",
+  growthDesc1: "Perjalanan PT Eagle Industry Indonesia sepanjang tahun:",
+  historyPoints: [
+    "1990–1994: Perusahaan memulai bisnisnya, dengan volume penjualan kecil dan fokus utama pada penetrasi pasar dan pembangunan hubungan.",
+    "1995: Pindah ke kantor EJIP",
+    "1999–2006: Bisnis berekspansi ke G/I Business, menunjukkan pertumbuhan yang bertahap dan lebih stabil seiring meningkatnya kepercayaan pelanggan.",
+    "2007: Tahun tonggak penting ketika perusahaan secara resmi beralih ke AICI Business, menandai pergeseran strategis menuju pertumbuhan jangka panjang dan operasi yang berbasis produk.",
+    "2008–2012: Bisnis AICI mulai tumbuh secara stabil, didukung oleh pengenalan dan ekspansi produk inti seperti Air Cut Valve, Reed Valve, O-Ring, dan Floating Seal.",
+    "2013–2018: Pertumbuhan bisnis dipercepat secara signifikan, didorong oleh permintaan yang meningkat, hubungan pelanggan yang lebih kuat, dan kapabilitas produksi yang diperluas.",
+    "2019: Perusahaan pindah ke EJIP, memperkuat kapasitas operasional dan meningkatkan efisiensi manufaktur.",
+    "2020–2024: Terlepas dari tantangan pasar, perusahaan mempertahankan pertumbuhan berkelanjutan, mencapai volume bisnis tertinggi, mencerminkan transformasi bisnis yang berhasil dan berkelanjutan."
+  ],
   factoryExpansion: "Ekspansi pabrik pada tahun 2010 untuk meningkatkan kapasitas.",
   qualityStandards: "Implementasi standar kualitas internasional seperti ISO 9001 dan IATF 16949.",
   envProtection: "Kontribusi pada perlindungan lingkungan melalui pencegahan kebocoran fluida.",
@@ -95,7 +104,7 @@ export default {
   
   companyOverviewName: "PT Eagle Industry Indonesia",
   companyOverviewEstablished: "1990",
-  companyOverviewRepresentative: "Bpk. Mitshuhiro Kishida: Presiden Direktur",
+  companyOverviewRepresentative: "Bpk. Mitsuhiro Kishida: Presiden Direktur",
   companyOverviewHeadquarters: "EJIP Industrial Park, Plot 8G, Sukaresmi, Cikarang Selatan, Kabupaten Bekasi, Jawa Barat 17550\nTel: (021) 8970178\nEmail: eid.sales@ekkeagle.com",
   companyOverviewPaidInCapital: "K USD 17.050",
   companyOverviewNumberOfEmployees: "196 Orang ( Update on Nov 2025 ) 2 Orang ( Ekspatriat )",
