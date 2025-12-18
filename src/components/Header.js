@@ -37,7 +37,7 @@ const Header = () => {
         <Link to="/" className={`logo d-flex align-items-center ${isScrolled ? 'logo-scrolled' : ''}`}>
           <img className="logo-img" src={`${process.env.PUBLIC_URL}/assets/img/EKK-LOGO.jpg`} alt="Eagle Industry Indonesia" />
           <h1 className={`sitename ${isScrolled ? 'sitename-scrolled' : ''}`}>PT. Eagle Industry Indonesia</h1>
-          <span className={`dot ${isScrolled ? 'dot-scrolled' : ''}`}>.</span>
+          <span className={`dot ${isScrolled ? 'dot-scrolled' : ''}`}></span>
         </Link>
 
         <nav id="navmenu" className={`navmenu ${isMobileNavActive ? 'mobile-nav-active' : ''}`}>

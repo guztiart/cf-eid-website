@@ -153,45 +153,109 @@ h6 {
   z-index: 997;
 }
 
+/* Enhanced header container spacing */
+.header .container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 100%;
+}
+
+/* Responsive header container spacing */
+@media (max-width: 1200px) {
+  .header .container-fluid {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .header {
+    padding: 18px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  
+  .header {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .header {
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .container-fluid {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .header {
+    padding: 10px 0;
+  }
+}
+
 .header .logo {
   display: flex;
   align-items: center;
-  min-width: 320px; /* Increased minimum width to prevent text wrapping */
+  min-width: 280px; /* Reduced minimum width for better responsiveness */
   white-space: nowrap; /* Prevent text from wrapping */
+  flex-shrink: 0; /* Prevent logo from shrinking */
 }
 
 .header .logo img {
   max-height: 32px;
   margin-right: 8px;
+  transition: all 0.3s ease;
 }
 
 .header .logo h1 {
-  font-size: 24px;
+  font-size: 22px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
   white-space: nowrap; /* Ensure the company name stays on one line */
+  transition: all 0.3s ease;
+  line-height: 1.2;
 }
 
 .header .logo span {
-  font-size: 24px;
+  font-size: 22px;
   padding-left: 1px;
   font-family: var(--heading-font);
   color: var(--color-primary);
+  transition: all 0.3s ease;
 }
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive styles for logo container */
-@media (max-width: 768px) {
+/* Responsive styles for logo container - Enhanced breakpoints */
+@media (max-width: 1200px) {
   .header .logo {
-    min-width: 280px; /* Slightly smaller minimum width for tablets */
+    min-width: 260px;
   }
   
   .header .logo h1 {
-    font-size: 20px; /* Slightly smaller font for tablets */
+    font-size: 20px;
   }
   
   .header .logo span {
@@ -199,13 +263,13 @@ h6 {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .header .logo {
-    min-width: 240px; /* Even smaller for mobile phones */
+    min-width: 240px;
   }
   
   .header .logo h1 {
-    font-size: 18px; /* Even smaller font for mobile phones */
+    font-size: 18px;
   }
   
   .header .logo span {
@@ -213,8 +277,65 @@ h6 {
   }
   
   .header .logo img {
-    max-height: 28px; /* Slightly smaller logo for mobile */
+    max-height: 30px;
     margin-right: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .logo {
+    min-width: 220px;
+  }
+  
+  .header .logo h1 {
+    font-size: 16px;
+  }
+  
+  .header .logo span {
+    font-size: 16px;
+  }
+  
+  .header .logo img {
+    max-height: 28px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .logo {
+    min-width: 200px;
+  }
+  
+  .header .logo h1 {
+    font-size: 15px;
+  }
+  
+  .header .logo span {
+    font-size: 15px;
+  }
+  
+  .header .logo img {
+    max-height: 26px;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo {
+    min-width: 180px;
+  }
+  
+  .header .logo h1 {
+    font-size: 14px;
+  }
+  
+  .header .logo span {
+    font-size: 14px;
+  }
+  
+  .header .logo img {
+    max-height: 24px;
+    margin-right: 3px;
   }
 }
 
@@ -230,7 +351,7 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
+/* Desktop Navigation - Enhanced Responsive Design */
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -250,7 +371,7 @@ h6 {
 
   .navmenu>ul>li {
     white-space: nowrap;
-    padding: 15px 14px;
+    padding: 15px 12px;
   }
 
   .navmenu>ul>li:last-child {
@@ -364,11 +485,53 @@ h6 {
   }
 }
 
-/* Mobile Navigation */
+/* Medium desktop navigation - 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .navmenu>ul>li {
+    padding: 12px 10px;
+  }
+  
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 13px;
+  }
+  
+  .language-switcher {
+    margin-left: 8px;
+  }
+  
+  .language-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+}
+
+/* Small desktop navigation - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navmenu>ul>li {
+    padding: 10px 8px;
+  }
+  
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 12px;
+  }
+  
+  .language-switcher {
+    margin-left: 6px;
+  }
+  
+  .language-btn {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+}
+
+/* Mobile Navigation - Enhanced Responsive Design */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 24px;
     line-height: 0;
     margin-right: 10px;
     cursor: pointer;
@@ -401,7 +564,7 @@ h6 {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -470,7 +633,7 @@ h6 {
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
-    font-size: 32px;
+    font-size: 28px;
     top: 15px;
     right: 15px;
     margin-right: 0;
@@ -487,6 +650,78 @@ h6 {
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+}
+
+/* Tablet navigation - 768px to 991px */
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    font-size: 22px;
+    margin-right: 8px;
+  }
+  
+  .navmenu ul {
+    inset: 55px 15px 15px 15px;
+  }
+  
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+  
+  .mobile-nav-active .mobile-nav-toggle {
+    font-size: 26px;
+    top: 12px;
+    right: 12px;
+  }
+}
+
+/* Mobile navigation - 480px to 767px */
+@media (max-width: 767px) {
+  .mobile-nav-toggle {
+    font-size: 20px;
+    margin-right: 6px;
+  }
+  
+  .navmenu ul {
+    inset: 50px 10px 10px 10px;
+  }
+  
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  
+  .mobile-nav-active .mobile-nav-toggle {
+    font-size: 24px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Small mobile navigation - up to 479px */
+@media (max-width: 479px) {
+  .mobile-nav-toggle {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  
+  .navmenu ul {
+    inset: 45px 5px 5px 5px;
+  }
+  
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 13px;
+    padding: 7px 14px;
+  }
+  
+  .mobile-nav-active .mobile-nav-toggle {
+    font-size: 22px;
+    top: 8px;
+    right: 8px;
   }
 }
 

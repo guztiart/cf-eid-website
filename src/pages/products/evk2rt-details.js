@@ -116,25 +116,25 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Features</h2>
-                <p>Key features and benefits of the EVK2RT Water Lubricated Stern Tube Seal</p>
+                <h2>{t('productDetails.features')}</h2>
+                <p>{t('productDetails.featuresDescription', { product: t('productDetails.evk2rt.title') })}</p>
               </div>
               <div className="features-list" data-aos="fade-up" data-aos-delay="100">
                 <div className="feature-item">
-                  <h4>1. Improved wear resistance</h4>
-                  <p>The active #1 seal ring is always lubricated by self-controlled clean fresh water. This results in the significant reduction in wear of the mating ring, the seal housing and the seal ring.</p>
+                  <h4>{t('productDetails.evk2rtFeatures.improvedWearResistance')}</h4>
+                  <p>{t('productDetails.evk2rtFeatures.improvedWearResistanceDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>2. Built in spare seal ring</h4>
-                  <p>The spare #2 seal ring is incorporated in the seal housing as a spare. The #2 seal stands by in an idle condition under normal operation and is cooled, lubricated & protected by fresh water.</p>
+                  <h4>{t('productDetails.evk2rtFeatures.builtInSpareSealRing')}</h4>
+                  <p>{t('productDetails.evk2rtFeatures.builtInSpareSealRingDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>3. Improved operability</h4>
-                  <p>The active seal ring is easily changed from #1 to #2 spare seal by operation of valves . The #2 spare ring is activated without disassembling the seal unit should #1 seal ring shows increasing leakage.</p>
+                  <h4>{t('productDetails.evk2rtFeatures.improvedOperability')}</h4>
+                  <p>{t('productDetails.evk2rtFeatures.improvedOperabilityDescription')}</p>
                 </div>
                 <div className="feature-item">
-                  <h4>4. Easy upgrade form existing EVK</h4>
-                  <p>By replacing the seal housing, it may be possible to convert an existing EVK seal to a Tandem type.</p>
+                  <h4>{t('productDetails.evk2rtFeatures.easyUpgradeFromExistingEVK')}</h4>
+                  <p>{t('productDetails.evk2rtFeatures.easyUpgradeFromExistingEVKDescription')}</p>
                 </div>
               </div>
             </div>
@@ -148,8 +148,8 @@ const ProjectDetails = () => {
           <div className="row">
             <div className="col-12">
               <div className="section-title" data-aos="fade-up">
-                <h2>Specification</h2>
-                <p>Technical specifications of the EVK2RT Water Lubricated Stern Tube Seal</p>
+                <h2>{t('productDetails.specification')}</h2>
+                <p>{t('productDetails.specificationDescription', { product: t('productDetails.evk2rt.title') })}</p>
               </div>
               <div className="specifications-table" data-aos="fade-up" data-aos-delay="100">
                 <table className="table table-bordered">
@@ -198,7 +198,7 @@ const ProjectDetails = () => {
                   </div>
                   <div className="download-info">
                     <h4>{t('productDetails.manualInstruction')}</h4>
-                    <p>{t('productDetails.manualInstruction')} {t('productDetails.manualInstruction')} for EVK2RV & EVK2RT</p>
+                    <p>{t('productDetails.manualInstruction')} for EVK2RV & EVK2RT</p>
                   </div>
                   <a href={`${process.env.PUBLIC_URL}/assets/img/pdf/Manual Instruction - EVK2RV & EVK2RT.pdf`} target="_blank" rel="noopener noreferrer" className="btn-download">
                     <i className="bi bi-download"></i> {t('productDetails.downloadPDF')}
